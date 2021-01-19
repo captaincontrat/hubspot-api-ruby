@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "httparty", ">= 0.10"
 
   # Add development-only dependencies here
-  s.add_development_dependency("appraisal", "~> 2.2")
   s.add_development_dependency("dotenv")
   s.add_development_dependency("rake", "~> 11.0")
   s.add_development_dependency("rspec", "~> 3.8")

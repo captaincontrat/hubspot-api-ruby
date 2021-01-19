@@ -1,0 +1,37 @@
+name: tests
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby:
+          - '2.7.x'
+          - '3.0.x'
+        active_support:
+          - 'active_support_6.0.x'
+          - 'active_support_6.1.x'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+      - name: Bundle
+        env:
+          ACTIVE_SUPPORT_VERSION: ${{ matrix.active_support }}
+        run: |
+          export BUNDLE_GEMFILE="${GITHUB_WORKSPACE}/gemfiles/${ACTIVE_SUPPORT_VERSION}.gemfile"
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+      - name: Test
+        run: RUBYOPT='-W:deprecated' bundle exec rspec
