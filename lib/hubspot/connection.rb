@@ -154,7 +154,7 @@ module Hubspot
     def self.trigger(path, opts)
       url = generate_url(path, opts[:params], { hapikey: true })
       headers = (opts[:headers] || {}).merge('content-type': 'application/json')
-      post(url, body: opts[:body].to_json, headers: opts[:headers])
+      post(url, body: opts[:body].to_json, headers: headers)
     end
   end
 end
