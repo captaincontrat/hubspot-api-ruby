@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.hubapi.com/contacts/v1/contact?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"property":"email","value":"billie@example.com"}]}'
+      string: '{"properties":[{"property":"email","value":"gregg.brekke@example.com"}]}'
     headers:
       Content-Type:
       - application/json
@@ -21,15 +21,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 21 Jun 2022 13:28:27 GMT
+      - Wed, 22 Jun 2022 08:49:15 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '415'
+      - '422'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71ed165fc8ca3aa5-CDG
+      - 71f3bac2b8ae4069-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -41,25 +41,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - fbad8b04-94d6-44c6-9d3e-bc5d76b2de56
+      - f5e9770a-fee4-4ca4-8eaf-1e0a7d490e31
       X-Hubspot-Ratelimit-Daily:
       - '500000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498754'
+      - '498391'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '150'
       X-Hubspot-Ratelimit-Remaining:
-      - '132'
+      - '117'
       X-Hubspot-Ratelimit-Secondly:
       - '15'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '13'
+      - '11'
       X-Trace:
-      - 2BACE10233873F521DE37F022122B71CEB4FE95A4A000000000000000000
+      - 2B6A37F47E46AB4FADA283FB533AE2584B3D4F993A000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6PniStjWYTQpjXKzHKDSP0XMaY88ytoEHf6ALEvKm%2FBrnEwfL%2B%2BtjrEHG3f8pUEP3Pwh3OBxTeom7Bigr6JH0e660xIkqQmR2O%2FehG9jAAWyEkNlEDBE4i0UWGkipVKwyzY4W5NDPH9Os4Ou"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=x%2FB4wnQqIctKxTKAyUapYdI5DUKg4O5wmE%2BL7m%2FX9p%2FPgWsTN9t2ChF4CLbIuv0AyQ0BKx12GS5c2sbiBhLdGN8rdPF50VvgjDOqUCdR3MdH04MAd9o5XIRgIQXBqOmmR0lHrrhpGbkruAPH"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -68,6 +68,6 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"vid":50751,"canonical-vid":50751,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"email":{"value":"billie@example.com","versions":[{"value":"billie@example.com","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655818106926,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":50751,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"billie@example.com","timestamp":1655818106933,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"42f612d6-b89b-43ae-b9e2-94413c0635ea","timestamp":1655818106948,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
-  recorded_at: Tue, 21 Jun 2022 13:28:27 GMT
+      string: '{"vid":68101,"canonical-vid":68101,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"email":{"value":"gregg.brekke@example.com","versions":[{"value":"gregg.brekke@example.com","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887754780,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":68101,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"gregg.brekke@example.com","timestamp":1655887754786,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"01594b63-e190-434e-b011-3facb816fbe6","timestamp":1655887754810,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Wed, 22 Jun 2022 08:49:14 GMT
 recorded_with: VCR 6.1.0

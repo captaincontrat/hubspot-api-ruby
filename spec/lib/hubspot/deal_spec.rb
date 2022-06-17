@@ -112,10 +112,10 @@ describe Hubspot::Deal do
     context 'when an id is invalid' do
       let(:contact_id) { 1234 }
 
-      it 'raises an error and do not changes associations' do
-        expect { subject }.to raise_error(Hubspot::RequestError)
+      it 'returns false and changes valid associations' do
+        expect(subject).to eq(false)
         find_deal = Hubspot::Deal.find(deal.deal_id)
-        find_deal.company_ids.should eql []
+        find_deal.company_ids.should eql [company.id]
         find_deal.vids.should eql []
       end
     end

@@ -64,13 +64,23 @@ module Hubspot
       # Usage
       # Hubspot::Deal.associate!(45146940, [32], [52])
       def associate!(deal_id, company_ids=[], vids=[])
-        associations = company_ids.map do |id|
-          { from_id: deal_id, to_id: id, definition_id: Hubspot::Association::DEAL_TO_COMPANY }
+        company_associations = associations = company_ids.map do |id|
+          { from_id: deal_id, to_id: id }
         end
-        associations += vids.map do |id|
-          { from_id: deal_id, to_id: id, definition_id: Hubspot::Association::DEAL_TO_CONTACT }
+
+        contact_associations = vids.map do |id|
+          { from_id: deal_id, to_id: id}
         end
-        Hubspot::Association.batch_create(associations)
+
+        results = []
+        if company_associations.any?
+          results << HubSpot::Association.batch_create("Deal", "Company", company_associations)
+        end
+        if contact_associations.any?
+          results << HubSpot::Association.batch_create("Deal", "Contact", contact_associations)
+        end
+
+        results.all?
       end
 
       # Didssociate a deal with a contact or company
@@ -78,13 +88,23 @@ module Hubspot
       # Usage
       # Hubspot::Deal.dissociate!(45146940, [32], [52])
       def dissociate!(deal_id, company_ids=[], vids=[])
-        associations = company_ids.map do |id|
-          { from_id: deal_id, to_id: id, definition_id: Hubspot::Association::DEAL_TO_COMPANY }
+        company_associations = company_ids.map do |id|
+          { from_id: deal_id, to_id: id }
         end
-        associations += vids.map do |id|
-          { from_id: deal_id, to_id: id, definition_id: Hubspot::Association::DEAL_TO_CONTACT }
+
+        contact_associations = vids.map do |id|
+          { from_id: deal_id, to_id: id }
         end
-        Hubspot::Association.batch_delete(associations)
+
+        results = []
+        if company_associations.any?
+          results << HubSpot::Association.batch_delete("Deal", "Company", company_associations)
+        end
+        if contact_associations.any?
+          results << HubSpot::Association.batch_delete("Deal", "Contact", contact_associations)
+        end
+
+        results.all?
       end
 
       def find(deal_id)
@@ -134,12 +154,12 @@ module Hubspot
       # @param object [Hubspot::Contact || Hubspot::Company] a contact or company
       # @return [Array] Array of Hubspot::Deal records
       def find_by_association(object)
-        definition = case object
-                     when Hubspot::Company then Hubspot::Association::COMPANY_TO_DEAL
-                     when Hubspot::Contact then Hubspot::Association::CONTACT_TO_DEAL
+        to_object_type = case object
+                     when Hubspot::Company then "Company"
+                     when Hubspot::Contact then "Contact"
                      else raise(Hubspot::InvalidParams, 'Instance type not supported')
                      end
-        Hubspot::Association.all(object.id, definition)
+        Hubspot::Association.all(to_object_type, object.id, "Deal")
       end
     end
 

@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: put
-    uri: https://api.hubapi.com/crm-associations/v1/associations/create-batch?hapikey=<HAPI_KEY>
+    method: post
+    uri: https://api.hubapi.com/crm/v4/associations/Company/Contact/batch/create?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '[{"fromObjectId":1,"toObjectId":1,"category":"HUBSPOT_DEFINED","definitionId":2}]'
+      string: '{"inputs":[{"from":{"id":1},"to":{"id":1},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":2}]}]}'
     headers:
       Content-Type:
       - application/json
@@ -17,19 +17,19 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 207
+      message: Multi-Status
     headers:
       Date:
-      - Tue, 21 Jun 2022 13:27:00 GMT
+      - Wed, 22 Jun 2022 08:47:50 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '158'
+      - '223'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71ed14409e043ffb-CDG
+      - 71f3b8b39ff999f7-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -41,25 +41,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 7186f55d-3ec5-4bd7-b9ba-5d6e1c7ad34f
+      - ae8dad93-d910-4457-a7eb-855ac2667f4c
       X-Hubspot-Ratelimit-Daily:
       - '500000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498946'
+      - '498583'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '150'
       X-Hubspot-Ratelimit-Remaining:
-      - '119'
+      - '109'
       X-Hubspot-Ratelimit-Secondly:
       - '15'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
+      - '10'
       X-Trace:
-      - 2B0F59309987B7E0266E16907A0E2B40B19F45D9D3000000000000000000
+      - 2B944EE00B21DF8492723DC81482A5617C6671414A000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZKIkwM7foTqxMlY2GldX%2Fbiyi5Lj7Azn0GsuKs8quO3Pbg0Mv4gmljr84oqX8z538Vaj5j63eCSNrMtUHVYQHfIT9XoTlLdu54iSp%2B5umA8BtmsiU6JbgRefWdZHzd0hcRiESFFmdlIKOADl"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5Vtp05%2FgP3S65H11C24YVeY%2FZZoA7cVptU8daFz%2BphNl7G0d1bLCb0LZPJSZfvAKbZUWLPBkJtZBsW8W1VmPj4sAOPDhCJ9igCEgtINBonzRiS3S9ngNn9Is3atM2NXze%2BVlNIxHmO2H1Z6N"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -68,7 +68,7 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"status":"error","message":"One or more associations are invalid","correlationId":"7186f55d-3ec5-4bd7-b9ba-5d6e1c7ad34f","errors":["COMPANY=1
-        is not valid"]}'
-  recorded_at: Tue, 21 Jun 2022 13:27:00 GMT
+      string: '{"status":"COMPLETE","results":[],"numErrors":1,"errors":[{"status":"error","category":"VALIDATION_ERROR","message":"COMPANY=1
+        is not valid"}],"startedAt":"2022-06-22T08:47:50.416Z","completedAt":"2022-06-22T08:47:50.429Z"}'
+  recorded_at: Wed, 22 Jun 2022 08:47:50 GMT
 recorded_with: VCR 6.1.0

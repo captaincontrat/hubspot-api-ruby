@@ -282,8 +282,8 @@ RSpec.describe Hubspot::Company do
 
       subject { described_class.add_contact company.id, 1234 }
 
-      it 'raises an error' do
-        expect { subject }.to raise_error(Hubspot::RequestError, /CONTACT=1234 is not valid/)
+      it 'returns false' do
+        expect(subject).to eq(false)
       end
     end
 
@@ -293,7 +293,7 @@ RSpec.describe Hubspot::Company do
       subject { described_class.add_contact 1, 1 }
 
       it 'raises an error' do
-        expect { subject }.to raise_error(Hubspot::RequestError, /COMPANY=1 is not valid/)
+        expect(subject).to eq(false)
       end
     end
   end

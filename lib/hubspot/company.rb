@@ -78,11 +78,11 @@ class Hubspot::Company < Hubspot::Resource
     end
 
     def add_contact(id, contact_id)
-      Hubspot::Association.create(id, contact_id, Hubspot::Association::COMPANY_TO_CONTACT)
+      Hubspot::Association.create("Company", id, "Contact", contact_id)
     end
 
     def remove_contact(id, contact_id)
-      Hubspot::Association.delete(id, contact_id, Hubspot::Association::COMPANY_TO_CONTACT)
+      Hubspot::Association.delete("Company", id, "Contact", contact_id)
     end
 
     def batch_update(companies, opts = {})

@@ -1,0 +1,146 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Mraz LLC"},{"name":"domain","value":"towne.net"}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Jun 2022 08:47:50 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '392'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71f3b8b0de2aedf7-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 9c331c26-6fbb-4010-9735-ffb2b54f3129
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498585'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '106'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '10'
+      X-Trace:
+      - 2B86765C73ABA5B635CEAD2CD81962D43791175AC1000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KihKO4AsDSJXJxwnQGkXkujQrH4M6L7DwPoAieT9WwKHrrgF3otz1vchyma%2FRPnWBWwt4a%2Fn1H109OWXJVmgoiHfWuA9B0f5Pq8SRGv7HcQhZmoCBV0oH3NTwsQtZik2zSUDFWUDr0QBBBI9"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8963424042,"isDeleted":false,"properties":{"website":{"value":"towne.net","timestamp":1655887669980,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"towne.net","timestamp":1655887669980,"source":"CALCULATED","sourceVid":[],"requestId":"9c331c26-6fbb-4010-9735-ffb2b54f3129"}]},"hs_lastmodifieddate":{"value":"1655887669980","timestamp":1655887669980,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887669980","timestamp":1655887669980,"source":"CALCULATED","sourceVid":[],"requestId":"9c331c26-6fbb-4010-9735-ffb2b54f3129"}]},"domain":{"value":"towne.net","timestamp":1655887669980,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"domain","value":"towne.net","timestamp":1655887669980,"source":"API","sourceVid":[],"requestId":"9c331c26-6fbb-4010-9735-ffb2b54f3129"}]},"name":{"value":"Mraz
+        LLC","timestamp":1655887669980,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Mraz
+        LLC","timestamp":1655887669980,"source":"API","sourceVid":[],"requestId":"9c331c26-6fbb-4010-9735-ffb2b54f3129"}]},"hs_object_id":{"value":"8963424042","timestamp":1655887669980,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963424042","timestamp":1655887669980,"source":"API","sourceVid":[],"requestId":"9c331c26-6fbb-4010-9735-ffb2b54f3129"}]},"createdate":{"value":"1655887669980","timestamp":1655887669980,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887669980","timestamp":1655887669980,"source":"API","sourceVid":[],"requestId":"9c331c26-6fbb-4010-9735-ffb2b54f3129"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Wed, 22 Jun 2022 08:47:50 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v4/associations/Company/Contact/batch/create?hapikey=<HAPI_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"inputs":[{"from":{"id":8963424042},"to":{"id":1234},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":2}]}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 207
+      message: Multi-Status
+    headers:
+      Date:
+      - Wed, 22 Jun 2022 08:47:50 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '226'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71f3b8b23e44cdd7-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 2b9cfd8f-a846-4bef-a854-a54182a6601c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498584'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '110'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2B718CE86C2D30B860C7EB9C880AD82DADC0B2A750000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PCGwCHW02SN95Ap5B5XrNTB%2F8ypOeD2QCkN2xhJcm1dI0T2q%2Bps7LdtZ%2BzrQ3N9AwK5Nxg%2Ff7rawEHMq17HFV13HI55Y6gYy6D0rXDE5XWka%2B5yK21bcbF4pZcOzR7rxu0r5qUDlPbdRf5fo"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"COMPLETE","results":[],"numErrors":1,"errors":[{"status":"error","category":"VALIDATION_ERROR","message":"CONTACT=1234
+        is not valid"}],"startedAt":"2022-06-22T08:47:50.198Z","completedAt":"2022-06-22T08:47:50.227Z"}'
+  recorded_at: Wed, 22 Jun 2022 08:47:50 GMT
+recorded_with: VCR 6.1.0
