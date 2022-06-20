@@ -9,24 +9,66 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '93'
       Date:
-      - Thu, 18 Aug 2016 14:05:14 GMT
+      - Tue, 21 Jun 2022 13:26:42 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed13d0cf4339f3-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - fc98aeb2-1f48-4f12-85d3-ec016b9ceb8c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499009'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '126'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B50A960487EBFE17936254CF117B8BDF1297C3397000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FE3FupsQscG0qgH2xlZ1R3utUZ4BTLTj0wvKAuR1Z%2B%2F%2BibIqETyvO5emnUgnuz7fbZgkygE7hGgk%2BRyHvNHSW9xqDI0QtMqJbsuh%2BOmxSfgIJ%2B71gv5AxsI1oC5XRbsjjGJCOhWrNCXrfomj"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"name":"ff_group1","displayName":"Test Group One","displayOrder":100,"hubspotDefined":false}'
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 14:05:11 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"name":"ff_group1","displayName":"Test Group
+        One","displayOrder":100,"deleted":false}'
+  recorded_at: Tue, 21 Jun 2022 13:26:42 GMT
+recorded_with: VCR 6.1.0

@@ -2,70 +2,78 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/forms?hapikey=demo
+    uri: https://api.hubapi.com/forms/v2/forms?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"name":"Demo Form 1424708546","action":"","method":"POST","cssClass":"hs-form
+      string: '{"name":"Demo Form 61f0187acb9e5bb5747a250ce6a33e6d","action":"","method":"POST","cssClass":"hs-form
         stacked","redirect":"","submitText":"Sign Up","followUpId":"","leadNurturingCampaignId":"","notifyRecipients":"","embeddedCode":""}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Mon, 23 Feb 2015 16:22:26 GMT
+      - Tue, 21 Jun 2022 13:29:19 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '605'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71ed17a78d913a93-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Vary:
       - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
-      - '649'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"guid":"8291bdd1-0681-4d99-b5f7-76ffffb4f98d","name":"Demo Form 1424708546","action":"","method":"POST","cssClass":"hs-form
-        stacked","redirect":"","fields":[],"submitText":"Sign Up","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1424708546415,"updatedAt":1424708546415,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"embeddedCode":"<script
-        charset=\"utf-8\" src=\"http://js.hubspot.com/forms/current.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId:
-        ''62515'',\n    formId: ''8291bdd1-0681-4d99-b5f7-76ffffb4f98d''\n  });\n</script>"}'
-    http_version: 
-  recorded_at: Mon, 23 Feb 2015 16:22:26 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/forms/v2/forms?hapikey=demo
-    body:
-      encoding: UTF-8
-      string: '{"name":"Demo Form 1466117050","action":"","method":"POST","cssClass":"hs-form
-        stacked","redirect":"","submitText":"Sign Up","followUpId":"","leadNurturingCampaignId":"","notifyRecipients":"","embeddedCode":""}'
-    headers:
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
+      Cf-Cache-Status:
+      - DYNAMIC
       Access-Control-Allow-Credentials:
       - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '615'
-      Date:
-      - Thu, 16 Jun 2016 22:44:10 GMT
-      Connection:
-      - keep-alive
+      Access-Control-Expose-Headers:
+      - x-last-modified-timestamp, X-HubSpot-NotFound, X-HS-User-Request, Link, X-Total-Count,
+        HS-Total-Forms-Count, HS-Total-Folders-Count
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - '080d4e6b-f5ec-4e1a-92dc-b6d9ed9b272f'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498621'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '129'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BC012CAA1036698EFE5E1102BC744D3D53E745A11000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VUON5JWYRY5tNB0rYOaTd3LdAm8InLAwVdLALGzgb6vbDxmmj3e1rKiHtLYIOTRt5HzF4BdMql5c9CB39doXe01VWonw51Z8Y2WU1FxeN2oEB3e1X9DuWQScT61nXQ8sX7QTaQz1cWcCR4Y%2F"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"guid":"beb92950-ca65-4daf-87ae-a42c054e429f","name":"Demo
-        Form 1466117050","action":"","method":"POST","cssClass":"hs-form stacked","redirect":"","submitText":"Sign
-        Up","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1466117050301,"updatedAt":1466117050301,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"inlineMessage":"","socialLoginEnabled":false,"socialLoginTypes":[],"tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"visible":true,"formType":"HUBSPOT"}'
-    http_version: 
-  recorded_at: Thu, 16 Jun 2016 22:44:10 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"guid":"1f2faebc-10cd-4977-aad6-7ce1f5715d1a","name":"Demo
+        Form 61f0187acb9e5bb5747a250ce6a33e6d","action":"","method":"POST","cssClass":"hs-form
+        stacked","redirect":"","submitText":"Sign Up","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1655818159391,"updatedAt":1655818159391,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"inlineMessage":"","tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"formType":"HUBSPOT","deletedAt":0,"themeName":"canvas","parentId":0,"style":"","isPublished":true,"publishAt":0,"unpublishAt":0,"publishedAt":0,"kickbackEmailWorkflowId":0,"kickbackEmailsJson":"","customUid":"","createMarketableContact":true,"editVersion":0,"thankYouMessageJson":"","themeColor":"","alwaysCreateNewCompany":false,"internalUpdatedAt":1655818159391,"businessUnitId":0,"portableKey":"d349939e-5b26-48f9-bf88-93c42ec17c62","paymentSessionTemplateIds":[],"selectedExternalOptions":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:29:19 GMT
+recorded_with: VCR 6.1.0

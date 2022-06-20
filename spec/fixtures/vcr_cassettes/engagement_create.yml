@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/engagements/v1/engagements?hapikey=demo
+    uri: https://api.hubapi.com/engagements/v1/engagements?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
       string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[null]},"metadata":{"body":"Test
@@ -10,33 +10,68 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept, Accept-Charset, Accept-Encoding,
-        X-Override-Internal-Permissions, X-Properties-Source, X-Properties-SourceId,
-        X-Properties-Flag, X-Hubspot-User-Id, X-Hubspot-Trace, X-Hubspot-Callee, X-Hubspot-Offset,
-        X-Hubspot-No-Trace, X-HubSpot-Request-Source, X-HubSpot-Request-Reason, Subscription-Billing-Auth-Token,
-        X-App-CSRF, X-Tools-CSRF, Online-Payment-Signing-UUID, X-Source, X-SourceId
-      Access-Control-Allow-Methods:
-      - GET, OPTIONS, PUT, POST, DELETE, PATCH, HEAD
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '280'
       Date:
-      - Wed, 29 Jun 2016 20:10:19 GMT
+      - Tue, 21 Jun 2022 13:29:05 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '334'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed174e9bdd085b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - e3f76712-8ba1-4f31-b197-db5d90ae6b4c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498656'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '142'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '14'
+      X-Trace:
+      - 2B7D4A04C28E635FC3F59D8066D6668632DC588D68000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Patt0g%2F5cp5rrhUhB9CzR17CZtNpv1%2FlwmNvJiWsyb6xODex%2FcQDVAGEPZCBUoJrOz4i8%2BtjDcHYSXX10V%2F%2FNm5jTlCIo8Fv%2FKmFTdAGMODsvIghanwvAbdoZSzfrPckzb%2F6eD1QM0wfqaFP"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"engagement":{"id":74241847,"portalId":62515,"active":true,"createdAt":1467231019741,"lastUpdated":1467231019741,"type":"NOTE","timestamp":1467231019741},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[]},"metadata":{"body":"Test
+      encoding: ASCII-8BIT
+      string: '{"associationCreateFailures":[],"engagement":{"id":22849910155,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655818145164,"lastUpdated":1655818145164,"type":"NOTE","timestamp":1655818145164,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
         note"}}'
-    http_version: 
-  recorded_at: Wed, 29 Jun 2016 20:10:19 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Tue, 21 Jun 2022 13:29:05 GMT
+recorded_with: VCR 6.1.0

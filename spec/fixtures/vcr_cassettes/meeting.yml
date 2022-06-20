@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/crm/v3/objects/meetings?hapikey=fake_api_key
+    uri: https://api.hubapi.com/crm/v3/objects/meetings?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":{"hs_timestamp":"1651676515540","hubspot_owner_id":123,"hs_meeting_title":"hs_meeting_title","hs_meeting_body":"hs_meeting_body","hs_meeting_start_time":"1651568400000","hs_meeting_end_time":"1651569300000","hs_meeting_outcome":"SCHEDULED"}}'
+      string: '{"properties":{"hs_timestamp":"1655818162502","hubspot_owner_id":123,"hs_meeting_title":"hs_meeting_title","hs_meeting_body":"hs_meeting_body","hs_meeting_start_time":"1651568400000","hs_meeting_end_time":"1651569300000","hs_meeting_outcome":"SCHEDULED"}}'
     headers:
       Content-Type:
       - application/json
@@ -21,17 +21,17 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Wed, 04 May 2022 15:01:57 GMT
+      - Tue, 21 Jun 2022 13:29:22 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '343'
+      - '345'
       Connection:
       - keep-alive
       Location:
-      - https://api.hubapi.com/crm/v3/objects/meetings/21495529380
+      - https://api.hubapi.com/crm/v3/objects/meetings/22851093879
       Cf-Ray:
-      - 70621d558c7fee0b-CDG
+      - 71ed17bc9aad99b6-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -43,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 03f7e3e6-3a0e-4d75-a0cf-0209e546ed4d
+      - 85d31778-8061-48a3-bb37-294d6d31ffbc
       X-Hubspot-Ratelimit-Daily:
-      - '250000'
+      - '500000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249979'
+      - '498614'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '100'
+      - '150'
       X-Hubspot-Ratelimit-Remaining:
-      - '99'
+      - '129'
       X-Hubspot-Ratelimit-Secondly:
-      - '10'
+      - '15'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '12'
       X-Trace:
-      - 2B16853A8E1CD54DACE73A2D7313FD2517C81966D9000000000000000000
+      - 2BDF8D52602D87858F9078EEC2055A1718EB91BF8F000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oDyP%2BW5ca%2BnozGLO1t2Yw%2FuG5B6DwbvNXl5Pj3mwz8rqFUNys%2FRu%2F1gVcsL7A2fJ%2BoVTm%2FZF%2BzorFHSLhby6Htx2RKz%2Bus6sNajxdR8OVrvx19niXdTXDKK5tzs67l0U"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=E3iepvLCPeV0bpUTMa6LiqzHSDczEHnLUf09p6ZTj8W4P66rdp1dU8K00F5rm%2FjjwL6nlSLT9xDoOYz3cbnNgNoCLtaDSocZIg8e%2B2t%2BcWNThUmeCkn%2FuxECXyCjzExv%2FzavxW6C22p56gso"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -70,7 +70,7 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"21495529380","properties":{"hs_all_owner_ids":"123","hs_body_preview":"hs_meeting_body","hs_body_preview_html":"<html>\n
-        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>","hs_body_preview_is_truncated":"false","hs_createdate":"2022-05-04T15:01:56.876Z","hs_lastmodifieddate":"2022-05-04T15:01:56.876Z","hs_meeting_body":"hs_meeting_body","hs_meeting_end_time":"2022-05-03T09:15:00Z","hs_meeting_outcome":"SCHEDULED","hs_meeting_source":"CRM_UI","hs_meeting_start_time":"2022-05-03T09:00:00Z","hs_meeting_title":"hs_meeting_title","hs_object_id":"21495529380","hs_timestamp":"2022-05-04T15:01:55.540Z","hubspot_owner_assigneddate":"2022-05-04T15:01:56.876Z","hubspot_owner_id":"123"},"createdAt":"2022-05-04T15:01:56.876Z","updatedAt":"2022-05-04T15:01:56.876Z","archived":false}'
-  recorded_at: Wed, 04 May 2022 15:01:55 GMT
+      string: '{"id":"22851093879","properties":{"hs_all_owner_ids":"123","hs_body_preview":"hs_meeting_body","hs_body_preview_html":"<html>\n
+        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>","hs_body_preview_is_truncated":"false","hs_createdate":"2022-06-21T13:29:22.755Z","hs_lastmodifieddate":"2022-06-21T13:29:22.755Z","hs_meeting_body":"hs_meeting_body","hs_meeting_end_time":"2022-05-03T09:15:00Z","hs_meeting_outcome":"SCHEDULED","hs_meeting_source":"CRM_UI","hs_meeting_start_time":"2022-05-03T09:00:00Z","hs_meeting_title":"hs_meeting_title","hs_object_id":"22851093879","hs_timestamp":"2022-06-21T13:29:22.502Z","hubspot_owner_assigneddate":"2022-06-21T13:29:22.755Z","hubspot_owner_id":"123"},"createdAt":"2022-06-21T13:29:22.755Z","updatedAt":"2022-06-21T13:29:22.755Z","archived":false}'
+  recorded_at: Tue, 21 Jun 2022 13:29:22 GMT
 recorded_with: VCR 6.1.0

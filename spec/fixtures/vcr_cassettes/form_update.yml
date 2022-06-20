@@ -1,135 +1,153 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.hubapi.com/contacts/v1/forms/561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Mon, 23 Feb 2015 16:45:12 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
-      - '1835'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"guid":"561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0","name":"Test Example
-        Form","action":"","method":"POST","cssClass":"hs-form stacked","redirect":"http://developers.hubspot.com/","fields":[{"name":"firstname","label":"First
-        Name","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":0,"required":false,"selectedOptions":[],"options":[],"validation":{"name":"","message":"","data":"","useDefaultBlockList":false},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":""},{"name":"lastname","label":"Last
-        Name","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":1,"required":false,"selectedOptions":[],"options":[],"validation":{"name":"","message":"","data":"","useDefaultBlockList":false},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":""},{"name":"email","label":"Email","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":2,"required":true,"selectedOptions":[],"options":[],"validation":{"name":"email","message":"Please
-        enter a valid email address","data":"","useDefaultBlockList":false},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":""}],"submitText":"Submit","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1366835347235,"updatedAt":1404737770155,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"embeddedCode":"<script
-        charset=\"utf-8\" src=\"http://js.hubspot.com/forms/current.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId:
-        ''62515'',\n    formId: ''561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0''\n  });\n</script>"}'
-    http_version: 
-  recorded_at: Mon, 23 Feb 2015 16:45:12 GMT
-- request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/forms/561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0?hapikey=demo
+    uri: https://api.hubapi.com/forms/v2/forms?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"name":"updated form name 1424709912","redirect":"http://hubspot.com"}'
+      string: '{"name":"Demo Form 6cfd75bdf8408c822977a1fc58c2a614","action":"","method":"POST","cssClass":"hs-form
+        stacked","redirect":"","submitText":"Sign Up","followUpId":"","leadNurturingCampaignId":"","notifyRecipients":"","embeddedCode":""}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Mon, 23 Feb 2015 16:45:13 GMT
+      - Tue, 21 Jun 2022 13:29:21 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '608'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71ed17b4e85899b6-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Vary:
       - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
-      - '1834'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"guid":"561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0","name":"updated form
-        name 1424709912","action":"","method":"POST","cssClass":"hs-form stacked","redirect":"http://hubspot.com","fields":[{"name":"firstname","label":"First
-        Name","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":0,"required":false,"selectedOptions":[],"options":[],"validation":{"name":"","message":"","data":"","useDefaultBlockList":false},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":""},{"name":"lastname","label":"Last
-        Name","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":1,"required":false,"selectedOptions":[],"options":[],"validation":{"name":"","message":"","data":"","useDefaultBlockList":false},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":""},{"name":"email","label":"Email","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":2,"required":true,"selectedOptions":[],"options":[],"validation":{"name":"email","message":"Please
-        enter a valid email address","data":"","useDefaultBlockList":false},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":""}],"submitText":"Submit","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1366835347235,"updatedAt":1424709913018,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"embeddedCode":"<script
-        charset=\"utf-8\" src=\"http://js.hubspot.com/forms/current.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId:
-        ''62515'',\n    formId: ''561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0''\n  });\n</script>"}'
-    http_version: 
-  recorded_at: Mon, 23 Feb 2015 16:45:12 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/forms/v2/forms/561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
+      Cf-Cache-Status:
+      - DYNAMIC
       Access-Control-Allow-Credentials:
       - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '603'
-      Date:
-      - Thu, 16 Jun 2016 22:44:11 GMT
-      Connection:
-      - keep-alive
+      Access-Control-Expose-Headers:
+      - x-last-modified-timestamp, X-HubSpot-NotFound, X-HS-User-Request, Link, X-Total-Count,
+        HS-Total-Forms-Count, HS-Total-Folders-Count
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 5df9c590-fd79-43ba-a213-4eb8aff5a892
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498618'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '130'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2B8DA8F18A3A14F0E644693837362975EFDBC2392A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LducdB1zDljPOJwcnJSlv9cQfM2J484I4aqdlaOHfdqnwMnsX5GYlzMF9HQaWRnVMa6wHvnb0uuQp86UqpCtFIV7w9ojTmm0TZ2dNnjSJFE5UhgGcbF%2FMu6vmwEVWr%2BDSv28aR2GPxfD6uZJ"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"guid":"561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0","name":"updated
-        form name 1424709912","action":"","method":"","cssClass":"","redirect":"http://hubspot.com","submitText":"","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":0,"updatedAt":1466116632531,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"inlineMessage":"","socialLoginEnabled":false,"socialLoginTypes":[],"tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"visible":true,"formType":"HUBSPOT"}'
-    http_version: 
-  recorded_at: Thu, 16 Jun 2016 22:44:11 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"guid":"9c4c252f-d6d6-421c-8442-215717160920","name":"Demo
+        Form 6cfd75bdf8408c822977a1fc58c2a614","action":"","method":"POST","cssClass":"hs-form
+        stacked","redirect":"","submitText":"Sign Up","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1655818161542,"updatedAt":1655818161542,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"inlineMessage":"","tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"formType":"HUBSPOT","deletedAt":0,"themeName":"canvas","parentId":0,"style":"","isPublished":true,"publishAt":0,"unpublishAt":0,"publishedAt":0,"kickbackEmailWorkflowId":0,"kickbackEmailsJson":"","customUid":"","createMarketableContact":true,"editVersion":0,"thankYouMessageJson":"","themeColor":"","alwaysCreateNewCompany":false,"internalUpdatedAt":1655818161542,"businessUnitId":0,"portableKey":"32385ee3-bb49-4ab3-ac2a-372d61f5de5f","paymentSessionTemplateIds":[],"selectedExternalOptions":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:29:21 GMT
 - request:
     method: post
-    uri: https://api.hubapi.com/forms/v2/forms/561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0?hapikey=demo
+    uri: https://api.hubapi.com/forms/v2/forms/9c4c252f-d6d6-421c-8442-215717160920?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"name":"updated form name 1424709912","redirect":"http://hubspot.com"}'
+      string: '{"name":"updated form name 710dfb5f1e128379c28463278aca6b9d","redirect":"http://hubspot.com"}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Date:
+      - Tue, 21 Jun 2022 13:29:22 GMT
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json;charset=utf-8
       Content-Length:
       - '603'
-      Date:
-      - Thu, 16 Jun 2016 22:44:11 GMT
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed17b6eb5b3a8d-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Expose-Headers:
+      - x-last-modified-timestamp, X-HubSpot-NotFound, X-HS-User-Request, Link, X-Total-Count,
+        HS-Total-Forms-Count, HS-Total-Folders-Count
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - c2758138-ef1a-48a9-91ed-936067ea3631
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498617'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '129'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BD408A035DD3ED2E9115900EFECF146544C7419AF000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dPZHAUMYN8zqq3zPXjNgIdXtRf6m3uvQseGg8o8CdOIyMzJmyFYoq6Mxm9Wbt6pfjMhzxJxTF%2FK6x%2F7y9Ha%2Fzkvw%2BcrVzClNQz1MZQPQed92UUydChwxiZhjeEvOyaS9miQ8gJtP6chhZIri"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"guid":"561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0","name":"updated
-        form name 1424709912","action":"","method":"","cssClass":"","redirect":"http://hubspot.com","submitText":"","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":0,"updatedAt":1466117051419,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"inlineMessage":"","socialLoginEnabled":false,"socialLoginTypes":[],"tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"visible":true,"formType":"HUBSPOT"}'
-    http_version: 
-  recorded_at: Thu, 16 Jun 2016 22:44:11 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"guid":"9c4c252f-d6d6-421c-8442-215717160920","name":"updated
+        form name 710dfb5f1e128379c28463278aca6b9d","action":"","method":"","cssClass":"","redirect":"http://hubspot.com","submitText":"","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1655818161542,"updatedAt":1655818161858,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"inlineMessage":"","tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"formType":"HUBSPOT","deletedAt":0,"themeName":"","parentId":0,"style":"","isPublished":true,"publishAt":0,"unpublishAt":0,"publishedAt":0,"kickbackEmailWorkflowId":0,"kickbackEmailsJson":"","customUid":"","createMarketableContact":true,"editVersion":0,"thankYouMessageJson":"","themeColor":"","alwaysCreateNewCompany":false,"internalUpdatedAt":1655818161858,"businessUnitId":0,"portableKey":"32385ee3-bb49-4ab3-ac2a-372d61f5de5f","paymentSessionTemplateIds":[],"selectedExternalOptions":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:29:21 GMT
+recorded_with: VCR 6.1.0

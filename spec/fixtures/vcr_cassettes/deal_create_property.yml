@@ -2,38 +2,75 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/deals/v1/properties/?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/properties/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"name":"my_new_property","groupName":"dealinformation","description":"How
+      string: '{"name":"my_new_property_87e29b63f83ec51f0a4c36dfca6f10da","groupName":"dealinformation","description":"How
         much money do you have?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
-        is my new property","options":[{"description":"","value":"Over $50K","label":"Over
-        $50K","hidden":false,"displayOrder":0},{"description":"","value":"Under $50K","label":"Under
-        $50K","hidden":false,"displayOrder":1}]}'
+        is my new property","options":[]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '658'
       Date:
-      - Tue, 05 Jan 2016 22:51:38 GMT
+      - Tue, 21 Jun 2022 13:28:41 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '502'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed16b7ba3f3a5d-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 2768c9d8-d182-49eb-87e3-02a812bcd422
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498718'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '123'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BF4A2BE9FB526EA01977AB04678EF0723495951AF000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LFrQGeQeSJFaDfBVU6CvoNixDuQf0Aot1sSLj5jqOXISdxUcceHRZ%2B3zOq0N%2F8jY7CMdeUgYGxcmfAT4GT0WlPPYwTaiIu4wQJavkd3OhCZNKOdMX7BJQnyQMDxO7unSBKTVXAXu%2F6UgL282"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"name":"my_new_property","label":"This is my new property","description":"How
-        much money do you have?","groupName":"dealinformation","type":"string","fieldType":"text","options":[{"description":"","value":"Over
-        $50K","readOnly":null,"label":"Over $50K","displayOrder":0,"hidden":false,"doubleData":null},{"description":"","value":"Under
-        $50K","readOnly":null,"label":"Under $50K","displayOrder":1,"hidden":false,"doubleData":null}],"formField":true,"displayOrder":0,"readOnlyDefinition":false,"hidden":false,"mutableDefinitionNotDeletable":false,"displayMode":"current_value","deleted":false,"calculated":false,"readOnlyValue":false,"externalOptions":false}'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:38 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"name":"my_new_property_87e29b63f83ec51f0a4c36dfca6f10da","label":"This
+        is my new property","description":"How much money do you have?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":false,"updatedAt":1655818121019,"createdAt":1655818121019,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"hidden":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false}'
+  recorded_at: Tue, 21 Jun 2022 13:28:41 GMT
+recorded_with: VCR 6.1.0

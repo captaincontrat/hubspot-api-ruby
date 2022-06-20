@@ -6,25 +6,74 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '204'
       Date:
-      - Tue, 05 Jan 2016 22:51:40 GMT
+      - Tue, 21 Jun 2022 13:29:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '338'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed17e1082dee89-CDG
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 26836d5f-b6a1-4b19-95ff-8661cef73913
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988303'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '186'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '18'
+      X-Trace:
+      - 2BFE1DBE6283A3E1E2D1939C69AF6EC587A1207F20000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Rr4MVtU0t1YUs8EPhPYyE0h5bm4U9FzrYqHiYoFt%2FFTyqH9W04WD5EAjX6qOFx6oyp52s5yVQt4dMkKqSvmTHMa2AVVkbnnEWnj48YEetHPzhDt2ovl9y3rv2OCzYhbdtfwI%2FLLAcZoh4Fjn"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '[{"name":"dealinformation","displayName":"Deal Information","displayOrder":0},{"name":"workflowmax","displayName":"WorkflowMAX","displayOrder":1},{"name":"ff_group23","displayName":"","displayOrder":100}]'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:40 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '[{"name":"deal_activity","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Deal
+        activity","displayOrder":-1,"hubspotDefined":true},{"name":"dealinformation","displayName":"Deal
+        Information","displayOrder":0,"hubspotDefined":false},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Analytics
+        history","displayOrder":1,"hubspotDefined":true},{"name":"salesforceinformation","displayName":"Salesforce
+        Information","displayOrder":101,"hubspotDefined":false},{"name":"onboardinggroup","displayName":"Onboarding","displayOrder":80944,"hubspotDefined":false},{"name":"mk_group_fit_segment","displayName":"MadKudo
+        Company Fit","displayOrder":80947,"hubspotDefined":false},{"name":"ip__ecomm_bridge__ecomm_bridge","displayName":"ECommerce","displayOrder":80948,"hubspotDefined":false},{"name":"internal3","displayName":"Internal
+        (Read Only)","displayOrder":80951,"hubspotDefined":false},{"name":"ip__sync_extension__sync_extension","displayName":"SyncExtension","displayOrder":80952,"hubspotDefined":false}]'
+  recorded_at: Tue, 21 Jun 2022 13:29:28 GMT
+recorded_with: VCR 6.1.0

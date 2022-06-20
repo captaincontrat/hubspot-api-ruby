@@ -14,30 +14,9 @@ describe Hubspot::DealProperties do
     end
   end
 
-  let(:example_groups) do
-    VCR.use_cassette('deal_groups_example') do
-      HTTParty.get('https://api.hubapi.com/deals/v1/groups?hapikey=demo').parsed_response
-    end
-  end
-
-  let(:example_properties) do
-    VCR.use_cassette('deal_properties_example') do
-      HTTParty.get('https://api.hubapi.com/deals/v1/properties?hapikey=demo').parsed_response
-    end
-  end
-
-  before { Hubspot.configure(hapikey: 'demo') }
 
   describe 'Properties' do
     describe '.all' do
-      context 'with no filter' do
-        cassette 'deal_all_properties'
-
-        it 'should return all properties' do
-          expect(Hubspot::DealProperties.all).to eql(example_properties)
-        end
-      end
-
       let(:groups) { %w(calltrackinginfo emailinformation) }
 
       context 'with included groups' do
@@ -60,31 +39,13 @@ describe Hubspot::DealProperties do
     end
 
     let(:params) { {
-      'name'                          => 'my_new_property',
+      'name'                          => "my_new_property_#{SecureRandom.hex}",
       'label'                         => 'This is my new property',
       'description'                   => 'How much money do you have?',
       'groupName'                     => 'dealinformation',
       'type'                          => 'string',
       'fieldType'                     => 'text',
       'hidden'                        => false,
-      'options'                       => [{
-                                            'description'  => '',
-                                            'value'        => 'Over $50K',
-                                            'readOnly'     => false,
-                                            'label'        => 'Over $50K',
-                                            'displayOrder' => 0,
-                                            'hidden'       => false,
-                                            'doubleData'   => 0.0
-                                          },
-                                          {
-                                            'description'  => '',
-                                            'value'        => 'Under $50K',
-                                            'readOnly'     => false,
-                                            'label'        => 'Under $50K',
-                                            'displayOrder' => 1,
-                                            'hidden'       => false,
-                                            'doubleData'   => 0.0
-                                          }],
       'deleted'                       => false,
       'displayOrder'                  => 0,
       'formField'                     => true,
@@ -110,7 +71,7 @@ describe Hubspot::DealProperties do
 
         it 'should return the valid parameters' do
           response = Hubspot::DealProperties.create!(params)
-          expect(Hubspot::DealProperties.same?(params, response)).to be true
+          expect(Hubspot::DealProperties.same?(params.except("name"), response.compact.except("name", "options"))).to be true
         end
       end
     end
@@ -127,22 +88,22 @@ describe Hubspot::DealProperties do
         cassette 'deal_update_property'
 
         it 'should return the valid parameters' do
+          properties = Hubspot::DealProperties.create!(params)
           params['description'] = 'What is their favorite flavor?'
 
-          response = Hubspot::DealProperties.update!(params['name'], params)
-          expect(Hubspot::DealProperties.same?(response, params)).to be true
+          response = Hubspot::DealProperties.update!(properties['name'], params)
+          expect(Hubspot::DealProperties.same?(response.compact.except("name"), params.except("name"))).to be true
         end
       end
     end
 
     describe '.delete!' do
-      let(:name) { params['name'] }
-
       context 'with existing property' do
         cassette 'deal_delete_property'
 
         it 'should return nil' do
-          expect(Hubspot::DealProperties.delete!(name)).to eq(nil)
+          properties = Hubspot::DealProperties.create!(params)
+          expect(Hubspot::DealProperties.delete!(properties["name"])).to eq(nil)
         end
       end
 
@@ -150,7 +111,7 @@ describe Hubspot::DealProperties do
         cassette 'deal_delete_non_property'
 
         it 'should raise an error' do
-          expect { Hubspot::DealProperties.delete!(name) }.to raise_error(Hubspot::RequestError)
+          expect { Hubspot::DealProperties.delete!("i_do_not_exist") }.to raise_error(Hubspot::RequestError)
         end
       end
     end
@@ -158,14 +119,6 @@ describe Hubspot::DealProperties do
 
   describe 'Groups' do
     describe '.groups' do
-      context 'with no filter' do
-        cassette 'deal_all_groups'
-
-        it 'should return all groups' do
-          expect(Hubspot::DealProperties.groups).to eql(example_groups)
-        end
-      end
-
       let(:groups) { %w(calltrackinginfo emailinformation) }
 
       context 'with included groups' do
@@ -211,9 +164,9 @@ describe Hubspot::DealProperties do
         let(:sub_params) { params.select { |k, _| k != 'displayName' } }
 
         it 'should return the valid parameters' do
-          params['name'] = 'ff_group234'
+          params['name'] = "ff_group_#{SecureRandom.hex}"
           response       = Hubspot::DealProperties.create_group!(sub_params)
-          expect(Hubspot::DealProperties.same?(response, sub_params)).to be true
+          expect(Hubspot::DealProperties.same?(response.except("name"), sub_params.except("name"))).to be true
         end
       end
     end

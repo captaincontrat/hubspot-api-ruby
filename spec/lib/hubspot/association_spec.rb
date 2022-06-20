@@ -1,6 +1,4 @@
 RSpec.describe Hubspot::Association do
-  before { Hubspot.configure(hapikey: 'demo') }
-
   let(:portal_id) { 62515 }
   let(:company) { create :company }
   let(:contact) { create :contact }

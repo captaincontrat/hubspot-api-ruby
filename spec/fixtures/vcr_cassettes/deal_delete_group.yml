@@ -2,27 +2,66 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.hubapi.com/deals/v1/groups/named/ff_group1?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/groups/named/ff_group1?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 204
       message: No Content
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Tue, 05 Jan 2016 22:51:41 GMT
+      - Tue, 21 Jun 2022 13:28:44 GMT
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed16cc0af132ac-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 8d07fe93-c0f7-42b7-8c87-97959b523be2
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498707'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '138'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2B6503EEF4141A6EF4FFD0519F0A2799DE133DD53A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Oc0yFj6ciAybwKPzoCK7jA0pLQfwkfmClMSCS01jAkfz0MyWZGPipZsfxV%2F4kZyO%2BVyp6hBl%2F6CpX1GYTVEuO0bXwkfuYEqXU6pIGNvb5w%2BxP6v%2BwQ%2FyNRQ5HxF2mNj7GM2SZ5%2B7SQUI1Wcy"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:41 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Tue, 21 Jun 2022 13:28:44 GMT
+recorded_with: VCR 6.1.0

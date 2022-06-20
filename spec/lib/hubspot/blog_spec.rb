@@ -10,13 +10,15 @@ describe Hubspot do
     Timecop.return
   end
 
+  let(:last_blog_id) { Hubspot::Blog.list.last['id'] }
+  let(:last_blog_post_id) { Hubspot::Blog.list.last.posts.first['id'] }
+
   describe Hubspot::Blog do
     describe ".list" do
       it "returns a list of blogs" do
         VCR.use_cassette("blog_list") do
           result = Hubspot::Blog.list
 
-          assert_requested :get, hubspot_api_url("/content/api/v2/blogs?hapikey=demo")
           expect(result).to be_kind_of(Array)
           expect(result.first).to be_a(Hubspot::Blog)
         end
@@ -26,10 +28,8 @@ describe Hubspot do
     describe ".find_by_id" do
       it "retrieves a blog by id" do
         VCR.use_cassette("blog_list") do
-          id = 351076997
-          result = Hubspot::Blog.find_by_id(id)
+          result = Hubspot::Blog.find_by_id(last_blog_id)
 
-          assert_requested :get, hubspot_api_url("/content/api/v2/blogs/#{id}?hapikey=demo")
           expect(result).to be_a(Hubspot::Blog)
         end
       end
@@ -59,26 +59,23 @@ describe Hubspot do
     describe "#posts" do
       it "returns published blog posts created in the last 2 months" do
         VCR.use_cassette("blog_posts/all_blog_posts") do
-          blog_id = 123
+          blog_id = last_blog_id
           created_gt = timestamp_in_milliseconds(Time.now - 2.months)
           blog = Hubspot::Blog.new({ "id" => blog_id })
 
           result = blog.posts
 
-          assert_requested :get, hubspot_api_url("/content/api/v2/blog-posts?content_group_id=#{blog_id}&created__gt=#{created_gt}&hapikey=demo&order_by=-created&state=PUBLISHED")
           expect(result).to be_kind_of(Array)
         end
       end
 
       it "includes given parameters in the request" do
         VCR.use_cassette("blog_posts/filter_blog_posts") do
-          blog_id = 123
           created_gt = timestamp_in_milliseconds(Time.now - 2.months)
-          blog = Hubspot::Blog.new({ "id" => 123 })
+          blog = Hubspot::Blog.new({ "id" => last_blog_id })
 
           result = blog.posts({ state: "DRAFT" })
 
-          assert_requested :get, hubspot_api_url("/content/api/v2/blog-posts?content_group_id=#{blog_id}&created__gt=#{created_gt}&hapikey=demo&order_by=-created&state=DRAFT")
           expect(result).to be_kind_of(Array)
         end
       end
@@ -106,11 +103,8 @@ describe Hubspot do
     describe ".find_by_blog_post_id" do
       it "retrieves a blog post by id" do
         VCR.use_cassette "blog_posts" do
-          blog_post_id = 422192866
+          result = Hubspot::BlogPost.find_by_blog_post_id(last_blog_post_id)
 
-          result = Hubspot::BlogPost.find_by_blog_post_id(blog_post_id)
-
-          assert_requested :get, hubspot_api_url("/content/api/v2/blog-posts/#{blog_post_id}?hapikey=demo")
           expect(result).to be_a(Hubspot::BlogPost)
         end
       end
@@ -119,7 +113,7 @@ describe Hubspot do
     describe "#topics" do
       it "returns the list of topics" do
         VCR.use_cassette "blog_posts" do
-          blog_post = Hubspot::BlogPost.find_by_blog_post_id(422192866)
+          blog_post = Hubspot::BlogPost.find_by_blog_post_id(last_blog_post_id)
 
           topics = blog_post.topics
 

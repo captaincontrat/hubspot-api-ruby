@@ -1,7 +1,5 @@
 RSpec.describe Hubspot::Meeting do
 
-  before{ Hubspot.configure(hapikey: 'fake_api_key') }
-
   let(:hubspot_owner_id) { 123 }
   let(:hs_meeting_title) { 'hs_meeting_title' }
   let(:hs_meeting_body) { 'hs_meeting_body' }

@@ -97,7 +97,7 @@ module Hubspot
 
       def valid_group_params(params)
         return {} if params.blank?
-        result = params.slice(*PROPERTY_SPECS[:group_field_names])
+        result = params.with_indifferent_access.slice(*PROPERTY_SPECS[:group_field_names])
         result['properties'] = valid_property_params(result['properties']) unless result['properties'].blank?
         result
       end

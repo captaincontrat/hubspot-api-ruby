@@ -10,7 +10,7 @@ SimpleCov.start do
   add_filter "/.bundle/"
 end
 
-require 'dotenv/load'
+require 'dotenv'
 require 'rspec'
 require 'rspec/its'
 require 'webmock/rspec'
@@ -18,6 +18,8 @@ require 'factory_bot'
 require 'faker'
 require 'byebug'
 require 'hubspot-api-ruby'
+
+Dotenv.load('.env.test')
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -27,9 +29,17 @@ Dir["#{RSPEC_ROOT}/support/**/*.rb"].each {|f| require f}
 Dir["#{RSPEC_ROOT}/shared_examples/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-  config.after(:each) do
-    Hubspot::Config.reset!
+  config.before(:all) do
+    Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"))
   end
+
+  config.before(:each) do
+    Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"))
+  end
+
+  # config.after(:each) do
+  #   Hubspot::Config.reset!
+  # end
 
   config.filter_run_when_matching :focus
 
@@ -40,5 +50,4 @@ RSpec.configure do |config|
   end
 
   config.extend CassetteHelper
-  config.extend TestsHelper
 end

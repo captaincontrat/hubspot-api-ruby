@@ -1,7 +1,10 @@
 describe Hubspot::Engagement do
+
+  let(:contact) { Hubspot::Contact.create("#{SecureRandom.hex}@hubspot.com") }
+  let(:engagement) { Hubspot::EngagementNote.create!(contact.id, "foo") }
   let(:example_engagement_hash) do
     VCR.use_cassette("engagement_example") do
-      HTTParty.get("https://api.hubapi.com/engagements/v1/engagements/51484873?hapikey=demo").parsed_response
+      HTTParty.get("https://api.hubapi.com/engagements/v1/engagements/3981023?hapikey=demo").parsed_response
     end
   end
   let(:example_associated_engagement_hash) do
@@ -11,12 +14,11 @@ describe Hubspot::Engagement do
   end
 
   # http://developers.hubspot.com/docs/methods/contacts/get_contact
-  before{ Hubspot.configure(hapikey: "demo") }
 
   describe "#initialize" do
     subject{ Hubspot::Engagement.new(example_engagement_hash) }
     it  { should be_an_instance_of Hubspot::Engagement }
-    its (:id) { should == 51484873 }
+    its (:id) { should == 3981023 }
   end
 
   describe 'EngagementNote' do
@@ -30,7 +32,6 @@ describe Hubspot::Engagement do
 
     describe ".find" do
       cassette "engagement_find"
-      let(:engagement) {Hubspot::EngagementNote.new(example_engagement_hash)}
 
       it 'must find by the engagement id' do
         find_engagement = Hubspot::EngagementNote.find(engagement.id)
@@ -41,10 +42,18 @@ describe Hubspot::Engagement do
 
     describe ".find_by_company" do
       cassette "engagement_find_by_country"
-      let(:engagement) {Hubspot::EngagementNote.new(example_associated_engagement_hash)}
+
+      let(:company) { Hubspot::Company.create(name: SecureRandom.hex) }
+      before do
+        engagement.class.associate!(
+          engagement.id,
+          "Company",
+          company.id
+        )
+      end
 
       it 'must find by company id' do
-        find_engagements = Hubspot::EngagementNote.find_by_company(engagement.associations["companyIds"].first)
+        find_engagements = Hubspot::EngagementNote.find_by_company(company.id)
         find_engagements.should_not be_nil
         find_engagements.any?{|engagement| engagement.id == engagement.id and engagement.body == engagement.body}.should be true
       end
@@ -52,7 +61,6 @@ describe Hubspot::Engagement do
 
     describe ".find_by_contact" do
       cassette "engagement_find_by_contact"
-      let(:engagement) {Hubspot::EngagementNote.new(example_associated_engagement_hash)}
 
       it 'must find by contact id' do
         find_engagements = Hubspot::EngagementNote.find_by_contact(engagement.associations["contactIds"].first)
@@ -75,31 +83,18 @@ describe Hubspot::Engagement do
       cassette "find_all_engagements"
 
       it 'must get the engagements list' do
+        engagement
         engagements = Hubspot::Engagement.all
 
-        expect(engagements['engagements'].size).to eql 100 # default page size
-
         first = engagements['engagements'].first
-        last = engagements['engagements'].last
 
         expect(first).to be_a Hubspot::Engagement
-        expect(first.engagement['id']).to eql 3981023
-
-        expect(last).to be_a Hubspot::Engagement
-        expect(last.engagement['id']).to eql 36579065
       end
 
       it 'must filter only 2 engagements' do
+        3.times { Hubspot::EngagementNote.create!(contact.id, "foo") }
         engagements = Hubspot::Engagement.all(limit: 2)
         expect(engagements['engagements'].size).to eql 2
-      end
-
-      it 'it must offset the engagements' do
-        single_list = Hubspot::Engagement.all(limit: 5)
-        expect(single_list['engagements'].size).to eql 5
-
-        second = Hubspot::Engagement.all(count: 1, offset: single_list['offset'])['engagements'].first
-        expect(second.engagement['id']).to eql 4815722
       end
     end
 
@@ -107,7 +102,7 @@ describe Hubspot::Engagement do
       cassette "engagement_associate"
 
       let(:engagement) { Hubspot::EngagementNote.create!(nil, 'note') }
-      let(:contact) { Hubspot::Contact.create(email: "newcontact#{Time.now.to_i}@hsgem.com") }
+      let(:contact) { Hubspot::Contact.create("#{SecureRandom.hex}@hubspot.com") }
       subject { Hubspot::Engagement.associate!(engagement.id, 'contact', contact.id) }
 
       it 'associate an engagement to a resource' do
@@ -134,12 +129,6 @@ describe Hubspot::Engagement do
   end
 
   describe 'EngagementCall' do
-    let(:example_engagement_hash) do
-      VCR.use_cassette("engagement_call_example") do
-        HTTParty.get("https://api.hubapi.com/engagements/v1/engagements/4709059?hapikey=demo").parsed_response
-      end
-    end
-
     describe ".create!" do
       cassette "engagement_call_create"
       body = "Test call"
@@ -150,10 +139,10 @@ describe Hubspot::Engagement do
 
     describe ".find" do
       cassette "engagement_call_find"
-      let(:engagement) { Hubspot::EngagementNote.new(example_engagement_hash) }
+      let(:engagement) { Hubspot::EngagementCall.create!(contact.id, "foo", 42) }
 
       it 'must find by the engagement id' do
-        find_engagement = Hubspot::EngagementNote.find(engagement.id)
+        find_engagement = Hubspot::EngagementCall.find(engagement.id)
         find_engagement.id.should eql engagement.id
         find_engagement.body.should eql engagement.body
       end

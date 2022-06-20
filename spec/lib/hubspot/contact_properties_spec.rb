@@ -14,29 +14,8 @@ describe Hubspot::ContactProperties do
     end
   end
 
-  let(:example_groups) do
-    VCR.use_cassette('contact_properties/groups_example') do
-      HTTParty.get('https://api.hubapi.com/contacts/v2/groups?hapikey=demo').parsed_response
-    end
-  end
-
-  let(:example_properties) do
-    VCR.use_cassette('contact_properties/properties_example') do
-      HTTParty.get('https://api.hubapi.com/contacts/v2/properties?hapikey=demo').parsed_response
-    end
-  end
-
-  before { Hubspot.configure(hapikey: 'demo') }
-
   describe 'Properties' do
     describe '.all' do
-      context 'with no filter' do
-        cassette 'contact_properties/all_properties'
-
-        it 'should return all properties' do
-          expect(Hubspot::ContactProperties.all).to eql(example_properties)
-        end
-      end
 
       let(:groups) { %w(calltrackinginfo emailinformation) }
 
@@ -141,14 +120,6 @@ describe Hubspot::ContactProperties do
 
   describe 'Groups' do
     describe '.groups' do
-      context 'with no filter' do
-        cassette 'contact_properties/all_groups'
-
-        it 'should return all groups' do
-          expect(Hubspot::ContactProperties.groups).to eql(example_groups)
-        end
-      end
-
       let(:groups) { %w(calltrackinginfo emailinformation) }
 
       context 'with included groups' do
@@ -193,10 +164,10 @@ describe Hubspot::ContactProperties do
 
         let(:sub_params) { params.select { |k, _| k != 'displayName' } }
 
-        it 'should return the valid parameters' do
-          params['name'] = 'ff_group234'
+        it 'should return the valid parameters' do |example|
+          params['name'] = "ff_group_#{SecureRandom.hex}"
           response       = Hubspot::ContactProperties.create_group!(sub_params)
-          expect(Hubspot::ContactProperties.same?(response, sub_params)).to be true
+          expect(Hubspot::ContactProperties.same?(response.except("name"), sub_params.except("name"))).to be true
         end
       end
     end

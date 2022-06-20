@@ -2,133 +2,315 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/content/api/v2/blog-posts/422192866?hapikey=demo
+    uri: https://api.hubapi.com/content/api/v2/blogs?hapikey=demo
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Cache-Control:
-      - No-store
-      Content-Type:
-      - application/json
       Date:
-      - Mon, 20 Oct 2014 02:21:22 GMT
-      P3p:
-      - 'P3P: policyref="http://www.hubspot.com/w3c/p3p.xml", CP="CURa ADMa DEVa TAIa
-        PSAa PSDa OUR IND DSP NON COR'
-      Server:
-      - gunicorn/0.17.2
+      - Tue, 21 Jun 2022 13:26:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1690'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71ed1377d8fc7a6b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Vary:
       - Accept-Encoding
-      X-Hs-Mc-Reqs:
-      - Z2V0X21hbnk6Nyw1O3NldDoyLDE7c2V0X21hbnk6MSwxO2dldDo2LDE0
-      Content-Length:
-      - '2431'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"archived": false, "attached_stylesheets": [], "author_user_id": 100307,
-        "blog_author": {"avatar": "", "bio": "", "body": {}, "created": 1387404442000,
-        "deleted_at": 0, "email": "test11+11@mangotreemedia.com", "facebook": "",
-        "full_name": "Levi Test", "google_plus": "", "gravatar_url": "https://app.hubspot.com/settings/avatar/caf1c7f4155541edb39b6f5d9566afe9",
-        "id": 418560336, "linkedin": "", "portal_id": 62515, "slug": "levi-test",
-        "twitter": "", "updated": 1387404442000, "user_id": null, "username": null,
-        "website": ""}, "blog_author_id": 418560336, "blueprint_type_id": 0, "campaign":
-        "||", "campaign_name": null, "category_id": 3, "cloned_from": null, "comment_count":
-        0, "content_group_id": 351076997, "created": 1387580494000, "css": {}, "css_text":
-        "", "deleted_at": 0, "domain": "", "enable_domain_stylesheets": true, "enable_layout_stylesheets":
-        true, "featured_image": "", "folder_id": null, "footer_html": "", "freeze_date":
-        1387580592000, "head_html": "", "html_title": "mypostasfsdf", "id": 422192866,
-        "include_default_custom_css": null, "is_draft": true, "is_instant_email_enabled":
-        false, "is_social_publishing_enabled": false, "keywords": [], "legacy_blog_tabid":
-        null, "meta_description": "dfsdf", "meta_keywords": null, "name": "mypostasfsdf",
-        "page_expiry_date": null, "page_expiry_enabled": null, "page_expiry_redirect_id":
-        null, "page_expiry_redirect_url": null, "page_redirected": null, "performable_url":
-        null, "personas": [], "portal_id": 62515, "post_body": "dfssadf", "post_summary":
-        "<p>dfssadf</p>", "preview_image_src": null, "preview_key": "4hrUQgP7", "processing_status":
-        "published", "publish_date": 1387580592000, "publish_immediately": true, "published_url":
-        "http://62515.hs-sites.com/blog/mypostasfsdf", "rss_body": "<p>dfssadf</p>",
-        "rss_email_by_text": "By", "rss_email_click_through_text": "Read more &raquo;",
-        "rss_email_comment_text": "Comment &raquo;", "rss_summary": "<p>dfssadf</p>",
-        "scheduled_update_date": null, "slug": "blog/mypostasfsdf", "state": "PUBLISHED",
-        "style_override_id": null, "subcategory": "normal_blog_post", "topic_ids":
-        [349001328], "unpublished_at": null, "updated": 1387580594000, "url": "http://62515.hs-sites.com/blog/mypostasfsdf",
-        "use_featured_image": false, "views": 0, "widget_containers": {}, "widgets":
-        {"blog_comments": {"body": {}, "name": "blog_comments", "child_css": {}, "meta":
-        {}, "type": "blog_comments", "id": "blog_comments", "css": {}}}}'
-    http_version: 
-  recorded_at: Tue, 09 Oct 2012 11:00:00 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/content/api/v2/topics/349001328?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
+      Cf-Cache-Status:
+      - DYNAMIC
       Access-Control-Allow-Credentials:
       - 'false'
-      Cache-Control:
-      - No-store
-      Content-Type:
-      - application/json
-      Date:
-      - Mon, 20 Oct 2014 03:38:36 GMT
-      P3p:
-      - 'P3P: policyref="http://www.hubspot.com/w3c/p3p.xml", CP="CURa ADMa DEVa TAIa
-        PSAa PSDa OUR IND DSP NON COR'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 838ed545-5e64-4664-9616-6e564ebb5217
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988344'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '190'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '19'
+      X-Trace:
+      - 2B6CB26364D3AF70746555375C0D98B85EB18A0CB4000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aXN6aCBaIZxx4rQ6WI6Xg0%2FeV9tOa40ZDGkqn%2BFfNXNQh42EEHVdJVVkzC7ys9D7r1oGIoQB15uK%2FP%2FO78Sombl8J3EV1X7%2B6HK4sbTBrPgy3FNAhpxtM4eYBtbBWQBBM%2B7OxTb9cth2U8wq"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
-      - gunicorn/0.17.2
-      X-Hs-Mc-Reqs:
-      - Z2V0X21hbnk6MSwxO2dldDoyLDM=
-      Content-Length:
-      - '165'
-      Connection:
-      - keep-alive
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"created": 1381896200000, "deleted_at": 0, "description": "", "id":
-        349001328, "name": "api-docs", "portal_id": 62515, "slug": "api-docs", "updated":
-        1381896200000}'
-    http_version: 
-  recorded_at: Tue, 09 Oct 2012 11:00:00 GMT
+      encoding: ASCII-8BIT
+      string: '{"objects":[{"id":10500366470,"portal_id":62515,"site_id":null,"name":"Example
+        blog","category_id":3,"deleted_at":0,"created":1560548984320,"created_date_time":1560548984320,"updated":1565896194218,"updated_date_time":1565896194218,"language":"id","translated_from_id":null,"domain":"","resolved_domain":"demo-hubapi.hs-sites.com","state":null,"absolute_url":"http://demo-hubapi.hs-sites.com/example-blog","live_domain":"demo-hubapi.hs-sites.com","translations":{},"business_unit_id":0,"cos_object_type":"BLOG","public_access_rules_enabled":false,"public_access_rules":[{"type":"LIST_MEMBERSHIP","ids":[]}],"settings_overrides":{"commentShouldCreateContact":false,"allowComments":false,"showSocialLinkLinkedin":false,"useFeaturedImageInSummary":false,"enableGoogleAmpOutput":false,"commentVerificationText":false,"itemTemplatePath":false,"ampHeaderColor":false,"showSummaryInEmails":false,"ampHeaderBackgroundColor":false,"ampHeaderFontSize":false,"generateJsonLdEnabled":false,"commentModeration":false,"closeCommentsOlder":false,"htmlFooter":false,"ampHeaderFont":false,"postHtmlFooter":false,"commentNotificationEmails":false,"ampLinkColor":false,"listingTemplatePath":false,"ampLogoSrc":false,"commentMaxThreadDepth":false,"socialAccountTwitter":false,"itemTemplateIsShared":false,"postsPerListingPage":false,"htmlHeadIsShared":false,"showSocialLinkFacebook":false,"postHtmlHead":false,"listingPageHtmlFooter":false,"ampBodyColor":false,"listingLayoutId":false,"ampBodyFont":false,"attachedStylesheets":false,"htmlFooterIsShared":false,"ampLogoWidth":false,"ampLogoAlt":false,"showSocialLinkTwitter":false,"ampBodyFontSize":false,"showSummaryInRss":false,"itemLayoutId":false,"showSummaryInListing":false,"htmlHead":false,"postsPerRssFeed":false,"showSummariesInEmails":false,"ampLogoHeight":false},"domain_when_published":"demo-hubapi.hs-sites.com","comment_should_create_contact":false,"parent_blog_update_task_id":null,"root_url":"http://demo-hubapi.hs-sites.com/example-blog","description":"","label":"Example
+        blog","attached_stylesheets":[],"slug":"example-blog","url_segments":{"author":"author","archive":"archive","tag":"tag","page":"page","all":"all"},"analytics_page_id":10500366470,"public_title":"Example
+        blog","html_title":"","html_head":"","html_head_is_shared":true,"post_html_head":"","html_footer":"","html_footer_is_shared":true,"post_html_footer":"","html_keywords":[],"posts_per_listing_page":10,"posts_per_rss_feed":10,"allow_comments":false,"close_comments_older":0,"comment_moderation":false,"comment_notification_emails":[],"show_summary_in_emails":true,"use_featured_image_in_summary":true,"legacy_tab_id":null,"date_formatting_language":null,"comment_verification_text":"","captcha_always":false,"captcha_after_days":7,"item_layout_id":10498049828,"item_template_path":"generated_layouts/10498049828.html","listing_layout_id":10498049828,"listing_template_path":"generated_layouts/10498049828.html","item_template_is_shared":true,"uses_default_template":false,"default_group_style_id":"","show_summary_in_listing":true,"show_summary_in_rss":true,"show_social_link_twitter":true,"show_social_link_facebook":true,"show_social_link_linkedin":true,"default_notification_reply_to":"","default_notification_from_name":"","subscription_contacts_property":"blog_example_blog_10500366470_subscription","subscription_lists_by_type":{},"subscription_form_guid":"233bb53d-071f-4d39-8859-f041855bbbd4","subscription_email_type":null,"email_api_subscription_id":6914043,"instant_notification_email_id":null,"daily_notification_email_id":null,"weekly_notification_email_id":null,"monthly_notification_email_id":null,"enable_social_auto_publishing":false,"enable_google_amp_output":true,"social_account_twitter":"","publish_date_format":"medium","comment_form_guid":"94cd91d1-babb-4646-9afc-512d3b997f83","comment_date_format":"medium","comment_max_thread_depth":1,"month_filter_format":"MMMM
+        yyyy","rss_custom_feed":null,"rss_description":null,"rss_item_header":null,"rss_item_footer":null,"legacy_module_id":null,"legacy_guid":null,"amp_header_color":"#1e1e1e","amp_header_background_color":"#ffffff","amp_body_color":"#404040","amp_link_color":"#416bb3","amp_header_font":"''Helvetica
+        Neue'', Helvetica, Arial, sans-serif","amp_header_font_size":"36","amp_body_font":"''Helvetica
+        Neue'', Helvetica, Arial, sans-serif","amp_body_font_size":"18","amp_logo_src":"","amp_logo_alt":"","amp_logo_height":0,"amp_logo_width":0,"amp_custom_css":"","generate_json_ld_enabled":false,"url_base":"demo-hubapi.hs-sites.com/example-blog","header":null,"title":null,"cdn_purge_embargo_time":null,"audience_access":"PUBLIC"}],"total":1,"limit":20,"offset":0}'
+  recorded_at: Wed, 10 Oct 2012 00:00:00 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/blogs/v3/topics/349001328?hapikey=demo
+    uri: https://api.hubapi.com/content/api/v2/blog-posts?content_group_id=10500366470&created__gt=1344556800000&hapikey=demo&order_by=-created&state=PUBLISHED
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '148'
       Date:
-      - Wed, 02 Dec 2015 19:34:04 GMT
+      - Tue, 21 Jun 2022 13:26:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed1379ebc53a29-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 517da414-8ea8-479f-816a-8374c0529d51
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988343'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '189'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '18'
+      X-Trace:
+      - 2BFFE4210CA1BF5CA178B991F5ECE03EFEDF1AE815000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=et%2FssttIYaChjj%2BreDaz%2FAakzP9iAVo%2BOJNDkAd%2F%2B0%2BqJujv0dBQKltFiUSS651uOxbZ9c8htZSvdrZhTzBYpd6DnOHTHSjaJB2Cb%2FHQ8HdRdR2A1%2BDTa%2B86DspdRQWiruXzLJisjHyxrZxM"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"created":1381896200000,"deletedAt":0,"description":"","id":349001328,"name":"api-docs","portalId":62515,"slug":"api-docs","updated":1381896200000}'
-    http_version: 
-  recorded_at: Wed, 10 Oct 2012 07:00:00 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"limit":20,"objects":[{"ab":false,"ab_variation":false,"absolute_url":"http://demo-hubapi.hs-sites.com/example-blog/example-blog","analytics_page_id":"12026507304","analytics_page_type":"blog-post","archived":false,"archived_in_dashboard":false,"are_comments_allowed":false,"attached_stylesheets":[],"audience_access":"PUBLIC","blog_author":{"avatar":"","bio":"","created":1387404442000,"deleted_at":0,"display_name":"Levi
+        Test","email":"test11+11@mangotreemedia.com","facebook":"","full_name":"Levi
+        Test","gravatar_url":"https://app.hubspot.com/settings/avatar/caf1c7f4155541edb39b6f5d9566afe9","has_social_profiles":false,"id":418560336,"linkedin":"","name":"Levi
+        Test","portal_id":62515,"slug":"levi-test","translations":{},"twitter":"","twitter_username":"","updated":1387404442000,"website":""},"blog_author_id":418560336,"blog_post_author":{"avatar":"","bio":"","created":1387404442000,"deleted_at":0,"display_name":"Levi
+        Test","email":"test11+11@mangotreemedia.com","facebook":"","full_name":"Levi
+        Test","gravatar_url":"https://app.hubspot.com/settings/avatar/caf1c7f4155541edb39b6f5d9566afe9","has_social_profiles":false,"id":418560336,"linkedin":"","name":"Levi
+        Test","portal_id":62515,"slug":"levi-test","translations":{},"twitter":"","twitter_username":"","updated":1387404442000,"website":""},"blog_publish_to_social_media_task":"DONE_NOT_SENT","blueprint_type_id":0,"category":3,"category_id":3,"composition_id":0,"content_access_rule_ids":[],"content_access_rule_types":[],"content_group":10500366470,"content_group_id":10500366470,"content_type_category":3,"content_type_category_id":3,"created":1565421643553,"created_by_id":215482,"created_time":1565421643553,"css":{},"css_text":"","current_state":"PUBLISHED","currently_published":true,"deleted_at":0,"domain":"","enable_google_amp_output_override":false,"featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","featured_image_alt_text":"Airforce-Wrap","featured_image_height":0,"featured_image_length":0,"featured_image_width":0,"flex_areas":{},"freeze_date":1565421821409,"generate_json_ld_enabled_override":true,"has_content_access_rules":false,"has_user_changes":true,"html_title":"Example
+        Blog","id":12026507304,"is_captcha_required":true,"is_draft":false,"is_instant_email_enabled":false,"is_published":true,"is_social_publishing_enabled":false,"keywords":[],"label":"Example
+        Blog","language":"id","layout_sections":{},"link_rel_canonical_url":"","list_template":"generated_layouts/10498049828.html","live_domain":"demo-hubapi.hs-sites.com","mab":false,"mab_master":false,"mab_variant":false,"meta":{"attached_stylesheets":[],"post_summary":null,"has_user_changes":true,"last_edit_session_id":null,"last_edit_update_id":null,"html_title":null,"tag_ids":[10249582185],"topic_ids":[10249582185],"campaign_name":null,"campaign_utm":null,"enable_google_amp_output_override":false,"featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","featured_image_alt_text":"Airforce-Wrap","link_rel_canonical_url":"","meta_description":"Blog
+        test","post_body":null,"publish_immediately":true,"use_featured_image":true,"published_by_id":215482,"published_at":1565421821409,"rss_body":null,"rss_summary":null,"blog_post_schedule_task_uid":null,"blog_publish_to_social_media_task":"DONE_NOT_SENT"},"meta_description":"Blog
+        test","name":"Example Blog","page_redirected":false,"page_title":"Example
+        Blog","parent_blog":{"absolute_url":"http://demo-hubapi.hs-sites.com/example-blog","allow_comments":false,"amp_body_color":"#404040","amp_body_font":"''Helvetica
+        Neue'', Helvetica, Arial, sans-serif","amp_body_font_size":"18","amp_custom_css":"","amp_header_background_color":"#ffffff","amp_header_color":"#1e1e1e","amp_header_font":"''Helvetica
+        Neue'', Helvetica, Arial, sans-serif","amp_header_font_size":"36","amp_link_color":"#416bb3","amp_logo_alt":"","amp_logo_height":0,"amp_logo_src":"","amp_logo_width":0,"analytics_page_id":10500366470,"attached_stylesheets":[],"audience_access":"PUBLIC","business_unit_id":0,"captcha_after_days":7,"captcha_always":false,"category_id":3,"close_comments_older":0,"comment_date_format":"medium","comment_form_guid":"94cd91d1-babb-4646-9afc-512d3b997f83","comment_max_thread_depth":1,"comment_moderation":false,"comment_notification_emails":[],"comment_should_create_contact":false,"comment_verification_text":"","cos_object_type":"BLOG","created":1560548984320,"created_date_time":1560548984320,"default_group_style_id":"","default_notification_from_name":"","default_notification_reply_to":"","deleted_at":0,"description":"","domain":"","domain_when_published":"demo-hubapi.hs-sites.com","email_api_subscription_id":6914043,"enable_google_amp_output":true,"enable_social_auto_publishing":false,"generate_json_ld_enabled":false,"html_footer":"","html_footer_is_shared":true,"html_head":"","html_head_is_shared":true,"html_keywords":[],"html_title":"","id":10500366470,"item_layout_id":10498049828,"item_template_is_shared":true,"item_template_path":"generated_layouts/10498049828.html","label":"Example
+        blog","language":"id","listing_layout_id":10498049828,"listing_template_path":"generated_layouts/10498049828.html","live_domain":"demo-hubapi.hs-sites.com","month_filter_format":"MMMM
+        yyyy","name":"Example blog","portal_id":62515,"post_html_footer":"","post_html_head":"","posts_per_listing_page":10,"posts_per_rss_feed":10,"public_access_rules":[{"ids":[],"type":"LIST_MEMBERSHIP"}],"public_access_rules_enabled":false,"public_title":"Example
+        blog","publish_date_format":"medium","resolved_domain":"demo-hubapi.hs-sites.com","root_url":"http://demo-hubapi.hs-sites.com/example-blog","settings_overrides":{"itemLayoutId":false,"itemTemplatePath":false,"itemTemplateIsShared":false,"listingLayoutId":false,"listingTemplatePath":false,"postsPerListingPage":false,"showSummaryInListing":false,"useFeaturedImageInSummary":false,"htmlHead":false,"postHtmlHead":false,"htmlHeadIsShared":false,"htmlFooter":false,"listingPageHtmlFooter":false,"postHtmlFooter":false,"htmlFooterIsShared":false,"attachedStylesheets":false,"postsPerRssFeed":false,"showSummaryInRss":false,"showSummaryInEmails":false,"showSummariesInEmails":false,"allowComments":false,"commentShouldCreateContact":false,"commentModeration":false,"closeCommentsOlder":false,"commentNotificationEmails":false,"commentMaxThreadDepth":false,"commentVerificationText":false,"socialAccountTwitter":false,"showSocialLinkTwitter":false,"showSocialLinkLinkedin":false,"showSocialLinkFacebook":false,"enableGoogleAmpOutput":false,"ampLogoSrc":false,"ampLogoHeight":false,"ampLogoWidth":false,"ampLogoAlt":false,"ampHeaderFont":false,"ampHeaderFontSize":false,"ampHeaderColor":false,"ampHeaderBackgroundColor":false,"ampBodyFont":false,"ampBodyFontSize":false,"ampBodyColor":false,"ampLinkColor":false,"generateJsonLdEnabled":false},"show_social_link_facebook":true,"show_social_link_linkedin":true,"show_social_link_twitter":true,"show_summary_in_emails":true,"show_summary_in_listing":true,"show_summary_in_rss":true,"slug":"example-blog","social_account_twitter":"","subscription_contacts_property":"blog_example_blog_10500366470_subscription","subscription_form_guid":"233bb53d-071f-4d39-8859-f041855bbbd4","subscription_lists_by_type":{},"translations":{},"updated":1565896194218,"updated_date_time":1565896194218,"url_base":"demo-hubapi.hs-sites.com/example-blog","url_segments":{"all":"all","archive":"archive","author":"author","page":"page","tag":"tag"},"use_featured_image_in_summary":true,"uses_default_template":false},"past_mab_experiment_ids":[],"personas":[],"placement_guids":[],"portal_id":62515,"post_body_rss":"","post_email_content":"","post_featured_image_if_enabled":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","post_list_content":"","post_list_summary_featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","post_rss_content":"","post_rss_summary_featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","post_summary_rss":"","post_template":"generated_layouts/10498049828.html","preview_key":"IdDriNzq","processing_status":"PUBLISHED","public_access_rules":[],"public_access_rules_enabled":false,"publish_date":1565421821409,"publish_date_local_time":1565421821409,"publish_date_localized":{"date":1565421821409,"format":"medium"},"publish_immediately":true,"published_at":1565421821409,"published_by_id":215482,"published_url":"http://demo-hubapi.hs-sites.com/example-blog/example-blog","resolved_domain":"demo-hubapi.hs-sites.com","resolved_language":"id","rss_summary_featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","screenshot_preview_taken_at":1620224363190,"screenshot_preview_url":"https://cdn2.hubspot.net/hubshot/21/05/05/68a684a8-4ac0-488a-bac1-f103b1e9f709.png","sections":{},"security_state":"NONE","slug":"example-blog/example-blog","state":"PUBLISHED","subcategory":"normal_blog_post","synced_with_blog_root":true,"tag_ids":[10249582185],"tag_list":[],"tag_names":[],"team_perms":[],"template_path":"","template_path_for_render":"generated_layouts/10498049828.html","theme_path":"","title":"Example
+        Blog","topic_ids":[10249582185],"topic_list":[],"topic_names":[],"topics":[10249582185],"translated_content":{},"translations":{},"tweet_immediately":false,"unpublished_at":0,"updated":1565421820472,"updated_by_id":215482,"upsize_featured_image":false,"url":"http://demo-hubapi.hs-sites.com/example-blog/example-blog","use_featured_image":true,"user_perms":[],"views":0,"visible_to_all":true,"widget_containers":{},"widgetcontainers":{},"widgets":{}}],"offset":0,"total":1}'
+  recorded_at: Wed, 10 Oct 2012 00:00:00 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/content/api/v2/blog-posts/12026507304?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jun 2022 13:26:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71ed137bde4d3329-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 1cd8f031-1ba7-49e2-8660-8b0192703012
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988342'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '188'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '18'
+      X-Trace:
+      - 2B22DAFEB8ABED2789C39F48FC0272B37E36B85FD6000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Fpri7ie5%2BMP4O%2F1AssX%2BiLDExgbabkSZdGj3Ho%2FaGGCODA6MNDyZJSkJHPzyhNzmR2rcRvSoXjQoU87D2IgplJdPsxM9nMAs60N3vRj%2BAN5ENKRp9QCweJjgtWD3w30qIu4rsmwxE0R2e%2FKl"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ab":false,"ab_variation":false,"absolute_url":"http://demo-hubapi.hs-sites.com/example-blog/example-blog","analytics_page_id":"12026507304","analytics_page_type":"blog-post","archived":false,"archived_in_dashboard":false,"are_comments_allowed":false,"attached_stylesheets":[],"audience_access":"PUBLIC","blog_author":{"avatar":"","bio":"","created":1387404442000,"deleted_at":0,"display_name":"Levi
+        Test","email":"test11+11@mangotreemedia.com","facebook":"","full_name":"Levi
+        Test","gravatar_url":"https://app.hubspot.com/settings/avatar/caf1c7f4155541edb39b6f5d9566afe9","has_social_profiles":false,"id":418560336,"linkedin":"","name":"Levi
+        Test","portal_id":62515,"slug":"levi-test","translations":{},"twitter":"","twitter_username":"","updated":1387404442000,"website":""},"blog_author_id":418560336,"blog_post_author":{"avatar":"","bio":"","created":1387404442000,"deleted_at":0,"display_name":"Levi
+        Test","email":"test11+11@mangotreemedia.com","facebook":"","full_name":"Levi
+        Test","gravatar_url":"https://app.hubspot.com/settings/avatar/caf1c7f4155541edb39b6f5d9566afe9","has_social_profiles":false,"id":418560336,"linkedin":"","name":"Levi
+        Test","portal_id":62515,"slug":"levi-test","translations":{},"twitter":"","twitter_username":"","updated":1387404442000,"website":""},"blog_publish_to_social_media_task":"DONE_NOT_SENT","blueprint_type_id":0,"category":3,"category_id":3,"composition_id":0,"content_access_rule_ids":[],"content_access_rule_types":[],"content_group":10500366470,"content_group_id":10500366470,"content_type_category":3,"content_type_category_id":3,"created":1565421643553,"created_by_id":215482,"created_time":1565421643553,"css":{},"css_text":"","current_state":"PUBLISHED","currently_published":true,"deleted_at":0,"domain":"","enable_google_amp_output_override":false,"featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","featured_image_alt_text":"Airforce-Wrap","featured_image_height":0,"featured_image_length":0,"featured_image_width":0,"flex_areas":{},"freeze_date":1565421821409,"generate_json_ld_enabled_override":true,"has_content_access_rules":false,"has_user_changes":true,"html_title":"Example
+        Blog","id":12026507304,"is_captcha_required":true,"is_draft":false,"is_instant_email_enabled":false,"is_published":true,"is_social_publishing_enabled":false,"keywords":[],"label":"Example
+        Blog","language":"id","layout_sections":{},"link_rel_canonical_url":"","list_template":"generated_layouts/10498049828.html","live_domain":"demo-hubapi.hs-sites.com","mab":false,"mab_master":false,"mab_variant":false,"meta":{"attached_stylesheets":[],"post_summary":null,"has_user_changes":true,"last_edit_session_id":null,"last_edit_update_id":null,"html_title":null,"tag_ids":[10249582185],"topic_ids":[10249582185],"campaign_name":null,"campaign_utm":null,"enable_google_amp_output_override":false,"featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","featured_image_alt_text":"Airforce-Wrap","link_rel_canonical_url":"","meta_description":"Blog
+        test","post_body":null,"publish_immediately":true,"use_featured_image":true,"published_by_id":215482,"published_at":1565421821409,"rss_body":null,"rss_summary":null,"blog_post_schedule_task_uid":null,"blog_publish_to_social_media_task":"DONE_NOT_SENT"},"meta_description":"Blog
+        test","name":"Example Blog","page_redirected":false,"page_title":"Example
+        Blog","parent_blog":{"absolute_url":"http://demo-hubapi.hs-sites.com/example-blog","allow_comments":false,"amp_body_color":"#404040","amp_body_font":"''Helvetica
+        Neue'', Helvetica, Arial, sans-serif","amp_body_font_size":"18","amp_custom_css":"","amp_header_background_color":"#ffffff","amp_header_color":"#1e1e1e","amp_header_font":"''Helvetica
+        Neue'', Helvetica, Arial, sans-serif","amp_header_font_size":"36","amp_link_color":"#416bb3","amp_logo_alt":"","amp_logo_height":0,"amp_logo_src":"","amp_logo_width":0,"analytics_page_id":10500366470,"attached_stylesheets":[],"audience_access":"PUBLIC","business_unit_id":0,"captcha_after_days":7,"captcha_always":false,"category_id":3,"close_comments_older":0,"comment_date_format":"medium","comment_form_guid":"94cd91d1-babb-4646-9afc-512d3b997f83","comment_max_thread_depth":1,"comment_moderation":false,"comment_notification_emails":[],"comment_should_create_contact":false,"comment_verification_text":"","cos_object_type":"BLOG","created":1560548984320,"created_date_time":1560548984320,"default_group_style_id":"","default_notification_from_name":"","default_notification_reply_to":"","deleted_at":0,"description":"","domain":"","domain_when_published":"demo-hubapi.hs-sites.com","email_api_subscription_id":6914043,"enable_google_amp_output":true,"enable_social_auto_publishing":false,"generate_json_ld_enabled":false,"html_footer":"","html_footer_is_shared":true,"html_head":"","html_head_is_shared":true,"html_keywords":[],"html_title":"","id":10500366470,"item_layout_id":10498049828,"item_template_is_shared":true,"item_template_path":"generated_layouts/10498049828.html","label":"Example
+        blog","language":"id","listing_layout_id":10498049828,"listing_template_path":"generated_layouts/10498049828.html","live_domain":"demo-hubapi.hs-sites.com","month_filter_format":"MMMM
+        yyyy","name":"Example blog","portal_id":62515,"post_html_footer":"","post_html_head":"","posts_per_listing_page":10,"posts_per_rss_feed":10,"public_access_rules":[{"ids":[],"type":"LIST_MEMBERSHIP"}],"public_access_rules_enabled":false,"public_title":"Example
+        blog","publish_date_format":"medium","resolved_domain":"demo-hubapi.hs-sites.com","root_url":"http://demo-hubapi.hs-sites.com/example-blog","settings_overrides":{"itemLayoutId":false,"itemTemplatePath":false,"itemTemplateIsShared":false,"listingLayoutId":false,"listingTemplatePath":false,"postsPerListingPage":false,"showSummaryInListing":false,"useFeaturedImageInSummary":false,"htmlHead":false,"postHtmlHead":false,"htmlHeadIsShared":false,"htmlFooter":false,"listingPageHtmlFooter":false,"postHtmlFooter":false,"htmlFooterIsShared":false,"attachedStylesheets":false,"postsPerRssFeed":false,"showSummaryInRss":false,"showSummaryInEmails":false,"showSummariesInEmails":false,"allowComments":false,"commentShouldCreateContact":false,"commentModeration":false,"closeCommentsOlder":false,"commentNotificationEmails":false,"commentMaxThreadDepth":false,"commentVerificationText":false,"socialAccountTwitter":false,"showSocialLinkTwitter":false,"showSocialLinkLinkedin":false,"showSocialLinkFacebook":false,"enableGoogleAmpOutput":false,"ampLogoSrc":false,"ampLogoHeight":false,"ampLogoWidth":false,"ampLogoAlt":false,"ampHeaderFont":false,"ampHeaderFontSize":false,"ampHeaderColor":false,"ampHeaderBackgroundColor":false,"ampBodyFont":false,"ampBodyFontSize":false,"ampBodyColor":false,"ampLinkColor":false,"generateJsonLdEnabled":false},"show_social_link_facebook":true,"show_social_link_linkedin":true,"show_social_link_twitter":true,"show_summary_in_emails":true,"show_summary_in_listing":true,"show_summary_in_rss":true,"slug":"example-blog","social_account_twitter":"","subscription_contacts_property":"blog_example_blog_10500366470_subscription","subscription_form_guid":"233bb53d-071f-4d39-8859-f041855bbbd4","subscription_lists_by_type":{},"translations":{},"updated":1565896194218,"updated_date_time":1565896194218,"url_base":"demo-hubapi.hs-sites.com/example-blog","url_segments":{"all":"all","archive":"archive","author":"author","page":"page","tag":"tag"},"use_featured_image_in_summary":true,"uses_default_template":false},"past_mab_experiment_ids":[],"personas":[],"placement_guids":[],"portal_id":62515,"post_body_rss":"","post_email_content":"","post_featured_image_if_enabled":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","post_list_content":"","post_list_summary_featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","post_rss_content":"","post_rss_summary_featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","post_summary_rss":"","post_template":"generated_layouts/10498049828.html","preview_key":"IdDriNzq","processing_status":"PUBLISHED","public_access_rules":[],"public_access_rules_enabled":false,"publish_date":1565421821409,"publish_date_local_time":1565421821409,"publish_date_localized":{"date":1565421821409,"format":"medium"},"publish_immediately":true,"published_at":1565421821409,"published_by_id":215482,"published_url":"http://demo-hubapi.hs-sites.com/example-blog/example-blog","resolved_domain":"demo-hubapi.hs-sites.com","resolved_language":"id","rss_summary_featured_image":"https://cdn2.hubspot.net/hubfs/62515/import-20190803/Airforce-Wrap.jpg","screenshot_preview_taken_at":1620224363190,"screenshot_preview_url":"https://cdn2.hubspot.net/hubshot/21/05/05/68a684a8-4ac0-488a-bac1-f103b1e9f709.png","sections":{},"security_state":"NONE","slug":"example-blog/example-blog","state":"PUBLISHED","subcategory":"normal_blog_post","synced_with_blog_root":true,"tag_ids":[10249582185],"tag_list":[],"tag_names":[],"team_perms":[],"template_path":"","template_path_for_render":"generated_layouts/10498049828.html","theme_path":"","title":"Example
+        Blog","topic_ids":[10249582185],"topic_list":[],"topic_names":[],"topics":[10249582185],"translated_content":{},"translations":{},"tweet_immediately":false,"unpublished_at":0,"updated":1565421820472,"updated_by_id":215482,"upsize_featured_image":false,"url":"http://demo-hubapi.hs-sites.com/example-blog/example-blog","use_featured_image":true,"user_perms":[],"visible_to_all":true,"widget_containers":{},"widgetcontainers":{},"widgets":{}}'
+  recorded_at: Wed, 10 Oct 2012 00:00:00 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/blogs/v3/topics/10249582185?hapikey=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jun 2022 13:26:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '188'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71ed137d4f143a8d-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - b06db15e-0049-458c-97d3-a0f57d286689
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988341'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '187'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '18'
+      X-Trace:
+      - 2BB0C0B7088604A1EE3C56A51E50EEDC09D792136D000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PSRuM8FoJrHBSXI0OcrhsloD5HzRZIU9QBZTXBfPsVBlJOjKXorTjZRc7%2FsMjC%2Fwk5xhIrqqAA77sx1CSup6y1WEpAlsNrzyTOFLd%2FQKmHdxVbPHpQHWuGwh7ci%2Bx94vAavCemKSVu5d7ay4"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"categoryId":3,"contentIds":[],"created":1559806018452,"deletedAt":0,"description":"Topic
+        Test 5cf8c042e9dc1 Description","id":10249582185,"name":"Topic Test 5cf8c042e9db8","portalId":62515,"slug":"topic-test-5cf8c042e9db8","translations":{},"updated":1559806018452}'
+  recorded_at: Wed, 10 Oct 2012 00:00:00 GMT
+recorded_with: VCR 6.1.0

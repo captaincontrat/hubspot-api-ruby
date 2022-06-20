@@ -14,8 +14,6 @@ RSpec.describe Hubspot::CompanyProperties do
     end
   end
 
-  before { Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY", "demo")) }
-
   describe ".all" do
     it "should return all properties" do
       VCR.use_cassette "company_properties/all_properties" do
@@ -240,17 +238,16 @@ RSpec.describe Hubspot::CompanyProperties do
     describe ".groups" do
       it "returns all groups" do
         VCR.use_cassette("company_properties/all_groups") do
-          group_name = "group_awesome"
-          Hubspot::CompanyProperties.create_group!(name: group_name)
+          group = Hubspot::CompanyProperties.create_group!(name: "group_#{SecureRandom.hex}")
 
           response = Hubspot::CompanyProperties.groups
 
           assert_hubspot_api_request(:get, "/properties/v1/companies/groups")
 
           group_names = response.map { |group| group["name"] }
-          expect(group_names).to include(group_name)
+          expect(group_names).to include(group['name'])
 
-          Hubspot::CompanyProperties.delete_group!(group_name)
+          Hubspot::CompanyProperties.delete_group!(group['name'])
         end
       end
 
@@ -358,10 +355,10 @@ RSpec.describe Hubspot::CompanyProperties do
 
         let(:sub_params) { params.select { |k, _| k != 'displayName' } }
 
-        it 'should return the valid parameters' do
-          params['name'] = 'ff_group235'
+        it 'should return the valid parameters' do |example|
+          params['name'] = "ff_group_#{SecureRandom.hex}"
           response       = Hubspot::CompanyProperties.create_group!(sub_params)
-          expect(Hubspot::CompanyProperties.same?(response, sub_params)).to be true
+          expect(Hubspot::CompanyProperties.same?(response.except("name"), sub_params.except("name"))).to be true
         end
       end
     end

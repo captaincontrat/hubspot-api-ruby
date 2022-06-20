@@ -6,51 +6,69 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 404
       message: Not Found
     headers:
       Date:
-      - Sat, 04 May 2019 14:44:34 GMT
+      - Tue, 21 Jun 2022 13:28:26 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d5af6e5b89e89217cb97f1963dc74bf291556981074; expires=Sun, 03-May-20
-        14:44:34 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B79A0DE85775AB97FED8136570DCBA2F2126E2322000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979474'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      X-Hubspot-Notfound:
-      - 'true'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed165e1c3e99e1-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 746cd179-8d62-4a3d-80db-d0fae9d5f8aa
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498755'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '133'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2BFB0A271C8828CF625CAA7C02B0D288F6BE4AE879000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=l2yfHCOoyLu5MNijEK7nz0QrfqzgHVL0Po1xHjh4IA%2F%2FcRYaPv2TXuePgT8gyDlcx06DD4yfkAEqSWR3dvWD%2FRJReHSeo7eshLxnWkr%2BPH2dXLXta0gcTARIlgJOz6i3H8e8jPPWe0q%2FJhOH"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b40e2ca78cf24-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"status":"error","message":"contact does not exist","correlationId":"7bd39b3c-db46-497a-89bb-1e553eeeeb04","requestId":"d53e9612f568210aea835dc141d2c200"}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:44:34 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"status":"error","message":"contact does not exist","correlationId":"746cd179-8d62-4a3d-80db-d0fae9d5f8aa","errors":[{"message":"The
+        contact 0 does not exist."}],"category":"OBJECT_NOT_FOUND"}'
+  recorded_at: Tue, 21 Jun 2022 13:28:26 GMT
+recorded_with: VCR 6.1.0

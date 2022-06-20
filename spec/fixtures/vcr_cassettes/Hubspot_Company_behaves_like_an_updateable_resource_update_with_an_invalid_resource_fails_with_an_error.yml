@@ -9,48 +9,69 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 404
       message: Not Found
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:52 GMT
+      - Tue, 21 Jun 2022 13:26:46 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Content-Length:
-      - '190'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=de134823efd285b284c0a4a801154ec331556981032; expires=Sun, 03-May-20
-        14:43:52 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BED46D4C79E1F2B9D75A1B102CB637010E8BE42FC000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979554'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      X-Hubspot-Notfound:
-      - 'true'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13e8db4dcd8f-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - a2dcb299-6bfb-41c3-aac8-e4413d690093
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498994'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '128'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BEB8F5F3F44E539D465BD949AD9841321DC663202000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=j7MlgmU0ny5FdbY0XvWLQMb2vaqOcOiArlVPMvZiEX9WhFtC%2FY%2F52ES5wuLCInLV%2F%2FhrZd9QRKTFpNVPL%2FmWhWZErXLKAmO%2BbskOv2vX9HjLUNrSwrR5fcU9rIT6axGlFhNpf8U%2F9yfAWW64"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fdd8df495ae-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"status":"error","message":"Couldn''t find a company with the ID ''0''
-        in portal ''62515''","correlationId":"a0cac8b2-78e7-4a4e-976a-ffac432ce5ea","requestId":"c09777ad893f1a2de369da52a52ae3a7"}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:52 GMT
-recorded_with: VCR 4.0.0
+        in portal ''<PORTAL_ID>''","correlationId":"a2dcb299-6bfb-41c3-aac8-e4413d690093","errors":[{"message":"This
+        company 0 does not exist."}],"category":"OBJECT_NOT_FOUND","subCategory":"COMPANY_NOT_FOUND"}'
+  recorded_at: Tue, 21 Jun 2022 13:26:45 GMT
+recorded_with: VCR 6.1.0

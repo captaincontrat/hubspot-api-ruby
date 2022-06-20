@@ -92,12 +92,6 @@ module Hubspot
       end
     end
 
-    # {http://developers.hubspot.com/docs/methods/lists/refresh_list}
-    def refresh
-      response = Hubspot::Connection.post_json(REFRESH_PATH, params: { list_id: @id, no_parse: true }, body: {})
-      response.code == 204
-    end
-
     # {http://developers.hubspot.com/docs/methods/lists/add_contact_to_list}
     def add(contacts)
       contact_ids = [contacts].flatten.uniq.compact.map(&:id)

@@ -1,24 +1,11 @@
 describe Hubspot::Deal do
-  let(:portal_id) { 62515 }
-  let(:company_id) { 8954037 }
-  let(:vid) { 27136 }
+  let(:portal_id) { ENV.fetch("HUBSPOT_PORTAL_ID").to_i }
+  let(:company) { Hubspot::Company.create(name: SecureRandom.hex) }
+  let(:company_id) { company.id }
+  let(:contact) { Hubspot::Contact.create("#{SecureRandom.hex}@hubspot.com") }
+  let(:vid) { contact.id }
   let(:amount) { '30' }
   let(:deal) { Hubspot::Deal.create!(portal_id, [company_id], [vid], { amount: amount}) }
-
-  let(:example_deal_hash) do
-    VCR.use_cassette("deal_example") do
-      HTTParty.get("https://api.hubapi.com/deals/v1/deal/3?hapikey=demo&portalId=#{portal_id}").parsed_response
-    end
-  end
-
-  before { Hubspot.configure(hapikey: 'demo') }
-
-  describe "#initialize" do
-    subject{ Hubspot::Deal.new(example_deal_hash) }
-    it  { should be_an_instance_of Hubspot::Deal }
-    its (:portal_id) { should == portal_id }
-    its (:deal_id) { should == 3 }
-  end
 
   describe ".create!" do
     cassette "deal_create"
@@ -107,13 +94,10 @@ describe Hubspot::Deal do
       end
     end
   end
-  
-  
+
   describe '.associate' do
     cassette
     let(:deal) { Hubspot::Deal.create!(portal_id, [], [], {}) }
-    let(:company) { create :company }
-    let(:contact) { create :contact }
     let(:contact_id) { contact.id }
 
     subject { Hubspot::Deal.associate!(deal.deal_id, [company.id], [contact_id]) }
@@ -149,7 +133,6 @@ describe Hubspot::Deal do
 
   describe '.find_by_company' do
     cassette
-    let(:company) { create :company }
     let!(:deal) { Hubspot::Deal.create!(portal_id, [company.id], [], { amount: amount }) }
 
     it 'returns company deals' do
@@ -161,7 +144,6 @@ describe Hubspot::Deal do
 
   describe '.find_by_contact' do
     cassette
-    let(:contact) { create :contact }
     let!(:deal) { Hubspot::Deal.create!(portal_id, [], [contact.id], { amount: amount }) }
 
     it 'returns contact deals' do
@@ -175,51 +157,27 @@ describe Hubspot::Deal do
     cassette 'find_all_recent_updated_deals'
 
     it 'must get the recents updated deals' do
+      deal
       deals = Hubspot::Deal.recent
 
       first = deals.first
-      last = deals.last
 
       expect(first).to be_a Hubspot::Deal
-      expect(first.properties['amount']).to eql '0'
-      expect(first.properties['dealname']).to eql '1420787916-gou2rzdgjzx2@u2rzdgjzx2.com'
-      expect(first.properties['dealstage']).to eql 'closedwon'
-
-      expect(last).to be_a Hubspot::Deal
-      expect(last.properties['amount']).to eql '250'
-      expect(last.properties['dealname']).to eql '1420511993-U9862RD9XR@U9862RD9XR.com'
-      expect(last.properties['dealstage']).to eql 'closedwon'
     end
 
     it 'must filter only 2 deals' do
+      3.times { Hubspot::Deal.create!(portal_id, [company_id], [vid], { amount: amount}) }
       deals = Hubspot::Deal.recent(count: 2)
       expect(deals.size).to eql 2
     end
 
-    it 'it must offset the deals' do
-      deal = Hubspot::Deal.recent(count: 1, offset: 1).first
-      expect(deal.properties['dealname']).to eql '1420704406-goy6v83a97nr@y6v83a97nr.com'  # the third deal
-    end
   end
 
   describe "#destroy!" do
     it "should remove from hubspot" do
       VCR.use_cassette("destroy_deal") do
         result = deal.destroy!
-
-        assert_requested :delete, hubspot_api_url("/deals/v1/deal/#{deal.deal_id}?hapikey=demo")
-
         expect(result).to be true
-      end
-    end
-  end
-
-  describe '#[]' do
-    subject{ Hubspot::Deal.new(example_deal_hash) }
-
-    it 'should get a property' do
-      subject.properties.each do |property, value|
-        expect(subject[property]).to eql value
       end
     end
   end

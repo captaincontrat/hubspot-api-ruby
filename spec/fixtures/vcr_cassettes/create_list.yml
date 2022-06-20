@@ -2,35 +2,73 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/lists?hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"name":"testing list","dynamic":false,"portal_id":null}'
+      string: '{"name":"testing list 025916f0738b364f917bd8df505acf83","dynamic":false,"portal_id":null}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Sun, 22 Feb 2015 02:24:20 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Tue, 21 Jun 2022 13:27:33 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '297'
+      - '281'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed150e8ae03324-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 5ea5912d-191b-43b6-a8ac-2d41765ef614
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498878'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '123'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B2B8182DBC7BF77E4005933ED8DE74DC59FAA6A4D000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lFoLoGuF%2Ft3xZdWrckfZ7Lfb3Q96fpMzD1KkHTFYBbfbHEYFHaw6QkNajl%2Bf63AmpC%2FV2flivPLVRyIPb805zZHmtVfcKgOUPcsSNl3AwlsybZ%2BCWmy7petwMoXwTAXOPmXzPohcuwmtT1Ff"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1424571860081,"lastSizeChangeAt":0,"error":"","size":0},"dynamic":false,"listType":"STATIC","createdAt":1424571860081,"listId":97344,"updatedAt":1424571860081,"filters":[],"portalId":62515,"internalListId":97396,"name":"testing
-        list"}'
-    http_version: 
-  recorded_at: Sun, 22 Feb 2015 02:24:20 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"listId":1381,"internalListId":1381,"createdAt":1655818052987,"updatedAt":1655818052987,"name":"testing
+        list 025916f0738b364f917bd8df505acf83","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655818052987,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}'
+  recorded_at: Tue, 21 Jun 2022 13:27:33 GMT
+recorded_with: VCR 6.1.0

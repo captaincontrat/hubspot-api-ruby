@@ -2,32 +2,73 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/properties/named/i_do_not_exist?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 404
       message: Not Found
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Hubspot-Notfound:
-      - 'true'
-      Content-Length:
-      - '199'
       Date:
-      - Tue, 05 Jan 2016 22:51:39 GMT
+      - Tue, 21 Jun 2022 13:28:42 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed16c23a1a0847-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 332782e2-05d8-4a5a-bd6c-6a01e53bf0fc
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498713'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '120'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BA5978CD15C48F84D0B31443996AAD57016AFC285000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=l2HEX%2F7kXI58gcuFVbXCPCZoQpEbCKFdmPsdhnFOUnQ61ftgqS33K08JcqK92x0iCtk3D5kmUGKYjvDyK2VH7gPd52FFaerGV71fAQtulH8lNFWdY06oP5uJVRokcP06ALHGs3pTbR7kumra"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"status":"error","message":"Couldn''t find a Property with the given
-        name ''my_new_property''","correlationId":"74a854fa-b3a6-48ff-b4f4-1d8633407e0b","requestId":"1e67ba24-3f95-4dff-a57f-523f74f17c44"}'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:39 GMT
-recorded_with: VCR 2.4.0
+        name ''i_do_not_exist''","correlationId":"332782e2-05d8-4a5a-bd6c-6a01e53bf0fc","propertiesErrorCode":"PROPERTY_NOT_FOUND"}'
+  recorded_at: Tue, 21 Jun 2022 13:28:42 GMT
+recorded_with: VCR 6.1.0

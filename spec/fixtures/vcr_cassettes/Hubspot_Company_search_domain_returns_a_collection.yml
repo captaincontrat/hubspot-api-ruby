@@ -5,101 +5,141 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Smitham and Sons"},{"name":"domain","value":"bogisich.io"}]}'
+      string: '{"properties":[{"name":"name","value":"Russel Group"},{"name":"domain","value":"tillman.co"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:44:15 GMT
+      - Tue, 21 Jun 2022 13:26:55 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '408'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d9826c39ae2e1a4e09cb116b58068cbd31556981055; expires=Sun, 03-May-20
-        14:44:15 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B7EA250EE799E8FC4138445DFDCD26418399D6AE4000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979517'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed14250c714001-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 801c3016-11f9-4029-91ec-06a209100155
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498960'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '115'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2B1EB8546328E6CD0926EA03F3EA36AD2156C47BBB000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Bf1gNrRoPSGnPxsq%2Fu2kPi1uyDpzkBwR%2FWXbqP0Q4Y6tnfOsH4JFg7UepI0GN4Gde%2BhdVmFJrWf7TdRukhRizR0YIcAluJd2SeZWTq2EPqDvjG4VgCwdKmK0K%2FKY707FcPGuKAudnL9h5cLv"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b406cf80b9566-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897466919,"isDeleted":false,"properties":{"website":{"value":"bogisich.io","timestamp":1556981055541,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"bogisich.io","timestamp":1556981055541,"source":"CALCULATED","sourceVid":[],"requestId":"23b52c33-7f4c-413a-99fb-4cf4f3a914d2"}]},"hs_lastmodifieddate":{"value":"1556981055541","timestamp":1556981055541,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981055541","timestamp":1556981055541,"source":"CALCULATED","sourceVid":[],"requestId":"23b52c33-7f4c-413a-99fb-4cf4f3a914d2"}]},"domain":{"value":"bogisich.io","timestamp":1556981055541,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"bogisich.io","timestamp":1556981055541,"source":"API","sourceVid":[],"requestId":"23b52c33-7f4c-413a-99fb-4cf4f3a914d2"}]},"name":{"value":"Smitham
-        and Sons","timestamp":1556981055541,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Smitham
-        and Sons","timestamp":1556981055541,"source":"API","sourceVid":[],"requestId":"23b52c33-7f4c-413a-99fb-4cf4f3a914d2"}]},"createdate":{"value":"1556981055541","timestamp":1556981055541,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981055541","timestamp":1556981055541,"source":"API","sourceVid":[],"requestId":"23b52c33-7f4c-413a-99fb-4cf4f3a914d2"},{"name":"createdate","value":"1556981055541","timestamp":1556981055541,"sourceId":"API","source":"API","sourceVid":[],"requestId":"23b52c33-7f4c-413a-99fb-4cf4f3a914d2"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:44:15 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956174219,"isDeleted":false,"properties":{"website":{"value":"tillman.co","timestamp":1655818015622,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"tillman.co","timestamp":1655818015622,"source":"CALCULATED","sourceVid":[],"requestId":"801c3016-11f9-4029-91ec-06a209100155"}]},"hs_lastmodifieddate":{"value":"1655818015622","timestamp":1655818015622,"source":"CALCULATED","sourceId":"801c3016-11f9-4029-91ec-06a209100155","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818015622","timestamp":1655818015622,"sourceId":"801c3016-11f9-4029-91ec-06a209100155","source":"CALCULATED","sourceVid":[],"requestId":"801c3016-11f9-4029-91ec-06a209100155"}]},"domain":{"value":"tillman.co","timestamp":1655818015622,"source":"API","sourceId":"801c3016-11f9-4029-91ec-06a209100155","updatedByUserId":null,"versions":[{"name":"domain","value":"tillman.co","timestamp":1655818015622,"sourceId":"801c3016-11f9-4029-91ec-06a209100155","source":"API","sourceVid":[],"requestId":"801c3016-11f9-4029-91ec-06a209100155"}]},"name":{"value":"Russel
+        Group","timestamp":1655818015622,"source":"API","sourceId":"801c3016-11f9-4029-91ec-06a209100155","updatedByUserId":null,"versions":[{"name":"name","value":"Russel
+        Group","timestamp":1655818015622,"sourceId":"801c3016-11f9-4029-91ec-06a209100155","source":"API","sourceVid":[],"requestId":"801c3016-11f9-4029-91ec-06a209100155"}]},"hs_object_id":{"value":"8956174219","timestamp":1655818015622,"source":"API","sourceId":"801c3016-11f9-4029-91ec-06a209100155","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956174219","timestamp":1655818015622,"sourceId":"801c3016-11f9-4029-91ec-06a209100155","source":"API","sourceVid":[],"requestId":"801c3016-11f9-4029-91ec-06a209100155"}]},"createdate":{"value":"1655818015622","timestamp":1655818015622,"source":"API","sourceId":"801c3016-11f9-4029-91ec-06a209100155","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818015622","timestamp":1655818015622,"sourceId":"801c3016-11f9-4029-91ec-06a209100155","source":"API","sourceVid":[],"requestId":"801c3016-11f9-4029-91ec-06a209100155"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:55 GMT
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/domains/bogisich.io/companies?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/domains/tillman.co/companies?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
       string: '{"limit":25,"requestOptions":{},"offset":{"isPrimary":true,"companyId":null}}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:44:15 GMT
+      - Tue, 21 Jun 2022 13:26:55 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d86a11ce58f0af7f427a7076f5648742f1556981055; expires=Sun, 03-May-20
-        14:44:15 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B3E50070A461BD9DA28D374AF4394179CA455D03E000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979516'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed14269df89992-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 0d40bb7a-35b0-480f-b4c8-cc075931935d
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498959'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '114'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2B8DFD19FF47A9DA068A81C55233A87C6B44C0066E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ywFcWYjQGXAH4ftmNKlY3OmV42DdoGX2WdYKimCc3XQMWXYlQsdV%2FU7tI13m0S3%2FOxyE6SdvsgtSHaS0WgKf%2BvsE7NgvWe%2FLr5lhAutPnv3xbx7F3KUuxEBF5Q3rwTA6UnrqUhQb8DHsS%2BeL"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b406e8c225673-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"results":[{"portalId":62515,"companyId":1897466919,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}],"hasMore":false,"offset":{"companyId":1897466919,"isPrimary":true}}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:44:15 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"results":[{"portalId":<PORTAL_ID>,"companyId":8956174219,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}],"hasMore":false,"offset":{"companyId":8956174219,"isPrimary":true}}'
+  recorded_at: Tue, 21 Jun 2022 13:26:55 GMT
+recorded_with: VCR 6.1.0

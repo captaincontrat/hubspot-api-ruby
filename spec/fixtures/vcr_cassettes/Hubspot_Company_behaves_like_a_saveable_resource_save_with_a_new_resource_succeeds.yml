@@ -5,51 +5,69 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Zieme and Sons"},{"name":"domain","value":"armstrong.info"}]}'
+      string: '{"properties":[{"name":"name","value":"Raynor-Schiller"},{"name":"domain","value":"altenwerth-sporer.com"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:47 GMT
+      - Tue, 21 Jun 2022 13:26:43 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '419'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=da24adcb5cf4946e58647abc842295ab41556981027; expires=Sun, 03-May-20
-        14:43:47 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B94B8392988614D5AE33B83889243F42B4E9D6C6C000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979564'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13d8e8b799b4-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - be2d43b9-69ff-4071-b93b-1fe9f6e025a6
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499004'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '124'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BF1CA9EB9CB5F60117099F08E21F7FC25AC6AAE3A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=I4wvGVb2Z7MK8VQiy3hPeVsAPmJ%2BsswcTRforrLw9rQXrE9JzNafe%2B2OwyZWhENOcRfOJepK3NLh6M%2FqGTOAMMqqJ5ZfCxESDU4ojhEV5zcOoEoZ99dwiFX56mkc4KCqJYXWdBM7mZQDQEsm"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fbc39acc1c0-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1896382701,"isDeleted":false,"properties":{"website":{"value":"armstrong.info","timestamp":1556981027261,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"armstrong.info","timestamp":1556981027261,"source":"CALCULATED","sourceVid":[],"requestId":"26873900-3615-45ce-bb9b-88dd365ad133"}]},"hs_lastmodifieddate":{"value":"1556981027261","timestamp":1556981027261,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981027261","timestamp":1556981027261,"source":"CALCULATED","sourceVid":[],"requestId":"26873900-3615-45ce-bb9b-88dd365ad133"}]},"domain":{"value":"armstrong.info","timestamp":1556981027261,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"armstrong.info","timestamp":1556981027261,"source":"API","sourceVid":[],"requestId":"26873900-3615-45ce-bb9b-88dd365ad133"}]},"name":{"value":"Zieme
-        and Sons","timestamp":1556981027261,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Zieme
-        and Sons","timestamp":1556981027261,"source":"API","sourceVid":[],"requestId":"26873900-3615-45ce-bb9b-88dd365ad133"}]},"createdate":{"value":"1556981027261","timestamp":1556981027261,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981027261","timestamp":1556981027261,"source":"API","sourceVid":[],"requestId":"26873900-3615-45ce-bb9b-88dd365ad133"},{"name":"createdate","value":"1556981027261","timestamp":1556981027261,"sourceId":"API","source":"API","sourceVid":[],"requestId":"26873900-3615-45ce-bb9b-88dd365ad133"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:47 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956816266,"isDeleted":false,"properties":{"website":{"value":"altenwerth-sporer.com","timestamp":1655818003447,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"altenwerth-sporer.com","timestamp":1655818003447,"source":"CALCULATED","sourceVid":[],"requestId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6"}]},"hs_lastmodifieddate":{"value":"1655818003447","timestamp":1655818003447,"source":"CALCULATED","sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818003447","timestamp":1655818003447,"sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","source":"CALCULATED","sourceVid":[],"requestId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6"}]},"domain":{"value":"altenwerth-sporer.com","timestamp":1655818003447,"source":"API","sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","updatedByUserId":null,"versions":[{"name":"domain","value":"altenwerth-sporer.com","timestamp":1655818003447,"sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","source":"API","sourceVid":[],"requestId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6"}]},"name":{"value":"Raynor-Schiller","timestamp":1655818003447,"source":"API","sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","updatedByUserId":null,"versions":[{"name":"name","value":"Raynor-Schiller","timestamp":1655818003447,"sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","source":"API","sourceVid":[],"requestId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6"}]},"hs_object_id":{"value":"8956816266","timestamp":1655818003447,"source":"API","sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956816266","timestamp":1655818003447,"sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","source":"API","sourceVid":[],"requestId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6"}]},"createdate":{"value":"1655818003447","timestamp":1655818003447,"source":"API","sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818003447","timestamp":1655818003447,"sourceId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6","source":"API","sourceVid":[],"requestId":"be2d43b9-69ff-4071-b93b-1fe9f6e025a6"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:43 GMT
+recorded_with: VCR 6.1.0

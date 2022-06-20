@@ -9,47 +9,67 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:57 GMT
+      - Tue, 21 Jun 2022 13:26:50 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '373'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d995f159e108bcb0cbc9449da8e6a73da1556981037; expires=Sun, 03-May-20
-        14:43:57 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B231EE75CE1CBA2488D6ADFC0D804E289780753B4000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979540'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13ff5f770814-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - f00e1999-9d92-471d-854c-5225981d23c4
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498980'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '116'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2BB9FBE3AF3F96717337652B4EC03760FC5B31F023000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QOy50txrrODZcabwX%2BWogOfxnYY8x4mIoq3Jw0urHydcQWVbBs0w0dKDkrCZQPWB5SZX%2FOPbsWKpkL8lJauY6qTSoFxa%2FI1WpbmUt0IS9cRGtbKRrru%2B6HVcxjLXyzGhYRLdvElAEIQnTjNO"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3ffb7a2dc1ed-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1896332001,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1556981037384","timestamp":1556981037384,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981037384","timestamp":1556981037384,"source":"CALCULATED","sourceVid":[],"requestId":"be7eeb26-abf0-4170-998a-6953d926fd7a"}]},"name":{"value":"Foo
-        Bar Inc.","timestamp":1556981037384,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Foo
-        Bar Inc.","timestamp":1556981037384,"source":"API","sourceVid":[],"requestId":"be7eeb26-abf0-4170-998a-6953d926fd7a"}]},"createdate":{"value":"1556981037384","timestamp":1556981037384,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981037384","timestamp":1556981037384,"source":"API","sourceVid":[],"requestId":"be7eeb26-abf0-4170-998a-6953d926fd7a"},{"name":"createdate","value":"1556981037384","timestamp":1556981037384,"sourceId":"API","source":"API","sourceVid":[],"requestId":"be7eeb26-abf0-4170-998a-6953d926fd7a"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:57 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956828709,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1655818010131","timestamp":1655818010131,"source":"CALCULATED","sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818010131","timestamp":1655818010131,"sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","source":"CALCULATED","sourceVid":[],"requestId":"f00e1999-9d92-471d-854c-5225981d23c4"}]},"name":{"value":"Foo
+        Bar Inc.","timestamp":1655818010131,"source":"API","sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","updatedByUserId":null,"versions":[{"name":"name","value":"Foo
+        Bar Inc.","timestamp":1655818010131,"sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","source":"API","sourceVid":[],"requestId":"f00e1999-9d92-471d-854c-5225981d23c4"}]},"hs_object_id":{"value":"8956828709","timestamp":1655818010131,"source":"API","sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956828709","timestamp":1655818010131,"sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","source":"API","sourceVid":[],"requestId":"f00e1999-9d92-471d-854c-5225981d23c4"}]},"createdate":{"value":"1655818010131","timestamp":1655818010131,"source":"API","sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818010131","timestamp":1655818010131,"sourceId":"f00e1999-9d92-471d-854c-5225981d23c4","source":"API","sourceVid":[],"requestId":"f00e1999-9d92-471d-854c-5225981d23c4"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:50 GMT
+recorded_with: VCR 6.1.0

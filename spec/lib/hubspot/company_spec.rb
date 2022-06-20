@@ -1,5 +1,4 @@
 RSpec.describe Hubspot::Company do
-  before { Hubspot.configure(hapikey: 'demo') }
 
   it_behaves_like "a saveable resource", :company do
     def set_property(company)

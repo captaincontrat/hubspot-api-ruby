@@ -10,41 +10,68 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Wed, 12 Dec 2018 19:55:42 GMT
+      - Tue, 21 Jun 2022 13:26:34 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '762'
+      - '460'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d852f8dfe280973f04b67c01e096fe9dc1544644542; expires=Thu, 12-Dec-19
-        19:55:42 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B4371ADF4DD890D6AD2CA403873E25443B9FACCDB000000000000000000
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13a00d393b37-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - dcc910cd-eaf0-4be8-8dd6-267047a1d36c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499028'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '131'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2B0F1A3E6772AE519878B17B8A33BD9CA84AF9E1C4000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=70binrT8qKljd36TLYAJ1RQ1%2B9f%2FzN%2F9TNqsvf6h8m9EvNVFPsEzRttzxxCrQf5ghiMuZorpq6KO%2BC2so%2FL2%2BaE6G8JCmnoAXfu7YkQaT9zXJQzSsVJvXY3yJn4CANhd1BzNEDxWjBCZLMC7"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4882c0076ed35a92-BOS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"name":"fax_number","label":"fax number label","description":"","groupName":"companyinformation","type":"string","fieldType":"","options":[],"hidden":false,"deleted":false,"hubspotDefined":null,"readOnlyDefinition":false,"showCurrencySymbol":null,"createdAt":1544542448040,"formField":false,"displayOrder":-1,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","createdUserId":null,"textDisplayHint":null,"numberDisplayHint":null,"optionsAreMutable":null,"referencedObjectType":null,"updatedAt":1544644542648,"isCustomizedDefault":false,"searchableInGlobalSearch":false,"currencyPropertyName":null,"hasUniqueValue":false,"updatedUserId":null}'
-    http_version: 
-  recorded_at: Wed, 12 Dec 2018 19:55:42 GMT
+      encoding: ASCII-8BIT
+      string: '{"name":"fax_number","label":"fax number label","description":"The
+        company fax number.","groupName":"companyinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":false,"updatedAt":1655817994332,"createdAt":1655456762968,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"hidden":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false}'
+  recorded_at: Tue, 21 Jun 2022 13:26:34 GMT
 - request:
     method: put
     uri: https://api.hubapi.com/properties/v1/companies/properties/named/fax_number?hapikey=<HAPI_KEY>
@@ -55,75 +82,129 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Wed, 12 Dec 2018 19:55:42 GMT
+      - Tue, 21 Jun 2022 13:26:34 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '747'
+      - '424'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d44341da2e87d096e598f8b764f80fed51544644542; expires=Thu, 12-Dec-19
-        19:55:42 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B798A1757935BD9FE79F0626CB9E0185F8FC6738D000000000000000000
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13a20976eda7-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 4b5b3c55-64d6-46e2-a00d-f6672f8ef740
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499027'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '130'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2B5CBE63F2107E26D311BDDEBDE31A7472D3572672000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8wiUPN0mAUW8NCZvSdmhB7K9X0fX40RVRJrhk%2FY%2BkgSdPDuZdMafdc0n0HCOZ%2BvS9zb6I4qvfvS9UHOUro4ElQeliNXOC2IUfaA%2FGTwAZUbBkRKDw1LEoijcb0yGP%2F9V0zSf7u7FoogvGO2n"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4882c008899a5a2c-BOS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"name":"fax_number","label":"new fax number label","description":"","groupName":"companyinformation","type":"string","fieldType":"","hidden":false,"options":[],"showCurrencySymbol":null,"deleted":null,"currencyPropertyName":null,"displayOrder":-1,"hubspotDefined":null,"readOnlyDefinition":false,"readOnlyValue":false,"calculated":false,"createdAt":null,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"externalOptions":false,"displayMode":"current_value","createdUserId":null,"textDisplayHint":null,"numberDisplayHint":null,"optionsAreMutable":null,"referencedObjectType":null,"updatedAt":null,"isCustomizedDefault":false,"searchableInGlobalSearch":false,"hasUniqueValue":false,"formField":false,"updatedUserId":null}'
-    http_version: 
-  recorded_at: Wed, 12 Dec 2018 19:55:42 GMT
+      encoding: ASCII-8BIT
+      string: '{"name":"fax_number","label":"new fax number label","description":"","groupName":"companyinformation","type":"string","fieldType":"","fieldLevelPermission":null,"options":[],"deleted":null,"updatedAt":null,"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"hidden":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false}'
+  recorded_at: Tue, 21 Jun 2022 13:26:34 GMT
 - request:
     method: delete
     uri: https://api.hubapi.com/properties/v1/companies/properties/named/fax_number?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 204
       message: No Content
     headers:
       Date:
-      - Wed, 12 Dec 2018 19:55:43 GMT
+      - Tue, 21 Jun 2022 13:26:35 GMT
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=db8194bff40187bcf0d0f30b3f5d4ee961544644542; expires=Thu, 12-Dec-19
-        19:55:42 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B54F6E8BAEAAF15E0B903926F8370AD3392643D65000000000000000000
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13a458113bda-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 539952a2-c3f2-4335-bc2e-c8dadd2918f1
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499026'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '131'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2B405AF99211A4977F171045806F6E2C33472C5F28000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ooqu9kZv928FOCkVmMHv5JnrNSbJLTQZEOzXzADNvrz8Xxh%2FvRmetMTrqjlwWRTs3Lez9ycK8NCLYScU%2FFNsHqlr48fd%2FNpyidygJ8pjLGm%2BA0UW6Q%2F0Hx%2BvL9Rlz%2FtohEDi8nnio%2FCwFD7n"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4882c0096ae95a44-BOS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Wed, 12 Dec 2018 19:55:43 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Tue, 21 Jun 2022 13:26:35 GMT
+recorded_with: VCR 6.1.0

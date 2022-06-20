@@ -5,99 +5,141 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Terry-Rau"},{"name":"domain","value":"waters.net"}]}'
+      string: '{"properties":[{"name":"name","value":"Bradtke Group"},{"name":"domain","value":"funk-feest.biz"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:58 GMT
+      - Tue, 21 Jun 2022 13:26:50 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '415'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dc2432f2e6e935b7384986b490085d2d91556981037; expires=Sun, 03-May-20
-        14:43:57 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BA400A17B3B5927F166144E71CD793EEABCB3A234000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979537'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '55'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed14060ad53a5d-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - dce0239a-573a-4b37-b3fb-b8ac4d619dc1
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498978'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '114'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2B0F354E1FAC748740B36CCB20B80071D630488221000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2BiqeRyuBWyztmmUkfoR0hwNSfp1pb9pyLUagZxNOb9hxseS96IO6doZ6TVxVlQAWt9zO0QgMrKIdbdpTSW1Lcd8JoUcMlps5gtcjU8ai%2Bk59eaNXPLsjs%2FW%2FVcKrwt3tP6NH7PE4S%2FlZ7Y7x"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3ffefe999f82-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897430240,"isDeleted":false,"properties":{"website":{"value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"hs_lastmodifieddate":{"value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"domain":{"value":"waters.net","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"waters.net","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"name":{"value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"createdate":{"value":"1556981037942","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981037942","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"},{"name":"createdate","value":"1556981037942","timestamp":1556981037942,"sourceId":"API","source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:58 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956816271,"isDeleted":false,"properties":{"website":{"value":"funk-feest.biz","timestamp":1655818010642,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"funk-feest.biz","timestamp":1655818010642,"source":"CALCULATED","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"hs_lastmodifieddate":{"value":"1655818010642","timestamp":1655818010642,"source":"CALCULATED","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818010642","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"CALCULATED","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"domain":{"value":"funk-feest.biz","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"domain","value":"funk-feest.biz","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"name":{"value":"Bradtke
+        Group","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"name","value":"Bradtke
+        Group","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"hs_object_id":{"value":"8956816271","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956816271","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"createdate":{"value":"1655818010642","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818010642","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:50 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/companies/v2/companies/1897430240?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/8956816271?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:58 GMT
+      - Tue, 21 Jun 2022 13:26:51 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '415'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dac2e41f10a72ebc606e3327d000b431c1556981038; expires=Sun, 03-May-20
-        14:43:58 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B3610B7607B08CCFD79A3FDDDFA5B26C7A3E428DF000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979536'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Vary:
-      - Accept-Encoding, User-Agent
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed140798d1ee2f-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - ba604644-28eb-4edf-aa7c-1815c1cc9134
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498977'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '113'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2B04540713B1B441A72D3F7A2DF3A0FDB46E05D613000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bsyntpYyCFrK6P8XTCU%2BrN98ZtSbEuUJUMZ2RNG7sYZzGQgGIQze3wa%2F1X6zoKwLW8nITgFGAD1yx%2BcPuK%2Fj6cUFuQvxPTNpXruvP6P7SodOsOuJ%2BmUT1qE9s3FZnBvhIxmt8GyZsdtAYMHz"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b40004ed0243c-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897430240,"isDeleted":false,"properties":{"website":{"value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"waters.net","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"hs_lastmodifieddate":{"value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981037942","timestamp":1556981037942,"source":"CALCULATED","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"domain":{"value":"waters.net","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"waters.net","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"name":{"value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Terry-Rau","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]},"createdate":{"value":"1556981037942","timestamp":1556981037942,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981037942","timestamp":1556981037942,"source":"API","sourceVid":[],"requestId":"f8ef44a4-930f-4d7b-9744-9c425ea411c8"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:58 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956816271,"isDeleted":false,"properties":{"website":{"value":"funk-feest.biz","timestamp":1655818010642,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"funk-feest.biz","timestamp":1655818010642,"source":"CALCULATED","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"hs_lastmodifieddate":{"value":"1655818010642","timestamp":1655818010642,"source":"CALCULATED","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818010642","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"CALCULATED","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"domain":{"value":"funk-feest.biz","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"domain","value":"funk-feest.biz","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"name":{"value":"Bradtke
+        Group","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"name","value":"Bradtke
+        Group","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"hs_object_id":{"value":"8956816271","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956816271","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]},"createdate":{"value":"1655818010642","timestamp":1655818010642,"source":"API","sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818010642","timestamp":1655818010642,"sourceId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1","source":"API","sourceVid":[],"requestId":"dce0239a-573a-4b37-b3fb-b8ac4d619dc1"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:50 GMT
+recorded_with: VCR 6.1.0

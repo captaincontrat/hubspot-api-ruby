@@ -5,102 +5,142 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Kuphal Inc"},{"name":"domain","value":"kreigerhagenes.biz"}]}'
+      string: '{"properties":[{"name":"name","value":"Altenwerth and Sons"},{"name":"domain","value":"wiegand.io"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:53 GMT
+      - Tue, 21 Jun 2022 13:26:46 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '416'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d5e24d94c2cfb6626e5bd4fc8627633bd1556981033; expires=Sun, 03-May-20
-        14:43:53 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B672FA4E16B04FC03D9DA511210C10EFAC5253CED000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979551'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13ed5a8899a8-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - f35bf9cc-9e6f-4cd9-b172-65acb92e2113
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498991'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '125'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B483D411FE8A712C29807CF4792355E641E902C7D000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=36v1x9A8Gnz7TAYnfYBnyiSXiQ1hWj6NhFXJFDjRRPlMyB9nWbcZURyFQmeq856yCeJ0xUbkHzI4l4vMCm%2BdG1rkcgZiUbGpthEX702tgBfm5CSISUNYQEaJPe240C2N%2FyDuGNyCf9%2BPAU0I"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fe25a9ec17c-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897447164,"isDeleted":false,"properties":{"website":{"value":"kreigerhagenes.biz","timestamp":1556981033355,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"kreigerhagenes.biz","timestamp":1556981033355,"source":"CALCULATED","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"}]},"hs_lastmodifieddate":{"value":"1556981033355","timestamp":1556981033355,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981033355","timestamp":1556981033355,"source":"CALCULATED","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"}]},"domain":{"value":"kreigerhagenes.biz","timestamp":1556981033355,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"kreigerhagenes.biz","timestamp":1556981033355,"source":"API","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"}]},"name":{"value":"Kuphal
-        Inc","timestamp":1556981033355,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Kuphal
-        Inc","timestamp":1556981033355,"source":"API","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"}]},"createdate":{"value":"1556981033355","timestamp":1556981033355,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981033355","timestamp":1556981033355,"source":"API","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"},{"name":"createdate","value":"1556981033355","timestamp":1556981033355,"sourceId":"API","source":"API","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:53 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956850241,"isDeleted":false,"properties":{"website":{"value":"wiegand.io","timestamp":1655818006699,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"wiegand.io","timestamp":1655818006699,"source":"CALCULATED","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"hs_lastmodifieddate":{"value":"1655818006699","timestamp":1655818006699,"source":"CALCULATED","sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818006699","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"CALCULATED","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"domain":{"value":"wiegand.io","timestamp":1655818006699,"source":"API","sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","updatedByUserId":null,"versions":[{"name":"domain","value":"wiegand.io","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"API","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"name":{"value":"Altenwerth
+        and Sons","timestamp":1655818006699,"source":"API","sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","updatedByUserId":null,"versions":[{"name":"name","value":"Altenwerth
+        and Sons","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"API","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"hs_object_id":{"value":"8956850241","timestamp":1655818006699,"source":"API","sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956850241","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"API","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"createdate":{"value":"1655818006699","timestamp":1655818006699,"source":"API","sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818006699","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"API","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:46 GMT
 - request:
     method: put
-    uri: https://api.hubapi.com/companies/v2/companies/1897447164?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/8956850241?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
       string: '{"properties":[{"name":"name","value":"Foobar"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:53 GMT
+      - Tue, 21 Jun 2022 13:26:47 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '446'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d114c0c5cd2be6f544ff034131843a7531556981033; expires=Sun, 03-May-20
-        14:43:53 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B2B260F4637FC13E57CCCD330BB27D1967C09ABD9000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979550'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '57'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13eece373b1f-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - d3604d2c-ccf0-472a-9c63-b573df96c9a0
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498990'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '124'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B2AD1D7782AFAF6A4B13A8670DF4E76B957CE8370000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=d7p6aIcN0CB9lkfB2w9u6%2Bg1msAm1yzXaIzU46a3uBEb4QYeIx00II8bI4a7MfiHMNw1UERid46glhEhz0iBCOB79jzQowMtP1wQaiN1l7YEpR90BjoSJ9wX7hw4dQM74TVv5g7LiAlZKcYr"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fe3cf649f3a-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897447164,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1556981033594","timestamp":1556981033594,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981033594","timestamp":1556981033594,"source":"CALCULATED","sourceVid":[],"requestId":"d8ff8ffc-2871-4995-b96b-09019324b0e1"},{"name":"hs_lastmodifieddate","value":"1556981033355","timestamp":1556981033355,"source":"CALCULATED","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"}]},"name":{"value":"Foobar","timestamp":1556981033594,"source":"API","sourceId":"d8ff8ffc-2871-4995-b96b-09019324b0e1","versions":[{"name":"name","value":"Foobar","timestamp":1556981033594,"sourceId":"d8ff8ffc-2871-4995-b96b-09019324b0e1","source":"API","sourceVid":[],"requestId":"d8ff8ffc-2871-4995-b96b-09019324b0e1"},{"name":"name","value":"Kuphal
-        Inc","timestamp":1556981033355,"source":"API","sourceVid":[],"requestId":"a01acfc9-e338-4890-85c3-7a20f954a458"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:53 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956850241,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1655818006946","timestamp":1655818006946,"source":"CALCULATED","sourceId":"d3604d2c-ccf0-472a-9c63-b573df96c9a0","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818006946","timestamp":1655818006946,"sourceId":"d3604d2c-ccf0-472a-9c63-b573df96c9a0","source":"CALCULATED","sourceVid":[],"requestId":"d3604d2c-ccf0-472a-9c63-b573df96c9a0"},{"name":"hs_lastmodifieddate","value":"1655818006699","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"CALCULATED","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"name":{"value":"Foobar","timestamp":1655818006946,"source":"API","sourceId":"d3604d2c-ccf0-472a-9c63-b573df96c9a0","updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1655818006946,"sourceId":"d3604d2c-ccf0-472a-9c63-b573df96c9a0","source":"API","sourceVid":[],"requestId":"d3604d2c-ccf0-472a-9c63-b573df96c9a0"},{"name":"name","value":"Altenwerth
+        and Sons","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"API","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"hs_object_id":{"value":"8956850241","timestamp":1655818006699,"source":"API","sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956850241","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"API","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]},"createdate":{"value":"1655818006699","timestamp":1655818006699,"source":"API","sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818006699","timestamp":1655818006699,"sourceId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113","source":"API","sourceVid":[],"requestId":"f35bf9cc-9e6f-4cd9-b172-65acb92e2113"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:46 GMT
+recorded_with: VCR 6.1.0

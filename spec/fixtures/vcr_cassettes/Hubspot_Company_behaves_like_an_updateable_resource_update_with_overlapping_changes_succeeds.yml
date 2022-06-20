@@ -5,56 +5,74 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Pfeffer Group"},{"name":"domain","value":"monahan.info"}]}'
+      string: '{"properties":[{"name":"name","value":"Toy-Kemmer"},{"name":"domain","value":"flatley-franecki.info"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:53 GMT
+      - Tue, 21 Jun 2022 13:26:47 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '416'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=df2d6fbceecae67ffbd4082e4ebfd79121556981033; expires=Sun, 03-May-20
-        14:43:53 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B4B6D87980302C67BFD841E615C1FFDD60516C78E000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979549'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '56'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13f06cd6cdc3-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 568d9764-ab14-4499-b106-1ac03dd4f565
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498989'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '123'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BACDB743B056066C52C740F21436F05552F8A2499000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HJAtszVln0uDitldd6N7LZLB73Ii00IRWLknXolZFCdqxcDOWNiLpLyThkaeLTK8LZR3XXqr2fPD%2BbODyjJzz8OlYMsSOyTmZeYC95rmgC3lpxWEOJIx0Kt0pMoQOI9nN8zDK6jJ5f0wzxjd"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fe56aee571b-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897447165,"isDeleted":false,"properties":{"website":{"value":"monahan.info","timestamp":1556981033850,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"monahan.info","timestamp":1556981033850,"source":"CALCULATED","sourceVid":[],"requestId":"0c28a40e-3ee1-40dd-865c-a42550f1ac03"}]},"hs_lastmodifieddate":{"value":"1556981033850","timestamp":1556981033850,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981033850","timestamp":1556981033850,"source":"CALCULATED","sourceVid":[],"requestId":"0c28a40e-3ee1-40dd-865c-a42550f1ac03"}]},"domain":{"value":"monahan.info","timestamp":1556981033850,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"monahan.info","timestamp":1556981033850,"source":"API","sourceVid":[],"requestId":"0c28a40e-3ee1-40dd-865c-a42550f1ac03"}]},"name":{"value":"Pfeffer
-        Group","timestamp":1556981033850,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Pfeffer
-        Group","timestamp":1556981033850,"source":"API","sourceVid":[],"requestId":"0c28a40e-3ee1-40dd-865c-a42550f1ac03"}]},"createdate":{"value":"1556981033850","timestamp":1556981033850,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981033850","timestamp":1556981033850,"source":"API","sourceVid":[],"requestId":"0c28a40e-3ee1-40dd-865c-a42550f1ac03"},{"name":"createdate","value":"1556981033850","timestamp":1556981033850,"sourceId":"API","source":"API","sourceVid":[],"requestId":"0c28a40e-3ee1-40dd-865c-a42550f1ac03"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:53 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956174210,"isDeleted":false,"properties":{"website":{"value":"flatley-franecki.info","timestamp":1655818007192,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"flatley-franecki.info","timestamp":1655818007192,"source":"CALCULATED","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"hs_lastmodifieddate":{"value":"1655818007192","timestamp":1655818007192,"source":"CALCULATED","sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818007192","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"CALCULATED","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"domain":{"value":"flatley-franecki.info","timestamp":1655818007192,"source":"API","sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","updatedByUserId":null,"versions":[{"name":"domain","value":"flatley-franecki.info","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"API","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"name":{"value":"Toy-Kemmer","timestamp":1655818007192,"source":"API","sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","updatedByUserId":null,"versions":[{"name":"name","value":"Toy-Kemmer","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"API","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"hs_object_id":{"value":"8956174210","timestamp":1655818007192,"source":"API","sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956174210","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"API","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"createdate":{"value":"1655818007192","timestamp":1655818007192,"source":"API","sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818007192","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"API","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:47 GMT
 - request:
     method: put
-    uri: https://api.hubapi.com/companies/v2/companies/1897447165?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/8956174210?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
       string: '{"properties":[{"name":"name","value":"Foobar"},{"name":"description","value":"My
@@ -62,49 +80,67 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:54 GMT
+      - Tue, 21 Jun 2022 13:26:47 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '476'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=da1373ab676d8176cbc58f6ccc42895e41556981034; expires=Sun, 03-May-20
-        14:43:54 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BE4921DF5021686A2D915B0977C8ADE302B7DFA8C000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979548'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13f21cb199b6-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - c597c177-e19b-4cc8-b19d-115ae6509b47
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498988'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '122'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BF38472623A65A2F10EF3E24471446184056CFA61000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=a0CXjjlDTUS2L42uTvWeAdWufPc217IQwXLMmB8m0BaK0f1H%2BhBzFyotZmwu71uq6xoCws0x2YXhYxW%2BP6AUJjQNH35Xh77zU7DXSXaNr%2B%2FAO%2FW9%2BGbIadZ6JI%2BqjfLwWkc0PjwORvJaqTIs"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fe7089b9f46-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897447165,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1556981034123","timestamp":1556981034123,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981034123","timestamp":1556981034123,"source":"CALCULATED","sourceVid":[],"requestId":"2131d23c-019c-4fdc-bf86-44d8da3328b5"},{"name":"hs_lastmodifieddate","value":"1556981034105","timestamp":1556981034105,"source":"CALCULATED","sourceVid":[]}]},"name":{"value":"Foobar","timestamp":1556981034123,"source":"API","sourceId":"2131d23c-019c-4fdc-bf86-44d8da3328b5","versions":[{"name":"name","value":"Foobar","timestamp":1556981034123,"sourceId":"2131d23c-019c-4fdc-bf86-44d8da3328b5","source":"API","sourceVid":[],"requestId":"2131d23c-019c-4fdc-bf86-44d8da3328b5"},{"name":"name","value":"Pfeffer
-        Group","timestamp":1556981033850,"source":"API","sourceVid":[],"requestId":"0c28a40e-3ee1-40dd-865c-a42550f1ac03"}]},"description":{"value":"My
-        Corporation","timestamp":1556981034123,"source":"API","sourceId":"2131d23c-019c-4fdc-bf86-44d8da3328b5","versions":[{"name":"description","value":"My
-        Corporation","timestamp":1556981034123,"sourceId":"2131d23c-019c-4fdc-bf86-44d8da3328b5","source":"API","sourceVid":[],"requestId":"2131d23c-019c-4fdc-bf86-44d8da3328b5"},{"name":"description","value":"-
-        MONAHAN.INFO -","timestamp":1556981034030,"sourceId":"BidenPropertyMappings","source":"BIDEN","sourceVid":[]}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:54 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956174210,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1655818007468","timestamp":1655818007468,"source":"CALCULATED","sourceId":"c597c177-e19b-4cc8-b19d-115ae6509b47","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818007468","timestamp":1655818007468,"sourceId":"c597c177-e19b-4cc8-b19d-115ae6509b47","source":"CALCULATED","sourceVid":[],"requestId":"c597c177-e19b-4cc8-b19d-115ae6509b47"},{"name":"hs_lastmodifieddate","value":"1655818007192","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"CALCULATED","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"name":{"value":"Foobar","timestamp":1655818007468,"source":"API","sourceId":"c597c177-e19b-4cc8-b19d-115ae6509b47","updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1655818007468,"sourceId":"c597c177-e19b-4cc8-b19d-115ae6509b47","source":"API","sourceVid":[],"requestId":"c597c177-e19b-4cc8-b19d-115ae6509b47"},{"name":"name","value":"Toy-Kemmer","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"API","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"hs_object_id":{"value":"8956174210","timestamp":1655818007192,"source":"API","sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956174210","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"API","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]},"description":{"value":"My
+        Corporation","timestamp":1655818007468,"source":"API","sourceId":"c597c177-e19b-4cc8-b19d-115ae6509b47","updatedByUserId":null,"versions":[{"name":"description","value":"My
+        Corporation","timestamp":1655818007468,"sourceId":"c597c177-e19b-4cc8-b19d-115ae6509b47","source":"API","sourceVid":[],"requestId":"c597c177-e19b-4cc8-b19d-115ae6509b47"}]},"createdate":{"value":"1655818007192","timestamp":1655818007192,"source":"API","sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818007192","timestamp":1655818007192,"sourceId":"568d9764-ab14-4499-b106-1ac03dd4f565","source":"API","sourceVid":[],"requestId":"568d9764-ab14-4499-b106-1ac03dd4f565"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:47 GMT
+recorded_with: VCR 6.1.0

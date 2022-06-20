@@ -2,120 +2,73 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/fields/561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0/email?hapikey=demo
+    uri: https://api.hubapi.com/forms/v2/fields/038e819c-5262-4c13-8550-8cabe38c4309/email?hapikey=demo
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Mon, 23 Feb 2015 15:51:46 GMT
+      - Tue, 21 Jun 2022 13:29:20 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '307'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71ed17ac3bd599a4-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Vary:
       - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
-      - '406'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"name":"email","label":"Email","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":2,"required":true,"selectedOptions":[],"options":[],"validation":{"name":"email","message":"Please
-        enter a valid email address","data":"","useDefaultBlockList":false},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":""}'
-    http_version: 
-  recorded_at: Mon, 23 Feb 2015 15:51:46 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/forms/v2/fields/561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0/email?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
+      Cf-Cache-Status:
+      - DYNAMIC
       Access-Control-Allow-Credentials:
       - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Hubspot-Notfound:
-      - 'true'
-      Content-Length:
-      - '238'
-      Date:
-      - Thu, 16 Jun 2016 22:44:10 GMT
-      Connection:
-      - keep-alive
+      Access-Control-Expose-Headers:
+      - x-last-modified-timestamp, X-HubSpot-NotFound, X-HS-User-Request, Link, X-Total-Count,
+        HS-Total-Forms-Count, HS-Total-Folders-Count
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - d391c234-9e3b-4d97-9e92-7e45b43223e2
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988314'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '191'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '19'
+      X-Trace:
+      - 2BD41CC9B1412BC9F379ED75AAEB7E0DABAB23D532000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=N27atnPA2rDVhiNWm8FndO5Ur%2BYUUmNvwCPZ5W0z2jytWJF8GtUx9hay68N7ytDKOcG7KlReoV3ym2JW2EGs2K708je03PvMpbSmXjmJIs%2FrbIUok0x%2BkwYXksYkxjQDR0pnzW9fU1ZmSzMh"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"status":"error","message":"The Form with the guid ''561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0''
-        has no FormField with the name ''email''.","correlationId":"f76718bd-a625-44fe-bbc2-97695622f433","requestId":"151d9350-8542-4158-be2f-f51d9603e3d4"}'
-    http_version: 
-  recorded_at: Thu, 16 Jun 2016 22:44:10 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/forms/v2/fields/78c2891f-ebdd-44c0-bd94-15c012bbbfbf/email?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Hubspot-Notfound:
-      - 'true'
-      Content-Length:
-      - '238'
-      Date:
-      - Thu, 16 Jun 2016 23:14:10 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"status":"error","message":"The Form with the guid ''78c2891f-ebdd-44c0-bd94-15c012bbbfbf''
-        has no FormField with the name ''email''.","correlationId":"84fcec59-007d-4b6f-b47e-1ff22faa5c3e","requestId":"3f9106cb-cb2c-4018-a6ed-76c9c931f0ea"}'
-    http_version: 
-  recorded_at: Thu, 16 Jun 2016 23:14:10 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/forms/v2/fields/78c2891f-ebdd-44c0-bd94-15c012bbbfbf/sb_pres_name?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '454'
-      Date:
-      - Thu, 16 Jun 2016 23:31:24 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"name":"sb_pres_name","label":"SlideBear Presentation Name","type":"string","fieldType":"text","description":"","groupName":"","displayOrder":-1,"required":false,"selectedOptions":[],"options":[],"validation":{"name":"","message":"","data":"","useDefaultBlockList":false,"blockedEmailAddresses":[]},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":"","dependentFieldFilters":[],"labelHidden":false}'
-    http_version: 
-  recorded_at: Thu, 16 Jun 2016 23:31:24 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"name":"email","label":"Email","type":"string","fieldType":"text","description":"","groupName":"contactinformation","displayOrder":-1,"required":true,"selectedOptions":[],"options":[],"validation":{"name":"","message":"","data":"","useDefaultBlockList":false,"blockedEmailAddresses":[]},"enabled":true,"hidden":false,"defaultValue":"","isSmartField":false,"unselectedLabel":"","placeholder":"","dependentFieldFilters":[],"labelHidden":false,"propertyObjectType":"CONTACT","metaData":[],"objectTypeId":"0-1"}'
+  recorded_at: Tue, 21 Jun 2022 13:29:20 GMT
+recorded_with: VCR 6.1.0

@@ -2,29 +2,70 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=aaron@unbounce.com&hapikey=demo&includeInactive=false
+    uri: https://api.hubapi.com/owners/v2/owners?email=blogapitest@hubspot.com&hapikey=demo&includeInactive=false
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '283'
       Date:
-      - Wed, 20 Jan 2016 20:14:06 GMT
+      - Tue, 21 Jun 2022 13:29:26 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '274'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed17d61c353317-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - ff067ad8-2151-412a-952a-df9f18f25aed
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988311'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '189'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '18'
+      X-Trace:
+      - 2B27731C057B9BCCC04BCBA5FD5B1F7069DC292574000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tC6NJs%2Ft2v4TX9fcgldDRuTJSr0QJn%2BvJP7PHcGu5C50SG8EK7HCXY1LjhL8qUh4femlFFZDvZm2a%2FZ%2FXWlBhHqs0J2jbnPt%2FSltN35Auy2k1UZiuC%2FO4kcZKZtwoJU1zG6xTJRotlYH2Fdp"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '[{"portalId":62515,"ownerId":72,"type":"PERSON","firstName":"Aaron","lastName":"Oman","email":"aaron@unbounce.com","createdAt":1405605859739,"updatedAt":1446764930941,"remoteList":[{"id":29619,"portalId":62515,"ownerId":72,"remoteId":"254556","remoteType":"HUBSPOT","active":true}]}]'
-    http_version: 
-  recorded_at: Wed, 20 Jan 2016 20:14:06 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '[{"portalId":62515,"ownerId":66,"type":"PERSON","firstName":"Blog Api","lastName":"Test","email":"blogapitest@hubspot.com","createdAt":1405605858898,"updatedAt":1502455466553,"remoteList":[{"id":29451,"portalId":62515,"ownerId":66,"remoteId":"166656","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeUserId":166656,"userIdIncludingInactive":166656,"activeSalesforceId":null,"isActive":true}]'
+  recorded_at: Tue, 21 Jun 2022 13:29:26 GMT
+recorded_with: VCR 6.1.0

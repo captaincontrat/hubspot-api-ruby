@@ -2,32 +2,71 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1?hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists/124897?hapikey=demo
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Fri, 20 Feb 2015 18:46:55 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Tue, 21 Jun 2022 13:27:03 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '382'
+      - '420'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed1456b9f23323-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 6ae2c460-bcd5-493a-b486-3f6b3f72da43
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '988334'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '200'
+      X-Hubspot-Ratelimit-Remaining:
+      - '199'
+      X-Hubspot-Ratelimit-Secondly:
+      - '20'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '19'
+      X-Trace:
+      - 2BAE0E5F40C51BA95AFCD010486AA1BF53639097C3000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5oSyGln5FChAsgUL2hsCww4KXUrj6ohiwl35pImxHDi1505LoRfmk1G0iN%2F%2BBCVyKzaLWrmDtxIaXRebYu325vaOrZjdKVUl74X4BjTojQB4vi42dpqXgRj2bxZnzloKcw4Y2HUvEgnGMVTQ"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"dynamic":true,"metaData":{"processing":"DONE","lastSizeChangeAt":1424402567742,"lastProcessingStateChangeAt":1335448864306,"error":"","size":3355},"listType":"DYNAMIC","filters":[[{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"twitterhandle"}]],"listId":1,"portalId":62515,"createdAt":1335448813688,"updatedAt":1335448813688,"internalListId":1,"name":"twitterers"}'
-    http_version: 
-  recorded_at: Fri, 20 Feb 2015 18:46:55 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":62515,"listId":124897,"internalListId":524091,"createdAt":1441960245097,"updatedAt":1441960245097,"name":"Marketing
+        John Persona - MQLs","listType":"DYNAMIC","authorId":215482,"parentId":0,"filters":[[{"operator":"SET_ANY","withinTimeMode":"PAST","type":"enumeration","property":"hs_persona","value":"persona_10"},{"operator":"SET_ANY","withinTimeMode":"PAST","type":"enumeration","property":"lifecyclestage","value":"marketingqualifiedlead"}]],"metaData":{"size":0,"lastSizeChangeAt":1608743267834,"processing":"DONE","lastProcessingStateChangeAt":1608743267764,"error":"","listReferencesCount":null,"parentFolderId":0},"archived":false,"teamIds":[],"deleteable":false,"dynamic":true,"readOnly":true}'
+  recorded_at: Tue, 21 Jun 2022 13:27:03 GMT
+recorded_with: VCR 6.1.0

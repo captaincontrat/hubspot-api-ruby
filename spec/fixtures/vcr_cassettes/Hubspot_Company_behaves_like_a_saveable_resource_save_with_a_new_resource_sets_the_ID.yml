@@ -5,51 +5,71 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Pfeffer LLC"},{"name":"domain","value":"roob.net"}]}'
+      string: '{"properties":[{"name":"name","value":"Gerhold, Beatty and Morar"},{"name":"domain","value":"zulauf.com"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:47 GMT
+      - Tue, 21 Jun 2022 13:26:43 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '420'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dcd2bcf6ec4386094393887fbe5a574871556981027; expires=Sun, 03-May-20
-        14:43:47 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B4BB1F40E65327D3B44172FE8F3962AECEC0A2D60000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979563'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed13da882a99c8-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 0350c693-bbd5-4afc-a403-44a04a2eb331
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499003'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '123'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B73FF5A385842FFCA4AEEF99C58BBFB6E95BF0CF3000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VlYTdHoxkEXd1HOQjEffrwg6OqukvDr2nqNRl7DbgetGR7oFPGzwGYc%2FHCr0Nh2Iwj5CX%2FUSof6UL1Udt3lOozbJOI%2FRagYSs8tuOjpbfO1rYCheLrQ0NGp1EB5%2B%2Fd23ECuyfU4klvcuL9Xb"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fbddd06ced8-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897430239,"isDeleted":false,"properties":{"website":{"value":"roob.net","timestamp":1556981027520,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"roob.net","timestamp":1556981027520,"source":"CALCULATED","sourceVid":[],"requestId":"6eb82c14-f270-400c-bd52-ddeac0125f24"}]},"hs_lastmodifieddate":{"value":"1556981027520","timestamp":1556981027520,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981027520","timestamp":1556981027520,"source":"CALCULATED","sourceVid":[],"requestId":"6eb82c14-f270-400c-bd52-ddeac0125f24"}]},"domain":{"value":"roob.net","timestamp":1556981027520,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"roob.net","timestamp":1556981027520,"source":"API","sourceVid":[],"requestId":"6eb82c14-f270-400c-bd52-ddeac0125f24"}]},"name":{"value":"Pfeffer
-        LLC","timestamp":1556981027520,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Pfeffer
-        LLC","timestamp":1556981027520,"source":"API","sourceVid":[],"requestId":"6eb82c14-f270-400c-bd52-ddeac0125f24"}]},"createdate":{"value":"1556981027520","timestamp":1556981027520,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981027520","timestamp":1556981027520,"source":"API","sourceVid":[],"requestId":"6eb82c14-f270-400c-bd52-ddeac0125f24"},{"name":"createdate","value":"1556981027520","timestamp":1556981027520,"sourceId":"API","source":"API","sourceVid":[],"requestId":"6eb82c14-f270-400c-bd52-ddeac0125f24"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:47 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8956420208,"isDeleted":false,"properties":{"website":{"value":"zulauf.com","timestamp":1655818003679,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"zulauf.com","timestamp":1655818003679,"source":"CALCULATED","sourceVid":[],"requestId":"0350c693-bbd5-4afc-a403-44a04a2eb331"}]},"hs_lastmodifieddate":{"value":"1655818003679","timestamp":1655818003679,"source":"CALCULATED","sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655818003679","timestamp":1655818003679,"sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","source":"CALCULATED","sourceVid":[],"requestId":"0350c693-bbd5-4afc-a403-44a04a2eb331"}]},"domain":{"value":"zulauf.com","timestamp":1655818003679,"source":"API","sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","updatedByUserId":null,"versions":[{"name":"domain","value":"zulauf.com","timestamp":1655818003679,"sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","source":"API","sourceVid":[],"requestId":"0350c693-bbd5-4afc-a403-44a04a2eb331"}]},"name":{"value":"Gerhold,
+        Beatty and Morar","timestamp":1655818003679,"source":"API","sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","updatedByUserId":null,"versions":[{"name":"name","value":"Gerhold,
+        Beatty and Morar","timestamp":1655818003679,"sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","source":"API","sourceVid":[],"requestId":"0350c693-bbd5-4afc-a403-44a04a2eb331"}]},"hs_object_id":{"value":"8956420208","timestamp":1655818003679,"source":"API","sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8956420208","timestamp":1655818003679,"sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","source":"API","sourceVid":[],"requestId":"0350c693-bbd5-4afc-a403-44a04a2eb331"}]},"createdate":{"value":"1655818003679","timestamp":1655818003679,"source":"API","sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","updatedByUserId":null,"versions":[{"name":"createdate","value":"1655818003679","timestamp":1655818003679,"sourceId":"0350c693-bbd5-4afc-a403-44a04a2eb331","source":"API","sourceVid":[],"requestId":"0350c693-bbd5-4afc-a403-44a04a2eb331"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 21 Jun 2022 13:26:43 GMT
+recorded_with: VCR 6.1.0

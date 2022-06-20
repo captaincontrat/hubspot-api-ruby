@@ -1,7 +1,5 @@
 RSpec.describe Hubspot::Contact do
 
-  before{ Hubspot.configure(hapikey: 'demo') }
-
   it_behaves_like "a saveable resource", :contact do
     def set_property(contact)
       contact.firstname = "foobar"

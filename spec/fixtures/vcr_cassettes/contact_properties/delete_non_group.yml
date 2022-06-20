@@ -2,34 +2,73 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.hubapi.com/properties/v1/contacts/groups/named/ff_group1?hapikey=demo
+    uri: https://api.hubapi.com/properties/v1/contacts/groups/named/ff_group1?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 404
       message: Not Found
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      X-Hubspot-Notfound:
-      - 'true'
-      Content-Length:
-      - '191'
       Date:
-      - Tue, 05 Jan 2016 22:51:36 GMT
+      - Tue, 21 Jun 2022 13:28:18 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed1629dd5fedbb-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 8d907fab-06d3-48e8-9e77-b7e91efae047
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498778'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '124'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BBB74FAEEAFD35767E449204B33F17291C152FEFA000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Myzgw%2Bhkd2GA54m12jj%2BIt2%2F7GRaipTuQ5bbH6NkMbRY8pJN9bfwquJYUdMrlpiDVNwnyGE%2B3zuSzBDj1m%2FJgeFn2NjQUTREwDMRcTkZlrnoDiaHtZapMid7fhO4Pyk3hpSdbJJY1JAUSPb7"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"status":"error","message":"Couldn''t find a Group with the given
-        name ''ff_group1''.","correlationId":"e520d302-1378-43a0-9158-3dd7289f10e4","requestId":"6c614438-4ef3-404f-b93e-d563df3d53e6"}'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:36 GMT
+        name ''ff_group1''.","correlationId":"8d907fab-06d3-48e8-9e77-b7e91efae047","groupsErrorCode":"GROUP_NOT_FOUND"}'
+  recorded_at: Tue, 21 Jun 2022 13:28:18 GMT
+recorded_with: VCR 6.1.0

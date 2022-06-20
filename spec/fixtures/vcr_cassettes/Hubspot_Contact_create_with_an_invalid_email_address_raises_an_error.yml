@@ -9,50 +9,67 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 400
       message: Bad Request
     headers:
       Date:
-      - Sat, 04 May 2019 14:44:39 GMT
+      - Tue, 21 Jun 2022 13:28:31 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '249'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d471e679583030d4e8dca92cafef2ff741556981079; expires=Sun, 03-May-20
-        14:44:39 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BE1063EAF8F9BC9081FF37377E5DDE4EB5CB361B5000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979467'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71ed1678ea2639e1-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - '09402e83-6983-41f5-8c49-ceec04380bee'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498748'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '126'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BBEEE5DE020AC4FCB6FA01C33018992D75C71627A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xV3HaZL9zEhGpCwjS%2FMy5%2FlB%2FL9rbuizGXW30y5cW1BgFSXmlX0TZUSjGdGM7FLAk7N6YgWvNNkN%2FNUtXWg70FSK2eFH%2B7hX3rR6ra0kU7YUcMk69bJYrKjFgJcy0qQF4BS%2BO01Ue2j2ANe8"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b40ffde18c1ed-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
       string: '{"validationResults":[{"isValid":false,"message":"Email address an_invalid_email
         is invalid","error":"INVALID_EMAIL","name":"email"}],"status":"error","message":"Property
-        values were not valid","correlationId":"0a40ba3a-1594-4647-a48d-a84a6af2cb57","requestId":"feac3dd272a81eeb29178aa452ff2364"}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:44:39 GMT
-recorded_with: VCR 4.0.0
+        values were not valid","correlationId":"09402e83-6983-41f5-8c49-ceec04380bee"}'
+  recorded_at: Tue, 21 Jun 2022 13:28:30 GMT
+recorded_with: VCR 6.1.0

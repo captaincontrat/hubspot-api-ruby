@@ -2,29 +2,76 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/deals/v1/groups?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/groups?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '204'
       Date:
-      - Tue, 05 Jan 2016 22:51:40 GMT
+      - Tue, 21 Jun 2022 13:28:43 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '433'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71ed16c4ee2c3bb6-CDG
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 763fdcab-89c6-4c13-b735-b529312be652
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498711'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '122'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B2F20576C50363772ABE060E33C48A81118D63800000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=j34SogqnHinhtNIVY8KdQgBP9wBMAO1g9wZMlQgl4%2BgzSnzv7NP%2B1CDggnJXg97of8JVd%2BjKOzzRNuDmK1uEXOBS9TTOOrz7k%2FEmabZCTgo7uaAHHGmVZ1hZnzpHPg89pP6aiSyOU8WjgKH%2F"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '[{"name":"dealinformation","displayName":"Deal Information","displayOrder":0},{"name":"workflowmax","displayName":"WorkflowMAX","displayOrder":1},{"name":"ff_group23","displayName":"","displayOrder":100}]'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:40 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '[{"name":"deal_activity","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
+        activity","displayOrder":-1,"hubspotDefined":true},{"name":"deal_revenue","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
+        revenue","displayOrder":-1,"hubspotDefined":true},{"name":"dealinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Deal
+        information","displayOrder":0,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Analytics
+        history","displayOrder":1,"hubspotDefined":true},{"name":"ff_group234","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_64d41a5764bbc1c038256101fde51910","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_b29595fba1df470e4d22af0b3a947809","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_53efc625157d8e24536d5d8c24441147","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_eb1721d1a9ebebd0d038bf4caa89691a","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_f705815c19d665f360336d04a48db540","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_cbb6b7eed0eaeabd14a2cbcbbb5bc2dd","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_4402fe73a52ef66057dbbe7fa7dd4f05","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_0fe4993ae65ed5b71a88d08c0300246b","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_11302991dc000ec12d884ba7def32020","displayName":"","displayOrder":100,"hubspotDefined":false}]'
+  recorded_at: Tue, 21 Jun 2022 13:28:43 GMT
+recorded_with: VCR 6.1.0

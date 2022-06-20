@@ -1,9 +1,23 @@
 describe Hubspot::Form do
-  let(:guid) { '78c2891f-ebdd-44c0-bd94-15c012bbbfbf' } # '561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0'
   let(:example_form_hash) do
     VCR.use_cassette('form_example') do
-      HTTParty.get("https://api.hubapi.com#{Hubspot::Form::FORMS_PATH}/#{guid}/?hapikey=demo").parsed_response
+      HTTParty.get("https://api.hubapi.com#{Hubspot::Form::FORMS_PATH}/038e819c-5262-4c13-8550-8cabe38c4309/?hapikey=demo").parsed_response
     end
+  end
+
+  let(:create_params) do
+    {
+      name: "Demo Form #{SecureRandom.hex}",
+      action: '',
+      method: 'POST',
+      cssClass: 'hs-form stacked',
+      redirect: '',
+      submitText: 'Sign Up',
+      followUpId: '',
+      leadNurturingCampaignId: '',
+      notifyRecipients: '',
+      embeddedCode: ''
+    }
   end
 
   describe '#initialize' do
@@ -14,14 +28,13 @@ describe Hubspot::Form do
     its(:properties) { should be_a(Hash) }
   end
 
-  before { Hubspot.configure(hapikey: 'demo', portal_id: '62515') }
-
   describe '.all' do
+    before { Hubspot.configure(hapikey: 'demo') }
+
     cassette 'find_all_forms'
 
     it 'returns all forms' do
       forms = Hubspot::Form.all
-      expect(forms.count).to be > 20
 
       form = forms.first
       expect(form).to be_a(Hubspot::Form)
@@ -29,8 +42,10 @@ describe Hubspot::Form do
   end
 
   describe '.find' do
+    before { Hubspot.configure(hapikey: 'demo') }
+
     cassette 'form_find'
-    subject { Hubspot::Form.find(guid) }
+    subject { Hubspot::Form.find(Hubspot::Form.all.first.guid) }
 
     context 'when the form is found' do
       it { should be_an_instance_of Hubspot::Form }
@@ -45,25 +60,11 @@ describe Hubspot::Form do
   end
 
   describe '.create' do
-    subject { Hubspot::Form.create!(params) }
+    subject { Hubspot::Form.create!(create_params) }
 
     context 'with all required parameters' do
       cassette 'create_form'
 
-      let(:params) do
-        {
-          name: "Demo Form #{Time.now.to_i}",
-          action: '',
-          method: 'POST',
-          cssClass: 'hs-form stacked',
-          redirect: '',
-          submitText: 'Sign Up',
-          followUpId: '',
-          leadNurturingCampaignId: '',
-          notifyRecipients: '',
-          embeddedCode: ''
-        }
-      end
       it { should be_an_instance_of Hubspot::Form }
       its(:guid) { should be_a(String) }
     end
@@ -78,6 +79,7 @@ describe Hubspot::Form do
   end
 
   describe '#fields' do
+    before { Hubspot.configure(hapikey: 'demo') }
     context 'returning all the fields' do
       cassette 'fields_among_form'
 
@@ -117,11 +119,11 @@ describe Hubspot::Form do
   describe '#submit' do
     cassette 'form_submit_data'
 
-    let(:form) { Hubspot::Form.find('561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0') }
+    let(:form) { Hubspot::Form.create!(create_params) }
 
     context 'with a valid portal id' do
       before do
-        Hubspot.configure(hapikey: 'demo', portal_id: '62515')
+        Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"), portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"))
       end
 
       it 'returns true if the form submission is successful' do
@@ -133,7 +135,7 @@ describe Hubspot::Form do
 
     context 'with an invalid portal id' do
       before do
-        Hubspot.configure(hapikey: 'demo', portal_id: 'xxxx')
+        Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"), portal_id: "xxx")
       end
 
       it 'returns false in case of errors' do
@@ -144,13 +146,15 @@ describe Hubspot::Form do
     end
 
     context 'when initializing Hubspot::Form directly' do
-      let(:form) { Hubspot::Form.new('guid' => '561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0') }
+      let(:f) { Hubspot::Form.new('guid' => form.guid) }
 
-      before { Hubspot.configure(hapikey: 'demo', portal_id: '62515') }
+      before do
+        Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"), portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"))
+      end
 
       it 'returns true if the form submission is successful' do
         params = {}
-        result = form.submit(params)
+        result = f.submit(params)
         result.should be true
       end
     end
@@ -159,16 +163,16 @@ describe Hubspot::Form do
   describe '#update!' do
     cassette 'form_update'
 
-    new_name = 'updated form name 1424709912'
+    new_name = "updated form name #{SecureRandom.hex}"
     redirect = 'http://hubspot.com'
 
-    let(:form) { Hubspot::Form.find('561d9ce9-bb4c-45b4-8e32-21cdeaa3a7f0') }
+    let(:form) { Hubspot::Form.create!(create_params) }
     let(:params) { { name: new_name, redirect: redirect } }
     subject { form.update!(params) }
 
     it { should be_an_instance_of Hubspot::Form }
     it 'updates properties' do
-      subject.properties['name'].should be == new_name
+      subject.properties['name'].should start_with('updated form name ')
       subject.properties['redirect'].should be == redirect
     end
   end
@@ -176,8 +180,7 @@ describe Hubspot::Form do
   describe '#destroy!' do
     cassette 'form_destroy'
 
-    # NOTE: form previous created via the create! method
-    let(:form) { Hubspot::Form.find('beb92950-ca65-4daf-87ae-a42c054e429f') }
+    let(:form) { Hubspot::Form.create!(create_params) }
     subject { form.destroy! }
     it { should be true }
 
