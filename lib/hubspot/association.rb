@@ -1,9 +1,4 @@
 class Hubspot::Association
-  COMPANY_TO_CONTACT = 2
-  DEAL_TO_CONTACT = 3
-  CONTACT_TO_DEAL = 4
-  DEAL_TO_COMPANY = 5
-  COMPANY_TO_DEAL = 6
   OBJECT_TARGET_TO_CLASS = {
     "Contact" => Hubspot::Contact,
     "Deal" => Hubspot::Deal,
@@ -23,8 +18,6 @@ class Hubspot::Association
       "Deal" => 4
     }
   }.freeze
-
-  ASSOCIATIONS_PATH = '/crm-associations/v1/associations/:resource_id/HUBSPOT_DEFINED/:definition_id'
 
   class << self
     def create(object_type, object_id, to_object_type, to_object_id)
