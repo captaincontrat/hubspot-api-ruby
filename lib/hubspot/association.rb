@@ -8,7 +8,8 @@ class Hubspot::Association
   ASSOCIATION_DEFINITIONS = {
     "Company" => {
       "Contact" => 2,
-      "Deal" => 6
+      "Deal" => 6,
+      "Company" => 13
     },
     "Deal" => {
       "Company" => 5,
