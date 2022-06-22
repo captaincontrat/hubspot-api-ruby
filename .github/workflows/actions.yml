@@ -26,4 +26,7 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
       - name: Test
+        env:
+          HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
+          HUBSPOT_HAPI_KEY: ${{ secrets.HUBSPOT_HAPI_KEY }}
         run: RUBYOPT='-W:deprecated' bundle exec rspec
