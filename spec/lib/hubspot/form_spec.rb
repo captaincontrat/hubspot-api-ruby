@@ -54,7 +54,7 @@ describe Hubspot::Form do
 
     context 'when the form is not found' do
       it 'raises an error' do
-        expect { Hubspot::Form.find(-1) }.to raise_error(Hubspot::RequestError)
+        expect { Hubspot::Form.find(-1) }.to raise_error(Hubspot::NotFoundError)
       end
     end
   end

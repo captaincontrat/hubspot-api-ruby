@@ -112,7 +112,7 @@ describe Hubspot::ContactProperties do
         cassette 'contact_properties/delete_non_property'
 
         it 'should raise an error' do
-          expect { Hubspot::ContactProperties.delete!(name) }.to raise_error(Hubspot::RequestError)
+          expect { Hubspot::ContactProperties.delete!(name) }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
@@ -208,7 +208,7 @@ describe Hubspot::ContactProperties do
         cassette 'contact_properties/delete_non_group'
 
         it 'should raise an error' do
-          expect { Hubspot::ContactProperties.delete_group!(name) }.to raise_error(Hubspot::RequestError)
+          expect { Hubspot::ContactProperties.delete_group!(name) }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end

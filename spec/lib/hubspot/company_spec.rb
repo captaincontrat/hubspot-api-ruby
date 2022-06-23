@@ -30,7 +30,7 @@ RSpec.describe Hubspot::Company do
       it 'raises an error' do
         expect {
           subject
-        }.to raise_error(Hubspot::RequestError, /resource not found/)
+        }.to raise_error(Hubspot::NotFoundError, /resource not found/)
       end
     end
   end
@@ -163,7 +163,7 @@ RSpec.describe Hubspot::Company do
 
         expect {
           described_class.find subject.id
-        }.to raise_error(Hubspot::RequestError)
+        }.to raise_error(Hubspot::NotFoundError)
       end
     end
   end

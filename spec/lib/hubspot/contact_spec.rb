@@ -33,7 +33,7 @@ RSpec.describe Hubspot::Contact do
       it 'raises an error' do
         expect {
           subject
-        }.to raise_error(Hubspot::RequestError, /contact does not exist/)
+        }.to raise_error(Hubspot::NotFoundError, /contact does not exist/)
       end
     end
   end

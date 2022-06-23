@@ -7,7 +7,7 @@ module Hubspot
         url = generate_url(path, opts)
         response = get(url, format: :json, read_timeout: read_timeout(opts), open_timeout: open_timeout(opts))
         log_request_and_response url, response
-        handle_response(response)
+        handle_response(response).parsed_response
       end
 
       def post_json(path, opts)
@@ -24,9 +24,9 @@ module Hubspot
         )
 
         log_request_and_response url, response, opts[:body]
-        raise(Hubspot::RequestError.new(response)) unless response.success?
-
-        no_parse ? response : response.parsed_response
+        handle_response(response).yield_self do |r|
+          no_parse ? r : r.parsed_response
+        end
       end
 
       def put_json(path, options)
@@ -43,17 +43,16 @@ module Hubspot
         )
 
         log_request_and_response(url, response, options[:body])
-        raise(Hubspot::RequestError.new(response)) unless response.success?
-
-        no_parse ? response : response.parsed_response
+        handle_response(response).yield_self do |r|
+          no_parse ? r : r.parsed_response
+        end
       end
 
       def delete_json(path, opts)
         url = generate_url(path, opts)
         response = delete(url, format: :json, read_timeout: read_timeout(opts), open_timeout: open_timeout(opts))
         log_request_and_response url, response, opts[:body]
-        raise(Hubspot::RequestError.new(response)) unless response.success?
-        response
+        handle_response(response)
       end
 
       protected
@@ -68,7 +67,9 @@ module Hubspot
 
       def handle_response(response)
         if response.success?
-          response.parsed_response
+          response
+        elsif response.not_found?
+          raise(Hubspot::NotFoundError.new(response))
         else
           raise(Hubspot::RequestError.new(response))
         end

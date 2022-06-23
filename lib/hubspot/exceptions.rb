@@ -10,6 +10,8 @@ module Hubspot
     end
   end
 
+  class NotFoundError < RequestError; end
+
   class ConfigurationError < StandardError; end
   class MissingInterpolation < StandardError; end
   class ContactExistsError < RequestError; end

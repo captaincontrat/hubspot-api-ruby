@@ -194,7 +194,7 @@ describe Hubspot::ContactList do
 
       context 'when the contact list is not found' do
         it 'raises an error' do
-          expect { Hubspot::ContactList.find(-1) }.to raise_error(Hubspot::RequestError)
+          expect { Hubspot::ContactList.find(-1) }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end

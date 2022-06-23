@@ -227,7 +227,7 @@ RSpec.describe Hubspot::CompanyProperties do
           VCR.use_cassette("company_properties/delete_non_property") do
             expect {
               Hubspot::CompanyProperties.delete!("non-existent")
-            }.to raise_error(Hubspot::RequestError)
+            }.to raise_error(Hubspot::NotFoundError)
           end
         end
       end
@@ -399,7 +399,7 @@ RSpec.describe Hubspot::CompanyProperties do
         cassette 'company_properties/delete_non_group'
 
         it 'should raise an error' do
-          expect { Hubspot::CompanyProperties.delete_group!(name) }.to raise_error(Hubspot::RequestError)
+          expect { Hubspot::CompanyProperties.delete_group!(name) }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
