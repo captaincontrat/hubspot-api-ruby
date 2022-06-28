@@ -66,13 +66,10 @@ module Hubspot
       end
 
       def handle_response(response)
-        if response.success?
-          response
-        elsif response.not_found?
-          raise(Hubspot::NotFoundError.new(response))
-        else
-          raise(Hubspot::RequestError.new(response))
-        end
+        return response if response.success?
+
+        raise(Hubspot::NotFoundError.new(response)) if response.not_found?
+        raise(Hubspot::RequestError.new(response))
       end
 
       def log_request_and_response(uri, response, body=nil)

@@ -10,7 +10,6 @@ module Hubspot
     RECENT_CONTACTS_PATH = LIST_PATH + '/contacts/recent'
     ADD_CONTACT_PATH     = LIST_PATH + '/add'
     REMOVE_CONTACT_PATH  = LIST_PATH + '/remove'
-    REFRESH_PATH         = LIST_PATH + '/refresh'
 
     class << self
       # {http://developers.hubspot.com/docs/methods/lists/create_list}
