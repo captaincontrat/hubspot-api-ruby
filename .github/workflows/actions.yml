@@ -31,4 +31,5 @@ jobs:
         env:
           HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
           HUBSPOT_HAPI_KEY: ${{ secrets.HUBSPOT_HAPI_KEY }}
+          HUBSPOT_ACCESS_TOKEN: ${{ secrets.HUBSPOT_ACCESS_TOKEN }}
         run: RUBYOPT='-W:deprecated' bundle exec rspec

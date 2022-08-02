@@ -30,11 +30,11 @@ Dir["#{RSPEC_ROOT}/shared_examples/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
   config.before(:all) do
-    Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"))
+    Hubspot.configure(access_token: ENV.fetch("HUBSPOT_ACCESS_TOKEN"))
   end
 
   config.before(:each) do
-    Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"))
+    Hubspot.configure(access_token: ENV.fetch("HUBSPOT_ACCESS_TOKEN"))
   end
 
   # config.after(:each) do

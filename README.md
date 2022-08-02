@@ -147,10 +147,10 @@ By default, the VCR recording mode is set to `:none`, which allows recorded
 requests to be re-played but raises for any new request. This prevents the test
 suite from issuing unexpected HTTP requests.
 
-Some requests require to be done on a live hubspot portal, you can set the `HUBSPOT_HAPI_KEY` environement variable, for example inside a `.env.test` file :
+Some requests require to be done on a live hubspot portal, you can set the `HUBSPOT_ACCESS_TOKEN` environement variable, for example inside a `.env.test` file :
 
 ```
-HUBSPOT_HAPI_KEY=xxxx
+HUBSPOT_ACCESS_TOKEN=xxxx
 ```
 
 To add a new test or update a VCR recording, run the test with the `VCR_RECORD_MODE`
