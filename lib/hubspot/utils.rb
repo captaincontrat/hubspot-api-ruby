@@ -87,11 +87,6 @@ module Hubspot
         [skip, new_groups.to_a, new_props, update_props]
       end
 
-      def with_hapikey(hapikey)
-        Hubspot.configure(hapikey: hapikey)
-        yield if block_given?
-      end
-
       private
 
       def find_by_name(name, set)

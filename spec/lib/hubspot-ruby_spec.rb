@@ -1,7 +1,7 @@
 RSpec.describe Hubspot do
   describe ".configure" do
     it "delegates .configure to Hubspot::Config.configure" do
-      options = { hapikey: "demo" }
+      options = { access_token: "demo" }
       allow(Hubspot::Config).to receive(:configure).with(options)
 
       Hubspot.configure(options)

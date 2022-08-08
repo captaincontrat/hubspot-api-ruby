@@ -1,22 +1,14 @@
 describe Hubspot::Engagement do
-
   let(:contact) { Hubspot::Contact.create("#{SecureRandom.hex}@hubspot.com") }
   let(:engagement) { Hubspot::EngagementNote.create!(contact.id, "foo") }
-  let(:example_engagement_hash) do
-    VCR.use_cassette("engagement_example") do
-      HTTParty.get("https://api.hubapi.com/engagements/v1/engagements/3981023?hapikey=demo").parsed_response
-    end
-  end
-  let(:example_associated_engagement_hash) do
-    VCR.use_cassette("engagement_associated_example") do
-      HTTParty.get("https://api.hubapi.com/engagements/v1/engagements/58699206?hapikey=demo").parsed_response
-    end
-  end
 
   # http://developers.hubspot.com/docs/methods/contacts/get_contact
 
   describe "#initialize" do
     subject{ Hubspot::Engagement.new(example_engagement_hash) }
+
+    let(:example_engagement_hash) { { 'engagement' => { 'id' => 3981023, 'portalId' => 62515, 'associations' => {} } } }
+
     it  { should be_an_instance_of Hubspot::Engagement }
     its (:id) { should == 3981023 }
   end

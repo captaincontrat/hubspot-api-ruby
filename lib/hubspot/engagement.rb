@@ -21,7 +21,6 @@ module Hubspot
     attr_reader :metadata
 
     def initialize(response_hash)
-
       @engagement = response_hash["engagement"]
       @associations = response_hash["associations"]
       @attachments = response_hash["attachments"]

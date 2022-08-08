@@ -1,4 +1,6 @@
 describe Hubspot::Utils do
+  API_HEADERS = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }.freeze
+
   describe ".properties_to_hash" do
     let(:properties) do
       {
@@ -32,13 +34,13 @@ describe Hubspot::Utils do
   describe '.compare_property_lists for ContactProperties' do
     let(:example_groups) do
       VCR.use_cassette('contact_properties/groups_example') do
-        HTTParty.get('https://api.hubapi.com/contacts/v2/groups?hapikey=demo').parsed_response
+        HTTParty.get('https://api.hubapi.com/contacts/v2/groups', headers: API_HEADERS).parsed_response
       end
     end
 
     let(:example_properties) do
       VCR.use_cassette('contact_properties/properties_example') do
-        HTTParty.get('https://api.hubapi.com/contacts/v2/properties?hapikey=demo').parsed_response
+        HTTParty.get('https://api.hubapi.com/contacts/v2/properties', headers: API_HEADERS).parsed_response
       end
     end
 
@@ -81,13 +83,13 @@ describe Hubspot::Utils do
   describe '.compare_property_lists for DealProperties' do
     let(:example_groups) do
       VCR.use_cassette('deal_groups_example') do
-        HTTParty.get('https://api.hubapi.com/deals/v1/groups?hapikey=demo').parsed_response
+        HTTParty.get('https://api.hubapi.com/deals/v1/groups', headers: API_HEADERS).parsed_response
       end
     end
 
     let(:example_properties) do
       VCR.use_cassette('deal_properties_example') do
-        HTTParty.get('https://api.hubapi.com/deals/v1/properties?hapikey=demo').parsed_response
+        HTTParty.get('https://api.hubapi.com/deals/v1/properties', headers: API_HEADERS).parsed_response
       end
     end
 
