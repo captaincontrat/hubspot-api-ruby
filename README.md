@@ -30,16 +30,16 @@ Authentication docs].
 Below is a complete list of configuration options with the default values:
 ```ruby
 Hubspot.configure({
-  hapikey: <HAPIKEY>,
+  access_token: <ACCESS_TOKEN>,
   base_url: "https://api.hubapi.com",
   portal_id: <PORTAL_ID>,
   logger: Logger.new(nil),
-  access_token: <ACCESS_TOKEN>,
   client_id: <CLIENT_ID>,
   client_secret: <CLIENT_SECRET>,
   redirect_uri: <REDIRECT_URI>,
   read_timeout: nil, # or :timeout to set read_timeout and open_timeout
   open_timeout: nil,
+  hapikey: <HAPIKEY>,
 })
 ```
 
@@ -50,15 +50,20 @@ environment.
 [HubSpot API Authentication Docs]: https://developers.hubspot.com/docs/methods/auth/oauth-overview
 [HubSpot Developer Tools]: https://developers.hubspot.com/docs/devtools
 
-## Authentication with an API key
+## Authentication with a private app access token
 
-To set the HubSpot API key, aka `hapikey`, run the following:
+To set the HubSpot access token, run the following:
 ```ruby
-Hubspot.configure(hapikey: "YOUR_API_KEY")
+Hubspot.configure(access_token: 'YOUR_ACCESS_TOKEN')
 ```
 
-If you have a HubSpot account, you can find your API key by logging in and
-visiting: https://app.hubspot.com/keys/get
+Note: some APIs require the portal ID to be set.
+
+```ruby
+Hubspot.configure(access_token: 'YOUR_ACCESS_TOKEN', portal_id: 'YOUR_PORTAL_ID')
+```
+
+[To learn how to create and manage private apps and access tokens, click here.](https://developers.hubspot.com/docs/api/private-apps)
 
 ## Authentication with OAuth 2.0
 
@@ -111,6 +116,18 @@ Hubspot::OAuth.refresh(refresh_token)
 
 At this time, OAuth tokens are configured globally rather than on a per-connection basis.
 
+## Authentication with an API key
+
+NOTE: API keys are deprecated. [Read more here](https://developers.hubspot.com/changelog/upcoming-api-key-sunset) and [find out how to migrate to private apps there](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app).
+
+To set the HubSpot API key, aka `hapikey`, run the following:
+```ruby
+Hubspot.configure(hapikey: "YOUR_API_KEY")
+```
+
+If you have a HubSpot account, you can find your API key by logging in and
+visiting: https://app.hubspot.com/keys/get
+
 ## Usage
 
 Classes have been created that map to Hubspot resource types and attempt to abstract away as much of the API specific details as possible. These classes generally follow the [ActiveRecord](https://en.wikipedia.org/wiki/Active_record_pattern) pattern and general Ruby conventions. Anyone familiar with [Ruby On Rails](https://rubyonrails.org/) should find this API closely maps with familiar concepts.
@@ -147,10 +164,11 @@ By default, the VCR recording mode is set to `:none`, which allows recorded
 requests to be re-played but raises for any new request. This prevents the test
 suite from issuing unexpected HTTP requests.
 
-Some requests require to be done on a live hubspot portal, you can set the `HUBSPOT_ACCESS_TOKEN` environement variable, for example inside a `.env.test` file :
+Some requests require to be done on a live hubspot portal, you can set the `HUBSPOT_ACCESS_TOKEN` and `HUBSPOT_PORTAL_ID` environement variables, for example inside a `.env.test` file :
 
 ```
 HUBSPOT_ACCESS_TOKEN=xxxx
+HUBSPOT_PORTAL_ID=yyyy
 ```
 
 To add a new test or update a VCR recording, run the test with the `VCR_RECORD_MODE`
