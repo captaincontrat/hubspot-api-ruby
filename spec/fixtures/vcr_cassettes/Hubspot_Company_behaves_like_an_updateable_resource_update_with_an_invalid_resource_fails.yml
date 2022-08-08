@@ -2,80 +2,6 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.hubapi.com/companies/v2/companies/0?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Foobar"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:39 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b86dcc5799ab-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 8b131412-ee72-4abf-b583-c2237b500a55
-      X-Hubspot-Notfound:
-      - 'true'
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498632'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '114'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B11E19B6F1306FD3D4ECABA449F00B2E62F36C9B1000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=leQ2vMFVllRJnq0SjlQBbzr8YUynYzDfBPvA69slwYb7fB1s5t0ugrDyuMNHL4W7Si9K9C6W0uWxPtb7fNygk26%2BVTblgMOr3sNBsE%2FGjvJBmOKYsrcC8IdKkECMmDSi%2BWoSMkBl0gnz7Ggd"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"status":"error","message":"Couldn''t find a company with the ID ''0''
-        in portal ''<PORTAL_ID>''","correlationId":"8b131412-ee72-4abf-b583-c2237b500a55","errors":[{"message":"This
-        company 0 does not exist."}],"category":"OBJECT_NOT_FOUND","subCategory":"COMPANY_NOT_FOUND"}'
-  recorded_at: Wed, 22 Jun 2022 08:47:39 GMT
-- request:
-    method: put
     uri: https://api.hubapi.com/companies/v2/companies/0
     body:
       encoding: UTF-8
@@ -97,7 +23,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:51:01 GMT
+      - Mon, 08 Aug 2022 14:49:12 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -105,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a11308ad3311-CDG
+      - 73790eae39463a3b-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -117,27 +43,27 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 2a74cfef-ade0-4c89-9848-9d4e418e5d3a
+      - a9d3d64a-0793-4b51-b819-f9fbd38eeb57
       X-Hubspot-Notfound:
       - 'true'
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249912'
+      - '248563'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '79'
+      - '77'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '7'
       X-Trace:
-      - 2B3CA734B4DA574D29F132F57F0D9690845D710E9C000000000000000000
+      - 2BBCF86212F21FEE15AD639D5813E7D9136469891F000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=W34MV3Q78NzR%2B%2Fq%2BBQTXD7Wa4ih1uQYitFOcEfMNPHSrJ3EM2x8t50%2BnuvvkTU0s%2B2xZeeeim6IfPA0W5x5o%2FSoeYvcgu5G4htvyNvQlqseqQv4UNduHhK8R2imaZSzSA6OP%2F0Oknbbr1MXa"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mnFYQ2AhI4Y3Hz1ek51%2FWv7hP%2BJGTHBaUR2mOz3RkjcnJmZihaZcTLf9IIq%2B6SMCZO7ZbAqpim%2FidT9Ybjv63hdiqOVaHoTgF87%2FIWcKZe90sJK7M%2FXYsAahKgDnNLh0V4ByS9kPA%2FS%2Bt24P"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -147,7 +73,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"status":"error","message":"Couldn''t find a company with the ID ''0''
-        in portal ''<PORTAL_ID>''","correlationId":"2a74cfef-ade0-4c89-9848-9d4e418e5d3a","errors":[{"message":"This
+        in portal ''<PORTAL_ID>''","correlationId":"a9d3d64a-0793-4b51-b819-f9fbd38eeb57","errors":[{"message":"This
         company 0 does not exist."}],"category":"OBJECT_NOT_FOUND","subCategory":"COMPANY_NOT_FOUND"}'
-  recorded_at: Tue, 02 Aug 2022 14:51:01 GMT
+  recorded_at: Mon, 08 Aug 2022 14:49:12 GMT
 recorded_with: VCR 6.0.0

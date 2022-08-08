@@ -2,13 +2,15 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/properties/v1/companies/properties?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/properties/v1/companies/properties
     body:
       encoding: UTF-8
       string: '{"name":"instagram_handle","groupName":"socialmediainformation","description":"The
         company''s Instagram handle.","fieldType":"text","type":"string","label":"Instagram
         Handle","options":[]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -23,7 +25,81 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:47:34 GMT
+      - Mon, 08 Aug 2022 14:49:05 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '482'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 73790e7d98fa0814-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - dbb00426-1570-4570-850c-94b714aa131d
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248582'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '83'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B1187C2F999D5EE92BA476A4211881F2EC0F42AD84AD59093495E135301
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mKsnyyCMgyePw95X4WogiI7KLiHmAnmby0IIcoJ0bKw7c2DxZ3j%2BvKXeU2sVUmul61crouaaBJCAzEwshcIIP60c4GincoZzbv3dh2Z2Ebrv%2BWL2LiwPGWgp%2F1BLVPYC%2BdihtQuyVOZOPDn2"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"instagram_handle","label":"Instagram Handle","description":"The
+        company''s Instagram handle.","groupName":"socialmediainformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"createdAt":1659969392788,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"numberDisplayHint":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"isCustomizedDefault":false,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"textDisplayHint":null,"updatedUserId":3326038,"hidden":false,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"formField":false,"displayOrder":-1,"readOnlyDefinition":false,"deleted":false,"updatedAt":1659970144990}'
+  recorded_at: Mon, 08 Aug 2022 14:49:05 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/properties/v1/companies/properties
+    body:
+      encoding: UTF-8
+      string: '{"name":"fax_number","groupName":"companyinformation","description":"The
+        company fax number.","fieldType":"text","type":"string","label":"Fax Number","options":[]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:49:05 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -31,7 +107,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3b84fdbad7926-CDG
+      - 73790e800bbc3b1f-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -43,452 +119,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 48ae5f2f-a243-4924-b7ed-26552164a263
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498651'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '120'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
-      X-Trace:
-      - 2BCC458C3C5E603BFFDA99EBD341BCF8B2DF656B68000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nSTq9NtBRNF1Eod7vK10P%2FFIbyRq5Y08e2pPvPi%2FtyBf%2F4G84R9yCWn1ctxGMt9ANh0NPjyPIWjiKMXD7dthnSuc96FuQASd5isHObqemAo3%2BHGVikaXMFy8GzTHFRFPC2I479HciBIDKRgf"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"name":"instagram_handle","label":"Instagram Handle","description":"The
-        company''s Instagram handle.","groupName":"socialmediainformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":false,"updatedAt":1655887654465,"createdAt":1655456763755,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"hidden":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false}'
-  recorded_at: Wed, 22 Jun 2022 08:47:34 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/properties/v1/companies/properties?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"name":"fax_number","groupName":"companyinformation","description":"The
-        company fax number.","fieldType":"text","type":"string","label":"Fax Number","options":[]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:34 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '460'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b851a90f3a4d-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 4099268e-4694-461b-abfe-648a020376d9
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498650'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '119'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2BDF269249EC34C2008B83226725070EE9C74B3273000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bws5ZSpeZHFLvkn9rVp4uDUukeMyBWS2Zp36%2Bm4j148IpcxWvTdNqjfqWK3DHP6NQc3kEW81rNDRwxqJ2IfpShS3mbe9kkLV081iBWz5ssvQeJNjMQcXGYE%2BmQyBgrVkHyJuCPBKFF6XzfvH"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"name":"fax_number","label":"Fax Number","description":"The company
-        fax number.","groupName":"companyinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"updatedUserId":null,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"options":[],"deleted":false,"updatedAt":1655887654743,"createdAt":1655456762968}'
-  recorded_at: Wed, 22 Jun 2022 08:47:34 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/properties/v1/companies/groups?hapikey=<HAPI_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:35 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '634'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b8534a100853-CDG
-      Cache-Control:
-      - no-cache, no-store, no-transform, must-revalidate, max-age=0
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 1530467f-56f3-49b2-b04f-88928925737a
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498649'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '118'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B25B2471D10FB5B81ACF09A23707B64FDFB379DBF000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KcAu3Tz97Mm%2BWvZLz6yeMy%2Fa1JLOlXS2PNdNw0h7CM0BqusN9gl%2FAKp2imlX3wQymOaRT3KPWx26hGyKMDjn1Z9BgFtbWksSeD13qHllDbK8y2m7nmC1X7IEpT%2BK2n%2Fbg8WA%2B%2BO72O9bgLnW"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"name":"company_activity","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Company
-        activity","displayOrder":-1,"hubspotDefined":true},{"name":"deal_information","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
-        information","displayOrder":-1,"hubspotDefined":true},{"name":"sales_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Sales
-        properties","displayOrder":-1,"hubspotDefined":true},{"name":"companyinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Company
-        information","displayOrder":1,"hubspotDefined":true},{"name":"socialmediainformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Social
-        media information","displayOrder":2,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Web
-        analytics history","displayOrder":4,"hubspotDefined":true},{"name":"conversioninformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Conversion
-        information","displayOrder":5,"hubspotDefined":true},{"name":"targetaccountsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Target
-        accounts information","displayOrder":6,"hubspotDefined":true},{"name":"ff_group235","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_5d53927dca3cb4d33b3c0dd67aec8ec1","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_dca0c6f2180493ec7afa72818f3dee9b","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_fd8285a73338e9128f3efdfd6f19084d","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_44722e13ea598b37bcc54646c229c60f","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_8be26642b60b4989304600ceb1baf04f","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_c1e5b0dca88933b986ba4f979d8d72b3","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_bc6005fe6d5f15928dbb53c5ab9de863","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_3c8550cd25358b9dc8f7af573787896c","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_a996fb59b571ffe0e0db1e8f24712b67","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_7d9396af7eda9392d14c5c10738f913e","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_69e4534dae61e8cefeb6d37607359c2e","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_f47e669c25af6bf51aa332d312eb74b4","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_3c602e6f06a60c058fae70230ee8b8f9","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_48830f136c450497544a16354edd9dd4","displayName":"","displayOrder":100,"hubspotDefined":false}]'
-  recorded_at: Wed, 22 Jun 2022 08:47:35 GMT
-- request:
-    method: delete
-    uri: https://api.hubapi.com/properties/v1/companies/properties/named/instagram_handle?hapikey=<HAPI_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:35 GMT
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b8547f30404f-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 78917f19-2e25-4438-9dbf-ca8be2a2e26c
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498648'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '117'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2BC1EB303A1D4452EDED1ED8871C575C85B9F7442A000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yX%2FB9T95oV6snVBxjE6B9wLHURQ2r7NHTSolRGPPBmlAbSpO1bBfmSz3FhZbGPy9Nbt%2FNji20JIrc%2Bu%2FPBGD3HBi19KD34YHkZmiGjjZVO6on7JFFFxL1rrBPP1dpeV74NBaLj%2B1tygNhnko"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Vary:
-      - Accept-Encoding
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: ''
-  recorded_at: Wed, 22 Jun 2022 08:47:35 GMT
-- request:
-    method: delete
-    uri: https://api.hubapi.com/properties/v1/companies/properties/named/fax_number?hapikey=<HAPI_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:35 GMT
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b8561e4c4037-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 0ace3ca2-119a-4504-b22a-568bd7fc782c
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498647'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '116'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B52EB8E1DEA9D5002BA735C831838EF47A4C90236000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BHEFvZ3o0AoSslfB9hobAK6eKKJS8b9LsnVgJBN23n%2Fwo8dA4GZ0HnVxPR3k8YIwAiuxVYO1JYbeyP3awqJau%2BglrnC446xs3vqN%2BvdvzIejH9xJ9KpOe1n3mNtxUOtbMPK6q0na9e3IBSlc"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Vary:
-      - Accept-Encoding
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: ''
-  recorded_at: Wed, 22 Jun 2022 08:47:35 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/properties/v1/companies/properties
-    body:
-      encoding: UTF-8
-      string: '{"name":"instagram_handle","groupName":"socialmediainformation","description":"The
-        company''s Instagram handle.","fieldType":"text","type":"string","label":"Instagram
-        Handle","options":[]}'
-    headers:
-      Authorization:
-      - Bearer <ACCESS_TOKEN>
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 02 Aug 2022 14:50:52 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '481'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 7347a0df0c910824-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 7b3edb76-eee8-46b9-b11f-53e2385dbf57
+      - fd5f1eda-dd54-4c4f-88fb-48fd9badf785
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249931'
+      - '248581'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '79'
-      X-Hubspot-Ratelimit-Secondly:
-      - '10'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '7'
-      X-Trace:
-      - 2B66E3CF095077C9DABB7AC69AC54685BF0B0AD35F000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DkmL24HlUFW2rUr5qCZNZG7GuFqURiggmGhzBvaWPi8Ghlqu0YNp9Hoo8Br0ju619SXJOiqeLUtBhvK1QKcsE2Hah0hSzLKOV6V7uHQe0rsaHynA%2BrOIxI7%2F0VDYC9cMjORECjbe%2Bx%2FY7o4O"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"name":"instagram_handle","label":"Instagram Handle","description":"The
-        company''s Instagram handle.","groupName":"socialmediainformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":1659451839488,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"updatedUserId":3326038,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"options":[],"deleted":false,"updatedAt":1659451852731}'
-  recorded_at: Tue, 02 Aug 2022 14:50:53 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/properties/v1/companies/properties
-    body:
-      encoding: UTF-8
-      string: '{"name":"fax_number","groupName":"companyinformation","description":"The
-        company fax number.","fieldType":"text","type":"string","label":"Fax Number","options":[]}'
-    headers:
-      Authorization:
-      - Bearer <ACCESS_TOKEN>
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 02 Aug 2022 14:50:53 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '470'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 7347a0e1bbe799a2-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 8cc30cd2-ddeb-495f-a2a8-4b4bf0a387e8
-      X-Hubspot-Ratelimit-Daily:
-      - '250000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249930'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '100'
-      X-Hubspot-Ratelimit-Remaining:
-      - '80'
+      - '82'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2B19FAD5B1776CCF674E36161EE7F14AE50CD845C4000000000000000000
+      - 2B2520BF2B565B383B5777AF7B784AE9C902193784000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=80ckN88Z7EbzFcEYRj9ZHX0BPBVmkJAaTmO6SArR0zr%2FzXL6%2FkUKQJva%2BvAK7o0YxjnCWjIgoEW3tU2p5WhOcmKZDJl6f2HfY5tJp%2BA6Yo1lr0kp4Kbw25Wkf%2F7fmv9yKuM%2FHBsO3ei%2F22Ot"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2BHBUUKYh3xhrgjb7HrWJvMVZZP12efcS72ZlKNq9hZhgQOQnVMKUKHXyHx98p7ZeK3AzB%2Bom2yRLBAAnyeD8LPefmJPG2dwU%2BV6fLRMrMtYkZ8zhHLPJGzn%2Fs4204gcXOvOvD6K770UKgGO5"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -498,8 +147,8 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"name":"fax_number","label":"Fax Number","description":"The company
-        fax number.","groupName":"companyinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":1659451837297,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"updatedUserId":3326038,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"options":[],"deleted":false,"updatedAt":1659451853147}'
-  recorded_at: Tue, 02 Aug 2022 14:50:53 GMT
+        fax number.","groupName":"companyinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"createdAt":1659969391229,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"numberDisplayHint":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"isCustomizedDefault":false,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"textDisplayHint":null,"updatedUserId":3326038,"hidden":false,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"formField":false,"displayOrder":-1,"readOnlyDefinition":false,"deleted":false,"updatedAt":1659970145412}'
+  recorded_at: Mon, 08 Aug 2022 14:49:05 GMT
 - request:
     method: get
     uri: https://api.hubapi.com/properties/v1/companies/groups
@@ -521,15 +170,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:53 GMT
+      - Mon, 08 Aug 2022 14:49:06 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '266'
+      - '339'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a0e4caee4043-CDG
+      - 73790e82bb04ee5c-CDG
       Cache-Control:
       - no-cache, no-store, no-transform, must-revalidate, max-age=0
       Strict-Transport-Security:
@@ -543,25 +192,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 2f5efcc0-b68c-4aac-bf7a-861aef9d89a1
+      - 7b99497c-49d4-4df9-8be0-0f5a96685100
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249929'
+      - '248580'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '79'
+      - '81'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '7'
+      - '8'
       X-Trace:
-      - 2B9AA3EF421D2B4336D9EE8FE976B82FF3DB236345000000000000000000
+      - 2BBA18ECE8931AFE63112C13C3B7BACDBFB23B3CBA000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xwDDlFPm0UAIyb0s%2FzLU5NbipIr1dkoJ18zILzaQOdqORKpowhFiejlZlGy7h6XpJxQbmXQmb2tSrGSfXnJmISYZGoA7FslYq3ZIPi96Cd0SRpzyDaCSD6G8c2WTMwYmPTlqSEwag%2Fp%2FFQdW"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=P5EWc4keLf%2BdyFRPFZseUGWMJMEdJLCUTiopJeZFt0d0dYbxRg%2FXS%2FXi6%2FR7pwMa%2FZf69aeZOYP%2FHR989iiUCtggAqfMlHm7RIwWYX3lWv%2FKx0Fr1TBJs0%2FpD5saA6RrRVvPSz08WgbZcm8Y"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -570,15 +219,16 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '[{"name":"company_activity","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Company
-        activity","displayOrder":-1,"hubspotDefined":true},{"name":"companyinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Company
-        information","displayOrder":1,"hubspotDefined":true},{"name":"captaininformation","displayName":"Captain
-        Contrat Information","displayOrder":2,"hubspotDefined":false},{"name":"socialmediainformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Social
+      string: '[{"name":"company_activity","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Company
+        activity","displayOrder":-1,"hubspotDefined":true},{"name":"deal_information","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
+        information","displayOrder":-1,"hubspotDefined":true},{"name":"sales_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Sales
+        properties","displayOrder":-1,"hubspotDefined":true},{"name":"companyinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Company
+        information","displayOrder":1,"hubspotDefined":true},{"name":"socialmediainformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Social
         media information","displayOrder":2,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Web
         analytics history","displayOrder":4,"hubspotDefined":true},{"name":"conversioninformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Conversion
         information","displayOrder":5,"hubspotDefined":true},{"name":"targetaccountsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Target
-        accounts information","displayOrder":6,"hubspotDefined":true}]'
-  recorded_at: Tue, 02 Aug 2022 14:50:53 GMT
+        accounts information","displayOrder":6,"hubspotDefined":true},{"name":"ff_group_c126a9f3501143a78c61fbec86632e93","displayName":"","displayOrder":100,"hubspotDefined":false}]'
+  recorded_at: Mon, 08 Aug 2022 14:49:06 GMT
 - request:
     method: delete
     uri: https://api.hubapi.com/properties/v1/companies/properties/named/instagram_handle
@@ -600,11 +250,11 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:54 GMT
+      - Mon, 08 Aug 2022 14:49:06 GMT
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a0e65ff14055-CDG
+      - 73790e85ec083a5d-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
@@ -614,25 +264,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 3190679d-8bf4-4266-bc7b-8d17bc566901
+      - ea27f2e7-d029-4317-89e3-86ec2c0c16ba
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249928'
+      - '248579'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '78'
+      - '81'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '7'
+      - '8'
       X-Trace:
-      - 2B4C15D33160A8CABD05C4C78398B025F06F6CAA54000000000000000000
+      - 2BB66E1777C0151E64A132EFF870ABE3434E64449A000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CjvISAUoRdg5vsIK9QpZgqYDk0Su2ZaWKH6R4qdtr%2F%2FdsdBPggaJfRHqBERsGOW7cma6TDHpHJnGx2z39wkXowUJMxrjVDdm4g7HHxAGSdE3X2WFX5EBkU2DTx9HDlXZ3RMpONnzf54jxcvz"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sA7Q9DirgvzibrGXWN6wTsRRxeKdh2cl4UwkXdVgMro%2B4QXdNqkby%2B8ETa469CBvr%2FDBUrNykCFzJorwO%2FwLxQl7ZRj%2FpMi8yZuotlpgH4uWa9Gsg%2B60ddO5%2BpooW6Y2iBhluazxGh4Lbyk2"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -644,7 +294,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 02 Aug 2022 14:50:54 GMT
+  recorded_at: Mon, 08 Aug 2022 14:49:06 GMT
 - request:
     method: delete
     uri: https://api.hubapi.com/properties/v1/companies/properties/named/fax_number
@@ -666,11 +316,11 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:54 GMT
+      - Mon, 08 Aug 2022 14:49:06 GMT
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a0e9593599d2-CDG
+      - 73790e88fa7932c4-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
@@ -680,11 +330,11 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 0a38920d-9e32-43e1-a501-d4f3dc6a15b1
+      - f9ef3543-0ea2-417a-92f9-96ac7ac3cc05
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249927'
+      - '248578'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
@@ -696,9 +346,9 @@ http_interactions:
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2BB9CBF87DC53C626778DF12879852856E0A36A7AD000000000000000000
+      - 2B238EE1EAFDBE7271C1AD026469FCFD6B704749FB000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DCrRwKytinVkAcgNFuiuoAzSGGY6664N9LopmFaN3uREQ0EmteOECT3LvQRYqAZp9QxjwZ7ho8bcLPTNgpmQN%2B0xx3Q0DMx%2FGDiR73UFzb8wXaZ1Ec0Z1ygR6M3AqoyZ9k5E8BGHbFHDvfgb"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dLywOw%2BUNhtLGMaah8aBB%2F4SU9%2Bo%2FSCwj6bjd94l8P1G51jpBCLIFnaD6QCi2LnW2uNpbaleqZxXzALzoY%2BeXd34HTyXAs%2F8E0INC4ILQotXJmEbxxOwNkQaVjtD13kv6BeMOOoZD5fouAtT"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -710,5 +360,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 02 Aug 2022 14:50:54 GMT
+  recorded_at: Mon, 08 Aug 2022 14:49:07 GMT
 recorded_with: VCR 6.0.0

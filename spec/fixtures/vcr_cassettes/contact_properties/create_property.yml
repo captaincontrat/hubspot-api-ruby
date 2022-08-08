@@ -2,79 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/properties/v1/contacts/properties?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"name":"my_new_property","groupName":"contactinformation","description":"What
-        kind of x would you like?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
-        is my new property","options":[]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:04 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '495'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3ba825bebedcf-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 5cbb7abc-24d2-43be-adec-3e567b950fc3
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498425'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '136'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '13'
-      X-Trace:
-      - 2BC8FD77B4FD1F7DC026A8F8ACA4E4662E8D431AD8000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FkNMx8Qj1wBrYB4MHdXkhQk8a8NBl50iRmzbDN3LtBPuQbuORRZ3pZuTNAKJrVT1mAh3zGbvg41vT6FUewZsd8qQ%2FSQoIHZGM6VvegdRwnH%2B3ji7M9mcCMZzPv1ogY4y%2FjRfF73nq4o%2BWJKW"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"name":"my_new_property","label":"This is my new property","description":"What
-        kind of x would you like?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":false,"updatedAt":1655887744467,"createdAt":1655457044273,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"formField":true,"displayOrder":0,"readOnlyValue":false,"readOnlyDefinition":false,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"mutableDefinitionNotDeletable":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"updatedUserId":null,"isCustomizedDefault":false}'
-  recorded_at: Wed, 22 Jun 2022 08:49:04 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/properties/v1/contacts/properties
     body:
       encoding: UTF-8
@@ -98,15 +25,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:52:53 GMT
+      - Mon, 08 Aug 2022 14:50:35 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '493'
+      - '499'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a3d18a7099a5-CDG
+      - 737910b4cfa099c9-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -118,11 +45,11 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 481dda56-6c59-4097-b90d-fac0a53bc111
+      - c614f2d8-dd52-4d33-bce2-241e22acec3b
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249710'
+      - '248380'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
@@ -134,9 +61,9 @@ http_interactions:
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2B7A24E4698639CA2C03E82FF421874D3FCED94966000000000000000000
+      - 2B459F37678F7C7A1A3E8160FEF0B70957CA335DED000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ya%2B7R9Eftiovh58BURxPkfbKG3G6GOZr6L38tPSgU7lxiXXDplyNZM4aWly%2BAVhetIH%2FoJwvJN7%2FbdHfIa6dCJFzvNzW91H6%2BvkqZBNSfdmTH7LmyfgLee%2B%2BcNnZGkY8OcuB%2Bi7YFcKWH63%2F"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=L5obvTffp9S0iOlcW0BP0IVt%2FbNwZHc01%2FTEHYMLHMue5YCUVCKvTnkEq8CEGaX73sqmPpcd%2F82%2BFDjqMGisTzsvxBP%2FvWbsK0pGspXX6eHacQUC7VABD5zMzTqp9UL8vjTTR0FiTSQLlflv"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -146,6 +73,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"name":"my_new_property","label":"This is my new property","description":"What
-        kind of x would you like?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":1659451973448,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"updatedUserId":3326038,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"options":[],"deleted":false,"updatedAt":1659451973448}'
-  recorded_at: Tue, 02 Aug 2022 14:52:53 GMT
+        kind of x would you like?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":false,"updatedAt":1659970235773,"createdAt":1659969497203,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"updatedUserId":3326038}'
+  recorded_at: Mon, 08 Aug 2022 14:50:36 GMT
 recorded_with: VCR 6.0.0

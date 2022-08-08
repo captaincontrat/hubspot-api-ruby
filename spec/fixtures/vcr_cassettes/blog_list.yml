@@ -2,137 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/content/api/v2/blogs/10500366470?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:24 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '1665'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b811aab13ae9-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 333dfb79-f3ee-4c6d-8bce-c87aeb8e64d2
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '994144'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '200'
-      X-Hubspot-Ratelimit-Remaining:
-      - '197'
-      X-Hubspot-Ratelimit-Secondly:
-      - '20'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '19'
-      X-Trace:
-      - 2BA90FD20F66893025257AA499A5390B3B72967133000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LnM5fg%2F%2FDPfr%2Fr4it7yDxpsJuI9kkyo0JQ0Kvc%2BSP4U3ZyBFkcYWrI5SIQiroiJY76AGgq91w5lCga8LUywVLxl7ySEdFpz9HmEwPKI5HaWTVrEcd1lNpKvyWQm3tFsbDuzv4Fbm8NSHuSpQ"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id":10500366470,"portal_id":62515,"site_id":null,"name":"Example
-        blog","category_id":3,"deleted_at":0,"created":1560548984320,"created_date_time":1560548984320,"updated":1565896194218,"updated_date_time":1565896194218,"language":"id","translated_from_id":null,"domain":"","resolved_domain":"demo-hubapi.hs-sites.com","state":null,"absolute_url":"http://demo-hubapi.hs-sites.com/example-blog","live_domain":"demo-hubapi.hs-sites.com","translations":{},"business_unit_id":0,"cos_object_type":"BLOG","public_access_rules_enabled":false,"public_access_rules":[{"type":"LIST_MEMBERSHIP","ids":[]}],"settings_overrides":{"commentShouldCreateContact":false,"allowComments":false,"showSocialLinkLinkedin":false,"useFeaturedImageInSummary":false,"enableGoogleAmpOutput":false,"commentVerificationText":false,"itemTemplatePath":false,"ampHeaderColor":false,"showSummaryInEmails":false,"ampHeaderBackgroundColor":false,"ampHeaderFontSize":false,"generateJsonLdEnabled":false,"commentModeration":false,"closeCommentsOlder":false,"htmlFooter":false,"ampHeaderFont":false,"postHtmlFooter":false,"commentNotificationEmails":false,"ampLinkColor":false,"listingTemplatePath":false,"ampLogoSrc":false,"commentMaxThreadDepth":false,"socialAccountTwitter":false,"itemTemplateIsShared":false,"postsPerListingPage":false,"htmlHeadIsShared":false,"showSocialLinkFacebook":false,"postHtmlHead":false,"listingPageHtmlFooter":false,"ampBodyColor":false,"listingLayoutId":false,"ampBodyFont":false,"attachedStylesheets":false,"htmlFooterIsShared":false,"ampLogoWidth":false,"ampLogoAlt":false,"showSocialLinkTwitter":false,"ampBodyFontSize":false,"showSummaryInRss":false,"itemLayoutId":false,"showSummaryInListing":false,"htmlHead":false,"postsPerRssFeed":false,"showSummariesInEmails":false,"ampLogoHeight":false},"domain_when_published":"demo-hubapi.hs-sites.com","comment_should_create_contact":false,"parent_blog_update_task_id":null,"root_url":"http://demo-hubapi.hs-sites.com/example-blog","description":"","label":"Example
-        blog","attached_stylesheets":[],"slug":"example-blog","url_segments":{"author":"author","archive":"archive","tag":"tag","page":"page","all":"all"},"analytics_page_id":10500366470,"public_title":"Example
-        blog","html_title":"","html_head":"","html_head_is_shared":true,"post_html_head":"","html_footer":"","html_footer_is_shared":true,"post_html_footer":"","html_keywords":[],"posts_per_listing_page":10,"posts_per_rss_feed":10,"allow_comments":false,"close_comments_older":0,"comment_moderation":false,"comment_notification_emails":[],"show_summary_in_emails":true,"use_featured_image_in_summary":true,"legacy_tab_id":null,"date_formatting_language":null,"comment_verification_text":"","captcha_always":false,"captcha_after_days":7,"item_layout_id":10498049828,"item_template_path":"generated_layouts/10498049828.html","listing_layout_id":10498049828,"listing_template_path":"generated_layouts/10498049828.html","item_template_is_shared":true,"uses_default_template":false,"default_group_style_id":"","show_summary_in_listing":true,"show_summary_in_rss":true,"show_social_link_twitter":true,"show_social_link_facebook":true,"show_social_link_linkedin":true,"default_notification_reply_to":"","default_notification_from_name":"","subscription_contacts_property":"blog_example_blog_10500366470_subscription","subscription_lists_by_type":{},"subscription_form_guid":"233bb53d-071f-4d39-8859-f041855bbbd4","subscription_email_type":null,"email_api_subscription_id":6914043,"instant_notification_email_id":null,"daily_notification_email_id":null,"weekly_notification_email_id":null,"monthly_notification_email_id":null,"enable_social_auto_publishing":false,"enable_google_amp_output":true,"social_account_twitter":"","publish_date_format":"medium","comment_form_guid":"94cd91d1-babb-4646-9afc-512d3b997f83","comment_date_format":"medium","comment_max_thread_depth":1,"month_filter_format":"MMMM
-        yyyy","rss_custom_feed":null,"rss_description":null,"rss_item_header":null,"rss_item_footer":null,"legacy_module_id":null,"legacy_guid":null,"amp_header_color":"#1e1e1e","amp_header_background_color":"#ffffff","amp_body_color":"#404040","amp_link_color":"#416bb3","amp_header_font":"''Helvetica
-        Neue'', Helvetica, Arial, sans-serif","amp_header_font_size":"36","amp_body_font":"''Helvetica
-        Neue'', Helvetica, Arial, sans-serif","amp_body_font_size":"18","amp_logo_src":"","amp_logo_alt":"","amp_logo_height":0,"amp_logo_width":0,"amp_custom_css":"","generate_json_ld_enabled":false,"url_base":"demo-hubapi.hs-sites.com/example-blog","header":null,"title":null,"cdn_purge_embargo_time":null,"audience_access":"PUBLIC"}'
-  recorded_at: Wed, 10 Oct 2012 00:00:00 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/content/api/v2/blogs?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer <ACCESS_TOKEN>
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Tue, 02 Aug 2022 14:50:35 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '236'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 7347a074f8d14069-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 5fd3db81-4921-4201-b533-6da040285e65
-      X-Trace:
-      - 2BD17109A18B0D88A7209733BAEC15D8103737F05D000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=auXn1Jo09Z%2FPowx%2F9RUzenw1EpGelaqvMMzZXLEJBI8VlrSEcrC2immWN7DJ19dDEFyX9keJq%2BSMKr0hOVOEYye5CsczNje%2B2UZLbqpHa0geAGoz8kK8jJCmEtzr9exH%2FEowDOyl%2FI%2BhGBaE"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: '{"status":"error","message":"Request implies conflicting values for
-        hub-id: 62515 from [hapikey (demo)] vs. <PORTAL_ID> from oauth-token (<ACCESS_TOKEN>)","correlationId":"5fd3db81-4921-4201-b533-6da040285e65"}'
-  recorded_at: Wed, 10 Oct 2012 00:00:00 GMT
-- request:
-    method: get
     uri: https://api.hubapi.com/content/api/v2/blogs
     body:
       encoding: US-ASCII
@@ -152,15 +21,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 15:08:54 GMT
+      - Mon, 08 Aug 2022 14:48:46 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '1631'
+      - '1620'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347bb475bdb40b1-CDG
+      - 73790e07ef123b91-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -172,25 +41,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - dea7e7ee-6c9e-4e3e-8d99-d43e6009f3d6
+      - 537e1064-10dc-4729-b99e-17b9f20a2ae7
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249998'
+      - '248624'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '98'
+      - '79'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '7'
       X-Trace:
-      - 2B0D8015E12E891FBA8F53AE2558FCB3DD00FE1F81000000000000000000
+      - 2B2B704C4D82C724A1F01ABB687B828950723C8711000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=K56zf7hU6mSM8i%2FdPZluM3VEQGV3PSZAIIS1s1BXaLIYaPLw%2F7G8R0JhoW2mHH4Vl7Ew9Ell3JBY2Y3trJldYqrMm08JkxPizEveuJ9tp%2BWu5PFs6xO7zPpVfaKTiHcW9y8JbCl8xqgR0rdj"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FjZD2gTcIV2O6s3%2FpLFSbhMM5x%2FnS4cr5ykh9bJ8CapUcB21knuevnF1slVawx2QyyKrR3MvnygLk206Mj58N7x1c1blwEmY3uZJoZagZBlDYxJOPXvsX54CD8rysUw4XACvjRmAD3xgnNaJ"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -200,9 +69,9 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"objects":[{"id":68499289253,"portal_id":<PORTAL_ID>,"site_id":null,"name":"test
-        blog pliz ignore","category_id":3,"deleted_at":0,"created":1647277919496,"created_date_time":1647277919496,"updated":1647277919497,"updated_date_time":1647277919497,"language":"fr","translated_from_id":null,"domain":"","resolved_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","state":null,"absolute_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","live_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","translations":{},"business_unit_id":0,"cos_object_type":"BLOG","public_access_rules_enabled":false,"public_access_rules":[],"settings_overrides":{"postHtmlFooter":false,"ampLogoHeight":false,"htmlHeadIsShared":false,"ampHeaderBackgroundColor":false,"ampBodyFont":false,"commentVerificationText":false,"showSocialLinkFacebook":false,"postsPerListingPage":false,"commentMaxThreadDepth":false,"closeCommentsOlder":false,"postHtmlHead":false,"useFeaturedImageInSummary":false,"itemTemplatePath":false,"commentNotificationEmails":false,"showSocialLinkLinkedin":false,"showSummaryInRss":false,"commentModeration":false,"listingTemplatePath":false,"attachedStylesheets":false,"showSummariesInEmails":false,"listingLayoutId":false,"enableGoogleAmpOutput":false,"ampHeaderFontSize":false,"htmlFooter":false,"allowComments":false,"htmlHead":false,"generateJsonLdEnabled":false,"ampLinkColor":false,"itemLayoutId":false,"itemTemplateIsShared":false,"commentShouldCreateContact":false,"listingPageHtmlFooter":false,"postsPerRssFeed":false,"ampLogoWidth":false,"showSummaryInEmails":false,"showSocialLinkTwitter":false,"ampLogoSrc":false,"ampLogoAlt":false,"ampHeaderColor":false,"socialAccountTwitter":false,"ampHeaderFont":false,"htmlFooterIsShared":false,"ampBodyFontSize":false,"showSummaryInListing":false,"ampBodyColor":false},"domain_when_published":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","comment_should_create_contact":false,"parent_blog_update_task_id":null,"root_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","attached_stylesheets":[],"slug":"","show_summary_in_emails":true,"use_featured_image_in_summary":true,"html_title":"test
-        blog pliz ignore","legacy_tab_id":null,"date_formatting_language":null,"url_segments":{"author":"author","page":"page","archive":"archive","all":"all","tag":"tag"},"analytics_page_id":68499289253,"public_title":"test
-        blog pliz ignore","html_head":"","html_head_is_shared":true,"post_html_head":"","html_footer":"","html_footer_is_shared":true,"post_html_footer":"","html_keywords":[],"posts_per_listing_page":10,"posts_per_rss_feed":10,"allow_comments":true,"close_comments_older":0,"comment_moderation":false,"comment_notification_emails":[],"comment_verification_text":"","captcha_always":false,"captcha_after_days":7,"item_layout_id":null,"item_template_path":"captain-cms/templates/blog-post.html","listing_layout_id":null,"listing_template_path":"","item_template_is_shared":false,"uses_default_template":false,"default_group_style_id":"","show_summary_in_listing":true,"show_summary_in_rss":true,"show_social_link_twitter":true,"show_social_link_facebook":true,"show_social_link_linkedin":true,"default_notification_reply_to":"","default_notification_from_name":"","subscription_contacts_property":null,"subscription_lists_by_type":{},"subscription_form_guid":null,"subscription_email_type":null,"email_api_subscription_id":null,"instant_notification_email_id":null,"daily_notification_email_id":null,"weekly_notification_email_id":null,"monthly_notification_email_id":null,"enable_social_auto_publishing":false,"enable_google_amp_output":true,"social_account_twitter":"","publish_date_format":"medium","comment_form_guid":"dc306c32-fe6a-43fc-a656-a840647efa7e","comment_date_format":"medium","comment_max_thread_depth":1,"month_filter_format":"MMMM
+        blog pliz ignore","category_id":3,"deleted_at":0,"created":1647277919496,"created_date_time":1647277919496,"updated":1647277919497,"updated_date_time":1647277919497,"language":"fr","translated_from_id":null,"domain":"","resolved_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","state":null,"absolute_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","live_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","translations":{},"business_unit_id":0,"cos_object_type":"BLOG","public_access_rules_enabled":false,"public_access_rules":[],"settings_overrides":{"useFeaturedImageInSummary":false,"ampHeaderColor":false,"htmlHead":false,"ampLogoSrc":false,"socialAccountTwitter":false,"htmlHeadIsShared":false,"showSummaryInRss":false,"itemLayoutId":false,"showSocialLinkLinkedin":false,"showSummaryInEmails":false,"allowComments":false,"postHtmlHead":false,"commentVerificationText":false,"commentNotificationEmails":false,"ampLogoWidth":false,"ampHeaderFontSize":false,"ampHeaderBackgroundColor":false,"postsPerRssFeed":false,"commentMaxThreadDepth":false,"showSocialLinkFacebook":false,"ampLogoHeight":false,"htmlFooter":false,"showSocialLinkTwitter":false,"ampLogoAlt":false,"ampHeaderFont":false,"listingTemplatePath":false,"itemTemplatePath":false,"ampBodyColor":false,"commentShouldCreateContact":false,"ampLinkColor":false,"commentModeration":false,"generateJsonLdEnabled":false,"showSummaryInListing":false,"ampBodyFontSize":false,"closeCommentsOlder":false,"ampBodyFont":false,"postHtmlFooter":false,"showSummariesInEmails":false,"htmlFooterIsShared":false,"listingLayoutId":false,"enableGoogleAmpOutput":false,"itemTemplateIsShared":false,"listingPageHtmlFooter":false,"attachedStylesheets":false,"postsPerListingPage":false},"domain_when_published":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","comment_should_create_contact":false,"parent_blog_update_task_id":null,"root_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","attached_stylesheets":[],"html_title":"test
+        blog pliz ignore","legacy_tab_id":null,"slug":"","date_formatting_language":null,"url_segments":{"author":"author","page":"page","archive":"archive","all":"all","tag":"tag"},"analytics_page_id":68499289253,"public_title":"test
+        blog pliz ignore","html_head":"","html_head_is_shared":true,"post_html_head":"","html_footer":"","html_footer_is_shared":true,"post_html_footer":"","html_keywords":[],"show_summary_in_emails":true,"use_featured_image_in_summary":true,"posts_per_listing_page":10,"posts_per_rss_feed":10,"allow_comments":true,"close_comments_older":0,"comment_moderation":false,"comment_notification_emails":[],"comment_verification_text":"","captcha_always":false,"captcha_after_days":7,"item_layout_id":null,"item_template_path":"captain-cms/templates/blog-post.html","listing_layout_id":null,"listing_template_path":"","item_template_is_shared":false,"uses_default_template":false,"default_group_style_id":"","show_summary_in_listing":true,"show_summary_in_rss":true,"show_social_link_twitter":true,"show_social_link_facebook":true,"show_social_link_linkedin":true,"default_notification_reply_to":"","default_notification_from_name":"","subscription_contacts_property":null,"subscription_lists_by_type":{},"subscription_form_guid":null,"subscription_email_type":null,"email_api_subscription_id":null,"instant_notification_email_id":null,"daily_notification_email_id":null,"weekly_notification_email_id":null,"monthly_notification_email_id":null,"enable_social_auto_publishing":false,"enable_google_amp_output":true,"social_account_twitter":"","publish_date_format":"medium","comment_form_guid":"dc306c32-fe6a-43fc-a656-a840647efa7e","comment_date_format":"medium","comment_max_thread_depth":1,"month_filter_format":"MMMM
         yyyy","rss_custom_feed":null,"rss_description":null,"rss_item_header":null,"rss_item_footer":null,"legacy_module_id":null,"legacy_guid":null,"amp_header_color":"#1e1e1e","amp_header_background_color":"#ffffff","amp_body_color":"#404040","amp_link_color":"#416bb3","amp_header_font":"''Helvetica
         Neue'', Helvetica, Arial, sans-serif","amp_header_font_size":"36","amp_body_font":"''Helvetica
         Neue'', Helvetica, Arial, sans-serif","amp_body_font_size":"18","amp_logo_src":"","amp_logo_alt":"","amp_logo_height":0,"amp_logo_width":0,"amp_custom_css":"","generate_json_ld_enabled":false,"url_base":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","header":null,"description":"test
@@ -229,15 +98,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 15:08:54 GMT
+      - Mon, 08 Aug 2022 14:48:46 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '1602'
+      - '1591'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347bb49690599f7-CDG
+      - 73790e0a6b250818-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -249,25 +118,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 2684105c-a9a2-403f-9555-3033e7e66b1a
+      - 6072922b-4674-4fe5-9cd0-d85bf6758b03
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249997'
+      - '248623'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '97'
+      - '78'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '7'
       X-Trace:
-      - 2BE4DD63B3D0EE6288AF822B7508EDF5CCD671D3A1000000000000000000
+      - 2B91102FA8A2FE8FF8AE038300EC150E4206438BA8000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FCKVMpNIo5D8ReeZIOxkyhnQCqwUbGnZBXatn1NWItCawwAZKufRzAvJuu5%2Fm0BwKfgdBFLI%2FOR9KBSjma7pTzgHR9DrOk1wv6BZFMyAjZdUCahdu6XphNWlr4Z%2BemiW09F9XtmC7zA68o2l"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XDKVzWEbtIptor%2B1YF7mcVxIGMx63%2FLtkhTusyO8MFB%2BMmUXJ4dE6aCxNzqieZKxxD2x026S1pQn9Pp0hom8x7X0Odd4MxswbWWINmj7Roh3ctd%2BkjkvEJfvapknJmMH9ZIFvQ7gyoYZJma3"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -277,9 +146,9 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"id":68499289253,"portal_id":<PORTAL_ID>,"site_id":null,"name":"test
-        blog pliz ignore","category_id":3,"deleted_at":0,"created":1647277919496,"created_date_time":1647277919496,"updated":1647277919497,"updated_date_time":1647277919497,"language":"fr","translated_from_id":null,"domain":"","resolved_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","state":null,"absolute_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","live_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","translations":{},"business_unit_id":0,"cos_object_type":"BLOG","public_access_rules_enabled":false,"public_access_rules":[],"settings_overrides":{"postHtmlFooter":false,"ampLogoHeight":false,"htmlHeadIsShared":false,"ampHeaderBackgroundColor":false,"ampBodyFont":false,"commentVerificationText":false,"showSocialLinkFacebook":false,"postsPerListingPage":false,"commentMaxThreadDepth":false,"closeCommentsOlder":false,"postHtmlHead":false,"useFeaturedImageInSummary":false,"itemTemplatePath":false,"commentNotificationEmails":false,"showSocialLinkLinkedin":false,"showSummaryInRss":false,"commentModeration":false,"listingTemplatePath":false,"attachedStylesheets":false,"showSummariesInEmails":false,"listingLayoutId":false,"enableGoogleAmpOutput":false,"ampHeaderFontSize":false,"htmlFooter":false,"allowComments":false,"htmlHead":false,"generateJsonLdEnabled":false,"ampLinkColor":false,"itemLayoutId":false,"itemTemplateIsShared":false,"commentShouldCreateContact":false,"listingPageHtmlFooter":false,"postsPerRssFeed":false,"ampLogoWidth":false,"showSummaryInEmails":false,"showSocialLinkTwitter":false,"ampLogoSrc":false,"ampLogoAlt":false,"ampHeaderColor":false,"socialAccountTwitter":false,"ampHeaderFont":false,"htmlFooterIsShared":false,"ampBodyFontSize":false,"showSummaryInListing":false,"ampBodyColor":false},"domain_when_published":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","comment_should_create_contact":false,"parent_blog_update_task_id":null,"root_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","attached_stylesheets":[],"slug":"","show_summary_in_emails":true,"use_featured_image_in_summary":true,"html_title":"test
-        blog pliz ignore","legacy_tab_id":null,"date_formatting_language":null,"url_segments":{"author":"author","page":"page","archive":"archive","all":"all","tag":"tag"},"analytics_page_id":68499289253,"public_title":"test
-        blog pliz ignore","html_head":"","html_head_is_shared":true,"post_html_head":"","html_footer":"","html_footer_is_shared":true,"post_html_footer":"","html_keywords":[],"posts_per_listing_page":10,"posts_per_rss_feed":10,"allow_comments":true,"close_comments_older":0,"comment_moderation":false,"comment_notification_emails":[],"comment_verification_text":"","captcha_always":false,"captcha_after_days":7,"item_layout_id":null,"item_template_path":"captain-cms/templates/blog-post.html","listing_layout_id":null,"listing_template_path":"","item_template_is_shared":false,"uses_default_template":false,"default_group_style_id":"","show_summary_in_listing":true,"show_summary_in_rss":true,"show_social_link_twitter":true,"show_social_link_facebook":true,"show_social_link_linkedin":true,"default_notification_reply_to":"","default_notification_from_name":"","subscription_contacts_property":null,"subscription_lists_by_type":{},"subscription_form_guid":null,"subscription_email_type":null,"email_api_subscription_id":null,"instant_notification_email_id":null,"daily_notification_email_id":null,"weekly_notification_email_id":null,"monthly_notification_email_id":null,"enable_social_auto_publishing":false,"enable_google_amp_output":true,"social_account_twitter":"","publish_date_format":"medium","comment_form_guid":"dc306c32-fe6a-43fc-a656-a840647efa7e","comment_date_format":"medium","comment_max_thread_depth":1,"month_filter_format":"MMMM
+        blog pliz ignore","category_id":3,"deleted_at":0,"created":1647277919496,"created_date_time":1647277919496,"updated":1647277919497,"updated_date_time":1647277919497,"language":"fr","translated_from_id":null,"domain":"","resolved_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","state":null,"absolute_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","live_domain":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","translations":{},"business_unit_id":0,"cos_object_type":"BLOG","public_access_rules_enabled":false,"public_access_rules":[],"settings_overrides":{"useFeaturedImageInSummary":false,"ampHeaderColor":false,"htmlHead":false,"ampLogoSrc":false,"socialAccountTwitter":false,"htmlHeadIsShared":false,"showSummaryInRss":false,"itemLayoutId":false,"showSocialLinkLinkedin":false,"showSummaryInEmails":false,"allowComments":false,"postHtmlHead":false,"commentVerificationText":false,"commentNotificationEmails":false,"ampLogoWidth":false,"ampHeaderFontSize":false,"ampHeaderBackgroundColor":false,"postsPerRssFeed":false,"commentMaxThreadDepth":false,"showSocialLinkFacebook":false,"ampLogoHeight":false,"htmlFooter":false,"showSocialLinkTwitter":false,"ampLogoAlt":false,"ampHeaderFont":false,"listingTemplatePath":false,"itemTemplatePath":false,"ampBodyColor":false,"commentShouldCreateContact":false,"ampLinkColor":false,"commentModeration":false,"generateJsonLdEnabled":false,"showSummaryInListing":false,"ampBodyFontSize":false,"closeCommentsOlder":false,"ampBodyFont":false,"postHtmlFooter":false,"showSummariesInEmails":false,"htmlFooterIsShared":false,"listingLayoutId":false,"enableGoogleAmpOutput":false,"itemTemplateIsShared":false,"listingPageHtmlFooter":false,"attachedStylesheets":false,"postsPerListingPage":false},"domain_when_published":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","comment_should_create_contact":false,"parent_blog_update_task_id":null,"root_url":"http://hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","attached_stylesheets":[],"html_title":"test
+        blog pliz ignore","legacy_tab_id":null,"slug":"","date_formatting_language":null,"url_segments":{"author":"author","page":"page","archive":"archive","all":"all","tag":"tag"},"analytics_page_id":68499289253,"public_title":"test
+        blog pliz ignore","html_head":"","html_head_is_shared":true,"post_html_head":"","html_footer":"","html_footer_is_shared":true,"post_html_footer":"","html_keywords":[],"show_summary_in_emails":true,"use_featured_image_in_summary":true,"posts_per_listing_page":10,"posts_per_rss_feed":10,"allow_comments":true,"close_comments_older":0,"comment_moderation":false,"comment_notification_emails":[],"comment_verification_text":"","captcha_always":false,"captcha_after_days":7,"item_layout_id":null,"item_template_path":"captain-cms/templates/blog-post.html","listing_layout_id":null,"listing_template_path":"","item_template_is_shared":false,"uses_default_template":false,"default_group_style_id":"","show_summary_in_listing":true,"show_summary_in_rss":true,"show_social_link_twitter":true,"show_social_link_facebook":true,"show_social_link_linkedin":true,"default_notification_reply_to":"","default_notification_from_name":"","subscription_contacts_property":null,"subscription_lists_by_type":{},"subscription_form_guid":null,"subscription_email_type":null,"email_api_subscription_id":null,"instant_notification_email_id":null,"daily_notification_email_id":null,"weekly_notification_email_id":null,"monthly_notification_email_id":null,"enable_social_auto_publishing":false,"enable_google_amp_output":true,"social_account_twitter":"","publish_date_format":"medium","comment_form_guid":"dc306c32-fe6a-43fc-a656-a840647efa7e","comment_date_format":"medium","comment_max_thread_depth":1,"month_filter_format":"MMMM
         yyyy","rss_custom_feed":null,"rss_description":null,"rss_item_header":null,"rss_item_footer":null,"legacy_module_id":null,"legacy_guid":null,"amp_header_color":"#1e1e1e","amp_header_background_color":"#ffffff","amp_body_color":"#404040","amp_link_color":"#416bb3","amp_header_font":"''Helvetica
         Neue'', Helvetica, Arial, sans-serif","amp_header_font_size":"36","amp_body_font":"''Helvetica
         Neue'', Helvetica, Arial, sans-serif","amp_body_font_size":"18","amp_logo_src":"","amp_logo_alt":"","amp_logo_height":0,"amp_logo_width":0,"amp_custom_css":"","generate_json_ld_enabled":false,"url_base":"hubspot-developers-17geepl-<PORTAL_ID>.hs-sites.com","header":null,"description":"test

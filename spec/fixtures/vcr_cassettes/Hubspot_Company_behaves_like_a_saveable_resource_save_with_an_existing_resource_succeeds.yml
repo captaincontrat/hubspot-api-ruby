@@ -2,153 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Ruecker Group"},{"name":"domain","value":"hackett-marquardt.name"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:37 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '400'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b8652db43aef-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - bd87ca38-9110-48c7-890e-19eb90806052
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498638'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '113'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B3A8D8BAD2C9B3EA8421E0EEA16385391344BE480000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=V6IGuw18A4XoCHoKqGDBEBuutCkJeItHJOr6hizMsufDgOQ4yk0FPtM8%2FJqdKZ5b77omE6E%2BOyZkWY65scU4RNSli8WdxIPQ2GvMvWIU0FWvbrasZA2S3unF28dQFF9QWPB9yIeZ4AigXpNH"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":8963390976,"isDeleted":false,"properties":{"website":{"value":"hackett-marquardt.name","timestamp":1655887657862,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"hackett-marquardt.name","timestamp":1655887657862,"source":"CALCULATED","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"hs_lastmodifieddate":{"value":"1655887657862","timestamp":1655887657862,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887657862","timestamp":1655887657862,"source":"CALCULATED","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"domain":{"value":"hackett-marquardt.name","timestamp":1655887657862,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"domain","value":"hackett-marquardt.name","timestamp":1655887657862,"source":"API","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"name":{"value":"Ruecker
-        Group","timestamp":1655887657862,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Ruecker
-        Group","timestamp":1655887657862,"source":"API","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"hs_object_id":{"value":"8963390976","timestamp":1655887657862,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963390976","timestamp":1655887657862,"source":"API","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"createdate":{"value":"1655887657862","timestamp":1655887657862,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887657862","timestamp":1655887657862,"source":"API","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:47:37 GMT
-- request:
-    method: put
-    uri: https://api.hubapi.com/companies/v2/companies/8963390976?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Foobar"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:38 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '414'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b8668ea399ed-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - ffe85907-3811-4d84-91a3-89e195e2d666
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498637'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '115'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B52631A48145C9A7434F1DC583CFA060EA25ACEEE000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=D8hG4BwD9%2BMrLVP8GC3MFU16ZOgflRV1WBDCCcrELvI1M8M840hUeT2MTSZ5j0M9UmpUaJv6yq3fK5nC3c%2FlC9XmcbUnYbTFVhHyxj2x0fd%2B6Zpnl3uuBS%2BJwRzHgVtE0MwQX0LNEoubt3tU"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":8963390976,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1655887658118","timestamp":1655887658118,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887658118","timestamp":1655887658118,"source":"CALCULATED","sourceVid":[],"requestId":"ffe85907-3811-4d84-91a3-89e195e2d666"},{"name":"hs_lastmodifieddate","value":"1655887657862","timestamp":1655887657862,"source":"CALCULATED","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"name":{"value":"Foobar","timestamp":1655887658118,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1655887658118,"source":"API","sourceVid":[],"requestId":"ffe85907-3811-4d84-91a3-89e195e2d666"},{"name":"name","value":"Ruecker
-        Group","timestamp":1655887657862,"source":"API","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"hs_object_id":{"value":"8963390976","timestamp":1655887657862,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963390976","timestamp":1655887657862,"source":"API","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]},"createdate":{"value":"1655887657862","timestamp":1655887657862,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887657862","timestamp":1655887657862,"source":"API","sourceVid":[],"requestId":"bd87ca38-9110-48c7-890e-19eb90806052"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:47:38 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Christiansen Inc"},{"name":"domain","value":"muller.biz"}]}'
+      string: '{"properties":[{"name":"name","value":"Marvin-Mosciski"},{"name":"domain","value":"deckow.net"}]}'
     headers:
       Authorization:
       - Bearer <ACCESS_TOKEN>
@@ -166,15 +23,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:58 GMT
+      - Mon, 08 Aug 2022 14:49:10 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '477'
+      - '422'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a103ca3199dc-CDG
+      - 73790e9f0be439ff-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -186,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - db0d0076-f81a-45b7-a012-a2518d8293f0
+      - 8cda4753-b336-459a-809a-a62e199849d2
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249918'
+      - '248569'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '79'
+      - '78'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '7'
       X-Trace:
-      - 2B22E4EB734880207BD2AC3527BD21BF4D63CE1E0A000000000000000000
+      - 2B93AB5CB5656B1CEAE99AE95E6143EA4F8E91688E000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TR%2Frob2novc6sRAf11VTv01mrY2HngIF12a1gKxjxJWKDdze0%2BKDUfbolfeoLK8NMfbJpdf2je4B7gWlZS%2BAv49c8AOVLjZTI8N2XfuVioYW7y%2BNeua9mwHV5jTzKtFqw%2FDABhCmh7zDR120"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vZt5ctgA2oXVhzF5RK%2FSF6BEHu4NKRWNfaVS3F6lXi8IFDoZeCDUtaksyO5DzrZvFonOC%2FwLYTWMHIWoSRRQoarOLRseOd%2BaB4l836ac8sQhD%2FBpdNUZdoKlLTRci2nms6uOZ1bO4Zwhzqs9"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -213,13 +70,11 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":9290094219,"isDeleted":false,"properties":{"website":{"value":"muller.biz","timestamp":1659451858636,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"muller.biz","timestamp":1659451858636,"source":"CALCULATED","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"hs_lastmodifieddate":{"value":"1659451858636","timestamp":1659451858636,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451858636","timestamp":1659451858636,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"domain":{"value":"muller.biz","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"domain","value":"muller.biz","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"name":{"value":"Christiansen
-        Inc","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Christiansen
-        Inc","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"hs_object_id":{"value":"9290094219","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290094219","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"createdate":{"value":"1659451858636","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451858636","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"lifecyclestage":{"value":"lead","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Tue, 02 Aug 2022 14:50:58 GMT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337678383,"isDeleted":false,"properties":{"website":{"value":"deckow.net","timestamp":1659970150339,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"deckow.net","timestamp":1659970150339,"source":"CALCULATED","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"hs_lastmodifieddate":{"value":"1659970150339","timestamp":1659970150339,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970150339","timestamp":1659970150339,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"domain":{"value":"deckow.net","timestamp":1659970150339,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"deckow.net","timestamp":1659970150339,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"name":{"value":"Marvin-Mosciski","timestamp":1659970150339,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Marvin-Mosciski","timestamp":1659970150339,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"hs_object_id":{"value":"9337678383","timestamp":1659970150339,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337678383","timestamp":1659970150339,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"createdate":{"value":"1659970150339","timestamp":1659970150339,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970150339","timestamp":1659970150339,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:10 GMT
 - request:
     method: put
-    uri: https://api.hubapi.com/companies/v2/companies/9290094219
+    uri: https://api.hubapi.com/companies/v2/companies/9337678383
     body:
       encoding: UTF-8
       string: '{"properties":[{"name":"name","value":"Foobar"}]}'
@@ -240,15 +95,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:59 GMT
+      - Mon, 08 Aug 2022 14:49:11 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '500'
+      - '446'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a1069ca9047a-CDG
+      - 73790ea29f274019-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -260,25 +115,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - fac66caa-a2e7-4110-aae0-0c73f94f57de
+      - 7980b651-dba6-470b-a86b-42b5375ebf43
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249917'
+      - '248568'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '80'
+      - '77'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '8'
+      - '7'
       X-Trace:
-      - 2B8193F0AA6C7E4942DD0373B5043AC20D3827A5D1000000000000000000
+      - 2B3385053D651EB0A289DE4BA7ADB43E67C02BBF39000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iIM1bkuJGVNrMybI35f5pFmSQN7nGNUo%2BnlCZ7IMRayxfIYh3BbExTwhDAngSX0qRmRcVEvORMxs82Oqz%2FmUalhZ39L4eYPMIBZEIrp%2F1hwoMgWvRt7nEIlnZhaQn6m7dH6od%2BGwaJIpVzZO"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JLNrsaiAdpNUcLuFoEf2DKjNWkXmCJeOGdZ5i7j4uJSIJOcUaj4rU0u9ViEtCWE9vixQVutE2vNUbfVfh9K%2BZR8t0otwfqGv1SSOkz0NadbGc6sv10a8ENtBcRBC9YZWy5mhKaPxZBcBAT2O"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -287,7 +142,6 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":9290094219,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659451859087","timestamp":1659451859087,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451859087","timestamp":1659451859087,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"fac66caa-a2e7-4110-aae0-0c73f94f57de"},{"name":"hs_lastmodifieddate","value":"1659451858636","timestamp":1659451858636,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"name":{"value":"Foobar","timestamp":1659451859087,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1659451859087,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"fac66caa-a2e7-4110-aae0-0c73f94f57de"},{"name":"name","value":"Christiansen
-        Inc","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"hs_object_id":{"value":"9290094219","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290094219","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"createdate":{"value":"1659451858636","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451858636","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]},"lifecyclestage":{"value":"lead","timestamp":1659451858636,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451858636,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"db0d0076-f81a-45b7-a012-a2518d8293f0"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Tue, 02 Aug 2022 14:50:59 GMT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337678383,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659970150936","timestamp":1659970150936,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970150936","timestamp":1659970150936,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"7980b651-dba6-470b-a86b-42b5375ebf43"},{"name":"hs_lastmodifieddate","value":"1659970150339","timestamp":1659970150339,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"name":{"value":"Foobar","timestamp":1659970150936,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1659970150936,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"7980b651-dba6-470b-a86b-42b5375ebf43"},{"name":"name","value":"Marvin-Mosciski","timestamp":1659970150339,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"hs_object_id":{"value":"9337678383","timestamp":1659970150339,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337678383","timestamp":1659970150339,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]},"createdate":{"value":"1659970150339","timestamp":1659970150339,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970150339","timestamp":1659970150339,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8cda4753-b336-459a-809a-a62e199849d2"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:11 GMT
 recorded_with: VCR 6.0.0

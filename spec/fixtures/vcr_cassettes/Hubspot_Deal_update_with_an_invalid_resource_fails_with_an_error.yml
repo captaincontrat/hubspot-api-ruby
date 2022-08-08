@@ -2,79 +2,6 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.hubapi.com/deals/v1/deal/0?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"name":"dealname","value":"super deal"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:31 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bb293d63cd87-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 56fdc888-a214-46d9-84df-e0cbab2df9fb
-      X-Hubspot-Notfound:
-      - 'true'
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498333'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '114'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2BE8BBC6D1782F01978C0983C13805DC8EDE341E47000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=P%2B7N20gD0x0pzaR6yzvY%2BttxixTSvIpldbbkVyjsK8yejCM3O2KOORfNjMHFIWg9oh0SYkXU651QFmvhzqwg4L9SZ2G3WnLErf9xq7ddR0e6NJTSO9hEa3qj5Ixu2P%2F338N4vhqmY%2FHNf8ty"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"status":"error","message":"No deal found for dealId=0 portalId=<PORTAL_ID>","correlationId":"56fdc888-a214-46d9-84df-e0cbab2df9fb","errors":[{"message":"This
-        deal 0 does not exist."}],"category":"OBJECT_NOT_FOUND"}'
-  recorded_at: Wed, 22 Jun 2022 08:49:31 GMT
-- request:
-    method: put
     uri: https://api.hubapi.com/deals/v1/deal/0
     body:
       encoding: UTF-8
@@ -96,7 +23,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:53:53 GMT
+      - Mon, 08 Aug 2022 14:51:29 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -104,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a5469aaf08a7-CDG
+      - 73791204db5a3b97-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -116,27 +43,27 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 814f83db-f102-49f4-a17e-3c407414dedc
+      - abeeec06-463c-4bcc-a0c9-6c2d6211904c
       X-Hubspot-Notfound:
       - 'true'
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249608'
+      - '248272'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '82'
+      - '79'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '8'
+      - '7'
       X-Trace:
-      - 2B3F1761585D4354CB6F82ABAD5F52D2E343BD6163000000000000000000
+      - 2B63A15BEF93AF587642FBF502786EB1CDF36F58C9000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ayV0WgO6yqs91uPdd8brYi0ho%2BlyGZz4XMQUjwjKYd1h5YQz8P%2Bz3CiNO0UzJz2KG08x1%2BThq5GQ4Xg%2FnRr1CJiF%2FoolEFcrqcKMQlf1Uw54%2F%2FtXnmabiea3ZLxT9mM24l6HeQ%2BR7Me0u2tI"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gMg3%2BO1grBYrwBY39GsbF2lALKkQXkPFmsfP9aMgXBEJKhWVabvDAYxT08d03hx1ieU8tMqb5Jtg1yNanpvTD%2B2TCmm3Fe3FL%2BSmklDwd9iOQr8Ci8UFD7wXx0WBXAAs4GqAtAsW3ZP7IrKc"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -145,7 +72,7 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"error","message":"No deal found for dealId=0 portalId=<PORTAL_ID>","correlationId":"814f83db-f102-49f4-a17e-3c407414dedc","errors":[{"message":"This
+      string: '{"status":"error","message":"No deal found for dealId=0 portalId=<PORTAL_ID>","correlationId":"abeeec06-463c-4bcc-a0c9-6c2d6211904c","errors":[{"message":"This
         deal 0 does not exist."}],"category":"OBJECT_NOT_FOUND"}'
-  recorded_at: Tue, 02 Aug 2022 14:53:53 GMT
+  recorded_at: Mon, 08 Aug 2022 14:51:29 GMT
 recorded_with: VCR 6.0.0

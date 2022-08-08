@@ -2,146 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/contact?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"property":"firstname","value":"Rey"},{"property":"lastname","value":"VonRueden"},{"property":"email","value":"rachell@example.org"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:11 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '457'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3baadff9f4055-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 988d6a90-19a5-4b4a-a85b-febf63d05a56
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498401'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '118'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B6ADBE074F9D98CFAFE5AA41BDD3BD54087B30CFB000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tS6DwgzTNYSNLEKyJ0ssUWxm6FHkSIPJ0gJEl9PJg5O9yyzslIyx8Cykx%2BiRm17iFK7g4hVp%2FxyLXju8tTDgfKHPw%2FZDabdN8OMsQ0OFIgpKi%2BMrTWKhFT37%2BWtI%2Bc10g6g4P0gFV3VN7cJl"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"vid":67901,"canonical-vid":67901,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Rey","versions":[{"value":"Rey","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887751431,"selected":false}]},"email":{"value":"rachell@example.org","versions":[{"value":"rachell@example.org","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887751431,"selected":false}]},"lastname":{"value":"VonRueden","versions":[{"value":"VonRueden","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887751431,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":67901,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"rachell@example.org","timestamp":1655887751436,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"ba17f404-dc07-416f-ae99-37bc74991ce1","timestamp":1655887751455,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:49:11 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/contacts/v1/contact/vid/67901/profile?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"property":"firstname","value":"foobar"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:11 GMT
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bab00b26edef-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - d0496590-bc37-448e-a62c-6ffa406079e2
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498400'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '117'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B668C99A54646CA860D10429FAA314B4C5436E70C000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KdtaCrKKSdotsFLIubQU625%2By4CTxXgYyOmVq6qISV9WLuJrvTa5IHGvGhv%2F5XObMIWghHSaS8zRr5RpCdoK6ERoI9VU27K893hRREkOGnJvsE9HXrMS2HmLy5UOHF0kIQhtN1sY7qoBblP0"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Vary:
-      - Accept-Encoding
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: ''
-  recorded_at: Wed, 22 Jun 2022 08:49:11 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/contacts/v1/contact
     body:
       encoding: UTF-8
-      string: '{"properties":[{"property":"firstname","value":"Bradly"},{"property":"lastname","value":"Rosenbaum"},{"property":"email","value":"glenna.reilly@example.org"}]}'
+      string: '{"properties":[{"property":"firstname","value":"Katheryn"},{"property":"lastname","value":"Gutkowski"},{"property":"email","value":"ali.ohara@example.com"}]}'
     headers:
       Authorization:
       - Bearer <ACCESS_TOKEN>
@@ -159,15 +23,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:53:10 GMT
+      - Mon, 08 Aug 2022 14:50:48 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '482'
+      - '479'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a428aa94ee64-CDG
+      - 737911005dae3afb-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -179,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 86a30046-55b7-47a9-bb63-b4018940c280
+      - 85e09eac-1550-40fa-a7b9-f76b9783a6da
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249684'
+      - '248354'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '88'
+      - '79'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '8'
+      - '7'
       X-Trace:
-      - 2B5ECDAE19FDE0940AA1833FD708C2E4E3C16A6084000000000000000000
+      - 2B670BC1D4855E5C765FC550D373FB0B1EA0089A96000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xI5HEKjAwF7QXKOjPJTde5MpsJYbjuIS4o5cmEwFoGVUNEDch8X%2BvslUJvfQBn2H%2BqrQYS9VY7ZO8TVACyaOIiM6EI3rJa8WdOs%2FAVMNZgKSNpylLJCtZSbVSKKJy4kXPM%2FM3vkUXhyaMppD"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EaGlFmETM%2FZs0Sl5g%2BEVU%2BA%2BVkWn6mePaYFIQk5MI%2BSv%2BwYYtk8gFQ%2Bj%2BNAiCFGgjvL5fdGqnZSUsrJmr9x%2FwazT9CVK705sO7XZvGl%2Blmjtk5F6QDhfCr%2FIiWlZtnoYeLj65G0F0ad9a%2Fs%2B"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -206,11 +70,11 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"vid":159451,"canonical-vid":159451,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Bradly","versions":[{"value":"Bradly","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451989274,"selected":false}]},"email":{"value":"glenna.reilly@example.org","versions":[{"value":"glenna.reilly@example.org","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451989274,"selected":false}]},"lastname":{"value":"Rosenbaum","versions":[{"value":"Rosenbaum","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451989274,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":159451,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"glenna.reilly@example.org","timestamp":1659451989283,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"dcd7c46f-8f1f-4b46-b0b0-3a4c7a2e19f8","timestamp":1659451989370,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
-  recorded_at: Tue, 02 Aug 2022 14:53:10 GMT
+      string: '{"vid":22954,"canonical-vid":22954,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Katheryn","versions":[{"value":"Katheryn","source-type":"INTEGRATION","source-id":"1024781","source-label":null,"updated-by-user-id":null,"timestamp":1659970247872,"selected":false}]},"email":{"value":"ali.ohara@example.com","versions":[{"value":"ali.ohara@example.com","source-type":"INTEGRATION","source-id":"1024781","source-label":null,"updated-by-user-id":null,"timestamp":1659970247872,"selected":false}]},"lastname":{"value":"Gutkowski","versions":[{"value":"Gutkowski","source-type":"INTEGRATION","source-id":"1024781","source-label":null,"updated-by-user-id":null,"timestamp":1659970247872,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":22954,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"ali.ohara@example.com","timestamp":1659970247881,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"de3872e7-8405-4e91-9f6c-55bc051356b3","timestamp":1659970247901,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:50:48 GMT
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/contact/vid/159451/profile
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/22954/profile
     body:
       encoding: UTF-8
       string: '{"properties":[{"property":"firstname","value":"foobar"}]}'
@@ -231,11 +95,11 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:53:11 GMT
+      - Mon, 08 Aug 2022 14:50:48 GMT
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a43ebe1dedc7-CDG
+      - 737911034ed23b9d-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
@@ -245,25 +109,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 2bed6935-61f8-449b-af16-965c70a2b62b
+      - bf467bae-9de8-4c84-a2d6-0a36a6cfa258
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249683'
+      - '248353'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '88'
+      - '81'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2BFC6041E9EF9E99F222F0B4CBAC800D0AB7E2C3E7000000000000000000
+      - 2BE045B83F41D2682D68C824E2983B6560BFCAA765000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ac2x256tgIfWKEKOMRWsXwQLwZ%2BDPOzqS1so0kPvzL%2BiwnZUbeZks5WMwS61HqP2bJhndWce6dP0pimV5JPxwnuH77y%2BvHrZzZZzZnN6YZsyLydHa0qmJLYyE%2By6037Hc8uXGBUYHOimDRs%2F"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=suOQjlmpAjz7BbvZ2f2znXHFoQmR9BUkP7i3wl7keK5Q%2BwnHVyFOJjQOb%2Bo3tnPg2%2FUpAE7fms3Y2%2FnIFA31CipfmYp6bJSBAQwNFHJgum5PrRKWhvdlXHVk6W7Yki1b4pvQBAT8kb7krfQd"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -275,5 +139,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 02 Aug 2022 14:53:11 GMT
+  recorded_at: Mon, 08 Aug 2022 14:50:48 GMT
 recorded_with: VCR 6.0.0

@@ -2,85 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/properties/v1/contacts/groups?hapikey=<HAPI_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:05 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '454'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3ba894ab43a17-CDG
-      Cache-Control:
-      - no-cache, no-store, no-transform, must-revalidate, max-age=0
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 781afa4d-be1d-445f-9a24-a580623ee6a5
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498421'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '132'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '13'
-      X-Trace:
-      - 2BFB2334482AF747723D23FB9D0D15260871C12F0C000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=abPQlMPaZCvtjO1yTsxtj5nWduEmDaDGImmFBmMIOdbRK9wNPGYDi58WHJ0Qc48wfVZP%2FZaQM7b18ghwSdYxbpJHQqQ%2F%2FmA5IheopY0Ytaxs4j1sgHjeBSpuIdGatCCSZXUEUbi8VXl4MSva"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"name":"contact_activity","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Contact
-        activity","displayOrder":-1,"hubspotDefined":true},{"name":"deal_information","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
-        information","displayOrder":-1,"hubspotDefined":true},{"name":"sales_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Sales
-        properties","displayOrder":-1,"hubspotDefined":true},{"name":"contactinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Contact
-        information","displayOrder":0,"hubspotDefined":true},{"name":"socialmediainformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Social
-        media information","displayOrder":2,"hubspotDefined":true},{"name":"emailinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Email
-        information","displayOrder":3,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Web
-        analytics history","displayOrder":4,"hubspotDefined":true},{"name":"conversioninformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Conversion
-        information","displayOrder":5,"hubspotDefined":true},{"name":"facebook_ads_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Facebook
-        Ads properties","displayOrder":6,"hubspotDefined":true},{"name":"ff_group_dc2676955d84dc7e470e3d4571ee8b66","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group234","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_c19f187613b6879c2fd27fe83c13a3ca","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_8ab704c410d68bba8b377964228dded1","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_1a452d37b721bfc3f9b32558ad10a0aa","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_a64897bb8325e85050076c9497425220","displayName":"","displayOrder":100,"hubspotDefined":false}]'
-  recorded_at: Wed, 22 Jun 2022 08:49:05 GMT
-- request:
-    method: get
     uri: https://api.hubapi.com/properties/v1/contacts/groups
     body:
       encoding: US-ASCII
@@ -100,15 +21,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:52:55 GMT
+      - Mon, 08 Aug 2022 14:50:37 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '237'
+      - '354'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a3dbe89999ce-CDG
+      - 737910c02af599bd-CDG
       Cache-Control:
       - no-cache, no-store, no-transform, must-revalidate, max-age=0
       Strict-Transport-Security:
@@ -122,11 +43,11 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 476773bc-1ed6-41d5-9c08-0b2df7c21fbb
+      - 8acf2f4f-7c67-4a54-b26d-28c527767914
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249706'
+      - '248376'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
@@ -138,9 +59,9 @@ http_interactions:
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2B75D57CA9270F13654830134F0712B85043592814000000000000000000
+      - 2B83018A3654F7E9698BE568D0C9002C6CC405623F000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ht%2BRvYe2ieZKl3oBfNJQorpf86CvqHBnTzZUU0xmvoxoFrn7URozc2HcVuUOYNZcmtb%2Bg%2FAX5tTC6TpDe3oZlrpho5LvqgsykuGrQ1fJOG8P30pkk%2F8%2FQNa7ULY8KnCeD0Ucu%2F6SgDsvqts6"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Xv1x40dIBHtH9810eJCUrhTJv7%2BwfONQ7c2qJWVARi6wXHOGtQg9AoK5yVS7367aGp%2BaAd47LCq1uxTnriCzuMtxU3Cz2Zjw%2B%2BxdZ7sYQ9fIP4DRf5IEH8SP%2BFV6moVq0sO6ZGecoFW7PkE1"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -149,12 +70,15 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '[{"name":"contactinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Contact
-        information","displayOrder":0,"hubspotDefined":true},{"name":"captaininformation","displayName":"Captain
-        Contrat Information","displayOrder":1,"hubspotDefined":false},{"name":"socialmediainformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Social
+      string: '[{"name":"contact_activity","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Contact
+        activity","displayOrder":-1,"hubspotDefined":true},{"name":"deal_information","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Deal
+        information","displayOrder":-1,"hubspotDefined":true},{"name":"sales_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Sales
+        properties","displayOrder":-1,"hubspotDefined":true},{"name":"contactinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Contact
+        information","displayOrder":0,"hubspotDefined":true},{"name":"socialmediainformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Social
         media information","displayOrder":2,"hubspotDefined":true},{"name":"emailinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Email
         information","displayOrder":3,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Web
         analytics history","displayOrder":4,"hubspotDefined":true},{"name":"conversioninformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Conversion
-        information","displayOrder":5,"hubspotDefined":true}]'
-  recorded_at: Tue, 02 Aug 2022 14:52:55 GMT
+        information","displayOrder":5,"hubspotDefined":true},{"name":"facebook_ads_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Facebook
+        Ads properties","displayOrder":6,"hubspotDefined":true},{"name":"ff_group_1227db1bbf183f5c88e10c97d97285ad","displayName":"","displayOrder":100,"hubspotDefined":false}]'
+  recorded_at: Mon, 08 Aug 2022 14:50:37 GMT
 recorded_with: VCR 6.0.0

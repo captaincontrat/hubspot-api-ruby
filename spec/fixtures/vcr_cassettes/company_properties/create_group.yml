@@ -2,77 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/properties/v1/companies/groups?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"name":"ff_group1","displayName":"Test Group One","displayOrder":100}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:35 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b85888473ad7-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 89b1989b-3a71-4f2d-b702-67c355386c81
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498646'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '115'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2BAAFB945752BF91E8D23CF44EF5B79BF8C58496F7000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=R9jLknDhlSx2d8fZVX1skQkn2fir8wRRntPNJpultaoqph7YF9aiyyW%2B0EsjzegiWyoOkNK%2Bb0oiOcRP8QcaWmkW%2BsS3KIAPsA8%2Bk7g3%2FtqDPYNsRgsSp7soUwGGJItmgvTG6Um2ZN5qCLxt"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"name":"ff_group1","displayName":"Test Group
-        One","displayOrder":100,"deleted":false}'
-  recorded_at: Wed, 22 Jun 2022 08:47:35 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/properties/v1/companies/groups
     body:
       encoding: UTF-8
@@ -94,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:55 GMT
+      - Mon, 08 Aug 2022 14:49:07 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -102,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a0eccdac32b8-CDG
+      - 73790e8bbaf8edb7-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -114,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 5fc24928-12ce-4d69-bad7-c4fb3d8b58cf
+      - 0b7abdd6-67b9-4b8d-966a-f890ff96413a
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249926'
+      - '248577'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '79'
+      - '81'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '7'
+      - '8'
       X-Trace:
-      - 2B4CCA08F08328A3F4CCD2A976C4C6896CF83A763A000000000000000000
+      - 2BAA40A6BCC7737084B41F6D843E37C079FEAE5616000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LwscYJ9G6cLc2epjVCg6Ka5ciWH92Kl1DWP1vns5AazVSGgx0uNSqqq%2BHQZJ2gYsVcmj%2B07kmsBYLqKO7s7JcLCNyDlCoUcvI%2Fw5b%2B8cBKSMVtOWPgyYyeGB3Z6GJXXwoh63eKSHCjxaF7Cf"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IZlIEFuwrQ%2FtlXYDpGxxDOnLySv5ESit5r4aSUHtw5zVRGp6%2Bps07Xkmdy3SrFZBcxQb%2BiUiIpB9WaRpOWaBR%2BsBBMqReq71pSDDae8MxZks3WTzpNSJKvgUn0DzjYsBCnuqniAAnxaSxgIK"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -142,6 +71,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"portalId":<PORTAL_ID>,"name":"ff_group1","displayName":"Test Group
-        One","displayOrder":100}'
-  recorded_at: Tue, 02 Aug 2022 14:50:55 GMT
+        One","displayOrder":100,"deleted":false}'
+  recorded_at: Mon, 08 Aug 2022 14:49:07 GMT
 recorded_with: VCR 6.0.0

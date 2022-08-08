@@ -2,78 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Foo Bar Inc."}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:42 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '354'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b8837ada32a6-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 1f16b538-6799-4301-b550-567ec5d4ed84
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498616'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '133'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '13'
-      X-Trace:
-      - 2B3213B634839F4A1DFAF83FEA8BFA203FBCFF6990000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rm%2FNcNW73X9IkfUf8MWY%2Fo4F5xFG%2FVgApSC2ojncDLh9oRmsyaYkg5kVJbNjaZvPCucrXI0gvGcrYhA5BJoKhtBTeh71X5UH6XvTk%2FUatUeQsGIjRhbAOAmK6o0kh1ifJ0C%2B4Mxq%2Bm86c6VY"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":8963357363,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1655887662728","timestamp":1655887662728,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887662728","timestamp":1655887662728,"source":"CALCULATED","sourceVid":[],"requestId":"1f16b538-6799-4301-b550-567ec5d4ed84"}]},"name":{"value":"Foo
-        Bar Inc.","timestamp":1655887662728,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Foo
-        Bar Inc.","timestamp":1655887662728,"source":"API","sourceVid":[],"requestId":"1f16b538-6799-4301-b550-567ec5d4ed84"}]},"hs_object_id":{"value":"8963357363","timestamp":1655887662728,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963357363","timestamp":1655887662728,"source":"API","sourceVid":[],"requestId":"1f16b538-6799-4301-b550-567ec5d4ed84"}]},"createdate":{"value":"1655887662728","timestamp":1655887662728,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887662728","timestamp":1655887662728,"source":"API","sourceVid":[],"requestId":"1f16b538-6799-4301-b550-567ec5d4ed84"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:47:42 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
@@ -95,15 +23,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:51:08 GMT
+      - Mon, 08 Aug 2022 14:49:20 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '440'
+      - '382'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a13f9c18ee1f-CDG
+      - 73790ede3c123b67-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -115,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 7f0f87a2-c1a9-49b3-abef-cbdd294e4758
+      - ea4124f6-f9ee-464b-a892-0e4cf0325198
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249894'
+      - '248545'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '76'
+      - '77'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '7'
       X-Trace:
-      - 2BE9A7DB6104BF134EF277D74ECDF669B34BEEF065000000000000000000
+      - 2B588DEEC98B98DE9E3A85B606669001B2B20FA223000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KgLP4sBiTULjQRBUClq6D6eKA38hRrrE5xeDMJedNFHkdlJZGlv37HhI46GLv5rqncaLLgK%2Fh3Ex%2FseMuuNHAZvqmBCL1oTY%2BrvG4d%2F4El6jwIJoFD50Hy3SjrV3m2epxp0w3AYTYclDHEJH"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aQy9%2BVGRUdqXjUVmBBaFqPXNzU8THrwGJDBrnWZTAh3ybrwr9aTw2GRAtnP3KHcI1AQNYnaWaTNoDus9ahyvfsWtC8rqYSYP0FY%2FKqXYfsNFRCsmaC%2FZCtrYhDDKwphcfvmzr2Em4EOlZaxa"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -142,8 +70,8 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":9290133306,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659451868181","timestamp":1659451868181,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451868181","timestamp":1659451868181,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"7f0f87a2-c1a9-49b3-abef-cbdd294e4758"}]},"name":{"value":"Foo
-        Bar Inc.","timestamp":1659451868181,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Foo
-        Bar Inc.","timestamp":1659451868181,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"7f0f87a2-c1a9-49b3-abef-cbdd294e4758"}]},"hs_object_id":{"value":"9290133306","timestamp":1659451868181,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290133306","timestamp":1659451868181,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"7f0f87a2-c1a9-49b3-abef-cbdd294e4758"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451868181,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451868181,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"7f0f87a2-c1a9-49b3-abef-cbdd294e4758"}]},"createdate":{"value":"1659451868181","timestamp":1659451868181,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451868181","timestamp":1659451868181,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"7f0f87a2-c1a9-49b3-abef-cbdd294e4758"}]},"lifecyclestage":{"value":"lead","timestamp":1659451868181,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451868181,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"7f0f87a2-c1a9-49b3-abef-cbdd294e4758"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Tue, 02 Aug 2022 14:51:08 GMT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337407872,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659970160438","timestamp":1659970160438,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970160438","timestamp":1659970160438,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"ea4124f6-f9ee-464b-a892-0e4cf0325198"}]},"name":{"value":"Foo
+        Bar Inc.","timestamp":1659970160438,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Foo
+        Bar Inc.","timestamp":1659970160438,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"ea4124f6-f9ee-464b-a892-0e4cf0325198"}]},"hs_object_id":{"value":"9337407872","timestamp":1659970160438,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337407872","timestamp":1659970160438,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"ea4124f6-f9ee-464b-a892-0e4cf0325198"}]},"createdate":{"value":"1659970160438","timestamp":1659970160438,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970160438","timestamp":1659970160438,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"ea4124f6-f9ee-464b-a892-0e4cf0325198"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:20 GMT
 recorded_with: VCR 6.0.0

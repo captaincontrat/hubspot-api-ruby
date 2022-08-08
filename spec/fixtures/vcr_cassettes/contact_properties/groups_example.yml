@@ -2,78 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v2/groups?hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 03 Aug 2022 13:46:03 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '263'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 734f7f49ae3039f9-CDG
-      Cache-Control:
-      - no-cache, no-store, no-transform, must-revalidate, max-age=0
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 64cdb313-d51d-4f2e-baa7-857f0b80584c
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '986154'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '200'
-      X-Hubspot-Ratelimit-Remaining:
-      - '196'
-      X-Hubspot-Ratelimit-Secondly:
-      - '20'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '19'
-      X-Trace:
-      - 2B427BE8F897EF867BD0A8564D04E085CB7E004058000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jp88Bl9Ac4nnhiE%2FFyFSnoIP5FimgDyxcYicajUElsHdTLeK5r0Nkvfutz2cfMhrjLW8ATi%2B2PBQ4bxxkzMAvVaVnVmWQHioknD%2F2VfcFaP%2FupXjjAjnjOmRAuvf4QhN"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"name":"contactinformation","displayName":"Contact Properties","displayOrder":1,"hubspotDefined":false},{"name":"emailinformation","displayName":"Email","displayOrder":4,"hubspotDefined":false},{"name":"conversioninformation","displayName":"Conversion
-        Information","displayOrder":5,"hubspotDefined":false},{"name":"analyticsinformation","displayName":"Analytics","displayOrder":8,"hubspotDefined":false},{"name":"salesforceinformation","displayName":"Salesforce","displayOrder":9,"hubspotDefined":false},{"name":"example_property_group","displayName":"Example
-        property group","displayOrder":81619,"hubspotDefined":false},{"name":"ip__ecomm_bridge__ecomm_bridge","displayName":"ECommerce","displayOrder":81683,"hubspotDefined":false},{"name":"ip__sync_extension__sync_extension","displayName":"SyncExtension","displayOrder":81684,"hubspotDefined":false}]'
-  recorded_at: Wed, 03 Aug 2022 13:46:03 GMT
-- request:
-    method: get
     uri: https://api.hubapi.com/contacts/v2/groups
     body:
       encoding: US-ASCII
@@ -93,15 +21,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 08 Aug 2022 14:34:22 GMT
+      - Mon, 08 Aug 2022 14:52:30 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '311'
+      - '379'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7378f8f4ba88cd7b-CDG
+      - 73791382da7440a5-CDG
       Cache-Control:
       - no-cache, no-store, no-transform, must-revalidate, max-age=0
       Strict-Transport-Security:
@@ -115,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - f4837366-9c86-46fb-a485-8802d33b7349
+      - de4e2504-65a6-43a4-922b-2c334e2f26bb
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249334'
+      - '248129'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '97'
+      - '76'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '7'
       X-Trace:
-      - 2B66782923AF7BEF397554051F1CAB814ABA2E72AD000000000000000000
+      - 2B633CE5D711569A14FEA4669F52CB463821154F7C000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZTKVRWh4rDQ8Y3xK6RPvImodqi%2Fgl781ocEWb2sWst9%2FgalJ7RWTVgL48gBTt7cQn7TNonZzF%2FrirdY2KCKdw5zBSD41H%2BXjwNy%2FfFrLbMal59FF%2BFUJtdbpIDOZa0SUty6u6ocWIOJmVFh6"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=koneWpll5cMr9k%2Bz1lDHNtMKA7BeTAUZbFSJMlLhiAPmowYvsOcPrGyGy9xt5lViGggGFPjEO1mkceFGm8%2FAGdHEZDt2zzgkDMIHioaIZjoqPz143w5z%2BokKoxQQgFISL7CvbV0%2BsJ1pI9yI"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -151,6 +79,6 @@ http_interactions:
         information","displayOrder":3,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Web
         analytics history","displayOrder":4,"hubspotDefined":true},{"name":"conversioninformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Conversion
         information","displayOrder":5,"hubspotDefined":true},{"name":"facebook_ads_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Facebook
-        Ads properties","displayOrder":6,"hubspotDefined":true}]'
-  recorded_at: Mon, 08 Aug 2022 14:34:23 GMT
+        Ads properties","displayOrder":6,"hubspotDefined":true},{"name":"ff_group_8396a1d5155014e8f38933c2a2658cd6","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_1227db1bbf183f5c88e10c97d97285ad","displayName":"","displayOrder":100,"hubspotDefined":false}]'
+  recorded_at: Mon, 08 Aug 2022 14:52:30 GMT
 recorded_with: VCR 6.0.0

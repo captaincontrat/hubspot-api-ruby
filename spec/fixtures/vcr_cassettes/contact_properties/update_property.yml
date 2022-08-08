@@ -2,79 +2,6 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.hubapi.com/properties/v1/contacts/properties/named/my_new_property?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"name":"my_new_property","groupName":"contactinformation","description":"What
-        is their favorite flavor?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
-        is my new property","options":[]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:04 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '453'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3ba843d3b99c0-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - cf20690d-e46a-4daf-9edb-b919ba3eec9d
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498424'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '135'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '13'
-      X-Trace:
-      - 2B29757744D960FD016B63CBF6348D83734718CC09000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8EeGRKRiw4nRZgWfnMgrE%2FIROtJcs9ruOH1dmOPSwOjApO%2F1cSvtWQTMOWEDWnQmsFCNnSfSo5K8umFImW%2BeofVBDZT4OZM3hARBpOHdxg%2B%2B7xeABWLqY3PJewt2U7K19I67tbPnjpJqM3en"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"name":"my_new_property","label":"This is my new property","description":"What
-        is their favorite flavor?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":null,"updatedAt":null,"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"hidden":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false}'
-  recorded_at: Wed, 22 Jun 2022 08:49:04 GMT
-- request:
-    method: put
     uri: https://api.hubapi.com/properties/v1/contacts/properties/named/my_new_property
     body:
       encoding: UTF-8
@@ -98,15 +25,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:52:54 GMT
+      - Mon, 08 Aug 2022 14:50:36 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '457'
+      - '453'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a3d44a0e084b-CDG
+      - 737910b8ca663a87-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -118,25 +45,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 63273b17-fe46-488e-be90-e0339b212e6c
+      - 55d15da8-87e2-4dd1-9cdd-463cbe1622d2
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249709'
+      - '248379'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '79'
+      - '82'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '7'
+      - '8'
       X-Trace:
-      - 2B9B39C761DC80B45926F1D014923A991CEEFC83E2000000000000000000
+      - 2BE689F613183F499CDE154E9DB775847D2C416807000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sHOZckhsszAO1JXfYip6omUruMMOPyKEStYAsH3yElN9n68jVUhZqNShcVFk%2BsYz0m1kt9by3JkYoWgjjXDpRfSOgcb6x2jSAIj9xDtWsyLcgk%2FvPgLmek1WLlxGeJu%2FgXjoBvG25f1KfwND"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YVoon6n3mdcu1QnM3mFb7OFSs4vPPSS%2BLgnzMGhUPF624NKD84DIp2WK8Bf5hpYjBcfuoHhOypmaJKHSgaowbWP9RSUw4dokAizSKsZHi%2F3woeKCGt7LBAFvqAMDKW6v%2BKOFTZ93%2Fk9qhkpM"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -146,6 +73,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"name":"my_new_property","label":"This is my new property","description":"What
-        is their favorite flavor?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":null,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"options":[],"deleted":null,"updatedAt":null}'
-  recorded_at: Tue, 02 Aug 2022 14:52:54 GMT
+        is their favorite flavor?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"numberDisplayHint":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"isCustomizedDefault":false,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"textDisplayHint":null,"updatedUserId":null,"hidden":false,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"formField":true,"displayOrder":0,"readOnlyDefinition":false,"deleted":null,"updatedAt":null}'
+  recorded_at: Mon, 08 Aug 2022 14:50:36 GMT
 recorded_with: VCR 6.0.0

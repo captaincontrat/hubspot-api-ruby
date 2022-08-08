@@ -2,74 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/search/query?count=25&hapikey=<HAPI_KEY>&offset=&q=123xyz
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:19 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3badd0a5a3ba3-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - add29409-cd51-4ee1-9877-832b953b2179
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498377'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '117'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2B372D6F154F0C1C19DD073CA176715E3246CB8D51000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mOLvMMsRXvEFNlog%2Bx2I%2F9ou8%2BPKbCsboqjOxNwuBbWbjX94Qluc0sGUz7ZNQnIVTzHVh19LhWFPqF1GMc0vT%2BUgqmx2sRywhxjmcu5mZYalL0RAexMYslMV4ysSLogbooSxMhnV4T8VMdYR"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"query":"123xyz","offset":0,"has-more":false,"total":0,"contacts":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:49:18 GMT
-- request:
-    method: get
     uri: https://api.hubapi.com/contacts/v1/search/query?count=25&offset=&q=123xyz
     body:
       encoding: US-ASCII
@@ -89,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:53:24 GMT
+      - Mon, 08 Aug 2022 14:51:00 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -97,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a4940beaee0b-CDG
+      - 7379114fa98a0897-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -109,25 +41,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 16b59b5b-3a48-4d96-bbfd-32defbbca883
+      - 8f7baa4b-dfab-42fd-81ff-2327a26f06ec
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249660'
+      - '248330'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '82'
+      - '81'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2B70CC83EFCFFAC1107AE0265508DF43629FC6C556000000000000000000
+      - 2B463D620CC0A3DD031AAF66CB3176D35415D36B98000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vjAl326eS9KlMBJQqFfkQ838nN0gtz6w92ACnKa0LF9fO0hZUmXTnmFC6LBkC9I9Jt0ahJY6RlTq4KWTN96fB9yoDM9zQk3hcDHLkjpRgxf1xgemWET5QP%2FvrJr4dNPpBDmhP3YzlTXF0tVg"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=naY3mGXdvjin1RE%2Fq5c3egqOMFn3GJ6g85rFeZwW6YeSR6cAgfDomGl5D6Ef8wOpFUK33oYyCKxgNcZMfoUgMvBWk569E4bi6bMk6uooEWPYzi8bLtNiktJWxWt8hdvfp0aoJ6cKgMeA749n"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -137,5 +69,5 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"query":"123xyz","offset":0,"has-more":false,"total":0,"contacts":[]}'
-  recorded_at: Tue, 02 Aug 2022 14:53:24 GMT
+  recorded_at: Mon, 08 Aug 2022 14:51:01 GMT
 recorded_with: VCR 6.0.0

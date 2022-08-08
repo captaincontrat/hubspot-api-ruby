@@ -2,152 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Weissnat, Jakubowski and Brakus"},{"name":"domain","value":"sipes.net"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:41 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '404'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b87bba713bd4-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - acbeacbe-e101-4bcf-b834-75d6cd24c8e6
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498622'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '139'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '13'
-      X-Trace:
-      - 2B2253C60DF3E598A001F8EB825E195BE1446BC364000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XHLlm6lWKKsoC4w1WCi6PrEDA6pL%2FWt3JZsAW0yTnBN7D5C7SB6E9NfPnft0GmKLJEDwVKRN1A762nH4yIp5zXUbaM4oUlgmvAJE4XceFytKeMwBCyjXhr%2BrjqHcU3ndzhM%2FypginbfMlGc%2B"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":8963352675,"isDeleted":false,"properties":{"website":{"value":"sipes.net","timestamp":1655887661478,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"sipes.net","timestamp":1655887661478,"source":"CALCULATED","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"hs_lastmodifieddate":{"value":"1655887661478","timestamp":1655887661478,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887661478","timestamp":1655887661478,"source":"CALCULATED","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"domain":{"value":"sipes.net","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"domain","value":"sipes.net","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"name":{"value":"Weissnat,
-        Jakubowski and Brakus","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Weissnat,
-        Jakubowski and Brakus","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"hs_object_id":{"value":"8963352675","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963352675","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"createdate":{"value":"1655887661478","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887661478","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:47:41 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/companies/v2/companies/8963352675?hapikey=<HAPI_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:41 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '404'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b87cf8c8edef-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - d88571df-9182-4f1c-b988-a7c3f77ca812
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498621'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '138'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '13'
-      X-Trace:
-      - 2B58EC4BD784B7967B6B1F42ED6CF7768EE85DB993000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uuEWcu4ivkOcHocQjnkzo%2FFlaf71b5LzXZn3XOmTLIXm8DjTGQE2kwvotCa%2F1gIsLkTqxW0wfShm0Wj%2F2L6WlSMbkHGLf%2BJWSCqG1oqZ%2FecFdt%2FzcUShezZAxiEwPxVmoGax4IKFRNxQteLt"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":8963352675,"isDeleted":false,"properties":{"website":{"value":"sipes.net","timestamp":1655887661478,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"sipes.net","timestamp":1655887661478,"source":"CALCULATED","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"hs_lastmodifieddate":{"value":"1655887661478","timestamp":1655887661478,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887661478","timestamp":1655887661478,"source":"CALCULATED","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"domain":{"value":"sipes.net","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"domain","value":"sipes.net","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"name":{"value":"Weissnat,
-        Jakubowski and Brakus","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Weissnat,
-        Jakubowski and Brakus","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"hs_object_id":{"value":"8963352675","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963352675","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]},"createdate":{"value":"1655887661478","timestamp":1655887661478,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887661478","timestamp":1655887661478,"source":"API","sourceVid":[],"requestId":"acbeacbe-e101-4bcf-b834-75d6cd24c8e6"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:47:41 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Weber Inc"},{"name":"domain","value":"schultz.net"}]}'
+      string: '{"properties":[{"name":"name","value":"Bergstrom and Sons"},{"name":"domain","value":"parisian.com"}]}'
     headers:
       Authorization:
       - Bearer <ACCESS_TOKEN>
@@ -165,15 +23,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:51:06 GMT
+      - Mon, 08 Aug 2022 14:49:18 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '474'
+      - '424'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a1320f8240bd-CDG
+      - 73790ed28fe399bd-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -185,11 +43,11 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 941783bd-51dd-4814-ac4d-441bb994dd00
+      - 8b8d7d75-548e-43fa-8401-1024d5ca1e00
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249900'
+      - '248551'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
@@ -201,9 +59,9 @@ http_interactions:
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '7'
       X-Trace:
-      - 2BD9230EB0C18A7F0202BFCE0F9454212407718C52000000000000000000
+      - 2BB05048220AA3045C2CBD76F0877C2B461F3127BB000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=pQgQxLpScutAb7CoMMjx%2BFBf8GN%2FtDnBRLObGCie39Yo%2Fmr8tNBKT6%2Bk5S0YBUzPWP2%2Ff0GGJAinTOU95%2FJvJh3rZ1PEYZvCif7GI1WlZQdYPhS0KDhKHSCOs4JWNsEQFvAIHs2h59FuJ4sM"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=npq9i54lOhDYdy0AQKKJ3i4mmwzvqkj1Uc00wdnXKtz4aWrvRHmCaPgTfdoHDK6ODM5207f53JG5aytrRNOnUJrFBhG0NTlF7ygD%2FzOYGpyB65fhSFiDaHMkhZGkD9Ubh6ZoVuaYuKSuY50q"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -212,13 +70,13 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":9289301560,"isDeleted":false,"properties":{"website":{"value":"schultz.net","timestamp":1659451866051,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"schultz.net","timestamp":1659451866051,"source":"CALCULATED","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"hs_lastmodifieddate":{"value":"1659451866051","timestamp":1659451866051,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451866051","timestamp":1659451866051,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"domain":{"value":"schultz.net","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"domain","value":"schultz.net","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"name":{"value":"Weber
-        Inc","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Weber
-        Inc","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"hs_object_id":{"value":"9289301560","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9289301560","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"createdate":{"value":"1659451866051","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451866051","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"lifecyclestage":{"value":"lead","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Tue, 02 Aug 2022 14:51:06 GMT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337706499,"isDeleted":false,"properties":{"website":{"value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_lastmodifieddate":{"value":"1659970158579","timestamp":1659970158579,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"domain":{"value":"parisian.com","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"parisian.com","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"name":{"value":"Bergstrom
+        and Sons","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Bergstrom
+        and Sons","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_object_id":{"value":"9337706499","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337706499","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"createdate":{"value":"1659970158579","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:18 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/companies/v2/companies/9289301560
+    uri: https://api.hubapi.com/companies/v2/companies/9337706499
     body:
       encoding: US-ASCII
       string: ''
@@ -237,15 +95,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:51:06 GMT
+      - Mon, 08 Aug 2022 14:49:18 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '473'
+      - '424'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a134eaf6998d-CDG
+      - 73790ed48e543a8d-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -257,11 +115,11 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - b4b39e01-7daf-4c2b-88a3-27a6c4a03f18
+      - 10fcf3d1-4a07-47ec-a25b-64a3b520d47f
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249899'
+      - '248550'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
@@ -273,9 +131,9 @@ http_interactions:
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '7'
       X-Trace:
-      - 2B99F2F4AA1D77BD140599F7D25735F82CE397442C000000000000000000
+      - 2BF68E0154FAFEDA58894F97CFEC272FE4A2840225000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CFbjYPhwVjIQa9i5gSRpvCSR5yVZZPpxH0J%2FjVVRzrCV2IrvRtRXkcdrgfGv9wiy%2F%2F51ALXaiQD7d2F2y5hQspjWI12COgIME9zL0T0z%2BcXddwLvcAuLz3C6EoptC9Aw3GYPVyZdVRLPVADl"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uun9oLUUjgqV1zxDjMYj1lSuZ3PjuHEO4rXWZY57c5t%2BNK4iW9sLkYMw9QZ%2B4917Ael4tu4scD9xpe7RQHh8shld6g9KTP3GwXT6kzy35aqIx88pmP3D36tg3QyaSSVdHwH8MXW16KrmfGAA"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -284,8 +142,8 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":9289301560,"isDeleted":false,"properties":{"website":{"value":"schultz.net","timestamp":1659451866051,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"schultz.net","timestamp":1659451866051,"source":"CALCULATED","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"hs_lastmodifieddate":{"value":"1659451866051","timestamp":1659451866051,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451866051","timestamp":1659451866051,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"domain":{"value":"schultz.net","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"domain","value":"schultz.net","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"name":{"value":"Weber
-        Inc","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Weber
-        Inc","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"hs_object_id":{"value":"9289301560","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9289301560","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"createdate":{"value":"1659451866051","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451866051","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]},"lifecyclestage":{"value":"lead","timestamp":1659451866051,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451866051,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"941783bd-51dd-4814-ac4d-441bb994dd00"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Tue, 02 Aug 2022 14:51:06 GMT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337706499,"isDeleted":false,"properties":{"website":{"value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"parisian.com","timestamp":1659970158579,"source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_lastmodifieddate":{"value":"1659970158579","timestamp":1659970158579,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"domain":{"value":"parisian.com","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"parisian.com","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"name":{"value":"Bergstrom
+        and Sons","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Bergstrom
+        and Sons","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"hs_object_id":{"value":"9337706499","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337706499","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]},"createdate":{"value":"1659970158579","timestamp":1659970158579,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970158579","timestamp":1659970158579,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8b8d7d75-548e-43fa-8401-1024d5ca1e00"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:19 GMT
 recorded_with: VCR 6.0.0

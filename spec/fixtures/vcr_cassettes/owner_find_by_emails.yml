@@ -2,267 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=dadams@hubspot.com&hapikey=demo&includeInactive=false
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:59 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '273'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bbd9591499d2-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 53c7235a-61dc-49af-8552-8b5ad67395d8
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '994104'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '200'
-      X-Hubspot-Ratelimit-Remaining:
-      - '187'
-      X-Hubspot-Ratelimit-Secondly:
-      - '20'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '18'
-      X-Trace:
-      - 2B5A120F018F567723EEEC380CBF85C8B5E3FAD629000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=x1IAK8XpyWSn7jhBhYC45D18c64j%2FbNPtBmKpjUREEYet7CauxLFhAUoLOObMpPr3vlrRVb6yjnXlZmMlgew4fzVqhhjYEyQtLSZiifVP%2FgUDQ5bBlmewCyW%2FwwP3YXvaVVNcasIxvrv6bdS"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"portalId":62515,"ownerId":60683,"type":"PERSON","firstName":"David","lastName":"Adams","email":"dadams@hubspot.com","createdAt":1405605863380,"updatedAt":1655498283945,"remoteList":[{"id":30426,"portalId":62515,"ownerId":60683,"remoteId":"100097","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeUserId":100097,"userIdIncludingInactive":100097,"activeSalesforceId":null,"isActive":true}]'
-  recorded_at: Wed, 22 Jun 2022 08:49:59 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=mwelch@hubspot.com&hapikey=demo&includeInactive=false
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:59 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '270'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bbda8f0e3afb-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - bf244f9a-d469-41d3-9168-e64de6c5bbf4
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '994103'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '200'
-      X-Hubspot-Ratelimit-Remaining:
-      - '186'
-      X-Hubspot-Ratelimit-Secondly:
-      - '20'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '18'
-      X-Trace:
-      - 2B2EA14CA54F0DE1D2072AD17A79AF8B7DF295FF27000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rXxZWYaJ3vn2mI8AXo5ccPdj854n6mxDHVjhYM4PNMYN%2B%2F5ANBJ3lE8a4JmTE21NElQhM4JzQrT5CvX%2FFxLEi4uEeAqAmOBcODSk4mT0PIOAZigdBgYiNGe4%2FnBiuioGF%2B25vokFRSmL0%2Flq"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"portalId":62515,"ownerId":49016677,"type":"PERSON","firstName":"Matt","lastName":"Welch","email":"mwelch@hubspot.com","createdAt":1593537995049,"updatedAt":1593537995049,"remoteList":[{"id":36704045,"portalId":62515,"ownerId":49016677,"remoteId":"8518799","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeUserId":8518799,"userIdIncludingInactive":8518799,"activeSalesforceId":null,"isActive":true}]'
-  recorded_at: Wed, 22 Jun 2022 08:49:59 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=demo@hubspot.com&hapikey=demo&includeInactive=false
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:59 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '265'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bbdbc8a032b3-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 85a107bd-565a-4b51-853e-2c8d0d4a2a59
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '994102'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '200'
-      X-Hubspot-Ratelimit-Remaining:
-      - '185'
-      X-Hubspot-Ratelimit-Secondly:
-      - '20'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '18'
-      X-Trace:
-      - 2B3873DFFF1D2644B3C915050617ACE59ECCF0EF95000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6VJhBlXJSF0i5k22lRKMMEA9w1jG73OAyr4pSRLTXMTwqhOX5sGCjiRmTtyfGaEhbpEYm1blvNO4P0VLPpH2b%2BAcjnLOKb6GxXzfq9buBLNwT25M15MY5nTzRDYxlKQgAqZcFJ2Sy1rziS1H"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '[{"portalId":62515,"ownerId":71,"type":"PERSON","firstName":"demo","lastName":"demo","email":"demo@hubspot.com","createdAt":1405605859418,"updatedAt":1502455462834,"remoteList":[{"id":29598,"portalId":62515,"ownerId":71,"remoteId":"238058","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"isActive":true,"activeSalesforceId":null,"userIdIncludingInactive":238058,"activeUserId":238058}]'
-  recorded_at: Wed, 22 Jun 2022 08:49:59 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/owners/v2/owners?email=blogapitest@hubspot.com&hapikey=demo&includeInactive=false
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer <ACCESS_TOKEN>
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Tue, 02 Aug 2022 14:54:57 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '236'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 7347a6d5e9a908a3-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - ebdc4c8a-6b4f-4921-a959-92934b77f9a0
-      X-Trace:
-      - 2BA7CB7DF3840B28651508B18B8517E05CEE822563000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3hGLwT8GK%2BRxTHQiyRhL8QMG7llVoWJdUepU5FkY8L7OCVOnb3%2BR2EG3rF1uCYOX0LB7MsXKf%2BSHXJ8BsbQg5o%2BPpmtrUbZ8LOdDDsG8IdMES4DrX7%2Bm%2F4enS0Z9jSo%2BjkfuM9QwdzjQ8jFS"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: '{"status":"error","message":"Request implies conflicting values for
-        hub-id: 62515 from [hapikey (demo)] vs. <PORTAL_ID> from oauth-token (<ACCESS_TOKEN>)","correlationId":"ebdc4c8a-6b4f-4921-a959-92934b77f9a0"}'
-  recorded_at: Tue, 02 Aug 2022 14:54:57 GMT
-- request:
-    method: get
     uri: https://api.hubapi.com/owners/v2/owners?email=augustin@captaincontrat.com&includeInactive=false
     body:
       encoding: US-ASCII
@@ -282,15 +21,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Aug 2022 13:58:28 GMT
+      - Mon, 08 Aug 2022 14:52:28 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '291'
+      - '292'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 734f917c888d99f9-CDG
+      - 737913735d073a17-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -302,25 +41,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - fd71b3b2-4465-4919-9b48-27e4cb73238b
+      - c047d22b-8391-43fe-a48f-1f239d90ae9d
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249834'
+      - '248135'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '94'
+      - '77'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '7'
       X-Trace:
-      - 2B3DC5D0D64FE2ACD7F5ED211AF9A8BED95C2CB4F8000000000000000000
+      - 2BD79A0F83E1115B568BBF71B747AC7D39C9303B7C000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=q9ilhSIP6hGuUI2gkZYGUccyt2P%2F2ANmsbybK8o02iujW7tMiCu1PcoNT2JtDd3i0utYfY84CDUDaBlulN7zlQys52KJkxwr7Xttpaz4GybaguWQ9MfnvF4UbkdZ67gN"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=R3oyCK96U8NKTjHNQ8YROcFUchwS6m5KrfyrQ2NQOwjTWKt0LS6vjQ9Z%2FuiCaPnogc55AOxX60xI7WXO%2Bhma0u1%2BoOZe6ysT4WCEvbxPJ1NOjZx7%2FE2u5kp0xyXJ6XafZdTDnOpDY96Z1hop"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -330,8 +69,8 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '[{"portalId":<PORTAL_ID>,"ownerId":156644386,"type":"PERSON","firstName":"Augustin","lastName":"de
-        Maintenant","email":"augustin@captaincontrat.com","createdAt":1646901307500,"updatedAt":1652082080452,"remoteList":[{"id":115353727,"portalId":<PORTAL_ID>,"ownerId":156644386,"remoteId":"11598694","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeUserId":11598694,"userIdIncludingInactive":11598694,"activeSalesforceId":null,"isActive":true}]'
-  recorded_at: Wed, 03 Aug 2022 13:58:28 GMT
+        Maintenant","email":"augustin@captaincontrat.com","createdAt":1646901307500,"updatedAt":1652082080452,"remoteList":[{"id":115353727,"portalId":<PORTAL_ID>,"ownerId":156644386,"remoteId":"11598694","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeSalesforceId":null,"userIdIncludingInactive":11598694,"activeUserId":11598694,"isActive":true}]'
+  recorded_at: Mon, 08 Aug 2022 14:52:28 GMT
 - request:
     method: get
     uri: https://api.hubapi.com/owners/v2/owners?email=boris@captaincontrat.com&includeInactive=false
@@ -353,7 +92,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Aug 2022 13:58:28 GMT
+      - Mon, 08 Aug 2022 14:52:28 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -361,7 +100,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 734f917ddfa73b9d-CDG
+      - 737913759a690834-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -373,25 +112,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - aebe1d8c-3673-409a-b35a-d99c010ac5d0
+      - 1acb2001-57e6-46db-89f1-3644a31fc1f6
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249833'
+      - '248134'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '93'
+      - '76'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '7'
       X-Trace:
-      - 2BC136D6DE34BF74AD50A50E9A93A057669FF80AEE000000000000000000
+      - 2B52C052578C59FD611F7D61CE073FF6A9EC524121000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MmKbrs3ngB8OqPTd1yFh5tV0rJdBQWy5jC%2BXAEdPtQPBRlMWSM2L9icR9p2m4mCrnvttoXdQsOeyXLwKMIe55eJFIILai6K%2BCx1ZoU2TeYV%2By7H%2BQ%2FhkXAtGTMbvQmah"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vWbX2JRxgvCYqzMAml6ZuI6zXhxGQvXdHWG4Xm1wRHktxhi8PzuvfFppbxJue69TrHtZOZUk2UtePKH7b1jIyl8u6L5KgsFlDEOj84JdRJTajKOR5Av8pff8LodKTBErNoNc4SUfW9pgN6%2Fe"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -401,8 +140,8 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        W3sicG9ydGFsSWQiOjxQT1JUQUxfSUQ+LCJvd25lcklkIjoxNTgxMzc0OTAsInR5cGUiOiJQRVJTT04iLCJmaXJzdE5hbWUiOiJCb3JpcyIsImxhc3ROYW1lIjoiQWxmw7ZsZGkiLCJlbWFpbCI6ImJvcmlzQGNhcHRhaW5jb250cmF0LmNvbSIsImNyZWF0ZWRBdCI6MTY0NzI3NzMwNDAzMCwidXBkYXRlZEF0IjoxNjU5MDk1NzU2Mzc0LCJyZW1vdGVMaXN0IjpbeyJpZCI6MTE1OTk3MzY1LCJwb3J0YWxJZCI6PFBPUlRBTF9JRD4sIm93bmVySWQiOjE1ODEzNzQ5MCwicmVtb3RlSWQiOiIyNzg2MTkwMSIsInJlbW90ZVR5cGUiOiJIVUJTUE9UIiwiYWN0aXZlIjp0cnVlfV0sImhhc0NvbnRhY3RzQWNjZXNzIjpmYWxzZSwiYWN0aXZlVXNlcklkIjoyNzg2MTkwMSwiaXNBY3RpdmUiOnRydWUsImFjdGl2ZVNhbGVzZm9yY2VJZCI6bnVsbCwidXNlcklkSW5jbHVkaW5nSW5hY3RpdmUiOjI3ODYxOTAxfV0=
-  recorded_at: Wed, 03 Aug 2022 13:58:29 GMT
+        W3sicG9ydGFsSWQiOjxQT1JUQUxfSUQ+LCJvd25lcklkIjoxNTgxMzc0OTAsInR5cGUiOiJQRVJTT04iLCJmaXJzdE5hbWUiOiJCb3JpcyIsImxhc3ROYW1lIjoiQWxmw7ZsZGkiLCJlbWFpbCI6ImJvcmlzQGNhcHRhaW5jb250cmF0LmNvbSIsImNyZWF0ZWRBdCI6MTY0NzI3NzMwNDAzMCwidXBkYXRlZEF0IjoxNjU5MDk1NzU2Mzc0LCJyZW1vdGVMaXN0IjpbeyJpZCI6MTE1OTk3MzY1LCJwb3J0YWxJZCI6PFBPUlRBTF9JRD4sIm93bmVySWQiOjE1ODEzNzQ5MCwicmVtb3RlSWQiOiIyNzg2MTkwMSIsInJlbW90ZVR5cGUiOiJIVUJTUE9UIiwiYWN0aXZlIjp0cnVlfV0sImhhc0NvbnRhY3RzQWNjZXNzIjpmYWxzZSwiYWN0aXZlU2FsZXNmb3JjZUlkIjpudWxsLCJ1c2VySWRJbmNsdWRpbmdJbmFjdGl2ZSI6Mjc4NjE5MDEsImFjdGl2ZVVzZXJJZCI6Mjc4NjE5MDEsImlzQWN0aXZlIjp0cnVlfV0=
+  recorded_at: Mon, 08 Aug 2022 14:52:28 GMT
 - request:
     method: get
     uri: https://api.hubapi.com/owners/v2/owners?email=manon@captaincontrat.com&includeInactive=false
@@ -424,15 +163,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Aug 2022 13:58:29 GMT
+      - Mon, 08 Aug 2022 14:52:29 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '286'
+      - '283'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 734f917fb8e4998d-CDG
+      - 737913791f493ad1-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -444,25 +183,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - dc97e09a-d5ab-48aa-a881-1d453afbc128
+      - 3ca63b6e-9ef1-4aba-9725-a4bddaba0de7
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249832'
+      - '248133'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '92'
+      - '78'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '7'
       X-Trace:
-      - 2B2FF4CAEF19AA3C523BA57CADB77653E0B71B7FE0000000000000000000
+      - 2B54B13B6C027B67F49ED5DA2D7C6B77E6460B6FCB000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2F1CMK2%2BoQb2GlV9RMLRZK5QZ%2FREiiuF7%2BWzGKXlodNepE%2B7QXcP%2BnO1EDp5Ws7kQqhkcXSKc18vLTe2RnA1SVodYs96v5rLM43%2Bie%2B7R5qwhHkaFkYQbvKktB%2F8cIijG"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Hv6kPB8Lki9z2L1rChZekc4HXsqIrdnMLCao0sZYVWgHowRBcgg1x1BxobBrU1DI6qCKPKgCz4xXJaHfRPL49CObTW7GAoXXyqhWgPxb4FiJKqyLWqinu02f7XVoWVukpDk2d5GDmub9seY9"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -471,8 +210,8 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '[{"portalId":<PORTAL_ID>,"ownerId":156644387,"type":"PERSON","firstName":"Manon","lastName":"Prevot","email":"manon@captaincontrat.com","createdAt":1646901307550,"updatedAt":1651493551619,"remoteList":[{"id":115353728,"portalId":<PORTAL_ID>,"ownerId":156644387,"remoteId":"3905955","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeUserId":3905955,"isActive":true,"activeSalesforceId":null,"userIdIncludingInactive":3905955}]'
-  recorded_at: Wed, 03 Aug 2022 13:58:29 GMT
+      string: '[{"portalId":<PORTAL_ID>,"ownerId":156644387,"type":"PERSON","firstName":"Manon","lastName":"Prevot","email":"manon@captaincontrat.com","createdAt":1646901307550,"updatedAt":1651493551619,"remoteList":[{"id":115353728,"portalId":<PORTAL_ID>,"ownerId":156644387,"remoteId":"3905955","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeSalesforceId":null,"userIdIncludingInactive":3905955,"activeUserId":3905955,"isActive":true}]'
+  recorded_at: Mon, 08 Aug 2022 14:52:29 GMT
 - request:
     method: get
     uri: https://api.hubapi.com/owners/v2/owners?email=yannick@captaincontrat.com&includeInactive=false
@@ -494,15 +233,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Aug 2022 13:58:29 GMT
+      - Mon, 08 Aug 2022 14:52:29 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '289'
+      - '286'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 734f9180ab9c32ab-CDG
+      - 7379137af8483fef-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -514,25 +253,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 7037b5ed-1efb-4397-b919-15ade4871bd6
+      - f84ad5b5-f867-406d-8d30-948652b9313e
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249831'
+      - '248132'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '91'
+      - '77'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '9'
+      - '7'
       X-Trace:
-      - 2B13B90F9E7D4D04A595553F12B47375DA13D794AB000000000000000000
+      - 2BDD319FF763CCB117797B82C3E07128A10EA52A7E000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gR3D%2BklkejGWHIYvOnnJp4kSVXsMxzr7%2FOYnr25nJZOHt3oyIgeZgWsW6XaESMtQcIletUXGq%2BqPk5nwbwtFxWTFHPImKTk5SaLMYeRRzQMOhWNwLa32EIuVUljfFJMA"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gM6WFtFO1M7Sk4GLWi%2BaX%2BC9h6sYL8SDj1pIFLHAc3gesXSo%2Bxu%2ByCfDjsiUqQtlC6QsPpeCvUQ%2F9F36zjUKQFdNBzWAcJX9KPNV%2BK6HjONE5dvEQbwSdyfEZXVozTRIyYAjQKbKXTomzdnh"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -541,6 +280,6 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '[{"portalId":<PORTAL_ID>,"ownerId":88354160,"type":"PERSON","firstName":"Yannick","lastName":"Fonjallaz","email":"yannick@captaincontrat.com","createdAt":1625489284669,"updatedAt":1632405523288,"remoteList":[{"id":55965105,"portalId":<PORTAL_ID>,"ownerId":88354160,"remoteId":"3326038","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeUserId":3326038,"isActive":true,"activeSalesforceId":null,"userIdIncludingInactive":3326038}]'
-  recorded_at: Wed, 03 Aug 2022 13:58:29 GMT
+      string: '[{"portalId":<PORTAL_ID>,"ownerId":88354160,"type":"PERSON","firstName":"Yannick","lastName":"Fonjallaz","email":"yannick@captaincontrat.com","createdAt":1625489284669,"updatedAt":1632405523288,"remoteList":[{"id":55965105,"portalId":<PORTAL_ID>,"ownerId":88354160,"remoteId":"3326038","remoteType":"HUBSPOT","active":true}],"hasContactsAccess":false,"activeSalesforceId":null,"userIdIncludingInactive":3326038,"activeUserId":3326038,"isActive":true}]'
+  recorded_at: Mon, 08 Aug 2022 14:52:29 GMT
 recorded_with: VCR 6.0.0

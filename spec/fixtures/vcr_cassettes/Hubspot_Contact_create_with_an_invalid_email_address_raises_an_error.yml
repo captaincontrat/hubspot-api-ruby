@@ -2,78 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/contacts/v1/contact?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"property":"email","value":"an_invalid_email"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:16 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '249'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bacfe9d299a5-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - a961b4d2-230b-41c7-857a-4aa91c930956
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498385'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '119'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
-      X-Trace:
-      - 2BE257207E75600F4D4DF5E35C9ABF96B883091D64000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=20uiEKmpBw5LK208eqVAsZmLBHoKRYxbGmthN7voLGK9Y7TR1usz5FuzcqH87sMewgGsNIl0rfndELUyJmTnkg8K1G5Qawf8faS7Xq9qgO8lgmqi6xqEHfg%2F%2FIHt3BMANlgcwXhYnykA7F1m"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: '{"validationResults":[{"isValid":false,"message":"Email address an_invalid_email
-        is invalid","error":"INVALID_EMAIL","name":"email"}],"status":"error","message":"Property
-        values were not valid","correlationId":"a961b4d2-230b-41c7-857a-4aa91c930956"}'
-  recorded_at: Wed, 22 Jun 2022 08:49:16 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/contacts/v1/contact
     body:
       encoding: UTF-8
@@ -95,7 +23,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:53:20 GMT
+      - Mon, 08 Aug 2022 14:50:57 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -103,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a47a1e5e3b61-CDG
+      - 73791139cb510883-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -115,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - b9de2245-fc3a-47ec-ad6c-63c05f973161
+      - d71c97fe-4f84-4c58-b2d5-975269784447
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249668'
+      - '248338'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '85'
+      - '84'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2B51FBF3D49AF0D004E5EBA897D5599A4E0E0E3A6F000000000000000000
+      - 2BD6ECB3E0F0F900E07C32FA0D29B5C3611FBC3DC9000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eWjDdRX9Zn1af22uBJroxjFlHbZ8GcQcKWfTxk0c7nV3D01MdTZZQPhZE3H7v81p3RlAiz510va4p8Sv97dnJ5Dcf6wCABh2%2BUwUlOAmPp5sX74vRsAiBtEO%2BDQJgwl%2FSVdVV2dmgKR2J7Kw"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HZaosYAohu60bAAlJUBlvYDlr7oV0H1ATX6mNGS%2FKpKdsdb4x8yznnxTrfGseCRTx1e3dQJOopBSJxxRWz%2F0ib9vSFC8Yh%2FSqWEyD6d3wAVxOFe%2B3GN2HyUfphgo6QRuji%2BXetgc2mnLajqF"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -144,6 +72,6 @@ http_interactions:
       encoding: UTF-8
       string: '{"validationResults":[{"isValid":false,"message":"Email address an_invalid_email
         is invalid","error":"INVALID_EMAIL","name":"email"}],"status":"error","message":"Property
-        values were not valid","correlationId":"b9de2245-fc3a-47ec-ad6c-63c05f973161"}'
-  recorded_at: Tue, 02 Aug 2022 14:53:20 GMT
+        values were not valid","correlationId":"d71c97fe-4f84-4c58-b2d5-975269784447"}'
+  recorded_at: Mon, 08 Aug 2022 14:50:57 GMT
 recorded_with: VCR 6.0.0

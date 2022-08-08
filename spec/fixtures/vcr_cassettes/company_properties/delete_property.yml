@@ -2,140 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/properties/v1/companies/properties?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"name":"fax_number","groupName":"companyinformation","type":"string","options":[]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:31 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '449'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b83e3875399f-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 510bb652-19de-4808-b9c2-f4e60284aef3
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498662'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '124'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
-      X-Trace:
-      - 2B51173792111E15D52049F062863E28E3E43DFFBE000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gD%2BTX82D2dgNV8%2FSmOq0hFdzyHd5J1rFw9cAUHbrT8EvyJF2NXARUmXrg21qAbIpKgY30hUFZmlger1YeLazXYbpaWIyuDQ6xBF5u2LI%2FEzO1eWPBUPgc2CRjQ7RZsolNhfgFb5QO0yJdxz7"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"name":"fax_number","label":"new fax number label","description":"","groupName":"companyinformation","type":"string","fieldType":"","fieldLevelPermission":null,"hidden":false,"options":[],"deleted":false,"updatedAt":1655887651629,"createdAt":1655456762968,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"referencedObjectType":null,"createdUserId":null,"externalOptionsReferenceType":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"optionSortStrategy":null,"isCustomizedDefault":false,"updatedUserId":null}'
-  recorded_at: Wed, 22 Jun 2022 08:47:31 GMT
-- request:
-    method: delete
-    uri: https://api.hubapi.com/properties/v1/companies/properties/named/fax_number?hapikey=<HAPI_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:47:32 GMT
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3b83fde2d0810-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 7e6c8a52-c881-4f3f-9b45-895cd5432dc8
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498661'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '123'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
-      X-Trace:
-      - 2BDB5B8465282F6A26CCC1261DFBE6689CC71285BB000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ntyXaWdXms%2B0qwk0F85ZO%2FJEoihN6IMSOV0NcWNhtt0h6o1AlOrnJFE1t6Mrbs6ff2loBBVPkTu%2FdMHTZ35hsLppmNpkaZpOSkamQjpEEC1hTMNGnOiSXxK%2FEnuHosKjal7dgEOkpxzhTtA7"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Vary:
-      - Accept-Encoding
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: ''
-  recorded_at: Wed, 22 Jun 2022 08:47:31 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/properties/v1/companies/properties
     body:
       encoding: UTF-8
@@ -157,15 +23,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:47 GMT
+      - Mon, 08 Aug 2022 14:48:59 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '460'
+      - '463'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a0bd29c032c2-CDG
+      - 73790e5bc93eee85-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -177,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 2b85653f-1bd1-47a7-8178-84a40e0f1382
+      - 644c78be-afaa-483b-b545-9e86e29dec90
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249942'
+      - '248593'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '84'
+      - '78'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '8'
+      - '7'
       X-Trace:
-      - 2BA22EA2A4F25087ACEBF3B6D7CA92D8E0798D0030000000000000000000
+      - 2B0E3D5B1B028098B0E41BAFEFE21F085A42AF8791000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Dgzf4QQbGV6yTi8FbLg1j3cQgVdFd5fi6tZ79IXdt8ZwFp6Qi33f1ZRkCRpWi3qhSO78uYm1eeyMP9WC9THKXrx144TIDLIZA7BZjydxz9KYvIjzbKSayil50BvIoBXzTZUPrtMQ49RSZOYm"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=en%2FgU%2B3rZH10N54Tt9aUUPPDnPBKDHWjyjgMayjEcqycOGDLTV8JFBu5V2gFdzFi5YRIYv0%2FhHUHeNJdmKWZBr2NNI22mhrCO5ZJPG2chvulLSeVLrGWNNbD1uNnjjZ5j1qy50twFRs3UXDa"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -204,8 +70,8 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"name":"fax_number","label":"new fax number label","description":"","groupName":"companyinformation","type":"string","fieldType":"","fieldLevelPermission":null,"createdAt":1659451837297,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"updatedUserId":3326038,"readOnlyDefinition":false,"formField":false,"displayOrder":-1,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"options":[],"deleted":false,"updatedAt":1659451847330}'
-  recorded_at: Tue, 02 Aug 2022 14:50:47 GMT
+      string: '{"name":"fax_number","label":"new fax number label","description":"","groupName":"companyinformation","type":"string","fieldType":"","fieldLevelPermission":null,"options":[],"createdAt":1659969391229,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"numberDisplayHint":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"isCustomizedDefault":false,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"textDisplayHint":null,"updatedUserId":3326038,"hidden":false,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"formField":false,"displayOrder":-1,"readOnlyDefinition":false,"deleted":false,"updatedAt":1659970139574}'
+  recorded_at: Mon, 08 Aug 2022 14:49:00 GMT
 - request:
     method: delete
     uri: https://api.hubapi.com/properties/v1/companies/properties/named/fax_number
@@ -227,11 +93,11 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:50:47 GMT
+      - Mon, 08 Aug 2022 14:49:00 GMT
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a0bfef0999bc-CDG
+      - 73790e5fab36ee07-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
@@ -241,25 +107,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - b220ab1d-6973-42c4-a3da-979b263a3728
+      - d34efe5d-9fa0-4d60-b689-81a8ecb041cd
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249941'
+      - '248592'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '83'
+      - '80'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2BA4300A56FF6A6A67D70B665A6459DF030C629EC2000000000000000000
+      - 2B2A8A40144964962F1D3F470AB8111CE5E58F475D000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=k%2F6Nfz05pZ50dhKiPjTD3uvbWTFfYcJbw8ft6U2KsFF6BnSUly9zdmX109cYE1nUocOlUSU2Gg8OfjVtQAIRbHDJMzFi7SYsQIErDqmy1wQPa7SUErRuqi%2Bs%2B9gduLs0sUoDuHUPCxWc5sW2"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MV6XoZvjhlt8Ui1FQIuR%2FknW%2FjTuqOUd94KP2xvcWzvrdLST6Ov%2BLwbl1ut1JUzqNfpcfI9NkR1ZOuHpL1rB9zbFkivyV1zmwM9NJ5FkiADMhwoCsMO3QNF6q5zPMD7TRwRkxpgyQJVU7y6G"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -271,5 +137,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 02 Aug 2022 14:50:48 GMT
+  recorded_at: Mon, 08 Aug 2022 14:49:00 GMT
 recorded_with: VCR 6.0.0

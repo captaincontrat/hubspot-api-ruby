@@ -2,147 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/deals/v1/properties/?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"name":"my_new_property_1edce7a297c65919737fae56db72acb2","groupName":"dealinformation","description":"How
-        much money do you have?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
-        is my new property","options":[]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:26 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '503'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bb0b6c9b40b7-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 8038ed89-be4a-4819-9a64-b9750b630d8f
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498352'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '126'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
-      X-Trace:
-      - 2B3433C84CCCE6CF053048BC3197F944F768172E75000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=qrXSxFPaXhGvIUu%2FlTGHg9WE6s%2Fs0N8rL2%2B0v4XQYAgDiTXKdU%2BiQ3Wl3o3obO1cE1dJ8nL56ixZf1RSX2ZimaSJTk9ymecxuUqP0fi3924Pm9Q5CS%2FPXQ4ihEWhIbMGtjzyYyWDwwwNiQRC"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"name":"my_new_property_1edce7a297c65919737fae56db72acb2","label":"This
-        is my new property","description":"How much money do you have?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"deleted":false,"updatedAt":1655887766397,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"createdAt":1655887766397,"referencedObjectType":null,"formField":true,"displayOrder":0,"readOnlyValue":false,"readOnlyDefinition":false,"hidden":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"isCustomizedDefault":false,"options":[],"updatedUserId":null}'
-  recorded_at: Wed, 22 Jun 2022 08:49:26 GMT
-- request:
-    method: delete
-    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property_1edce7a297c65919737fae56db72acb2?hapikey=<HAPI_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:26 GMT
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bb0d0963401f-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 281fdd56-53e9-4836-9180-197f23cedeaf
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498351'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '125'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
-      X-Trace:
-      - 2B7FD3EB67962AA7FA80460417FAF32628CBA4E5CE000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nUA4Ws1SaMZx%2F2c62Rcru2rKgh9RTJ7dIgYL%2BpvprC%2Fl%2B6DRWoj83ZhmayL27RydmIOoomUhtMli5tpBEjuB0DfGTABaRuY5xoMCh4bb9cKBi2bMBx%2FN6Ic9Ku%2BWc%2B9zgSb%2BBXhAsx3zHBtu"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Vary:
-      - Accept-Encoding
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: ''
-  recorded_at: Wed, 22 Jun 2022 08:49:26 GMT
-- request:
-    method: post
     uri: https://api.hubapi.com/deals/v1/properties/
     body:
       encoding: UTF-8
-      string: '{"name":"my_new_property_9a55c496dc3a41defefe00f691187df7","groupName":"dealinformation","description":"How
+      string: '{"name":"my_new_property_3f8a9953c1827796779672a0deb8053e","groupName":"dealinformation","description":"How
         much money do you have?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
         is my new property","options":[]}'
     headers:
@@ -162,15 +25,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:53:35 GMT
+      - Mon, 08 Aug 2022 14:51:14 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '517'
+      - '512'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a4d7acf099e1-CDG
+      - 737911a898d64055-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -182,25 +45,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - af70fe69-4d2f-4b60-a0a1-5059deb93b7b
+      - 51bb50b1-deec-4014-9d9c-dc53aee322d7
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249641'
+      - '248305'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '84'
+      - '82'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2BBD6F92608446F7B3340E8CA1DAA2B44E5960EEDC000000000000000000
+      - 2B99FEDC5911FF47987574099E6864884B13F788EC000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bSeg7hNbtRNIPH8jXuoeR9w0Ize%2F1X6piiTxfdNiUoyd36tuLHHZ4aYii8NIFxSnGd0CFy%2FjBiz8y5%2F6wjq%2FHFKw13kqK3YSP4WITaxlSZtQVBvRYg6TYjynyLTb09BY0hAnboaB4AhKWYJN"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hKPSMrnvfBQltNLDKDE4JKLQoPMh26FlLNpOOu%2B3ayGPlYo7hLGPU24XnL0uIdkrf40vfzP90LGPSz2w4680cVvUSbhVTHvPJY0lYhOby6FpaXuCyqkFEoTOxQGj3rs2niVk07XpkXQXNXYn"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -209,12 +72,12 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"name":"my_new_property_9a55c496dc3a41defefe00f691187df7","label":"This
-        is my new property","description":"How much money do you have?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":1659452015381,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"updatedUserId":3326038,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"options":[],"deleted":false,"updatedAt":1659452015381}'
-  recorded_at: Tue, 02 Aug 2022 14:53:35 GMT
+      string: '{"name":"my_new_property_3f8a9953c1827796779672a0deb8053e","label":"This
+        is my new property","description":"How much money do you have?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"createdAt":1659970274746,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"numberDisplayHint":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"isCustomizedDefault":false,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"textDisplayHint":null,"updatedUserId":3326038,"hidden":false,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"formField":true,"displayOrder":0,"readOnlyDefinition":false,"deleted":false,"updatedAt":1659970274746}'
+  recorded_at: Mon, 08 Aug 2022 14:51:15 GMT
 - request:
     method: delete
-    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property_9a55c496dc3a41defefe00f691187df7
+    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property_3f8a9953c1827796779672a0deb8053e
     body:
       encoding: US-ASCII
       string: ''
@@ -233,11 +96,11 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Tue, 02 Aug 2022 14:53:36 GMT
+      - Mon, 08 Aug 2022 14:51:15 GMT
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7347a4da8a584007-CDG
+      - 737911ab3ba2085b-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
@@ -247,25 +110,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 328fcdbb-a1e0-4aef-8395-3bd9535b27fb
+      - 06ca71d9-033c-40f7-9574-f9a020b8465d
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249640'
+      - '248304'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '83'
+      - '82'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '8'
       X-Trace:
-      - 2B514ED99B1D0243D2AFE66FEABE256168EA2516D2000000000000000000
+      - 2B3BDA3F9774710F46CE760D9730BFEBB3A7AA3C48000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yCKvWkGt%2BbRDUFaqbhOFsPDS8wj24GyIV1%2BeuCEaszm97Bdz1ligKHxQjZTl96yEal6FXg1QOMsoYLwARD7MZOrzj3T3%2Fp95cEyfmXhWfvO2kYMt0vtLpXrJZdbZ78pNfD5B5qH2XL61idxf"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nKkyNn4QfxzrU%2FNmUlwlPOmVlGDJNtqf7V5BbmBZq8Hl%2Bikx9W8fegRZPjZEgb533whvVOR7FzE%2BwkJ0RyV37UI3xGZuu86roSRbQ0B%2BdiAxGG042nBvTXQYsG%2Bezan78auFVktV3ufdGAB3"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -277,5 +140,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 02 Aug 2022 14:53:36 GMT
+  recorded_at: Mon, 08 Aug 2022 14:51:15 GMT
 recorded_with: VCR 6.0.0
