@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.files = [".rspec", "Gemfile", "Guardfile", "LICENSE.txt", "README.md", "RELEASING.md", "Rakefile", "hubspot-api-ruby.gemspec"]
   s.files += Dir["lib/**/*.rb"]
-  s.files += Dir["lib/**/*.rake"]
   s.files += Dir["spec/**/*.rb"]
   s.homepage = "https://github.com/captaincontrat/hubspot-api-ruby"
   s.summary = "hubspot-api-ruby is a wrapper for the HubSpot REST API"
