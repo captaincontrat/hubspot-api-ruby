@@ -1,3 +1,7 @@
+## Next release
+
+  * API keys (`hapikey`) are deprecated. Please use `access_token`s. #7
+
 ## 0.9.0
 
   * Governance update: this gem is now maintained by the team over at @captaincontrat + @Intrepidd from @ecotable
