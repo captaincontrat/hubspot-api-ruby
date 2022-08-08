@@ -1,26 +1,23 @@
 describe Hubspot::Config do
   describe ".configure" do
-    it "sets the hapikey config" do
-      hapikey = "demo"
+    it "sets the access token config" do
+      access_token = "foobar"
 
-      config = Hubspot::Config.configure(hapikey: hapikey)
+      config = Hubspot::Config.configure(access_token: access_token)
 
-      expect(config.hapikey).to eq(hapikey)
+      expect(config.access_token).to eq(access_token)
     end
 
     it "changes the base_url" do
       base_url = "https://api.hubapi.com/v2"
 
-      config = Hubspot::Config.configure(
-        hapikey: "123abc",
-        base_url: base_url
-      )
+      config = Hubspot::Config.configure(base_url: base_url, access_token: 'foobar')
 
       expect(config.base_url).to eq(base_url)
     end
 
     it "sets a default value for base_url" do
-      config = Hubspot::Config.configure(hapikey: "123abc")
+      config = Hubspot::Config.configure(access_token: 'foobar')
 
       expect(config.base_url).to eq("https://api.hubapi.com")
     end
@@ -29,7 +26,7 @@ describe Hubspot::Config do
       portal_id = "62515"
 
       config = Hubspot::Config.configure(
-        hapikey: "123abc",
+        access_token: 'foobar',
         portal_id: portal_id
       )
 
@@ -67,11 +64,11 @@ describe Hubspot::Config do
 
   describe ".reset!" do
     it "resets the config values" do
-      Hubspot::Config.configure(hapikey: "123abc", portal_id: "456def")
+      Hubspot::Config.configure(access_token: "123abc", portal_id: "456def")
 
       Hubspot::Config.reset!
 
-      expect(Hubspot::Config.hapikey).to be nil
+      expect(Hubspot::Config.access_token).to be nil
       expect(Hubspot::Config.portal_id).to be nil
     end
   end
@@ -79,7 +76,7 @@ describe Hubspot::Config do
   describe ".ensure!" do
     context "when a specified parameter is missing" do
       it "raises an error" do
-        Hubspot::Config.configure(hapikey: "123abc")
+        Hubspot::Config.configure(access_token: "123abc")
 
         expect {
           Hubspot::Config.ensure!(:portal_id)
@@ -89,7 +86,7 @@ describe Hubspot::Config do
 
     context "when all specified parameters are present" do
       it "does not raise an error" do
-        Hubspot::Config.configure(hapikey: "123abc", portal_id: "456def")
+        Hubspot::Config.configure(access_token: "123abc", portal_id: "456def")
 
         expect {
           Hubspot::Config.ensure!(:portal_id)
