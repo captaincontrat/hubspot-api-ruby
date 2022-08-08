@@ -1,7 +1,9 @@
 describe Hubspot::Form do
   let(:example_form_hash) do
     VCR.use_cassette('form_example') do
-      HTTParty.get("https://api.hubapi.com#{Hubspot::Form::FORMS_PATH}/038e819c-5262-4c13-8550-8cabe38c4309/?hapikey=demo").parsed_response
+      guid = Hubspot::Form.all.first.guid
+      headers = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }
+      HTTParty.get("https://api.hubapi.com#{Hubspot::Form::FORMS_PATH}/#{guid}", headers: headers).parsed_response
     end
   end
 
@@ -29,8 +31,6 @@ describe Hubspot::Form do
   end
 
   describe '.all' do
-    before { Hubspot.configure(hapikey: 'demo') }
-
     cassette 'find_all_forms'
 
     it 'returns all forms' do
@@ -42,8 +42,6 @@ describe Hubspot::Form do
   end
 
   describe '.find' do
-    before { Hubspot.configure(hapikey: 'demo') }
-
     cassette 'form_find'
     subject { Hubspot::Form.find(Hubspot::Form.all.first.guid) }
 
@@ -79,7 +77,6 @@ describe Hubspot::Form do
   end
 
   describe '#fields' do
-    before { Hubspot.configure(hapikey: 'demo') }
     context 'returning all the fields' do
       cassette 'fields_among_form'
 
@@ -119,11 +116,11 @@ describe Hubspot::Form do
   describe '#submit' do
     cassette 'form_submit_data'
 
-    let(:form) { Hubspot::Form.create!(create_params) }
+    let(:form) { Hubspot::Form.all.first }
 
     context 'with a valid portal id' do
       before do
-        Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"), portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"))
+        Hubspot.configure(access_token: ENV.fetch("HUBSPOT_ACCESS_TOKEN"), portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"))
       end
 
       it 'returns true if the form submission is successful' do
@@ -135,7 +132,7 @@ describe Hubspot::Form do
 
     context 'with an invalid portal id' do
       before do
-        Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"), portal_id: "xxx")
+        Hubspot.configure(access_token: ENV.fetch("HUBSPOT_ACCESS_TOKEN"), portal_id: "xxx")
       end
 
       it 'returns false in case of errors' do
@@ -149,7 +146,7 @@ describe Hubspot::Form do
       let(:f) { Hubspot::Form.new('guid' => form.guid) }
 
       before do
-        Hubspot.configure(hapikey: ENV.fetch("HUBSPOT_HAPI_KEY"), portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"))
+        Hubspot.configure(access_token: ENV.fetch("HUBSPOT_ACCESS_TOKEN"), portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"))
       end
 
       it 'returns true if the form submission is successful' do
@@ -170,8 +167,8 @@ describe Hubspot::Form do
     let(:params) { { name: new_name, redirect: redirect } }
     subject { form.update!(params) }
 
-    it { should be_an_instance_of Hubspot::Form }
     it 'updates properties' do
+      should be_an_instance_of Hubspot::Form
       subject.properties['name'].should start_with('updated form name ')
       subject.properties['redirect'].should be == redirect
     end

@@ -73,4 +73,79 @@ http_interactions:
       string: '{"name":"my_new_property","label":"This is my new property","description":"What
         is their favorite flavor?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":null,"updatedAt":null,"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"hidden":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false}'
   recorded_at: Wed, 22 Jun 2022 08:49:04 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: put
+    uri: https://api.hubapi.com/properties/v1/contacts/properties/named/my_new_property
+    body:
+      encoding: UTF-8
+      string: '{"name":"my_new_property","groupName":"contactinformation","description":"What
+        is their favorite flavor?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
+        is my new property","options":[]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:52:54 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '457'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a3d44a0e084b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 63273b17-fe46-488e-be90-e0339b212e6c
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249709'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '79'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B9B39C761DC80B45926F1D014923A991CEEFC83E2000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sHOZckhsszAO1JXfYip6omUruMMOPyKEStYAsH3yElN9n68jVUhZqNShcVFk%2BsYz0m1kt9by3JkYoWgjjXDpRfSOgcb6x2jSAIj9xDtWsyLcgk%2FvPgLmek1WLlxGeJu%2FgXjoBvG25f1KfwND"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"my_new_property","label":"This is my new property","description":"What
+        is their favorite flavor?","groupName":"contactinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":null,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"options":[],"deleted":null,"updatedAt":null}'
+  recorded_at: Tue, 02 Aug 2022 14:52:54 GMT
+recorded_with: VCR 6.0.0

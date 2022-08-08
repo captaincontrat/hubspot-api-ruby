@@ -1,11 +1,10 @@
 describe Hubspot::Owner do
   let(:example_owners) do
     VCR.use_cassette('owner_example') do
-      HTTParty.get('https://api.hubapi.com/owners/v2/owners?hapikey=demo&portalId=62515').parsed_response
+      headers = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }
+      HTTParty.get('https://api.hubapi.com/owners/v2/owners', headers: headers).parsed_response
     end
   end
-
-  before { Hubspot.configure(hapikey: 'demo') }
 
   describe '.all' do
     cassette 'owner_all'

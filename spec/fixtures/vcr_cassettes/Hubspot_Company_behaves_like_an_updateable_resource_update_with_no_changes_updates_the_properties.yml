@@ -143,4 +143,151 @@ http_interactions:
       string: '{"portalId":<PORTAL_ID>,"companyId":8963396156,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1655887660347","timestamp":1655887660347,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887660347","timestamp":1655887660347,"source":"CALCULATED","sourceVid":[],"requestId":"e3f91998-2e2f-4808-9d61-56ef41ac0805"},{"name":"hs_lastmodifieddate","value":"1655887660119","timestamp":1655887660119,"source":"CALCULATED","sourceVid":[],"requestId":"fa08e6ee-e8fa-4007-b387-35d3553e82e8"}]},"name":{"value":"Foobar","timestamp":1655887660347,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1655887660347,"source":"API","sourceVid":[],"requestId":"e3f91998-2e2f-4808-9d61-56ef41ac0805"},{"name":"name","value":"Becker,
         Kihn and Shanahan","timestamp":1655887660119,"source":"API","sourceVid":[],"requestId":"fa08e6ee-e8fa-4007-b387-35d3553e82e8"}]},"hs_object_id":{"value":"8963396156","timestamp":1655887660119,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963396156","timestamp":1655887660119,"source":"API","sourceVid":[],"requestId":"fa08e6ee-e8fa-4007-b387-35d3553e82e8"}]},"createdate":{"value":"1655887660119","timestamp":1655887660119,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887660119","timestamp":1655887660119,"source":"API","sourceVid":[],"requestId":"fa08e6ee-e8fa-4007-b387-35d3553e82e8"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
   recorded_at: Wed, 22 Jun 2022 08:47:40 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Grady, Gleichner and Borer"},{"name":"domain","value":"quigley-pouros.io"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:51:03 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '488'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a1225acf4099-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 5ae4e92c-b3da-4404-905e-5e851b7433c1
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249906'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '78'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B0207269F858F7CF436C96E0E826E7B1EB6E2275A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0fqlKuCswNKvKXIi26RoxDaN9XmQb%2Bc3HiiZ1RDRTHyAODhyyzgl7wyhrCH%2B1SKIB%2Bsx0XuPX%2FLHMa4xhKcFt%2FEuqO6UCxYE7OsJwKjMFezigFaXkURBafL4Ho7993ZKV4dD0OFKarsQKtlh"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9290108565,"isDeleted":false,"properties":{"website":{"value":"quigley-pouros.io","timestamp":1659451863488,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"quigley-pouros.io","timestamp":1659451863488,"source":"CALCULATED","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"hs_lastmodifieddate":{"value":"1659451863488","timestamp":1659451863488,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451863488","timestamp":1659451863488,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"domain":{"value":"quigley-pouros.io","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"domain","value":"quigley-pouros.io","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"name":{"value":"Grady,
+        Gleichner and Borer","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Grady,
+        Gleichner and Borer","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"hs_object_id":{"value":"9290108565","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290108565","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"createdate":{"value":"1659451863488","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451863488","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"lifecyclestage":{"value":"lead","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:51:03 GMT
+- request:
+    method: put
+    uri: https://api.hubapi.com/companies/v2/companies/9290108565
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Foobar"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:51:03 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '507'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a123cc0b3bb6-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - d4cabb86-6fc0-424d-9fe0-fd1e56e88408
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249905'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '77'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B42DCDB6D26276F4103C1E087FCEB73CBB3CDBA12000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UN9ehFRcTbqQV4CjGPyWNc6zpOJYrzvzUEoPiOlLysAETurXMzhntxtmdNKx69JgmjDVCIZpXDCCcIhjZ1OUceBnV4ariuM9vhjZKeUgMaPM3n6NmYIsKC%2BhhMYNJ0tC5xb3xnN%2B8cC76tKH"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9290108565,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659451863749","timestamp":1659451863749,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451863749","timestamp":1659451863749,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"d4cabb86-6fc0-424d-9fe0-fd1e56e88408"},{"name":"hs_lastmodifieddate","value":"1659451863488","timestamp":1659451863488,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"name":{"value":"Foobar","timestamp":1659451863749,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1659451863749,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"d4cabb86-6fc0-424d-9fe0-fd1e56e88408"},{"name":"name","value":"Grady,
+        Gleichner and Borer","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"hs_object_id":{"value":"9290108565","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290108565","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"createdate":{"value":"1659451863488","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451863488","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]},"lifecyclestage":{"value":"lead","timestamp":1659451863488,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451863488,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"5ae4e92c-b3da-4404-905e-5e851b7433c1"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:51:03 GMT
+recorded_with: VCR 6.0.0

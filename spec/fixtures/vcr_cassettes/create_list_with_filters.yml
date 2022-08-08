@@ -71,4 +71,77 @@ http_interactions:
       string: '{"portalId":<PORTAL_ID>,"listId":1508,"internalListId":1508,"createdAt":1655887709079,"updatedAt":1655887709079,"name":"list
         with filters 2b7a7e3315c83074d1c337283e6d7d25","listType":"STATIC","filters":[[{"withinTimeMode":"PAST","operator":"EQ","filterFamily":"PropertyValue","type":"string","property":"twitterhandle","value":"@hubspot"}]],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"INITIALIZING","lastProcessingStateChangeAt":1655887709079,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}'
   recorded_at: Wed, 22 Jun 2022 08:48:29 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/lists
+    body:
+      encoding: UTF-8
+      string: '{"name":"list with filters b80b91bdf6ba64e0fbc488904ab4b56f","filters":[[{"operator":"EQ","value":"@hubspot","property":"twitterhandle","type":"string"}]],"dynamic":false,"portal_id":null}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 12:38:22 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '378'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 73784f0538913a6f-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 3bc96834-5f24-4558-9144-2d4130b000f7
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249395'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '85'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B3B8CAFCBADA06221F07189DA6EBDDFB8FE302473000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aNuCIMZPaqDKcQYUV3TxJk4SCOymD0ljOL3NWCK07xUmN4WSlt4prBsANSubZ4tJ9PkHH9IDv4r7VBZVari3fCGz%2FHii2t7lH9B0k1YdDiCQN4tebBSzZw%2FBRQnkP%2B019CXxwvTEKO%2FMInCV"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"listId":403,"internalListId":403,"createdAt":1659962302529,"updatedAt":1659962302529,"name":"list
+        with filters b80b91bdf6ba64e0fbc488904ab4b56f","listType":"STATIC","authorId":3326038,"filters":[[{"withinTimeMode":"PAST","filterFamily":"PropertyValue","operator":"EQ","type":"string","property":"twitterhandle","value":"@hubspot"}]],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"INITIALIZING","lastProcessingStateChangeAt":1659962302529,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}'
+  recorded_at: Mon, 08 Aug 2022 12:38:22 GMT
+recorded_with: VCR 6.0.0

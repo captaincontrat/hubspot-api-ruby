@@ -79,4 +79,82 @@ http_interactions:
         information","displayOrder":5,"hubspotDefined":true},{"name":"facebook_ads_properties","fulcrumPortalId":8008758,"fulcrumTimestamp":1593475199999,"displayName":"Facebook
         Ads properties","displayOrder":6,"hubspotDefined":true},{"name":"ff_group_dc2676955d84dc7e470e3d4571ee8b66","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group234","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_c19f187613b6879c2fd27fe83c13a3ca","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_8ab704c410d68bba8b377964228dded1","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_1a452d37b721bfc3f9b32558ad10a0aa","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_a64897bb8325e85050076c9497425220","displayName":"","displayOrder":100,"hubspotDefined":false}]'
   recorded_at: Wed, 22 Jun 2022 08:49:05 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: get
+    uri: https://api.hubapi.com/properties/v1/contacts/groups
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:52:55 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '237'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a3dd1ae1403d-CDG
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 3f3aa849-c399-42cf-865f-07911b6d8def
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249705'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '80'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2BF5C0242551E383C6FA8A956B30671405E3B0D712000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fBvz5ybt7Bf6cC5br6Sy5J2smMTIVTag%2FP6Phm3vLMouNzmxLbQkM8%2BZ6cOKOcIvTGId89MIrXcoxdx7V8a3qQlTN8uBk8VBQvm%2BzcEVeEaFOCmqn6Q45Bc8QDHH9gbRDtG%2BS0DZT2vUxUwD"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":"contactinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Contact
+        information","displayOrder":0,"hubspotDefined":true},{"name":"captaininformation","displayName":"Captain
+        Contrat Information","displayOrder":1,"hubspotDefined":false},{"name":"socialmediainformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Social
+        media information","displayOrder":2,"hubspotDefined":true},{"name":"emailinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Email
+        information","displayOrder":3,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Web
+        analytics history","displayOrder":4,"hubspotDefined":true},{"name":"conversioninformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Conversion
+        information","displayOrder":5,"hubspotDefined":true}]'
+  recorded_at: Tue, 02 Aug 2022 14:52:55 GMT
+recorded_with: VCR 6.0.0

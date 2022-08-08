@@ -71,4 +71,63 @@ http_interactions:
       string: '{"status":"COMPLETE","results":[],"numErrors":1,"errors":[{"status":"error","category":"VALIDATION_ERROR","message":"COMPANY=1234
         is not valid"}],"startedAt":"2022-06-22T08:47:15.976Z","completedAt":"2022-06-22T08:47:15.985Z"}'
   recorded_at: Wed, 22 Jun 2022 08:47:15 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v4/associations/Company/Contact/batch/create
+    body:
+      encoding: UTF-8
+      string: '{"inputs":[{"from":{"id":1234},"to":{"id":1234},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":2}]}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 207
+      message: Multi-Status
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:50:18 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '226'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a008e9833b55-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - a32de89b-4fcc-4d26-9b11-127aa39165c2
+      X-Trace:
+      - 2BE6927459E144FEE58676CC59071E6CB920A38B9E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1Yww1n0GiFtg4xezbuB%2Bx8arqcVeLgsvpn1MQMNbAQc%2BJIIz4TIEl9%2FYdDPQSmAmqc9QIZ%2B%2B87XL34q%2F2LlMqDLixMPUbwuUQmb5nyO176ZVRBkr%2Bimi6dV2NL4nf%2FUTeJtvCTl%2BCBjT%2F9Af"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"COMPLETE","results":[],"numErrors":1,"errors":[{"status":"error","category":"VALIDATION_ERROR","message":"COMPANY=1234
+        is not valid"}],"startedAt":"2022-08-02T14:50:18.890Z","completedAt":"2022-08-02T14:50:18.918Z"}'
+  recorded_at: Tue, 02 Aug 2022 14:50:19 GMT
+recorded_with: VCR 6.0.0

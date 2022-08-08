@@ -70,4 +70,62 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"vid":67751,"canonical-vid":67751,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Breanna","versions":[{"value":"Breanna","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887748151,"selected":false}]},"email":{"value":"dean_sauer@example.org","versions":[{"value":"dean_sauer@example.org","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887748151,"selected":false}]},"lastname":{"value":"Walsh","versions":[{"value":"Walsh","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887748151,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":67751,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"dean_sauer@example.org","timestamp":1655887748159,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"f954be11-3159-4038-b7cd-d0ebbbf84e9d","timestamp":1655887748172,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
   recorded_at: Wed, 22 Jun 2022 08:49:08 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"firstname","value":"Jonna"},{"property":"lastname","value":"Glover"},{"property":"email","value":"noel@example.org"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:52:59 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '473'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a3f1bf9bedbf-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 857e2bcf-3548-4708-acd7-72673cccd63d
+      X-Trace:
+      - 2B8A082BCCD09A3F00DFCADF352B2A8C2E196A120B000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=s%2FVI4LguUXgYPJAG8aMDAn004HDDLgTLYSds%2BUSTXDOfqqmUiV%2FtqJtbUQPxdV2JRlX0IfbN%2FeCLHaSQ0mSWnFhe68%2FN77q9lsGlo4KINq77daiODFVYYGhUSOpHaGc13XEDScCBE7CenmLo"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vid":159151,"canonical-vid":159151,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Jonna","versions":[{"value":"Jonna","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451978718,"selected":false}]},"email":{"value":"noel@example.org","versions":[{"value":"noel@example.org","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451978718,"selected":false}]},"lastname":{"value":"Glover","versions":[{"value":"Glover","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451978718,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":159151,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"noel@example.org","timestamp":1659451978728,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"e20ca691-d770-4346-8ffe-fb8493d72b46","timestamp":1659451979036,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:52:59 GMT
+recorded_with: VCR 6.0.0

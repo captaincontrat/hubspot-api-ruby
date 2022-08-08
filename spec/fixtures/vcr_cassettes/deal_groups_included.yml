@@ -74,4 +74,80 @@ http_interactions:
         information","displayOrder":0,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Analytics
         history","displayOrder":1,"hubspotDefined":true},{"name":"ff_group_c6cb95c8bb827f1a5643872d4e793b9b","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group234","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_64d41a5764bbc1c038256101fde51910","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_b29595fba1df470e4d22af0b3a947809","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_53efc625157d8e24536d5d8c24441147","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_eb1721d1a9ebebd0d038bf4caa89691a","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_f705815c19d665f360336d04a48db540","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_28dfd4efb9a39bdd75da000aed8da42c","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_cbb6b7eed0eaeabd14a2cbcbbb5bc2dd","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_4402fe73a52ef66057dbbe7fa7dd4f05","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_0fe4993ae65ed5b71a88d08c0300246b","displayName":"","displayOrder":100,"hubspotDefined":false},{"name":"ff_group_11302991dc000ec12d884ba7def32020","displayName":"","displayOrder":100,"hubspotDefined":false}]'
   recorded_at: Wed, 22 Jun 2022 08:49:27 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: get
+    uri: https://api.hubapi.com/deals/v1/groups
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:36 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '200'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a4e0a8c99996-CDG
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 297c4881-a9a8-4d57-9526-ff6149413ec7
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249638'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B1CC53C7E43C8C28E1C295AF9E1BC420AAC2EFC75000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nEPkQA%2Bmo8tygL4gwDDXTKKrzpXiv2Ja5zWydtbEtumb74Ce79OlT7Xr%2FMY0YruzSGvKhOlPvXCOv81pHH2w8ukb9tYRJEoS3K1TH2F0eISZ19511RwYUHMTB2S3ubQztfB1NN50EFKrTHRB"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":"deal_activity","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Deal
+        activity","displayOrder":-1,"hubspotDefined":true},{"name":"dealinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Deal
+        information","displayOrder":0,"hubspotDefined":true},{"name":"analyticsinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Analytics
+        history","displayOrder":1,"hubspotDefined":true},{"name":"captaininformation","displayName":"Captain
+        Contrat Information","displayOrder":1,"hubspotDefined":false}]'
+  recorded_at: Tue, 02 Aug 2022 14:53:36 GMT
+recorded_with: VCR 6.0.0

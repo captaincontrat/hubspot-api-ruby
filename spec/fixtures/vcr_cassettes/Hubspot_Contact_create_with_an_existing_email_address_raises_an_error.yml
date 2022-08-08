@@ -141,4 +141,149 @@ http_interactions:
       string: '{"message":"Contact already exists","identityProfile":{"vid":68251,"identity":[{"value":"olivia@example.net","type":"EMAIL","timestamp":1655887756278,"isPrimary":true},{"value":"fb59b0ae-1f38-4fc2-8989-44da55db629d","type":"LEAD_GUID","timestamp":1655887756310}],"linkedVid":[],"isContact":true,"savedAtTimestamp":1655887756315},"errors":[{"message":"A
         contact with email olivia@example.net already exists.","in":"email"}],"status":"error","correlationId":"ea4f4a63-809d-4a2a-80db-849597d2a849","category":"OBJECT_ALREADY_EXISTS","error":"CONTACT_EXISTS"}'
   recorded_at: Wed, 22 Jun 2022 08:49:16 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"firstname","value":"Otha"},{"property":"lastname","value":"Howe"},{"property":"email","value":"jesica_gottlieb@example.org"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:19 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '480'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a472f8863b07-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 43a63448-c32f-45f0-be14-e31e8e38e72c
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249670'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '86'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B114EF99E5F4370B50EC79EA85F53D83E70C9BA80000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MLc7BWfym6xNhE2OTnNNqM5ueGXs4McUkOZSwGeI4jpvCOHvrys816pD9PaizVTaEviQQOjhOsiQnAXPCT8RPdSxgJJZNgz2TC%2B6MNLTVSgb4Cb%2BVV3YKj5xRqP8XDLdU5Tk8Mnn14%2FTalxU"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vid":159603,"canonical-vid":159603,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Otha","versions":[{"value":"Otha","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451999371,"selected":false}]},"email":{"value":"jesica_gottlieb@example.org","versions":[{"value":"jesica_gottlieb@example.org","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451999371,"selected":false}]},"lastname":{"value":"Howe","versions":[{"value":"Howe","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659451999371,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":159603,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"jesica_gottlieb@example.org","timestamp":1659451999379,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"8f6d6ec6-7eac-40f3-897f-8967718f13c7","timestamp":1659451999392,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:53:19 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"email","value":"jesica_gottlieb@example.org"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:20 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '574'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a476fab93328-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 44d5e2aa-1ffc-4443-bbd4-c9e4a19e5f40
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249669'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '85'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B163C465FE478439DF96B511C03A6C69E242E9647000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9Hd8%2FZk3dDhTVsTExcSonyajuYJ7zfKh5tWu4WQwlKOOq5sqRJC7JfQWTNLhO3%2BVF9mgr6V6C8SuqL0THBz%2BBunpnVye%2BgB5S4QIDebymsQUpxKODw9R6lJSnAZuy120TJgowwI8CQIV%2FSB4"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"message":"Contact already exists","identityProfile":{"vid":159603,"identity":[{"value":"jesica_gottlieb@example.org","type":"EMAIL","timestamp":1659451999379,"isPrimary":true},{"value":"8f6d6ec6-7eac-40f3-897f-8967718f13c7","type":"LEAD_GUID","timestamp":1659451999392}],"linkedVid":[],"isContact":true,"savedAtTimestamp":1659451999394},"errors":[{"message":"A
+        contact with email jesica_gottlieb@example.org already exists.","in":"email"}],"status":"error","correlationId":"44d5e2aa-1ffc-4443-bbd4-c9e4a19e5f40","category":"OBJECT_ALREADY_EXISTS","error":"CONTACT_EXISTS"}'
+  recorded_at: Tue, 02 Aug 2022 14:53:20 GMT
+recorded_with: VCR 6.0.0

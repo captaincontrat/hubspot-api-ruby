@@ -72,4 +72,78 @@ http_interactions:
         Group","timestamp":1655887657612,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Lehner
         Group","timestamp":1655887657612,"source":"API","sourceVid":[],"requestId":"adbda7d5-ddaa-4358-84ee-2370c74405b7"}]},"hs_object_id":{"value":"8963368568","timestamp":1655887657612,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963368568","timestamp":1655887657612,"source":"API","sourceVid":[],"requestId":"adbda7d5-ddaa-4358-84ee-2370c74405b7"}]},"createdate":{"value":"1655887657612","timestamp":1655887657612,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887657612","timestamp":1655887657612,"source":"API","sourceVid":[],"requestId":"adbda7d5-ddaa-4358-84ee-2370c74405b7"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
   recorded_at: Wed, 22 Jun 2022 08:47:37 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Emard, Koch and Mayert"},{"name":"domain","value":"nader.biz"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:50:58 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '482'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a1009cd999fa-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - e9528821-fadc-494a-8734-e4535cdaa378
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249919'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '80'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B8471E808BDFE96E38A8830610B3F51D8C686392E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kNPzRexPWVds7YFsXUx3cEoHk6Rkc7roDE5kJTICaXXgCY4vtvlNXOuKkYsr9O9%2FvL6toNJnTxqYgUQkclE%2BfperD9POFdPWb3Ma1d6emDtL8MdcK9NszieGOxuB9hAexvlZ8oZJKhXxDbNM"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9290133300,"isDeleted":false,"properties":{"website":{"value":"nader.biz","timestamp":1659451858107,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"nader.biz","timestamp":1659451858107,"source":"CALCULATED","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]},"hs_lastmodifieddate":{"value":"1659451858107","timestamp":1659451858107,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451858107","timestamp":1659451858107,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]},"domain":{"value":"nader.biz","timestamp":1659451858107,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"domain","value":"nader.biz","timestamp":1659451858107,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]},"name":{"value":"Emard,
+        Koch and Mayert","timestamp":1659451858107,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Emard,
+        Koch and Mayert","timestamp":1659451858107,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]},"hs_object_id":{"value":"9290133300","timestamp":1659451858107,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290133300","timestamp":1659451858107,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451858107,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451858107,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]},"createdate":{"value":"1659451858107","timestamp":1659451858107,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451858107","timestamp":1659451858107,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]},"lifecyclestage":{"value":"lead","timestamp":1659451858107,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451858107,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"e9528821-fadc-494a-8734-e4535cdaa378"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:50:58 GMT
+recorded_with: VCR 6.0.0

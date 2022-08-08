@@ -69,4 +69,75 @@ http_interactions:
       string: '{"status":"error","message":"Invalid enum constant ''FAKE_TYPE'' for
         class ObjectType","correlationId":"7327fb4b-ae6b-4434-abb7-f3ee78b5f536"}'
   recorded_at: Wed, 22 Jun 2022 08:49:46 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: get
+    uri: https://api.hubapi.com/engagements/v1/engagements/associated/FAKE_TYPE/1/paged
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:54:23 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '140'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a6020c2f40ed-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - a7fdbd06-aa9a-4803-98eb-9aaf957015b7
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249549'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B27E4C0CF7D17C8D92A130A89DB3A5F126F8DD701000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cIpbC54bpBqH0jfSt2ijU4pmnbS1d7Fvv6EkjUY7Wn8RD%2FHyJtTBrpkAXRW0pM5xZgJZlxFORqv7%2Bf9q67Q5R%2FtoZTb0WYfZ06XS4eJzI8HSMH5GoZDPmNQnXoSYqyopqKjZ0%2BAvCCUnLVw4"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"Invalid enum constant ''FAKE_TYPE'' for
+        class ObjectType","correlationId":"a7fdbd06-aa9a-4803-98eb-9aaf957015b7"}'
+  recorded_at: Tue, 02 Aug 2022 14:54:23 GMT
+recorded_with: VCR 6.0.0

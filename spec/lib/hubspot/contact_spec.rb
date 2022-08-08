@@ -209,7 +209,7 @@ RSpec.describe Hubspot::Contact do
 
       let!(:contact1) { create :contact }
 
-      subject { contact1.merge(1) }
+      subject { contact1.merge(contact1.id) }
 
       it 'raises an error' do
         expect {

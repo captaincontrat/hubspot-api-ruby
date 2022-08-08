@@ -141,4 +141,221 @@ http_interactions:
       string: '{"status":"error","message":"vid to merge is not a valid contact or
         is already in the process of being merged","correlationId":"e9c0586c-590a-4373-8a82-eb50e85b34a0"}'
   recorded_at: Wed, 22 Jun 2022 08:49:22 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/merge-vids/159901/
+    body:
+      encoding: UTF-8
+      string: '{"vidToMerge":1}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:30 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '7'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a4b42a5c3b85-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - ccb61700-33e3-4406-8ba0-32cb05019eb3
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249651'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B95003FEFCD88C38EE26FB4C887E0E8253D01C185000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=itNtEBMar3It6Kv6BGKR0MYj96mE%2BJdnpKCRuxAQXAcFqhmTBwWTYDxf2kMIJIKrN0aqp7hzVwiV2%2FkM7oJHhsSJaXfvTwqRheZY8XwxXIWFWmV2LWN22li9U3sUXbXJ%2Fk1U59JyYxyGmmZz"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: SUCCESS
+  recorded_at: Tue, 02 Aug 2022 14:53:30 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"firstname","value":"Jack"},{"property":"lastname","value":"Weimann"},{"property":"email","value":"alfonzo_leannon@example.com"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 15:53:11 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '480'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347fc25dc6b0814-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 6c85e3a3-4b29-4176-b6c0-5cea363f762d
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249558'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '99'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      X-Trace:
+      - 2BC6E78011E05C1CA227B6816708578DA39F8E7434000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Dgeb28yjxbFHpDRXJF3xsarHHCtaoDYSdyuYr7kgIGE240MZOldNZF4mATjMUXNEWggml4hJo%2BMFohxype3P%2Fn03EqMWs%2FdnTZO4UvQK9wD8R9XT1bvwRfqm5dYSIdmTbtwVNub%2F3nlBdbH6"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vid":4551,"canonical-vid":4551,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Jack","versions":[{"value":"Jack","source-type":"INTEGRATION","source-id":"1024781","source-label":null,"updated-by-user-id":null,"timestamp":1659455591436,"selected":false}]},"email":{"value":"alfonzo_leannon@example.com","versions":[{"value":"alfonzo_leannon@example.com","source-type":"INTEGRATION","source-id":"1024781","source-label":null,"updated-by-user-id":null,"timestamp":1659455591436,"selected":false}]},"lastname":{"value":"Weimann","versions":[{"value":"Weimann","source-type":"INTEGRATION","source-id":"1024781","source-label":null,"updated-by-user-id":null,"timestamp":1659455591436,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":4551,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"alfonzo_leannon@example.com","timestamp":1659455591447,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"d4595910-a064-48bd-a61e-2b0ccf6ec92e","timestamp":1659455591600,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Tue, 02 Aug 2022 15:53:11 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/merge-vids/4551/
+    body:
+      encoding: UTF-8
+      string: '{"vidToMerge":4551}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 15:53:12 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '218'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347fc295c553ba3-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 32d7971a-0165-4eb0-99cb-ec27ca123b23
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249557'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '98'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      X-Trace:
+      - 2B35BB9BFE9063303653C04CA4036CB069432B9011000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=B9%2Bw44hiM1KkDjdlqNt677HQ1IlbG5jZbspw0YIKMNgCEhNAq4zCohC539iUCHa7F1RzhVzVmq8RO%2BgSVmOz3k%2BNPvLMQ4Vnz97Sgmuy1QJChuas04JlaSGhoL3VtrX%2BFRGXIhNInen%2BnxNq"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"{\"status\":\"error\",\"message\":\"Cannot
+        merge a contact with itself\",\"correlationId\":\"32d7971a-0165-4eb0-99cb-ec27ca123b23\"}","correlationId":"32d7971a-0165-4eb0-99cb-ec27ca123b23"}'
+  recorded_at: Tue, 02 Aug 2022 15:53:11 GMT
+recorded_with: VCR 6.0.0

@@ -74,4 +74,80 @@ http_interactions:
         <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
         note"}}'
   recorded_at: Wed, 22 Jun 2022 08:49:43 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/engagements/v1/engagements
+    body:
+      encoding: UTF-8
+      string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[null]},"metadata":{"body":"Test
+        note"}}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:54:17 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '335'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a5e03aff047a-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 131ea906-5fb0-4f52-99c8-058d28f5474b
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249561'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2BC5744528F1FF642AB0C040E3A97A55B319B9C4D7000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Kb2P17GXeG%2FVNa13pqk5FNzFM8jPwJYOIByY3XPXmKjhwhmeWabTpmfbPYuYR%2BHRBl3CM4628%2FCMnSOWxJQ6RZ3qDnLuXCYysbXzlE9Oy18VfKeCaIqlHJ5vWGnoJEbVWzE54s%2FcU1fXQhyL"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"associationCreateFailures":[],"engagement":{"id":24201588360,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659452057729,"lastUpdated":1659452057729,"type":"NOTE","timestamp":1659452057729,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
+        note"}}'
+  recorded_at: Tue, 02 Aug 2022 14:54:18 GMT
+recorded_with: VCR 6.0.0

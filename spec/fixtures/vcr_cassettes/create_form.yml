@@ -76,4 +76,82 @@ http_interactions:
         Form 1115346231c2eac2ffd20da6fe2d35b4","action":"","method":"POST","cssClass":"hs-form
         stacked","redirect":"","submitText":"Sign Up","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1655887794000,"updatedAt":1655887794000,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[],"deletable":true,"inlineMessage":"","tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"formType":"HUBSPOT","deletedAt":0,"themeName":"canvas","parentId":0,"style":"","isPublished":true,"publishAt":0,"unpublishAt":0,"publishedAt":0,"kickbackEmailWorkflowId":0,"kickbackEmailsJson":"","customUid":"","createMarketableContact":true,"editVersion":0,"thankYouMessageJson":"","themeColor":"","alwaysCreateNewCompany":false,"internalUpdatedAt":1655887794000,"businessUnitId":0,"portableKey":"4998bffe-0ec1-43eb-8bf9-9282b5ea3c17","paymentSessionTemplateIds":[],"selectedExternalOptions":[]}'
   recorded_at: Wed, 22 Jun 2022 08:49:54 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/forms/v2/forms
+    body:
+      encoding: UTF-8
+      string: '{"name":"Demo Form 3d2211a5a94b96da553e96ef078de69a","action":"","method":"POST","cssClass":"hs-form
+        stacked","redirect":"","submitText":"Sign Up","followUpId":"","leadNurturingCampaignId":"","notifyRecipients":"","embeddedCode":""}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 03 Aug 2022 13:12:57 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '629'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 734f4ecf8c3839cf-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Expose-Headers:
+      - x-last-modified-timestamp, X-HubSpot-NotFound, X-HS-User-Request, Link, X-Total-Count,
+        HS-Total-Forms-Count, HS-Total-Folders-Count
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 205a1588-9522-4b73-bd4a-9db361bf65ee
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249860'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '86'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2BB248C1A3A695767DAF1F1EFB57DA8B504DAB84B4000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fxsQT72UfhmEtbytA%2FU85bC%2FnQYuI19Vi%2FNXnNtvM%2FSQse%2FAUszN6gkUE8OJoNAzhsjxcwHt3w3q%2FRkipXqF%2B3E28H%2Fo22ZwiuQ5otevvSjYgj1g86cLP4zRgD7iA1KK"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"guid":"9cacf2d4-2d9a-47e3-a935-1fbc077b4083","name":"Demo
+        Form 3d2211a5a94b96da553e96ef078de69a","action":"","method":"POST","cssClass":"hs-form
+        stacked","redirect":"","submitText":"Sign Up","followUpId":"","notifyRecipients":"","leadNurturingCampaignId":"","formFieldGroups":[],"createdAt":1659532377638,"updatedAt":1659532377638,"performableHtml":"","migratedFrom":"","ignoreCurrentValues":false,"metaData":[{"name":"createdByAppId","value":"1024781"}],"deletable":true,"inlineMessage":"","tmsId":"","captchaEnabled":false,"campaignGuid":"","cloneable":true,"editable":true,"formType":"HUBSPOT","deletedAt":0,"themeName":"canvas","parentId":0,"style":"","isPublished":true,"publishAt":0,"unpublishAt":0,"publishedAt":0,"kickbackEmailWorkflowId":0,"kickbackEmailsJson":"","customUid":"","createMarketableContact":true,"editVersion":0,"thankYouMessageJson":"","themeColor":"","alwaysCreateNewCompany":false,"internalUpdatedAt":1659532377638,"businessUnitId":0,"portableKey":"664dc885-f124-4231-9286-f00e3e72af12","paymentSessionTemplateIds":[],"selectedExternalOptions":[]}'
+  recorded_at: Wed, 03 Aug 2022 13:12:57 GMT
+recorded_with: VCR 6.0.0

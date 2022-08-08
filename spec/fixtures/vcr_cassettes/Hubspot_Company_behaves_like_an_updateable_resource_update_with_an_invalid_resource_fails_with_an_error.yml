@@ -74,4 +74,80 @@ http_interactions:
         in portal ''<PORTAL_ID>''","correlationId":"9b4395d6-ad3c-445a-b79a-06b701de7770","errors":[{"message":"This
         company 0 does not exist."}],"category":"OBJECT_NOT_FOUND","subCategory":"COMPANY_NOT_FOUND"}'
   recorded_at: Wed, 22 Jun 2022 08:47:39 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: put
+    uri: https://api.hubapi.com/companies/v2/companies/0
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Foobar"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:51:02 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a1196eaa9996-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 1f8fd98d-71ae-4486-b091-2f361ea7cf7c
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249909'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '78'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B0B8AEDA1951C67426CEF8118DF95A9F12B8A74BD000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ak1wqjo6e%2FMHnBZUYAzKISoHd5XVbO5w6ou27lhgOe93oE%2FrKitP%2BaNVYf%2FhYou4R8o3wJkkd63lpVQy7xVLvz3CVrmRUG74od7Fk0wN6sleykI1KX78n9yyk8cmZCFR0qIrzRuCS4a70aFh"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"error","message":"Couldn''t find a company with the ID ''0''
+        in portal ''<PORTAL_ID>''","correlationId":"1f8fd98d-71ae-4486-b091-2f361ea7cf7c","errors":[{"message":"This
+        company 0 does not exist."}],"category":"OBJECT_NOT_FOUND","subCategory":"COMPANY_NOT_FOUND"}'
+  recorded_at: Tue, 02 Aug 2022 14:51:02 GMT
+recorded_with: VCR 6.0.0

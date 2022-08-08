@@ -71,4 +71,77 @@ http_interactions:
       string: '{"status":"error","message":"Couldn''t find a Group with the given
         name ''ff_group1''.","correlationId":"5ebe40b4-5c4d-4bac-a769-2407269547ba","groupsErrorCode":"GROUP_NOT_FOUND"}'
   recorded_at: Wed, 22 Jun 2022 08:47:36 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: delete
+    uri: https://api.hubapi.com/properties/v1/companies/groups/named/ff_group1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:50:57 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a0f9dcafee60-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 68272659-8ab8-46c6-ad9a-286d87a535a6
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249922'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '81'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2BE59CDA4593722F3695C7B0D604A6E3A5D28D186A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sWQYmaJEfsMZWbTDBJ5LAOVATgpCBiOfZlYn9J0UKPCFZ1y0vXYUbd4RiN4K9TDyXoCzmnWRYDhxkPjj%2BBfNjnQyxjucKaIKqG9JaiFbtq2rKi7QQhePEWqiqvHd9UOaHlqIwJGmisY5JqKW"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"error","message":"Couldn''t find a Group with the given
+        name ''ff_group1''.","correlationId":"68272659-8ab8-46c6-ad9a-286d87a535a6","groupsErrorCode":"GROUP_NOT_FOUND"}'
+  recorded_at: Tue, 02 Aug 2022 14:50:57 GMT
+recorded_with: VCR 6.0.0

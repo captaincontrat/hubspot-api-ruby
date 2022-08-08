@@ -1,14 +1,9 @@
 require 'timecop'
 
 describe Hubspot do
-  before do
-    Hubspot.configure(hapikey: "demo")
-    Timecop.freeze(Time.utc(2012, 'Oct', 10))
-  end
+  before { Timecop.freeze(Time.utc(2012, 'Oct', 10)) }
 
-  after do
-    Timecop.return
-  end
+  after { Timecop.return }
 
   let(:last_blog_id) { Hubspot::Blog.list.last['id'] }
   let(:last_blog_post_id) { Hubspot::Blog.list.last.posts.first['id'] }

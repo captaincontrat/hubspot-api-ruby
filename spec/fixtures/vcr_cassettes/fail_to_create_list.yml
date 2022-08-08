@@ -71,4 +71,77 @@ http_interactions:
       string: '{"status":"error","message":"{\"status\":\"error\",\"message\":\"Every
         list must have a name.\",\"correlationId\":\"7398b380-2cc1-4429-8900-d0dab8bd1afb\"}","correlationId":"7398b380-2cc1-4429-8900-d0dab8bd1afb"}'
   recorded_at: Wed, 22 Jun 2022 08:48:29 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/lists
+    body:
+      encoding: UTF-8
+      string: '{"name":null,"dynamic":false,"portal_id":null}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 12:38:23 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '212'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 73784f091e183b19-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 6d822305-6fb6-4051-a439-c63046710bd5
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249394'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '85'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B32AF03853EB0A25FE4DA3FC6263B3BE396C8A3A9000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9yoHvlY7EbKqE%2Bk4KPD2UYLMD5uPi4%2Bq%2FDcc8bZ3EcIXzWyRDfvXYli5zMF6kdBdvVNEhIGj8zgVl8DZmRhp3zkAHB%2BFOToE%2Ftav0zbwQORm%2Bz3khdAE4aQ46MA50V8gS0FafOnW3qUNE6px"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"{\"status\":\"error\",\"message\":\"Every
+        list must have a name.\",\"correlationId\":\"6d822305-6fb6-4051-a439-c63046710bd5\"}","correlationId":"6d822305-6fb6-4051-a439-c63046710bd5"}'
+  recorded_at: Mon, 08 Aug 2022 12:38:23 GMT
+recorded_with: VCR 6.0.0

@@ -10,7 +10,7 @@ module Hubspot
   #
   class File
     GET_FILE_PATH    = "/filemanager/api/v2/files/:file_id"
-    DELETE_FILE_PATH = "/filemanager/api/v2/files/:file_id/full-delete" 
+    DELETE_FILE_PATH = "/filemanager/api/v2/files/:file_id/full-delete"
     LIST_FILE_PATH   = "/filemanager/api/v2/files"
 
     attr_reader :id
@@ -24,7 +24,7 @@ module Hubspot
     class << self
       def find_by_id(file_id)
         response = Hubspot::Connection.get_json(GET_FILE_PATH, { file_id: file_id })
-	new(response)
+        new(response)
       end
     end
 

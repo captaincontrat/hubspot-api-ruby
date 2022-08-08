@@ -71,4 +71,77 @@ http_interactions:
       string: '{"status":"error","message":"contact does not exist","correlationId":"44df3947-9dd8-4d92-91e4-9d6b1b81a936","errors":[{"message":"The
         contact 0 does not exist."}],"category":"OBJECT_NOT_FOUND"}'
   recorded_at: Wed, 22 Jun 2022 08:49:14 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/vid/0/profile
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:16 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a4603cf10472-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 44dccda3-79dd-4d0c-b794-a2c71fbc56f1
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249675'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '90'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      X-Trace:
+      - 2B26CD0A48167471E9998757929381CF2EE487FE3E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=d%2FWgMTn%2Ba0PTaVSYBOiUopO1dQu7%2BudwH52UENLJfPdnTbcZREvrmzMQcRjNn2opwhcDfIGCXS1sByv5I8pK4xmKjvYzeDITETDzFYUL3Q%2BND8G2ZZhWnijsWug1%2FrIs%2BX62Nuz7lVUmY6Na"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"error","message":"contact does not exist","correlationId":"44dccda3-79dd-4d0c-b794-a2c71fbc56f1","errors":[{"message":"The
+        contact 0 does not exist."}],"category":"OBJECT_NOT_FOUND"}'
+  recorded_at: Tue, 02 Aug 2022 14:53:16 GMT
+recorded_with: VCR 6.0.0

@@ -142,4 +142,150 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"results":[{"portalId":<PORTAL_ID>,"companyId":8963324571,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}],"hasMore":false,"offset":{"companyId":8963324571,"isPrimary":true}}'
   recorded_at: Wed, 22 Jun 2022 08:47:47 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Lebsack Group"},{"name":"domain","value":"anderson-king.com"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:51:17 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '481'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a177ad2aee5c-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - a3f988c6-1e37-4930-bc54-82e47df86fba
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249875'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '80'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B3D5F48BCAA9D884D497FF26B3B58087260B2B0DB000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yJuEwfgk%2BfJp1FPjMCbpS%2BHkkvIEvA3SwAuXCxnO2VqYTwgMtfk3VRKJWzK1bkXrm8KmUFvAceE00NVU3nYkamdGA9joIKxv6XHQncq0gRbVC9Qc%2Bf2YmjyKa%2BQeTmA2vNEO29PI0xBzGrG9"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9290197129,"isDeleted":false,"properties":{"website":{"value":"anderson-king.com","timestamp":1659451877150,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"anderson-king.com","timestamp":1659451877150,"source":"CALCULATED","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]},"hs_lastmodifieddate":{"value":"1659451877150","timestamp":1659451877150,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451877150","timestamp":1659451877150,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]},"domain":{"value":"anderson-king.com","timestamp":1659451877150,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"domain","value":"anderson-king.com","timestamp":1659451877150,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]},"name":{"value":"Lebsack
+        Group","timestamp":1659451877150,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Lebsack
+        Group","timestamp":1659451877150,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]},"hs_object_id":{"value":"9290197129","timestamp":1659451877150,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290197129","timestamp":1659451877150,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451877150,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451877150,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]},"createdate":{"value":"1659451877150","timestamp":1659451877150,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451877150","timestamp":1659451877150,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]},"lifecyclestage":{"value":"lead","timestamp":1659451877150,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451877150,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"a3f988c6-1e37-4930-bc54-82e47df86fba"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:51:17 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/domains/anderson-king.com/companies
+    body:
+      encoding: UTF-8
+      string: '{"limit":25,"requestOptions":{},"offset":{"isPrimary":true,"companyId":null}}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:51:18 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a17cbfef3b43-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 544bd075-7519-4b4c-8c4a-af58bccbb5de
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249874'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '79'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B93DDC85ECC793AD82F0050713A2ECD4F52B0823E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AZikfmCv4NYdC2090Vmqqhc1K41C7YCImghvHab5n0kBtEzLq%2B%2BU1EdcCaQSeBVRXQIOWQHvLrcTp7D0BVjBsZ8AgIEZpOTC5LK6epcx%2BPrWXgogYhDqeco58fn%2FKw00tV0WMANAC7UtdbTG"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"portalId":<PORTAL_ID>,"companyId":9290197129,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}],"hasMore":false,"offset":{"companyId":9290197129,"isPrimary":true}}'
+  recorded_at: Tue, 02 Aug 2022 14:51:18 GMT
+recorded_with: VCR 6.0.0

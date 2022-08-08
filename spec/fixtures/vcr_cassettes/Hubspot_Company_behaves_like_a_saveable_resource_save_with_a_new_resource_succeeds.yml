@@ -70,4 +70,78 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"portalId":<PORTAL_ID>,"companyId":8963342199,"isDeleted":false,"properties":{"website":{"value":"lueilwitz-mertz.com","timestamp":1655887657130,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"lueilwitz-mertz.com","timestamp":1655887657130,"source":"CALCULATED","sourceVid":[],"requestId":"17d813c6-627c-4c6d-976b-dd13ff3080b6"}]},"hs_lastmodifieddate":{"value":"1655887657130","timestamp":1655887657130,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887657130","timestamp":1655887657130,"source":"CALCULATED","sourceVid":[],"requestId":"17d813c6-627c-4c6d-976b-dd13ff3080b6"}]},"domain":{"value":"lueilwitz-mertz.com","timestamp":1655887657130,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"domain","value":"lueilwitz-mertz.com","timestamp":1655887657130,"source":"API","sourceVid":[],"requestId":"17d813c6-627c-4c6d-976b-dd13ff3080b6"}]},"name":{"value":"Tillman-Parker","timestamp":1655887657130,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Tillman-Parker","timestamp":1655887657130,"source":"API","sourceVid":[],"requestId":"17d813c6-627c-4c6d-976b-dd13ff3080b6"}]},"hs_object_id":{"value":"8963342199","timestamp":1655887657130,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963342199","timestamp":1655887657130,"source":"API","sourceVid":[],"requestId":"17d813c6-627c-4c6d-976b-dd13ff3080b6"}]},"createdate":{"value":"1655887657130","timestamp":1655887657130,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887657130","timestamp":1655887657130,"source":"API","sourceVid":[],"requestId":"17d813c6-627c-4c6d-976b-dd13ff3080b6"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
   recorded_at: Wed, 22 Jun 2022 08:47:37 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Yundt, Von and Fisher"},{"name":"domain","value":"metz.net"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:50:57 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '481'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a0fb98793aa5-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 2d778bfb-f4e9-42d5-92dc-36b839999c93
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249921'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '80'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B0E94C7741AE8D6D1A710C9E7D4547CABF9A20597000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OcbO2zxx3BGVH%2BIk%2BDDlkUMtv%2FBED35EHfwbflqrhPzv65RXFgtZ22fazrpKKA9wYsYmo3qt145omXNQihxVmc%2Bfgh%2FdDCFWwy8aOQG2Koc1LAsxOZlthQm3fvUSDVLbD6ZQVR4EtI5mnhHw"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9290154332,"isDeleted":false,"properties":{"website":{"value":"metz.net","timestamp":1659451857290,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"metz.net","timestamp":1659451857290,"source":"CALCULATED","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]},"hs_lastmodifieddate":{"value":"1659451857290","timestamp":1659451857290,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451857290","timestamp":1659451857290,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]},"domain":{"value":"metz.net","timestamp":1659451857290,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"domain","value":"metz.net","timestamp":1659451857290,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]},"name":{"value":"Yundt,
+        Von and Fisher","timestamp":1659451857290,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Yundt,
+        Von and Fisher","timestamp":1659451857290,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]},"hs_object_id":{"value":"9290154332","timestamp":1659451857290,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290154332","timestamp":1659451857290,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451857290,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451857290,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]},"createdate":{"value":"1659451857290","timestamp":1659451857290,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451857290","timestamp":1659451857290,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]},"lifecyclestage":{"value":"lead","timestamp":1659451857290,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451857290,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"2d778bfb-f4e9-42d5-92dc-36b839999c93"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:50:57 GMT
+recorded_with: VCR 6.0.0

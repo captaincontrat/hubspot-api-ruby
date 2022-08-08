@@ -72,4 +72,78 @@ http_interactions:
         Bar Inc.","timestamp":1655887662276,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Foo
         Bar Inc.","timestamp":1655887662276,"source":"API","sourceVid":[],"requestId":"e125d477-287c-4e69-bc76-ce0ccc4d8f47"}]},"hs_object_id":{"value":"8963348059","timestamp":1655887662276,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963348059","timestamp":1655887662276,"source":"API","sourceVid":[],"requestId":"e125d477-287c-4e69-bc76-ce0ccc4d8f47"}]},"createdate":{"value":"1655887662276","timestamp":1655887662276,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887662276","timestamp":1655887662276,"source":"API","sourceVid":[],"requestId":"e125d477-287c-4e69-bc76-ce0ccc4d8f47"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
   recorded_at: Wed, 22 Jun 2022 08:47:42 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/companies/v2/companies/
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"name":"name","value":"Foo Bar Inc."}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:51:07 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '437'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a139a80c99c6-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 606d3825-26c9-4862-a8dd-a32cce471ba7
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249896'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '76'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BF3AAD006E884AEF8C2662A8608AE7BC4470273AF000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=or1y2Pwr9fq1Mpdsb67oPvDt4QMlH6vHyv4bh4DTEqNNkkEUCKhzgyIfNrgZ6CD70ZRWXVgUzDEuhs2gojnj4RpZ7NT%2BRs3SD1b9X0ESNh4nT%2BGLSAb1Chc8mhauTzacFNbduuAQN9q4aNDd"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9290108570,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1659451867244","timestamp":1659451867244,"source":"CALCULATED","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659451867244","timestamp":1659451867244,"sourceId":"1024738","source":"CALCULATED","sourceVid":[],"requestId":"606d3825-26c9-4862-a8dd-a32cce471ba7"}]},"name":{"value":"Foo
+        Bar Inc.","timestamp":1659451867244,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"name","value":"Foo
+        Bar Inc.","timestamp":1659451867244,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"606d3825-26c9-4862-a8dd-a32cce471ba7"}]},"hs_object_id":{"value":"9290108570","timestamp":1659451867244,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9290108570","timestamp":1659451867244,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"606d3825-26c9-4862-a8dd-a32cce471ba7"}]},"hs_pipeline":{"value":"companies-lifecycle-pipeline","timestamp":1659451867244,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"hs_pipeline","value":"companies-lifecycle-pipeline","timestamp":1659451867244,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"606d3825-26c9-4862-a8dd-a32cce471ba7"}]},"createdate":{"value":"1659451867244","timestamp":1659451867244,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659451867244","timestamp":1659451867244,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"606d3825-26c9-4862-a8dd-a32cce471ba7"}]},"lifecyclestage":{"value":"lead","timestamp":1659451867244,"source":"INTEGRATION","sourceId":"1024738","updatedByUserId":null,"versions":[{"name":"lifecyclestage","value":"lead","timestamp":1659451867244,"sourceId":"1024738","source":"INTEGRATION","sourceVid":[],"requestId":"606d3825-26c9-4862-a8dd-a32cce471ba7"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:51:07 GMT
+recorded_with: VCR 6.0.0

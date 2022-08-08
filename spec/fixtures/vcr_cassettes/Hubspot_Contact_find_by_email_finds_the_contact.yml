@@ -138,4 +138,146 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"vid":67853,"canonical-vid":67853,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"hs_is_unworked":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"firstname":{"value":"Eloisa","versions":[{"value":"Eloisa","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757061,"selected":false}]},"lastmodifieddate":{"value":"1655887757068","versions":[{"value":"1655887757068","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"hs_pipeline":{"value":"contacts-lifecycle-pipeline","versions":[{"value":"contacts-lifecycle-pipeline","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"createdate":{"value":"1655887757068","versions":[{"value":"1655887757068","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"hs_lifecyclestage_subscriber_date":{"value":"1655887757068","versions":[{"value":"1655887757068","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"lastname":{"value":"Boyle","versions":[{"value":"Boyle","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757061,"selected":false}]},"hs_all_contact_vids":{"value":"67853","versions":[{"value":"67853","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"hs_marketable_until_renewal":{"value":"false","versions":[{"value":"false","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"hs_marketable_status":{"value":"false","versions":[{"value":"false","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"hs_is_contact":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"hs_object_id":{"value":"67853","versions":[{"value":"67853","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"hs_email_domain":{"value":"example.com","versions":[{"value":"example.com","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"lifecyclestage":{"value":"subscriber","versions":[{"value":"subscriber","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]},"email":{"value":"cyril.kihn@example.com","versions":[{"value":"cyril.kihn@example.com","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887757068,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":67853,"saved-at-timestamp":1655887757088,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"cyril.kihn@example.com","timestamp":1655887757068,"is-primary":true},{"type":"LEAD_GUID","value":"d8ae3cce-0dc8-49ad-93e1-f59cf1d94fda","timestamp":1655887757086}]}],"merge-audits":[]}'
   recorded_at: Wed, 22 Jun 2022 08:49:17 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"firstname","value":"Lakeisha"},{"property":"lastname","value":"Johns"},{"property":"email","value":"sumiko_vonrueden@example.org"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:21 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '485'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a47d1d27ee0f-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - e1b04fcf-7d86-4ef7-919c-3b1674ecbfb9
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249667'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '84'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B6A89BCDD05AB3D994464F6D5F62A21478FA0775A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=f5kfcs1BWxOP8sQuui0RqRva5vPXhCvT043jmTHqPVbiMeOhkc%2F1C7OxvsSQrFGpBml053CH2JqX3f%2Bnkl0Jwn9rNSGYKd0ub5I%2FHCSm%2F2ETfcMYvig7g9gIPV%2BD90LGsBYNKZv5bYpbEpc4"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vid":159503,"canonical-vid":159503,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"firstname":{"value":"Lakeisha","versions":[{"value":"Lakeisha","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000941,"selected":false}]},"email":{"value":"sumiko_vonrueden@example.org","versions":[{"value":"sumiko_vonrueden@example.org","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000941,"selected":false}]},"lastname":{"value":"Johns","versions":[{"value":"Johns","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000941,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":159503,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"sumiko_vonrueden@example.org","timestamp":1659452000951,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"e9e09e66-9b90-4557-8b1a-7f1984cef521","timestamp":1659452000974,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:53:21 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/contact/email/sumiko_vonrueden@example.org/profile
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:21 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '650'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a4818da14081-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - f38089c2-491f-49bd-aa60-792d6e0043af
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249666'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '83'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B0AC5A9C73EF70D9469206B33809B1EE0B22817DC000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wkpoVCGpfPj4qWc1od0ZbBfQC6P8tTy%2BK%2BY3f8ygwTjbazrmcywPsSa3zPJxAo54JpLeOJupQ3qXd7xXF92mwUJVri3UWsxn1CuUI%2FQ4MgTxLjxTo5hDViaH9uiBUSMzwYWTwxDpZy0WJbno"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vid":159503,"canonical-vid":159503,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"hs_is_unworked":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"firstname":{"value":"Lakeisha","versions":[{"value":"Lakeisha","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000941,"selected":false}]},"hs_is_contact":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"lastmodifieddate":{"value":"1659452000951","versions":[{"value":"1659452000951","source-type":"CALCULATED","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"hs_pipeline":{"value":"contacts-lifecycle-pipeline","versions":[{"value":"contacts-lifecycle-pipeline","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"hs_object_id":{"value":"159503","versions":[{"value":"159503","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"hs_email_domain":{"value":"example.org","versions":[{"value":"example.org","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"createdate":{"value":"1659452000951","versions":[{"value":"1659452000951","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"hs_lifecyclestage_lead_date":{"value":"1659452000951","versions":[{"value":"1659452000951","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"lifecyclestage":{"value":"lead","versions":[{"value":"lead","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"email":{"value":"sumiko_vonrueden@example.org","versions":[{"value":"sumiko_vonrueden@example.org","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]},"lastname":{"value":"Johns","versions":[{"value":"Johns","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000941,"selected":false}]},"hs_all_contact_vids":{"value":"159503","versions":[{"value":"159503","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1659452000951,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":159503,"saved-at-timestamp":1659452000976,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"sumiko_vonrueden@example.org","timestamp":1659452000951,"is-primary":true},{"type":"LEAD_GUID","value":"e9e09e66-9b90-4557-8b1a-7f1984cef521","timestamp":1659452000974}]}],"merge-audits":[]}'
+  recorded_at: Tue, 02 Aug 2022 14:53:21 GMT
+recorded_with: VCR 6.0.0

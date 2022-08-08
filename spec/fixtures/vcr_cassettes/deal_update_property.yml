@@ -146,4 +146,154 @@ http_interactions:
       string: '{"name":"my_new_property_dca08d2101474b85dc35a61ab1f21541","label":"This
         is my new property","description":"What is their favorite flavor?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":null,"updatedAt":null,"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"formField":true,"displayOrder":0,"readOnlyValue":false,"readOnlyDefinition":false,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"mutableDefinitionNotDeletable":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"updatedUserId":null,"isCustomizedDefault":false}'
   recorded_at: Wed, 22 Jun 2022 08:49:26 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/deals/v1/properties/
+    body:
+      encoding: UTF-8
+      string: '{"name":"my_new_property_beb7cd9299a4217445028fb3cca5a3af","groupName":"dealinformation","description":"How
+        much money do you have?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
+        is my new property","options":[]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:34 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '513'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a4d19de5ee85-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - b59f58dd-b68f-4104-8894-d2560de65dc1
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249643'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '84'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B5FE6573E0867787F8F77A0730C37635914770426000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=S%2BEklhOanF6d%2BvcAvBq2OegFBShu4fjtqV%2FsZGGAaXCNMc6Ukt96GecPAzqhNwpc1Jm05IQPgONPAjRd3YljTEVN2T%2BFD%2FzNzFdbEbIo1RcFZ9vk6XSLeSQrXKGqyuJmzKOMWCVZ9DdboCzg"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"my_new_property_beb7cd9299a4217445028fb3cca5a3af","label":"This
+        is my new property","description":"How much money do you have?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":1659452014441,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":3326038,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":null,"isCustomizedDefault":false,"updatedUserId":3326038,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"options":[],"deleted":false,"updatedAt":1659452014441}'
+  recorded_at: Tue, 02 Aug 2022 14:53:34 GMT
+- request:
+    method: put
+    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property_beb7cd9299a4217445028fb3cca5a3af
+    body:
+      encoding: UTF-8
+      string: '{"name":"my_new_property_beb7cd9299a4217445028fb3cca5a3af","groupName":"dealinformation","description":"What
+        is their favorite flavor?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
+        is my new property","options":[]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:35 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '491'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a4d4688f0877-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 19404f36-45e6-40af-ab77-a09f35d35362
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249642'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '83'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B6254B394186B4B3656FF1D227378CBEFF8AB1C43000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uXKTdZ0Qf7cfvYWJlWMReORvYAPxM7unJkyamRROCwM91LPhxdT6IdulfKxmJ49FAZ4ZwcdGB5jreiFEbNVIcCdlKX1tzRjPa8ggJQZVDj4kTfW354Bv9%2FXgqDKrMEG%2B4heNQBliYulKRNOa"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"my_new_property_beb7cd9299a4217445028fb3cca5a3af","label":"This
+        is my new property","description":"What is their favorite flavor?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"updatedUserId":null,"readOnlyDefinition":false,"formField":true,"displayOrder":0,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"options":[],"deleted":null,"updatedAt":null}'
+  recorded_at: Tue, 02 Aug 2022 14:53:35 GMT
+recorded_with: VCR 6.0.0

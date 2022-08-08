@@ -71,4 +71,77 @@ http_interactions:
       string: '{"status":"error","message":"canonical vid is not a valid contact or
         is already in the process of being merged","correlationId":"3c36f443-b6ff-40a2-970d-2bc8137df825"}'
   recorded_at: Wed, 22 Jun 2022 08:49:20 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/merge-vids/1/
+    body:
+      encoding: UTF-8
+      string: '{"vidToMerge":2}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:53:26 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '166'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a4a20cfeee07-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 4c9a4908-c734-49a7-86b0-619a2ff3faa7
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249656'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '82'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2B97C394CCEB71B1D172F0486E5150F07C70DE04C4000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HSPo6uxH68DTVpmPmG9XoNLCw4NHuRrZXRn2kvvByFuNC2FA8XepR6GBQuQIGja%2BBYVVd6XmdJ08%2B31%2Fxj4pKKC0QnLSuPgmBnQQAS49slVMZqLO9zoHb7FyRMDKKLokQi81IbeLbq5B3%2FlI"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"vid to merge is not a valid contact or
+        is already in the process of being merged","correlationId":"4c9a4908-c734-49a7-86b0-619a2ff3faa7"}'
+  recorded_at: Tue, 02 Aug 2022 14:53:26 GMT
+recorded_with: VCR 6.0.0

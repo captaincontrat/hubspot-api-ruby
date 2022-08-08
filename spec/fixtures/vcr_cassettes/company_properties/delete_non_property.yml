@@ -71,4 +71,77 @@ http_interactions:
       string: '{"status":"error","message":"Couldn''t find a Property with the given
         name ''non-existent''","correlationId":"5522c49c-8f04-480e-88d7-c7b7427f07f5","propertiesErrorCode":"PROPERTY_NOT_FOUND"}'
   recorded_at: Wed, 22 Jun 2022 08:47:32 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: delete
+    uri: https://api.hubapi.com/properties/v1/companies/properties/named/non-existent
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 02 Aug 2022 14:50:48 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7347a0c31885cdc3-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 54522773-76bd-4b81-8f2e-2c7e682643fa
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249940'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '83'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '8'
+      X-Trace:
+      - 2BA53ED200F49FC5349F2D235B07DEA4AA6B131F65000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xzkDs1zYThZkGBOuJRMUcYtr4fDeqlvgad20bG8ti%2FisJN6f8qBUAvhLTjgysl0luPaDQK6hX5i4FGFsyZ0g6z7tYI4PiSnU5ckvLkpCosfisCWbWgdOeGyYok1qX8HJBHdg9V8LzaaNuLo2"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"error","message":"Couldn''t find a Property with the given
+        name ''non-existent''","correlationId":"54522773-76bd-4b81-8f2e-2c7e682643fa","propertiesErrorCode":"PROPERTY_NOT_FOUND"}'
+  recorded_at: Tue, 02 Aug 2022 14:50:48 GMT
+recorded_with: VCR 6.0.0
