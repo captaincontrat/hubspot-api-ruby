@@ -1,6 +1,12 @@
 RSpec.describe Hubspot::Meeting do
 
-  let(:hubspot_owner_id) { 123 }
+  let(:hubspot_owner_id) do
+    VCR.use_cassette('meeting_owner') do
+      headers = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }
+      owners = HTTParty.get('https://api.hubapi.com/owners/v2/owners', headers: headers).parsed_response
+      owners.first['ownerId']
+    end
+  end
   let(:hs_meeting_title) { 'hs_meeting_title' }
   let(:hs_meeting_body) { 'hs_meeting_body' }
   let(:hs_meeting_start_time) { DateTime.strptime('2022-05-03T10:00:00+01:00', '%Y-%m-%dT%H:%M:%S%z') }
