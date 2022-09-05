@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/properties/v1/contacts/groups/named/contactinformation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Sep 2022 09:09:55 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '145'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 745dd42a9c35b70c-AMS
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - fdf79bf0-501e-4cf7-8097-c8d94a637c38
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499991'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '147'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '14'
+      X-Trace:
+      - 2B183234DD9610A3EFE73B22116E6A9A6BDFB20995000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hpSEsBNB7slyZ9VYxX2ePXa79AVgSxDu2sQomE9M3Ln%2FAZYc32gU%2FZ3zFWDTWOcoBVe%2Fx9ARkRzXPD%2Fef5h8v9CjckwI5K37GrJuaqlrmyWcu1ecgZyL3MtOIwh5vpfS"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"name":"contactinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Contact
+        information","displayOrder":0,"hubspotDefined":true}'
+  recorded_at: Mon, 05 Sep 2022 09:09:55 GMT
+recorded_with: VCR 6.1.0

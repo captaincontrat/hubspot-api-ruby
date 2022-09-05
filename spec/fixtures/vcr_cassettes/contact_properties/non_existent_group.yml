@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/properties/v1/contacts/groups/named/this_does_not_exist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Mon, 05 Sep 2022 09:09:55 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '186'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 745dd42bfcedb71f-AMS
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - 95f698b8-38af-4bf4-b9d4-d6b5c7bfb95d
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499990'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '146'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '14'
+      X-Trace:
+      - 2B1A4F99C5FDA97A55047A877BAD8998A8DDA6BAE2000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7m9354N1RnlArSXm5nIPoGOTqLV6h2DHzXnchl7QbKnAIfKLlp%2Bclp50Kok4ACNAMqoJz45ktS3JTIkZiVKaIecETc20qfUo0wxt8J5ahk%2FXmRieJOtuFS51laqxjhIH"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"Couldn''t find a Group with the given
+        name ''this_does_not_exist''.","correlationId":"95f698b8-38af-4bf4-b9d4-d6b5c7bfb95d","groupsErrorCode":"GROUP_NOT_FOUND"}'
+  recorded_at: Mon, 05 Sep 2022 09:09:55 GMT
+recorded_with: VCR 6.1.0
