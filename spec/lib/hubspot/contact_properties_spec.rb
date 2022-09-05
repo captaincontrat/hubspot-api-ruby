@@ -50,7 +50,7 @@ describe Hubspot::ContactProperties do
       end
 
       context 'non-existent property' do
-        cassette 'contact_properties/non-existent-property'
+        cassette 'contact_properties/non_existent_property'
 
         it 'should return an error for a missing property' do
           expect{ Hubspot::ContactProperties.get('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
