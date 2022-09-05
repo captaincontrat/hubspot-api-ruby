@@ -161,7 +161,7 @@ describe Hubspot::ContactProperties do
       end
     end
 
-    describe '.get' do
+    describe '.get_group' do
       context 'existing group' do
         cassette 'contact_properties/existing_group'
 
