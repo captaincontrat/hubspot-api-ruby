@@ -38,12 +38,12 @@ describe Hubspot::ContactProperties do
       end
     end
 
-    describe '.get' do
+    describe '.find' do
       context 'existing property' do
         cassette 'contact_properties/existing_property'
 
         it 'should return a contact property by name if it exists' do
-          response = Hubspot::ContactProperties.get('full_name')
+          response = Hubspot::ContactProperties.find('full_name')
           expect(response['name']).to eq 'full_name'
           expect(response['label']).to eq 'Full name'
         end
@@ -53,7 +53,7 @@ describe Hubspot::ContactProperties do
         cassette 'contact_properties/non_existent_property'
 
         it 'should return an error for a missing property' do
-          expect{ Hubspot::ContactProperties.get('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
+          expect{ Hubspot::ContactProperties.find('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
@@ -161,12 +161,12 @@ describe Hubspot::ContactProperties do
       end
     end
 
-    describe '.get_group' do
+    describe '.find_group' do
       context 'existing group' do
         cassette 'contact_properties/existing_group'
 
         it 'should return a contact property by name if it exists' do
-          response = Hubspot::ContactProperties.get_group('contactinformation')
+          response = Hubspot::ContactProperties.find_group('contactinformation')
           expect(response['name']).to eq 'contactinformation'
           expect(response['displayName']).to eq 'Contact information'
         end
@@ -176,7 +176,7 @@ describe Hubspot::ContactProperties do
         cassette 'contact_properties/non_existent_group'
 
         it 'should return an error for a missing group' do
-          expect{ Hubspot::ContactProperties.get_group('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
+          expect{ Hubspot::ContactProperties.find_group('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end

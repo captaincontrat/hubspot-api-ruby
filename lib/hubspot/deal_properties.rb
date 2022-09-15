@@ -3,8 +3,8 @@ module Hubspot
 
     ALL_PROPERTIES_PATH  = '/deals/v1/properties'
     ALL_GROUPS_PATH      = '/deals/v1/groups'
-    GET_PROPERTY_PATH    = '/properties/v1/deals/properties/named/:property_name'
-    GET_GROUP_PATH       = '/properties/v1/deals/groups/named/:group_name'
+    PROPERTY_PATH        = '/properties/v1/deals/properties/named/:property_name'
+    GROUP_PATH           = '/properties/v1/deals/groups/named/:group_name'
     CREATE_PROPERTY_PATH = '/deals/v1/properties/'
     UPDATE_PROPERTY_PATH = '/deals/v1/properties/named/:property_name'
     DELETE_PROPERTY_PATH = '/deals/v1/properties/named/:property_name'
@@ -21,16 +21,16 @@ module Hubspot
         superclass.all(ALL_PROPERTIES_PATH, opts, filter)
       end
 
-      def get(property_name, opts={})
-        superclass.get(GET_PROPERTY_PATH, property_name, opts)
+      def find(property_name, opts={})
+        superclass.find(PROPERTY_PATH, property_name, opts)
       end
 
       def groups(opts={}, filter={})
         superclass.groups(ALL_GROUPS_PATH, opts, filter)
       end
 
-      def get_group(group_name, opts={})
-        superclass.get_group(GET_GROUP_PATH, group_name, opts)
+      def find_group(group_name, opts={})
+        superclass.find_group(GROUP_PATH, group_name, opts)
       end
 
       def create!(params={})

@@ -26,7 +26,7 @@ module Hubspot
         filter_results(response, :groupName, filter[:include], filter[:exclude])
       end
 
-      def get(path, property_name, opts={})
+      def find(path, property_name, opts={})
         response = Hubspot::Connection.get_json(path, opts.merge({ property_name: property_name }))
       end
 
@@ -35,7 +35,7 @@ module Hubspot
         filter_results(response, :name, filter[:include], filter[:exclude])
       end
 
-      def get_group(path, group_name, opts={})
+      def find_group(path, group_name, opts={})
         response = Hubspot::Connection.get_json(path, opts.merge({ group_name: group_name }))
       end
 

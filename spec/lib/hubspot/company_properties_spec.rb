@@ -111,12 +111,12 @@ RSpec.describe Hubspot::CompanyProperties do
       end
     end
 
-    describe '.get' do
+    describe '.find' do
       context 'existing property' do
         cassette 'company_properties/existing_property'
 
         it 'should return a company property by name if it exists' do
-          response = Hubspot::CompanyProperties.get('domain')
+          response = Hubspot::CompanyProperties.find('domain')
           expect(response['name']).to eq 'domain'
           expect(response['label']).to eq 'Company Domain Name'
         end
@@ -126,7 +126,7 @@ RSpec.describe Hubspot::CompanyProperties do
         cassette 'company_properties/non_existent_property'
 
         it 'should return an error for a missing property' do
-          expect{ Hubspot::CompanyProperties.get('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
+          expect{ Hubspot::CompanyProperties.find('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
@@ -352,12 +352,12 @@ RSpec.describe Hubspot::CompanyProperties do
       end
     end
 
-    describe '.get_group' do
+    describe '.find_group' do
       context 'existing group' do
         cassette 'company_properties/existing_group'
 
         it 'should return a company property group by name if it exists' do
-          response = Hubspot::CompanyProperties.get_group('companyinformation')
+          response = Hubspot::CompanyProperties.find_group('companyinformation')
           expect(response['name']).to eq 'companyinformation'
           expect(response['displayName']).to eq 'Company information'
         end
@@ -367,7 +367,7 @@ RSpec.describe Hubspot::CompanyProperties do
         cassette 'company_properties/non_existent_group'
 
         it 'should return an error for a missing group' do
-          expect{ Hubspot::CompanyProperties.get_group('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
+          expect{ Hubspot::CompanyProperties.find_group('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
