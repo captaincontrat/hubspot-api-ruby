@@ -1,3 +1,7 @@
+## 0.11.0
+
+  * Adds support for getting single properties #8 - thanks @sammyd @razeware
+
 ## 0.10.0
 
   * API keys (`hapikey`) are deprecated. Please use `access_token`s. #7
