@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/properties/v1/deals/properties/named/hs_acv
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Sep 2022 09:21:10 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '483'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 745de4a5fc01b730-AMS
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - 361386a8-3bc4-4308-9d2d-6e89cb45951e
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499988'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '149'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '14'
+      X-Trace:
+      - 2B563459D36CA0D6D2F0237BB51FC8EAE7B0867765000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DcFzvzz%2FsG1kYkZmYHjCSI7ZsLJ4qMezzNcwHeeQFYkAXk12rV6ykODoeYMLxFhU%2FXjABZWCiUWK8YFar4M4kNiryJWK3dYj7Mzu5dwavGvKeo3iRYFwTRl71LriY3Hz"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"hs_acv","label":"Annual contract value","description":"The
+        annual contract value (ACV) of this deal.","groupName":"deal_revenue","type":"number","fieldType":"number","fieldLevelPermission":null,"hidden":false,"deleted":null,"updatedAt":1653695359828,"createdAt":1593532658357,"readOnlyDefinition":true,"formField":false,"displayOrder":-1,"readOnlyValue":true,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"calculated":true,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":true,"hubspotDefined":true,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"currencyPropertyName":"deal_currency_code","textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"isCustomizedDefault":false,"updatedUserId":null,"options":[]}'
+  recorded_at: Mon, 05 Sep 2022 09:21:10 GMT
+recorded_with: VCR 6.1.0

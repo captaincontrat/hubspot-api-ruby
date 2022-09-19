@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/properties/v1/companies/properties/named/domain
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Sep 2022 09:31:04 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '490'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 745df325fd0db72a-AMS
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - f0de7a0a-dd04-4f8c-96ef-8a570a52f93c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499981'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '149'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '14'
+      X-Trace:
+      - 2BAD7370381E7ECE3A6DB247B2FF1485835AC45FBD000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gvbEOcwjPzMxaj9vF2DYwSyTUIm2c3YzQjhIT2Jg3IuBvkf36k6UL7EvdZ%2FbFxSxwhrjl0U25QD0kURJrf%2F5YLGsexZv2agjm6iExmh91spu2wZ8f7F7vt85XhhLzjoN"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"domain","label":"Company Domain Name","description":"The domain
+        name of the company or organization","groupName":"companyinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"hidden":false,"readOnlyDefinition":true,"formField":true,"displayOrder":9,"readOnlyValue":false,"mutableDefinitionNotDeletable":false,"favorited":false,"favoritedOrder":-1,"numberDisplayHint":null,"textDisplayHint":"domain_name","referencedObjectType":null,"deleted":null,"updatedAt":1653691894844,"externalOptionsReferenceType":null,"optionSortStrategy":null,"createdAt":1565059304024,"isCustomizedDefault":false,"optionsAreMutable":null,"searchTextAnalysisMode":null,"currencyPropertyName":null,"updatedUserId":null,"options":[],"calculated":false,"externalOptions":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":true,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false}'
+  recorded_at: Mon, 05 Sep 2022 09:31:04 GMT
+recorded_with: VCR 6.1.0

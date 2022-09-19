@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/properties/v1/companies/groups/named/companyinformation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Sep 2022 09:31:44 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '145'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 745df422cb6cb730-AMS
+      Cache-Control:
+      - no-cache, no-store, no-transform, must-revalidate, max-age=0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - 1e574e74-5a3c-4df3-9c69-6cfb58458c18
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '499979'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '149'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '14'
+      X-Trace:
+      - 2B3C57BAFA0B17129FF36E2FE9E9A2935BDF45A701000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rJrmTMZxkR8J%2BwsiCRbDS88S6HFyWsy%2FLnGMSREx%2BpouGjq5IbAjdjjZOg8jtiijfV%2BYh2QK5%2FvAHSkuKFWz1mlbij%2FbkShqd0BI%2FZzTj4SyGke0cjBRu%2FyFrrZAfZUl"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"name":"companyinformation","fulcrumPortalId":0,"fulcrumTimestamp":0,"displayName":"Company
+        information","displayOrder":1,"hubspotDefined":true}'
+  recorded_at: Mon, 05 Sep 2022 09:31:44 GMT
+recorded_with: VCR 6.1.0

@@ -37,6 +37,26 @@ describe Hubspot::DealProperties do
         end
       end
     end
+    
+    describe '.find' do
+      context 'existing property' do
+        cassette 'deal_properties/existing_property'
+
+        it 'should return a deal property by name if it exists' do
+          response = Hubspot::DealProperties.find('hs_acv')
+          expect(response['name']).to eq 'hs_acv'
+          expect(response['label']).to eq 'Annual contract value'
+        end
+      end
+
+      context 'non-existent property' do
+        cassette 'deal_properties/non_existent_property'
+
+        it 'should return an error for a missing property' do
+          expect{ Hubspot::DealProperties.find('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
+        end
+      end
+    end
 
     let(:params) { {
       'name'                          => "my_new_property_#{SecureRandom.hex}",
@@ -136,6 +156,26 @@ describe Hubspot::DealProperties do
         it 'should return groups that were not excluded' do
           response = Hubspot::DealProperties.groups({}, { exclude: groups })
           response.each { |p| expect(groups.include?(p['name'])).to be false }
+        end
+      end
+    end
+
+    describe '.find_group' do
+      context 'existing group' do
+        cassette 'deal_properties/existing_group'
+
+        it 'should return a deal property by name if it exists' do
+          response = Hubspot::DealProperties.find_group('deal_revenue')
+          expect(response['name']).to eq 'deal_revenue'
+          expect(response['displayName']).to eq 'Deal revenue'
+        end
+      end
+
+      context 'non-existent group' do
+        cassette 'deal_properties/non_existent_group'
+
+        it 'should return an error for a missing group' do
+          expect{ Hubspot::DealProperties.find_group('this_does_not_exist') }.to raise_error(Hubspot::NotFoundError)
         end
       end
     end
