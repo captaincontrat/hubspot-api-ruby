@@ -170,6 +170,7 @@ Some requests require to be done on a live hubspot portal, you can set the `HUBS
 ```
 HUBSPOT_ACCESS_TOKEN=xxxx
 HUBSPOT_PORTAL_ID=yyyy
+HUBSPOT_HAPI_KEY=zzzz
 ```
 
 To add a new test or update a VCR recording, run the test with the `VCR_RECORD_MODE`
