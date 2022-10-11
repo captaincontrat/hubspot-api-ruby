@@ -1,6 +1,5 @@
 module Hubspot
   class Resource
-
     class_attribute :id_field, instance_writer: false
     class_attribute :property_name_field, instance_writer: false
     class_attribute :update_method, instance_writer: false
@@ -73,25 +72,15 @@ module Hubspot
       @deleted = false
     end
 
-    def id
-      @id
-    end
-
-    def id=(id)
-      @id = id
-    end
+    attr_accessor :id
 
     def to_i
       @id
     end
 
-    def metadata
-      @metadata
-    end
-
-    def changes
-      @changes
-    end
+    attr_reader :changes
+    attr_reader :metadata
+    attr_reader :properties
 
     def changed?
       !@changes.empty?

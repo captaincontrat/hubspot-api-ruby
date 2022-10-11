@@ -91,4 +91,24 @@ RSpec.describe Hubspot::Resource do
       end
     end
   end
+
+  describe '#properties' do
+    context 'using new' do
+      subject(:resource) { described_class.new(properties) }
+      let(:properties) { { id: 1, firstname: 'John', lastname: 'Wayne' } }
+
+      it 'has no properties' do
+        expect(subject.properties).to be_empty
+      end
+    end
+
+    context 'using from_result' do
+      subject(:resource) { described_class.from_result({ properties: properties }) }
+      let(:properties) { { id: { 'value' => 1 }, firstname: { 'value' => 'John' }, lastname: { 'value' => 'Wayne' } } }
+
+      it 'has properties' do
+        expect(subject.properties).to eq HashWithIndifferentAccess.new(properties)
+      end
+    end
+  end
 end
