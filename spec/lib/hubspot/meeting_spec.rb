@@ -12,6 +12,15 @@ RSpec.describe Hubspot::Meeting do
   let(:hs_meeting_start_time) { DateTime.strptime('2022-05-03T10:00:00+01:00', '%Y-%m-%dT%H:%M:%S%z') }
   let(:hs_meeting_end_time) { DateTime.strptime('2022-05-03T10:15:00+01:00', '%Y-%m-%dT%H:%M:%S%z') }
 
+  describe '.all' do
+  end
+
+  describe '.find' do
+  end
+
+  describe '.find_by_contact' do
+  end
+
   describe '.create' do
     context 'with properties' do
 
