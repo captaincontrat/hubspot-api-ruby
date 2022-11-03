@@ -15,9 +15,15 @@ module Hubspot
     BASE_PROPERTIES = %w[hubspot_owner_id hs_meeting_title hs_meeting_body hs_meeting_start_time hs_meeting_end_time].freeze
 
     class << self
-      def all
-        response = Hubspot::Connection.get_json(MEETINGS_PATH, { properties: BASE_PROPERTIES.join(',') })
-        response['results'].map { |f| new(f) }
+      def all(opts = {})
+        options = { properties: BASE_PROPERTIES.join(','), **opts.compact }
+        response = Hubspot::Connection.get_json(MEETINGS_PATH, options)
+        meetings = response['results'].map { |result| new(result) }
+
+        {
+          meetings: meetings,
+          after: response.dig('paging', 'next', 'after')
+        }
       end
 
       def find(id)
