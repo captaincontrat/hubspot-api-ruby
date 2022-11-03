@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/crm/v3/objects/meetings?limit=2&properties=hubspot_owner_id,hs_meeting_title,hs_meeting_body,hs_meeting_start_time,hs_meeting_end_time
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Nov 2022 10:28:58 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '400'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 76446d18fe37d32f-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - dce54e5f-97d9-4fdb-ba77-5aec563fbcc3
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249964'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '98'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      X-Trace:
+      - 2B6C3A25293F516C984FA3AC05B660DDEADAE6A3B5000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hhX41WX3plUA47MrGUg26ZSn0Ne7pISvbEaBilUA7srW0a8Ppf1D0F9fgF4%2BWr%2BZ1f%2BDuhJ1%2Fu4lqBxYnCzfL6%2FrWuEgAmXXCdbgOvqEY5aO8Bd8canDswzyv9LJW2CUQ5Yd004D1ykqOZof"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"id":"12642321179","properties":{"hs_createdate":"2021-04-20T14:33:48.507Z","hs_lastmodifieddate":"2021-04-20T14:33:50.265Z","hs_meeting_body":"This
+        is the description.","hs_meeting_end_time":"2021-04-20T16:33:48.273Z","hs_meeting_start_time":"2021-04-20T15:33:48.273Z","hs_meeting_title":"Event
+        title","hs_object_id":"12642321179","hubspot_owner_id":""},"createdAt":"2021-04-20T14:33:48.507Z","updatedAt":"2021-04-20T14:33:50.265Z","archived":false},{"id":"12642400564","properties":{"hs_createdate":"2021-04-20T14:43:17.223Z","hs_lastmodifieddate":"2021-04-20T14:43:17.684Z","hs_meeting_body":"This
+        is the description.","hs_meeting_end_time":"2021-04-20T16:43:17.214Z","hs_meeting_start_time":"2021-04-20T15:43:17.214Z","hs_meeting_title":"Event
+        title","hs_object_id":"12642400564","hubspot_owner_id":"68156342"},"createdAt":"2021-04-20T14:43:17.223Z","updatedAt":"2021-04-20T14:43:17.684Z","archived":false}],"paging":{"next":{"after":"12642400565","link":"https://api.hubapi.com/crm/v3/objects/meetings?properties=hubspot_owner_id%2Chs_meeting_title%2Chs_meeting_body%2Chs_meeting_start_time%2Chs_meeting_end_time&limit=2&after=12642400565"}}}'
+  recorded_at: Thu, 03 Nov 2022 10:28:58 GMT
+recorded_with: VCR 6.1.0

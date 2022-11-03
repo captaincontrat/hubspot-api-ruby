@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/objects/meetings/search
+    body:
+      encoding: UTF-8
+      string: '{"properties":["hubspot_owner_id","hs_meeting_title","hs_meeting_body","hs_meeting_start_time","hs_meeting_end_time"],"filters":[{"propertyName":"associations.contact","operator":"EQ","value":1451}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Nov 2022 10:28:59 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '555'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 76446d201fbbd2b3-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - dff6b232-05b4-4947-8148-9cda29ff130d
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249961'
+      X-Trace:
+      - 2B895F606AF7F842613B3E34D07FBF071DBD24949F000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gaN4uAiALk3ZP1veN6ZrjuVOzwQvhspvl2lLCRl5P5gZRQJaMYketRCWC2VBGUbiQz6NbY2JxZh5uirZSFmsn8Y%2FdczTAE7pRdwGTB5MAc%2F3b2euvK5MZoozuAQ%2BG4mPzbrd3tJZ75I2eje2"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0b3RhbCI6NCwicmVzdWx0cyI6W3siaWQiOiIyNzE5NTQ4NzI0MSIsInByb3BlcnRpZXMiOnsiaHNfY3JlYXRlZGF0ZSI6IjIwMjItMTAtMjZUMTQ6MjU6MzYuNDA4WiIsImhzX2xhc3Rtb2RpZmllZGRhdGUiOiIyMDIyLTEwLTI2VDE0OjI1OjM4LjA5NVoiLCJoc19tZWV0aW5nX2JvZHkiOiI8cD5IZWxsbyBob3cgYXJlIHlvdSBkb2luZyB0b2RheTwvcD4iLCJoc19tZWV0aW5nX2VuZF90aW1lIjoiMjAyMi0xMC0yNlQxNDo0NTowMFoiLCJoc19tZWV0aW5nX3N0YXJ0X3RpbWUiOiIyMDIyLTEwLTI2VDE0OjMwOjAwWiIsImhzX21lZXRpbmdfdGl0bGUiOiJIZWxsbyBXb3JsZCIsImhzX29iamVjdF9pZCI6IjI3MTk1NDg3MjQxIiwiaHVic3BvdF9vd25lcl9pZCI6IjY4MTU2MzQyIn0sImNyZWF0ZWRBdCI6IjIwMjItMTAtMjZUMTQ6MjU6MzYuNDA4WiIsInVwZGF0ZWRBdCI6IjIwMjItMTAtMjZUMTQ6MjU6MzguMDk1WiIsImFyY2hpdmVkIjpmYWxzZX0seyJpZCI6IjI3NDc1MjUwNDk1IiwicHJvcGVydGllcyI6eyJoc19jcmVhdGVkYXRlIjoiMjAyMi0xMS0wM1QwOTozOToyNC4xNTVaIiwiaHNfbGFzdG1vZGlmaWVkZGF0ZSI6IjIwMjItMTEtMDNUMDk6Mzk6MjQuNzQxWiIsImhzX21lZXRpbmdfYm9keSI6IjxwPkJpZW4gbGUgYm9uam91cjwvcD4iLCJoc19tZWV0aW5nX2VuZF90aW1lIjoiMjAyMi0xMS0wM1QxMDowMDowMFoiLCJoc19tZWV0aW5nX3N0YXJ0X3RpbWUiOiIyMDIyLTExLTAzVDA5OjQ1OjAwWiIsImhzX21lZXRpbmdfdGl0bGUiOiJDZWNpIGVzdCB1biB0ZXN0IiwiaHNfb2JqZWN0X2lkIjoiMjc0NzUyNTA0OTUiLCJodWJzcG90X293bmVyX2lkIjoiNjgxNTYzNDIifSwiY3JlYXRlZEF0IjoiMjAyMi0xMS0wM1QwOTozOToyNC4xNTVaIiwidXBkYXRlZEF0IjoiMjAyMi0xMS0wM1QwOTozOToyNC43NDFaIiwiYXJjaGl2ZWQiOmZhbHNlfSx7ImlkIjoiMjc0NzUyNTI1ODMiLCJwcm9wZXJ0aWVzIjp7ImhzX2NyZWF0ZWRhdGUiOiIyMDIyLTExLTAzVDA5OjQwOjM2Ljk0NloiLCJoc19sYXN0bW9kaWZpZWRkYXRlIjoiMjAyMi0xMS0wM1QwOTo0MDozOC4xMTJaIiwiaHNfbWVldGluZ19ib2R5IjoiPHA+YWhpPC9wPiIsImhzX21lZXRpbmdfZW5kX3RpbWUiOiIyMDIyLTExLTAzVDEwOjAwOjAwWiIsImhzX21lZXRpbmdfc3RhcnRfdGltZSI6IjIwMjItMTEtMDNUMDk6NDU6MDBaIiwiaHNfbWVldGluZ190aXRsZSI6IlRoaXMgaXMgYSBzZWNvbmQgdGVzdCIsImhzX29iamVjdF9pZCI6IjI3NDc1MjUyNTgzIiwiaHVic3BvdF9vd25lcl9pZCI6IjY4MTU2MzQyIn0sImNyZWF0ZWRBdCI6IjIwMjItMTEtMDNUMDk6NDA6MzYuOTQ2WiIsInVwZGF0ZWRBdCI6IjIwMjItMTEtMDNUMDk6NDA6MzguMTEyWiIsImFyY2hpdmVkIjpmYWxzZX0seyJpZCI6IjI3NDc1MjU3MzU2IiwicHJvcGVydGllcyI6eyJoc19jcmVhdGVkYXRlIjoiMjAyMi0xMS0wM1QwOTo0Mjo1NS45NzhaIiwiaHNfbGFzdG1vZGlmaWVkZGF0ZSI6IjIwMjItMTEtMDNUMDk6NDI6NTYuODA4WiIsImhzX21lZXRpbmdfYm9keSI6IjxwPuOCreODquOCueODiOOBrumZjeiqleOBoOOBi+OCieODl+ODrOOCvOODs+ODiOOCkuWHuuOBm++8geOBk+OCiTwvcD4iLCJoc19tZWV0aW5nX2VuZF90aW1lIjoiMjAyMi0xMi0yNVQxMDowMDowMFoiLCJoc19tZWV0aW5nX3N0YXJ0X3RpbWUiOiIyMDIyLTEyLTI1VDA5OjQ1OjAwWiIsImhzX21lZXRpbmdfdGl0bGUiOiLjgq/jg6rjgrnjg57jgrkiLCJoc19vYmplY3RfaWQiOiIyNzQ3NTI1NzM1NiIsImh1YnNwb3Rfb3duZXJfaWQiOiI2ODE1NjM0MiJ9LCJjcmVhdGVkQXQiOiIyMDIyLTExLTAzVDA5OjQyOjU1Ljk3OFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTExLTAzVDA5OjQyOjU2LjgwOFoiLCJhcmNoaXZlZCI6ZmFsc2V9XX0=
+  recorded_at: Thu, 03 Nov 2022 10:28:59 GMT
+recorded_with: VCR 6.1.0

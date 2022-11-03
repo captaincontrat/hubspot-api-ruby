@@ -13,12 +13,88 @@ RSpec.describe Hubspot::Meeting do
   let(:hs_meeting_end_time) { DateTime.strptime('2022-05-03T10:15:00+01:00', '%Y-%m-%dT%H:%M:%S%z') }
 
   describe '.all' do
+    let(:options) { {} }
+    let(:expected_ids) do
+      %w[12642321179 12642400564 12643234101 12643330095 12643437384 27195487241 27475250495 27475252583 27475257356]
+    end
+    subject(:all) do
+      described_class.all(options)
+    end
+
+    it 'retrieves all the meetings with default limit' do
+      VCR.use_cassette 'meeting_all' do
+        meetings = all
+        expect(meetings).not_to be_nil
+        expect(meetings[:meetings].count).to eq 9
+        expect(meetings[:after]).to eq nil
+        expect(meetings[:meetings].map(&:id)).to eq expected_ids
+      end
+    end
+
+    context 'with a limit' do
+      let(:options) { { limit: 2 } }
+      it 'retrieves all the meetings withing limit' do
+        VCR.use_cassette 'meeting_all_limit' do
+          meetings = all
+          expect(meetings).not_to be_nil
+          expect(meetings[:meetings].count).to eq 2
+          expect(meetings[:after]).to eq '12642400565'
+          expect(meetings[:meetings].map(&:id)).to eq expected_ids[..1]
+        end
+      end
+    end
+
+    context 'with a limit and an after param' do
+      let(:options) { { limit: 3, after: '12642400565' } }
+
+      it 'retrives the next meetings within limit after a given id' do
+        VCR.use_cassette 'meeting_all_limit_after' do
+          meetings = all
+          expect(meetings).not_to be_nil
+          expect(meetings[:meetings].count).to eq 3
+          expect(meetings[:after]).to eq '12643437385'
+          expect(meetings[:meetings].map(&:id)).to eq expected_ids[2..4]
+        end
+      end
+    end
   end
 
   describe '.find' do
+    subject(:find) do
+      described_class.find(27195487241)
+    end
+
+    it 'retrieves the meeting' do
+      VCR.use_cassette 'meeting_find' do
+        meeting = find
+        expect(meeting).not_to be_nil
+        expect(meeting.properties[:hubspot_owner_id]).not_to be nil
+        expect(meeting.properties[:hs_meeting_title]).not_to be nil
+        expect(meeting.properties[:hs_meeting_body]).not_to be nil
+        expect(meeting.properties[:hs_meeting_start_time]).not_to be nil
+        expect(meeting.properties[:hs_meeting_end_time]).not_to be nil
+      end
+    end
   end
 
-  describe '.find_by_contact' do
+  describe ".find_by_contact" do
+    subject(:find_by_contact) do
+      described_class.find_by_contact(1451)
+    end
+
+    it 'retrieves meetings' do
+      VCR.use_cassette 'meeting_find_by_contact' do
+        meetings = find_by_contact
+        first_meeting = meetings.first
+        expect(meetings).not_to be_nil
+        expect(first_meeting).not_to be_nil
+        expect(first_meeting.properties[:hubspot_owner_id]).not_to be nil
+        expect(first_meeting.properties[:hs_meeting_title]).not_to be nil
+        expect(first_meeting.properties[:hs_meeting_body]).not_to be nil
+        expect(first_meeting.properties[:hs_meeting_start_time]).not_to be nil
+        expect(first_meeting.properties[:hs_meeting_end_time]).not_to be nil
+      end
+    end
   end
 
   describe '.create' do
