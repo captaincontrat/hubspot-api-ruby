@@ -14,9 +14,6 @@ RSpec.describe Hubspot::Meeting do
 
   describe '.all' do
     let(:options) { {} }
-    let(:expected_ids) do
-      %w[12642321179 12642400564 12643234101 12643330095 12643437384 27195487241 27475250495 27475252583 27475257356]
-    end
     subject(:all) do
       described_class.all(options)
     end
@@ -25,21 +22,20 @@ RSpec.describe Hubspot::Meeting do
       VCR.use_cassette 'meeting_all' do
         meetings = all
         expect(meetings).not_to be_nil
-        expect(meetings[:meetings].count).to eq 9
-        expect(meetings[:after]).to eq nil
-        expect(meetings[:meetings].map(&:id)).to eq expected_ids
+        expect(meetings[:meetings].many?).to be true
+        expect(meetings[:meetings].first).to be_a(Hubspot::Meeting)
       end
     end
 
     context 'with a limit' do
       let(:options) { { limit: 2 } }
-      it 'retrieves all the meetings withing limit' do
+      it 'retrieves all the meetings within limit' do
         VCR.use_cassette 'meeting_all_limit' do
           meetings = all
           expect(meetings).not_to be_nil
           expect(meetings[:meetings].count).to eq 2
-          expect(meetings[:after]).to eq '12642400565'
-          expect(meetings[:meetings].map(&:id)).to eq expected_ids[..1]
+          expect(meetings[:meetings].first).to be_a(Hubspot::Meeting)
+          expect(meetings[:after]).not_to be nil
         end
       end
     end
@@ -52,8 +48,8 @@ RSpec.describe Hubspot::Meeting do
           meetings = all
           expect(meetings).not_to be_nil
           expect(meetings[:meetings].count).to eq 3
+          expect(meetings[:meetings].first).to be_a(Hubspot::Meeting)
           expect(meetings[:after]).to eq '12643437385'
-          expect(meetings[:meetings].map(&:id)).to eq expected_ids[2..4]
         end
       end
     end
