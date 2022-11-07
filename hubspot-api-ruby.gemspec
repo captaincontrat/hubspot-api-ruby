@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "hubspot-api-ruby"
-  s.version = "0.12.0"
+  s.version = "0.13.0"
   s.require_paths = ["lib"]
   s.authors = ["Jonathan"]
   s.email = ["jonathan@hoggo.com"]
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
     "changelog_uri" => "https://github.com/captaincontrat/hubspot-api-ruby/blob/master/History.md"
   }
 
-  s.required_ruby_version = ">= 2.3"
+  s.required_ruby_version = ">= 2.7"
 
   # Add runtime dependencies here
   s.add_runtime_dependency "activesupport", ">= 4.2.2"

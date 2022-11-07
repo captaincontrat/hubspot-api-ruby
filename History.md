@@ -1,3 +1,7 @@
+## 0.13.0
+
+  * BREAKING: requires ruby 2.7+, as we're not testing against olders rubies. #11 + #12
+
 ## 0.12.0
 
   * Added Resource#properties reader (thanks @ur5us!) #10
