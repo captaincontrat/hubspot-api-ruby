@@ -49,7 +49,7 @@ RSpec.describe Hubspot::Meeting do
           expect(meetings).not_to be_nil
           expect(meetings[:meetings].count).to eq 3
           expect(meetings[:meetings].first).to be_a(Hubspot::Meeting)
-          expect(meetings[:after]).to eq '12643437385'
+          expect(meetings[:after]).not_to be nil
         end
       end
     end
