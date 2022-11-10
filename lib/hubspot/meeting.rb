@@ -45,7 +45,7 @@ module Hubspot
             body: {
               **params,
               properties: BASE_PROPERTIES,
-              filters: opts[:filters].presence || default_filters,
+              filters: (opts[:filters].presence || []) + default_filters,
               sorts: opts[:sorts].presence || default_sorts
             }
           }
