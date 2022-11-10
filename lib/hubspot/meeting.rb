@@ -31,16 +31,30 @@ module Hubspot
         new(response)
       end
 
-      def find_by_contact(contact_id)
+      def find_by_contact(contact_id, opts={})
+        params = {
+          limit: opts[:limit].presence,
+          after: opts[:after].presence
+        }.compact
+
+        default_filters = [{ propertyName: 'associations.contact', 'operator': 'EQ', value: contact_id }]
+        default_sorts = [{ propertyName: "hs_lastmodifieddate", direction: "DESCENDING" }]
+
         response = Hubspot::Connection.post_json(MEETING_SEARCH_PATH, {
             params: {},
             body: {
+              **params,
               properties: BASE_PROPERTIES,
-              filters: [{ propertyName: 'associations.contact', 'operator': 'EQ', value: contact_id }]
+              filters: opts[:filters].presence || default_filters,
+              sorts: opts[:sorts].presence || default_sorts
             }
           }
         )
-        response['results'].map { |f| new(f) }
+
+        {
+          after: response.dig('paging', 'next', 'after'),
+          meetings: response['results'].map { |f| new(f) }
+        }
       end
 
       def create!(owner_id, meeting_title, meeting_body, start_date_time, end_date_time)
