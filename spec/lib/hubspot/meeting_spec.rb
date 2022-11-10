@@ -75,12 +75,14 @@ RSpec.describe Hubspot::Meeting do
 
   describe ".find_by_contact" do
     subject(:find_by_contact) do
-      described_class.find_by_contact(1451)
+      described_class.find_by_contact(1451, opts)
     end
+    let(:opts) { {} }
 
     it 'retrieves meetings' do
       VCR.use_cassette 'meeting_find_by_contact' do
-        meetings = find_by_contact
+        results = find_by_contact
+        meetings = results[:meetings]
         first_meeting = meetings.first
         expect(meetings).not_to be_nil
         expect(first_meeting).not_to be_nil
@@ -89,6 +91,26 @@ RSpec.describe Hubspot::Meeting do
         expect(first_meeting.properties[:hs_meeting_body]).not_to be nil
         expect(first_meeting.properties[:hs_meeting_start_time]).not_to be nil
         expect(first_meeting.properties[:hs_meeting_end_time]).not_to be nil
+      end
+    end
+
+    context 'when custom filters' do
+      let(:opts) { { filters: [{ propertyName: 'hs_meeting_title', 'operator': 'EQ', value: 'Hello World' }] } }
+
+      it 'retrieves meetings' do
+        VCR.use_cassette 'meeting_find_by_contact_custom_filters' do
+          results = find_by_contact
+          meetings = results[:meetings]
+          first_meeting = meetings.first
+          expect(meetings).not_to be_nil
+          expect(meetings.count).to eq 1
+          expect(first_meeting).not_to be_nil
+          expect(first_meeting.properties[:hubspot_owner_id]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_title]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_body]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_start_time]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_end_time]).not_to be nil
+        end
       end
     end
   end
