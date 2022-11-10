@@ -113,6 +113,27 @@ RSpec.describe Hubspot::Meeting do
         end
       end
     end
+
+    context 'when limit' do
+      let(:opts) { { limit: 2, after: 1 } }
+
+      it 'retrieves meetings' do
+        VCR.use_cassette 'meeting_find_by_contact_limit' do
+          results = find_by_contact
+          meetings = results[:meetings]
+          first_meeting = meetings.first
+          expect(meetings).not_to be_nil
+          expect(results[:after]).not_to be_nil
+          expect(meetings.count).to eq 2
+          expect(first_meeting).not_to be_nil
+          expect(first_meeting.properties[:hubspot_owner_id]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_title]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_body]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_start_time]).not_to be nil
+          expect(first_meeting.properties[:hs_meeting_end_time]).not_to be nil
+        end
+      end
+    end
   end
 
   describe '.create' do

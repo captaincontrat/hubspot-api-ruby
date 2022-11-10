@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/objects/meetings/search
+    body:
+      encoding: UTF-8
+      string: '{"limit":2,"after":1,"properties":["hubspot_owner_id","hs_meeting_title","hs_meeting_body","hs_meeting_start_time","hs_meeting_end_time"],"filters":[{"propertyName":"associations.contact","operator":"EQ","value":1451}],"sorts":[{"propertyName":"hs_lastmodifieddate","direction":"DESCENDING"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Nov 2022 10:07:11 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '342'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 767dfacfbf41d512-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Hubspot-Correlation-Id:
+      - 2f916219-c6a1-4c55-8ad7-38a36230de24
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249973'
+      X-Trace:
+      - 2B2E2D8FA6913620864E6E68CCD472BB8D35FBBCBB000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uHQsEegIQOfn9VNlevDvhm3HEfVyKrM65J6k4UWSK65%2BsYWLa0utkg7v5R3LI3xEz3Z5CQnC5leQ8Fh72uNCM8tiYZHOEVGoyb8ItljUkqp5MjAZkoUR6JKobqylH2Yb"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":4,"results":[{"id":"27475252583","properties":{"hs_createdate":"2022-11-03T09:40:36.946Z","hs_lastmodifieddate":"2022-11-03T09:40:38.112Z","hs_meeting_body":"<p>ahi</p>","hs_meeting_end_time":"2022-11-03T10:00:00Z","hs_meeting_start_time":"2022-11-03T09:45:00Z","hs_meeting_title":"This
+        is a second test","hs_object_id":"27475252583","hubspot_owner_id":"68156342"},"createdAt":"2022-11-03T09:40:36.946Z","updatedAt":"2022-11-03T09:40:38.112Z","archived":false},{"id":"27475250495","properties":{"hs_createdate":"2022-11-03T09:39:24.155Z","hs_lastmodifieddate":"2022-11-03T09:39:24.741Z","hs_meeting_body":"<p>Bien
+        le bonjour</p>","hs_meeting_end_time":"2022-11-03T10:00:00Z","hs_meeting_start_time":"2022-11-03T09:45:00Z","hs_meeting_title":"Ceci
+        est un test","hs_object_id":"27475250495","hubspot_owner_id":"68156342"},"createdAt":"2022-11-03T09:39:24.155Z","updatedAt":"2022-11-03T09:39:24.741Z","archived":false}],"paging":{"next":{"after":"3"}}}'
+  recorded_at: Thu, 10 Nov 2022 10:07:11 GMT
+recorded_with: VCR 6.1.0
