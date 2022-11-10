@@ -33,7 +33,7 @@ module Hubspot
 
       def find_by_contact(contact_id, opts={})
         params = {
-          limit: opts[:limit].presence,
+          limit: opts[:limit].presence || 100,
           after: opts[:after].presence
         }.compact
 
