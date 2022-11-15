@@ -94,8 +94,10 @@ RSpec.describe Hubspot::Meeting do
       end
     end
 
-    context 'when custom filters' do
-      let(:opts) { { filters: [{ propertyName: 'hs_meeting_title', 'operator': 'EQ', value: 'Hello World' }] } }
+    context 'when custom filters and props' do
+      let(:filters) { [{ propertyName: 'hs_meeting_title', 'operator': 'EQ', value: 'Hello World' }] }
+      let(:properties) { [:hs_timestamp] }
+      let(:opts) { { filters: filters, properties: properties } }
 
       it 'retrieves meetings' do
         VCR.use_cassette 'meeting_find_by_contact_custom_filters' do
@@ -110,6 +112,7 @@ RSpec.describe Hubspot::Meeting do
           expect(first_meeting.properties[:hs_meeting_body]).not_to be nil
           expect(first_meeting.properties[:hs_meeting_start_time]).not_to be nil
           expect(first_meeting.properties[:hs_meeting_end_time]).not_to be nil
+          expect(first_meeting.properties[:hs_timestamp]).not_to be nil
         end
       end
     end
@@ -131,6 +134,7 @@ RSpec.describe Hubspot::Meeting do
           expect(first_meeting.properties[:hs_meeting_body]).not_to be nil
           expect(first_meeting.properties[:hs_meeting_start_time]).not_to be nil
           expect(first_meeting.properties[:hs_meeting_end_time]).not_to be nil
+          expect(first_meeting.properties[:hs_timestamp]).to be nil
         end
       end
     end

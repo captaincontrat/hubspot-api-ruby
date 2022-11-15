@@ -26,8 +26,11 @@ module Hubspot
         }
       end
 
-      def find(id)
-        response = Hubspot::Connection.get_json(MEETING_PATH, { meeting_id: id, properties: BASE_PROPERTIES.join(',') })
+      def find(id, opts = {})
+        props = opts[:properties].presence || []
+        properties = BASE_PROPERTIES | props.compact
+
+        response = Hubspot::Connection.get_json(MEETING_PATH, { meeting_id: id, properties: properties.join(',') })
         new(response)
       end
 
@@ -36,6 +39,7 @@ module Hubspot
           limit: opts[:limit].presence || 100,
           after: opts[:after].presence
         }.compact
+        properties = opts[:properties].presence || []
 
         default_filters = [{ propertyName: 'associations.contact', 'operator': 'EQ', value: contact_id }]
         default_sorts = [{ propertyName: "hs_lastmodifieddate", direction: "DESCENDING" }]
@@ -44,7 +48,7 @@ module Hubspot
             params: {},
             body: {
               **params,
-              properties: BASE_PROPERTIES,
+              properties: BASE_PROPERTIES | properties.compact,
               filters: (opts[:filters].presence || []) + default_filters,
               sorts: opts[:sorts].presence || default_sorts
             }
