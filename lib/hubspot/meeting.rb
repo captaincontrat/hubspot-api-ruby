@@ -27,8 +27,8 @@ module Hubspot
       end
 
       def find(id, opts = {})
-        props = opts[:properties].presence || []
-        properties = BASE_PROPERTIES | props.compact
+        input_properties = opts[:properties].presence || []
+        properties = BASE_PROPERTIES | input_properties.compact
 
         response = Hubspot::Connection.get_json(MEETING_PATH, { meeting_id: id, properties: properties.join(',') })
         new(response)
