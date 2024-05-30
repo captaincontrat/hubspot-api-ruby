@@ -4,7 +4,7 @@ module Hubspot
       # Parses the hubspot properties format into a key-value hash
       def properties_to_hash(props)
         newprops = HashWithIndifferentAccess.new
-        props.each { |k, v| newprops[k] = v["value"] }
+        props.each { |k, v| newprops[k] = v.is_a?(Hash) ? v["value"] : v }
         newprops
       end
 
