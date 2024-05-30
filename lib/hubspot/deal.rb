@@ -148,7 +148,7 @@ module Hubspot
             params: {},
             body: {
               **params,
-              properties: BASE_PROPERTIES | properties.compact,
+              properties: properties.compact,
               filters: (opts[:filters].presence || []),
               sorts: opts[:sorts].presence || default_sorts
             }
