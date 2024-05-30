@@ -12,6 +12,7 @@ module Hubspot
     DEAL_PATH = "/deals/v1/deal/:deal_id"
     RECENT_UPDATED_PATH = "/deals/v1/deal/recent/modified"
     UPDATE_DEAL_PATH = '/deals/v1/deal/:deal_id'
+    DEAL_SEARCH_PATH    = '/crm/v3/objects/deals/search'
 
     attr_reader :properties
     attr_reader :portal_id
@@ -132,6 +133,32 @@ module Hubspot
       def recent(opts = {})
         response = Hubspot::Connection.get_json(RECENT_UPDATED_PATH, opts)
         response['results'].map { |d| new(d) }
+      end
+
+      def find_by_search(opts = {})
+        params = {
+          limit: opts[:limit].presence || 100,
+          after: opts[:after].presence
+        }.compact
+        properties = opts[:properties].presence || []
+
+        default_sorts = [{ propertyName: "hs_lastmodifieddate", direction: "DESCENDING" }]
+
+        response = Hubspot::Connection.post_json(DEAL_SEARCH_PATH, {
+            params: {},
+            body: {
+              **params,
+              properties: BASE_PROPERTIES | properties.compact,
+              filters: (opts[:filters].presence || []),
+              sorts: opts[:sorts].presence || default_sorts
+            }
+          }
+        )
+
+        {
+          after: response.dig('paging', 'next', 'after'),
+          deals: response['results'].map { |f| new(f) }
+        }
       end
 
       # Find all deals associated to a company
