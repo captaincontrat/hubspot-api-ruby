@@ -22,7 +22,7 @@ module Hubspot
 
     def initialize(response_hash)
       @portal_id = response_hash["portalId"]
-      @deal_id = response_hash["dealId"]
+      @deal_id = response_hash["id"] || response_hash["dealId"]
       # Search API does not support returning associations. There's an open issue on HubSpot's side here: https://community.hubspot.com/t5/HubSpot-Ideas/Retrieving-Associated-IDs-via-HubSpot-APIv3-SearchAPI/idi-p/966730
       @company_ids = response_hash.fetch("associations", {}).fetch("associatedCompanyIds", nil)
       @vids = response_hash.fetch("associations", {}).fetch("associatedVids", nil)
