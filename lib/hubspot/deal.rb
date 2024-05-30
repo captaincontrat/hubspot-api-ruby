@@ -116,7 +116,6 @@ module Hubspot
       def all(opts = {})
         path = ALL_DEALS_PATH
 
-        opts[:includeAssociations] = true # Needed for initialize to work
         response = Hubspot::Connection.get_json(path, opts)
 
         result = {}
@@ -148,7 +147,6 @@ module Hubspot
             params: {},
             body: {
               **params,
-              includeAssociations: true,
               properties: properties.compact,
               filters: (opts[:filters].presence || []),
               sorts: opts[:sorts].presence || default_sorts
