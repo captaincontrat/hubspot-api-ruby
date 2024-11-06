@@ -17,6 +17,18 @@ class Hubspot::Association
     },
     "Contact" => {
       "Deal" => 4
+    },
+    "Ticket" => {
+      "Contact" => 16,
+      "Deal" => 28,
+      "Company" => 339,
+      "Task" => 229
+    },
+    "Task" => {
+      "Contact" => 204,
+      "Deal" => 216,
+      "Company" => 192,
+      "Ticket" => 230
     }
   }.freeze
 
