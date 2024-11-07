@@ -16,6 +16,7 @@ module Hubspot
       @id = response_hash['id']
       @properties = response_hash['properties'].deep_symbolize_keys
     end
+
     class << self
       def create!(params = {}, contact_id: nil, company_id: nil, deal_id: nil)
         associations_hash = { 'associations' => [] }
