@@ -50,7 +50,7 @@ module Hubspot
       def update!(id, properties = {})
         request = { properties: properties }
         response = Hubspot::Connection.patch_json(TICKET_PATH, params: { ticket_id: id }, body: request)
-        response.success?
+        new(response)
       end
 
       def find(ticket_id)
