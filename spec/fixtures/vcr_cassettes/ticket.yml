@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/objects/tickets
+    body:
+      encoding: UTF-8
+      string: '{"associations":[{"to":{"id":75761595194},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":16}]},{"to":{"id":25571271600},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":339}]},{"to":{"id":28806796888},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":28}]}],"properties":{"hs_pipeline":"0","hs_pipeline_stage":"1","hs_ticket_priority":"MEDIUM","subject":"test
+        ticket"}}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 07 Nov 2024 10:07:53 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '572'
+      Connection:
+      - keep-alive
+      Location:
+      - https://api.hubapi.com/crm/v3/objects/tickets/16174569112
+      Cf-Ray:
+      - 8dec84d6cc7b6fc6-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - 0fce89d5-9ed8-41f5-b4c4-db3e9777c5f5
+      X-Hubspot-Ratelimit-Daily:
+      - '1000000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '999901'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '190'
+      X-Hubspot-Ratelimit-Remaining:
+      - '189'
+      X-Hubspot-Ratelimit-Secondly:
+      - '19'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '18'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=13A2W1hpXwra7kRMXj5%2B9YDL9ozfMAPvr4wxkFQDJAmX%2BnKNttItIlGV6Ez%2B1mNob714GAu%2BT%2B9g1QKiGmJNY0EQww5ErZ1Xabuzs7K9WvmiJHIhqjR%2BilBAd7AShEPpu1B0rRXy82XWCfZ3"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"16174569112","properties":{"createdate":"2024-11-07T10:07:53.620Z","hs_helpdesk_sort_timestamp":"2024-11-07T10:07:53.620Z","hs_last_message_from_visitor":"false","hs_lastmodifieddate":"2024-11-07T10:07:53.620Z","hs_object_id":"16174569112","hs_object_source":"INTEGRATION","hs_object_source_id":"1024738","hs_object_source_label":"INTEGRATION","hs_pipeline":"0","hs_pipeline_stage":"1","hs_ticket_id":"16174569112","hs_ticket_priority":"MEDIUM","subject":"test
+        ticket"},"createdAt":"2024-11-07T10:07:53.620Z","updatedAt":"2024-11-07T10:07:53.620Z","archived":false}'
+  recorded_at: Thu, 07 Nov 2024 10:07:54 GMT
+recorded_with: VCR 6.3.1
