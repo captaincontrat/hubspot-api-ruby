@@ -30,6 +30,7 @@ require 'hubspot/oauth'
 require 'hubspot/file'
 require 'hubspot/meeting'
 require 'hubspot/ticket'
+require 'hubspot/task'
 
 module Hubspot
   def self.configure(config={})
