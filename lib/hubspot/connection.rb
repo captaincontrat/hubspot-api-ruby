@@ -10,61 +10,16 @@ module Hubspot
         handle_response(response).parsed_response
       end
 
-      def post_json(path, opts)
-        no_parse = opts[:params].delete(:no_parse) { false }
-
-        url = generate_url(path, opts[:params])
-        response = post(
-          url,
-          body: opts[:body].to_json,
-          headers: { 'Content-Type' => 'application/json' },
-          format: :json,
-          read_timeout: read_timeout(opts),
-          open_timeout: open_timeout(opts)
-        )
-
-        log_request_and_response url, response, opts[:body]
-        handle_response(response).yield_self do |r|
-          no_parse ? r : r.parsed_response
-        end
+      def post_json(path, options)
+        modification_query(:post, path, options)
       end
 
       def put_json(path, options)
-        no_parse = options[:params].delete(:no_parse) { false }
-        url = generate_url(path, options[:params])
-
-        response = put(
-          url,
-          body: options[:body].to_json,
-          headers: { "Content-Type" => "application/json" },
-          format: :json,
-          read_timeout: read_timeout(options),
-          open_timeout: open_timeout(options),
-        )
-
-        log_request_and_response(url, response, options[:body])
-        handle_response(response).yield_self do |r|
-          no_parse ? r : r.parsed_response
-        end
+        modification_query(:put, path, options)
       end
 
       def patch_json(path, options)
-        no_parse = options[:params].delete(:no_parse) { false }
-        url = generate_url(path, options[:params])
-
-        response = patch(
-          url,
-          body: options[:body].to_json,
-          headers: { "Content-Type" => "application/json" },
-          format: :json,
-          read_timeout: read_timeout(options),
-          open_timeout: open_timeout(options),
-        )
-
-        log_request_and_response(url, response, options[:body])
-        handle_response(response).yield_self do |r|
-          no_parse ? r : r.parsed_response
-        end
+        modification_query(:patch, path, options)
       end
 
       def delete_json(path, opts)
@@ -75,6 +30,26 @@ module Hubspot
       end
 
       protected
+
+      def modification_query(verb, path, options)
+        no_parse = options[:params].delete(:no_parse) { false }
+        url = generate_url(path, options[:params])
+
+        response = public_send(
+          verb,
+          url,
+          body: options[:body].to_json,
+          headers: { "Content-Type" => "application/json" },
+          format: :json,
+          read_timeout: read_timeout(options),
+          open_timeout: open_timeout(options),
+        )
+
+        log_request_and_response(url, response, options[:body])
+        handle_response(response).yield_self do |r|
+          no_parse ? r : r.parsed_response
+        end
+      end
 
       def read_timeout(opts = {})
         opts.delete(:read_timeout) || Hubspot::Config.read_timeout
