@@ -1,13 +1,5 @@
 describe Hubspot::TicketProperties do
   describe '.create' do
-    context 'with no valid parameters' do
-      it 'should return nil' do
-        VCR.use_cassette 'ticket_fail_to_create_property' do
-          expect(Hubspot::TicketProperties.create!({})).to be(nil)
-        end
-      end
-    end
-
     context 'with all valid parameters' do
       let(:params) do
         {
@@ -34,6 +26,14 @@ describe Hubspot::TicketProperties do
         VCR.use_cassette 'ticket_create_property' do
           response = Hubspot::TicketProperties.create!(params)
           expect(Hubspot::TicketProperties.same?(params, response.compact.except('options'))).to be true
+        end
+      end
+    end
+
+    context 'with invalid parameters' do
+      it 'should return nil' do
+        VCR.use_cassette 'ticket_fail_to_create_property' do
+          expect(Hubspot::TicketProperties.create!({})).to be(nil)
         end
       end
     end
