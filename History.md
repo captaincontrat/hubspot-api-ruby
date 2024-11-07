@@ -3,7 +3,7 @@
   * Add various Ticket endpoints (#create!, #update!, #find)
   * Add TicketProperties#create!
   * Add Task#create! and Task#find
-  * BREAKING CHANGE : requires ruby 3.1+, as we're not testing against olders versions
+  * BREAKING CHANGE : requires ruby 3.2+, as we're not testing against olders versions
 
 ## 0.16.0
 
