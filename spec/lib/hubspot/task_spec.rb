@@ -6,7 +6,7 @@ RSpec.describe Hubspot::Task do
         hs_task_subject: 'title of task',
         hs_timestamp: DateTime.now.strftime('%Q')
       }
-      described_class.create!(params, ticket_id: 16174569112)
+      described_class.create!(params, ticket_id: 16_174_569_112)
     end
 
     it 'creates a new task with valid properties' do
@@ -18,9 +18,9 @@ RSpec.describe Hubspot::Task do
       end
     end
   end
-  
+
   describe 'find' do
-    let(:task_id) { 64075014222 }
+    let(:task_id) { 64_075_014_222 }
 
     subject(:existing_task) { described_class.find(task_id, 'hs_task_subject,hs_task_status') }
 
@@ -32,7 +32,7 @@ RSpec.describe Hubspot::Task do
     end
 
     context 'when task does not exist' do
-      let(:task_id) { 996174569112 }
+      let(:task_id) { 996_174_569_112 }
 
       it 'returns nil' do
         VCR.use_cassette 'task_find' do

@@ -59,7 +59,7 @@ module Hubspot
           format: :json,
           read_timeout: read_timeout(options),
           open_timeout: open_timeout(options),
-          )
+        )
 
         log_request_and_response(url, response, options[:body])
         handle_response(response).yield_self do |r|

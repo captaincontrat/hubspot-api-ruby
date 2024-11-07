@@ -33,7 +33,7 @@ describe Hubspot::TicketProperties do
       it 'should return the valid parameters' do
         VCR.use_cassette 'ticket_create_property' do
           response = Hubspot::TicketProperties.create!(params)
-          expect(Hubspot::TicketProperties.same?(params, response.compact.except("options"))).to be true
+          expect(Hubspot::TicketProperties.same?(params, response.compact.except('options'))).to be true
         end
       end
     end
