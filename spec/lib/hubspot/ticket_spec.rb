@@ -55,7 +55,7 @@ RSpec.describe Hubspot::Ticket do
     it 'updates existing ticket, returns the updated entity' do
       VCR.use_cassette 'ticket_update' do
         ticket = update_ticket
-        ticket.properties[:subject] = 'Updated name'
+        ticket.properties[:subject] = 'New name'
         ticket.properties[:subject] = 'HIGH'
       end
     end
