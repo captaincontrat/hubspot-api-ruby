@@ -29,6 +29,9 @@ require 'hubspot/subscription'
 require 'hubspot/oauth'
 require 'hubspot/file'
 require 'hubspot/meeting'
+require 'hubspot/ticket'
+require 'hubspot/ticket_properties'
+require 'hubspot/task'
 
 module Hubspot
   def self.configure(config={})
