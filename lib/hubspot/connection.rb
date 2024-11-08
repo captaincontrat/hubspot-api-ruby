@@ -35,7 +35,7 @@ module Hubspot
         no_parse = options[:params].delete(:no_parse) { false }
         url = generate_url(path, options[:params])
 
-        response = public_send(
+        response = send(
           verb,
           url,
           body: options[:body].to_json,
