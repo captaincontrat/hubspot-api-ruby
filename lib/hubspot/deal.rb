@@ -12,6 +12,7 @@ module Hubspot
     DEAL_PATH = "/deals/v1/deal/:deal_id"
     RECENT_UPDATED_PATH = "/deals/v1/deal/recent/modified"
     UPDATE_DEAL_PATH = '/deals/v1/deal/:deal_id'
+    DEAL_SEARCH_PATH    = '/crm/v3/objects/deals/search'
 
     attr_reader :properties
     attr_reader :portal_id
@@ -21,9 +22,10 @@ module Hubspot
 
     def initialize(response_hash)
       @portal_id = response_hash["portalId"]
-      @deal_id = response_hash["dealId"]
-      @company_ids = response_hash["associations"]["associatedCompanyIds"]
-      @vids = response_hash["associations"]["associatedVids"]
+      @deal_id = response_hash["id"] || response_hash["dealId"]
+      # Search API does not support returning associations. There's an open issue on HubSpot's side here: https://community.hubspot.com/t5/HubSpot-Ideas/Retrieving-Associated-IDs-via-HubSpot-APIv3-SearchAPI/idi-p/966730
+      @company_ids = response_hash.fetch("associations", {}).fetch("associatedCompanyIds", nil)
+      @vids = response_hash.fetch("associations", {}).fetch("associatedVids", nil)
       @properties = Hubspot::Utils.properties_to_hash(response_hash["properties"])
     end
 
@@ -115,7 +117,6 @@ module Hubspot
       def all(opts = {})
         path = ALL_DEALS_PATH
 
-        opts[:includeAssociations] = true # Needed for initialize to work
         response = Hubspot::Connection.get_json(path, opts)
 
         result = {}
@@ -132,6 +133,32 @@ module Hubspot
       def recent(opts = {})
         response = Hubspot::Connection.get_json(RECENT_UPDATED_PATH, opts)
         response['results'].map { |d| new(d) }
+      end
+
+      def find_by_search(opts = {})
+        params = {
+          limit: opts[:limit].presence || 100,
+          after: opts[:after].presence
+        }.compact
+        properties = opts[:properties].presence || []
+
+        default_sorts = [{ propertyName: "hs_lastmodifieddate", direction: "DESCENDING" }]
+
+        response = Hubspot::Connection.post_json(DEAL_SEARCH_PATH, {
+            params: {},
+            body: {
+              **params,
+              properties: properties.compact,
+              filters: (opts[:filters].presence || []),
+              sorts: opts[:sorts].presence || default_sorts
+            }
+          }
+        )
+
+        {
+          after: response.dig('paging', 'next', 'after'),
+          deals: response['results'].map { |f| new(f) }
+        }
       end
 
       # Find all deals associated to a company
