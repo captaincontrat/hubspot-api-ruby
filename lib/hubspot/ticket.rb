@@ -56,7 +56,7 @@ module Hubspot
       end
 
       def find(ticket_id, properties = DEFAULT_TICKET_FIELDS)
-        response = Hubspot::Connection.get_json(TICKET_PATH, { ticket_id: ticket_id, properties: })
+        response = Hubspot::Connection.get_json(TICKET_PATH, ticket_id: ticket_id, properties:)
         new(response)
       end
     end

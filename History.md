@@ -1,3 +1,7 @@
+## 0.17.1
+
+* Add default properties for Ticket#find
+
 ## 0.17.0
 
   * Add various Ticket endpoints (#create!, #update!, #find)
