@@ -14,6 +14,7 @@ RSpec.describe Hubspot::Ticket do
       VCR.use_cassette 'ticket' do
         expect(new_ticket.id).not_to be_nil
         expect(new_ticket.properties[:subject]).to eq('test ticket')
+        expect(new_ticket.properties[:hubspot_owner_id]).to be_nil
       end
     end
   end
