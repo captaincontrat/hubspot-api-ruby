@@ -37,8 +37,7 @@ module Hubspot
       end
 
       def find(task_id, properties = DEFAULT_TASK_FIELDS)
-        response = Hubspot::Connection.get_json(TASK_PATH, { task_id: task_id,
-                                                             properties: properties })
+        response = Hubspot::Connection.get_json(TASK_PATH, task_id: task_id, properties:)
         new(response)
       end
     end

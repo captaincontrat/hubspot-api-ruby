@@ -9,6 +9,8 @@ module Hubspot
   class Ticket
     TICKETS_PATH = '/crm/v3/objects/tickets'
     TICKET_PATH  = '/crm/v3/objects/tickets/:ticket_id'
+    DEFAULT_TICKET_FIELDS='content,createdate,hs_lastmodifieddate,hs_object_id,hs_pipeline,hs_pipeline_stage,'\
+      'hs_ticket_category,hs_ticket_priority,hubspot_owner_id,subject'
 
     attr_reader :properties, :id
 
@@ -53,8 +55,8 @@ module Hubspot
         new(response)
       end
 
-      def find(ticket_id)
-        response = Hubspot::Connection.get_json(TICKET_PATH, { ticket_id: ticket_id })
+      def find(ticket_id, properties = DEFAULT_TICKET_FIELDS)
+        response = Hubspot::Connection.get_json(TICKET_PATH, ticket_id: ticket_id, properties:)
         new(response)
       end
     end
