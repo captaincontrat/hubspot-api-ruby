@@ -1,3 +1,7 @@
+## 0.17.2
+
+* Add more params for task association in Task#create
+
 ## 0.17.1
 
 * Add default properties for Ticket#find
