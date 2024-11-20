@@ -6,7 +6,8 @@ RSpec.describe Hubspot::Task do
         hs_task_subject: 'title of task',
         hs_timestamp: DateTime.now.strftime('%Q')
       }
-      described_class.create!(params, ticket_id: 16_174_569_112)
+      described_class.create!(params, ticket_id: 16_174_569_112, contact_id: 75_761_595_194, company_id: 25_571_271_600,
+                                      deal_id: 28_806_796_888)
     end
 
     it 'creates a new task with valid properties' do
