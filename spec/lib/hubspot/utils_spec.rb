@@ -128,4 +128,20 @@ describe Hubspot::Utils do
       end
     end
   end
+
+  describe '.append_association' do
+    it 'adds proper association hash to target list' do
+      associations_hash = { 'associations' => [] }
+      described_class.append_association(associations_hash['associations'], 'Ticket', 'Company', 1337)
+      expect(associations_hash).to eq(
+        {
+          'associations' => [
+            "to": { "id": 1337 },
+            "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
+                        "associationTypeId": 339 }]
+          ]
+        }
+      )
+    end
+  end
 end

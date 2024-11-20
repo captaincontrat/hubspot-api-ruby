@@ -22,13 +22,7 @@ module Hubspot
     class << self
       def create!(params = {}, ticket_id: nil)
         associations_hash = { 'associations' => [] }
-        if ticket_id.present?
-          associations_hash['associations'] << {
-            "to": { "id": ticket_id },
-            "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
-                        "associationTypeId": Hubspot::Association::ASSOCIATION_DEFINITIONS['Task']['Ticket'] }]
-          }
-        end
+        Hubspot::Utils.append_association(associations_hash['associations'], 'Task', 'Ticket', ticket_id)
         properties = { hs_task_status: 'NOT_STARTED', hs_task_type: 'TODO' }.merge(params)
         post_data = associations_hash.merge({ properties: properties })
 
