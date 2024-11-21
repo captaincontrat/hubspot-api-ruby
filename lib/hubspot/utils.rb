@@ -87,16 +87,6 @@ module Hubspot
         [skip, new_groups.to_a, new_props, update_props]
       end
 
-      def append_association(association_list, origin, associated, associated_id)
-        return unless associated_id.present?
-
-        association_list << {
-          "to": { "id": associated_id },
-          "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
-                      "associationTypeId": Hubspot::Association::ASSOCIATION_DEFINITIONS[origin][associated] }]
-        }
-      end
-
       private
 
       def find_by_name(name, set)

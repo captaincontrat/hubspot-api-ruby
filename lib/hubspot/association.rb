@@ -75,6 +75,17 @@ class Hubspot::Association
       response['results'].map { |result| klass.find(result["toObjectId"]) }
     end
 
+    # Utility function to build the association list required by some API endpoints
+    def append_association(association_list, origin, associated, associated_id)
+      return unless associated_id.present?
+
+      association_list << {
+        "to": { "id": associated_id },
+        "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
+                    "associationTypeId": Hubspot::Association::ASSOCIATION_DEFINITIONS[origin][associated] }]
+      }
+    end
+
     private
 
     def build_create_association_body(association, definition_id)

@@ -22,9 +22,9 @@ module Hubspot
     class << self
       def create!(params = {}, contact_id: nil, company_id: nil, deal_id: nil)
         associations_hash = { 'associations' => [] }
-        Hubspot::Utils.append_association(associations_hash['associations'], 'Ticket', 'Contact', contact_id)
-        Hubspot::Utils.append_association(associations_hash['associations'], 'Ticket', 'Company', company_id)
-        Hubspot::Utils.append_association(associations_hash['associations'], 'Ticket', 'Deal', deal_id)
+        Hubspot::Association.append_association(associations_hash['associations'], 'Ticket', 'Contact', contact_id)
+        Hubspot::Association.append_association(associations_hash['associations'], 'Ticket', 'Company', company_id)
+        Hubspot::Association.append_association(associations_hash['associations'], 'Ticket', 'Deal', deal_id)
         post_data = associations_hash.merge({ properties: params })
         response = Hubspot::Connection.post_json(TICKETS_PATH, params: {}, body: post_data)
         new(response)
