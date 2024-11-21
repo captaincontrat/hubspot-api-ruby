@@ -5,8 +5,8 @@ http_interactions:
     uri: https://api.hubapi.com/crm/v3/objects/tasks
     body:
       encoding: UTF-8
-      string: '{"associations":[{"to":{"id":16174569112},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":230}]}],"properties":{"hs_task_status":"NOT_STARTED","hs_task_type":"TODO","hs_task_body":"i
-        am a task","hs_task_subject":"title of task","hs_timestamp":"1730980291412"}}'
+      string: '{"associations":[{"to":{"id":16174569112},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":230}]},{"to":{"id":75761595194},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":204}]},{"to":{"id":25571271600},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":192}]},{"to":{"id":28806796888},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":216}]}],"properties":{"hs_task_status":"NOT_STARTED","hs_task_type":"TODO","hs_task_body":"i
+        am a task","hs_task_subject":"title of task","hs_timestamp":"1732111731855"}}'
     headers:
       Authorization:
       - Bearer <ACCESS_TOKEN>
@@ -24,7 +24,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Thu, 07 Nov 2024 11:51:32 GMT
+      - Wed, 20 Nov 2024 14:08:52 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -32,9 +32,9 @@ http_interactions:
       Connection:
       - keep-alive
       Location:
-      - https://api.hubapi.com/crm/v3/objects/tasks/64075014222
+      - https://api.hubapi.com/crm/v3/objects/tasks/65039244375
       Cf-Ray:
-      - 8ded1ca5e8d0d70a-CDG
+      - 8e5903b4aaa16f0e-CDG
       Cf-Cache-Status:
       - DYNAMIC
       Strict-Transport-Security:
@@ -46,11 +46,11 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Hubspot-Correlation-Id:
-      - f6e0983f-f1f2-4dbb-9a03-28499f0e87df
+      - ed5e936f-5d2d-4ad2-8beb-72f79c0ff48f
       X-Hubspot-Ratelimit-Daily:
       - '1000000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '999894'
+      - '999999'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
@@ -62,16 +62,16 @@ http_interactions:
       X-Hubspot-Ratelimit-Secondly-Remaining:
       - '18'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=oxvVtGSHCCKhoRjRe14twDypKCjwgEIh6e22X%2FLmtWKVgsRRb27POoL5Gd7j1NcyqK%2BqRLzZ3JeUjhuS0gKc7css6LgrE5Tu7aOtG%2BW0iNszBavmdUBMNVJENnwtUAsXStB0Ql5UwoIdRPnu"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=fHqKZ2b5WxUO52SyuP8pubAeqYZmEENONadmd36c7UFlW20eBEEZcXZK%2F301Y9tpUJrgXlYhsYGZfh%2BCqvlZ%2BCiV5WTT53KcBK2KG%2Bs7R5hf87s997XYhuJfJLMUUZJbkIgc9mpYmFsSCbzE"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"64075014222","properties":{"hs_body_preview":"i am a task","hs_body_preview_html":"<html>\n
-        <head></head>\n <body>\n i am a task\n </body>\n</html>","hs_body_preview_is_truncated":"false","hs_createdate":"2024-11-07T11:51:31.747Z","hs_lastmodifieddate":"2024-11-07T11:51:31.747Z","hs_object_id":"64075014222","hs_object_source":"INTEGRATION","hs_object_source_id":"1024738","hs_object_source_label":"INTEGRATION","hs_task_body":"i
+      string: '{"id":"65039244375","properties":{"hs_body_preview":"i am a task","hs_body_preview_html":"<html>\n
+        <head></head>\n <body>\n i am a task\n </body>\n</html>","hs_body_preview_is_truncated":"false","hs_createdate":"2024-11-20T14:08:52.191Z","hs_lastmodifieddate":"2024-11-20T14:08:52.191Z","hs_object_id":"65039244375","hs_object_source":"INTEGRATION","hs_object_source_id":"1024738","hs_object_source_label":"INTEGRATION","hs_task_body":"i
         am a task","hs_task_completion_count":"0","hs_task_family":"SALES","hs_task_for_object_type":"OWNER","hs_task_is_all_day":"false","hs_task_is_completed":"0","hs_task_is_completed_call":"0","hs_task_is_completed_email":"0","hs_task_is_completed_linked_in":"0","hs_task_is_completed_sequence":"0","hs_task_is_overdue":"true","hs_task_is_past_due_date":"true","hs_task_missed_due_date":"true","hs_task_missed_due_date_count":"1","hs_task_priority":"NONE","hs_task_status":"NOT_STARTED","hs_task_subject":"title
-        of task","hs_task_type":"TODO","hs_timestamp":"2024-11-07T11:51:31.412Z"},"createdAt":"2024-11-07T11:51:31.747Z","updatedAt":"2024-11-07T11:51:31.747Z","archived":false}'
-  recorded_at: Thu, 07 Nov 2024 11:51:32 GMT
+        of task","hs_task_type":"TODO","hs_timestamp":"2024-11-20T14:08:51.855Z"},"createdAt":"2024-11-20T14:08:52.191Z","updatedAt":"2024-11-20T14:08:52.191Z","archived":false}'
+  recorded_at: Wed, 20 Nov 2024 14:08:52 GMT
 recorded_with: VCR 6.3.1

@@ -1,3 +1,7 @@
+## 0.18.0
+
+* BREAKING CHANGE : Ticket#create! and Task#create now takes association param (array), build it using Association.build_association_param
+
 ## 0.17.1
 
 * Add default properties for Ticket#find

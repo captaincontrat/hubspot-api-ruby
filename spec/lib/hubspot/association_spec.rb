@@ -162,4 +162,17 @@ RSpec.describe Hubspot::Association do
       end
     end
   end
+
+  describe '.build_association_param' do
+    it 'returns proper association hash' do
+      result = described_class.build_association_param('Ticket', 'Company', 1337)
+      expect(result).to eq(
+        {
+          "to": { "id": 1337 },
+          "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
+                      "associationTypeId": 339 }]
+        }
+      )
+    end
+  end
 end

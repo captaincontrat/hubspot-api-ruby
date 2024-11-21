@@ -7,7 +7,12 @@ RSpec.describe Hubspot::Ticket do
         hs_ticket_priority: 'MEDIUM',
         subject: 'test ticket'
       }
-      described_class.create!(params, contact_id: 75_761_595_194, company_id: 25_571_271_600, deal_id: 28_806_796_888)
+      associations = [
+        Hubspot::Association.build_association_param('Ticket', 'Contact', 75_761_595_194),
+        Hubspot::Association.build_association_param('Ticket', 'Company', 25_571_271_600),
+        Hubspot::Association.build_association_param('Ticket', 'Deal', 28_806_796_888),
+      ]
+      described_class.create!(params, associations:)
     end
 
     it 'creates a new ticket with valid properties' do

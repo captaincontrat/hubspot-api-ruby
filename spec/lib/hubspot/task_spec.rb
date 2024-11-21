@@ -6,7 +6,13 @@ RSpec.describe Hubspot::Task do
         hs_task_subject: 'title of task',
         hs_timestamp: DateTime.now.strftime('%Q')
       }
-      described_class.create!(params, ticket_id: 16_174_569_112)
+      associations = [
+        Hubspot::Association.build_association_param('Task', 'Ticket', 16_174_569_112),
+        Hubspot::Association.build_association_param('Task', 'Contact', 75_761_595_194),
+        Hubspot::Association.build_association_param('Task', 'Company', 25_571_271_600),
+        Hubspot::Association.build_association_param('Task', 'Deal', 28_806_796_888),
+      ]
+      described_class.create!(params, associations:)
     end
 
     it 'creates a new task with valid properties' do
