@@ -143,5 +143,13 @@ describe Hubspot::Utils do
         }
       )
     end
+
+    context 'when no associated_id' do
+      it 'does not change the list' do
+        associations_hash = { 'associations' => [] }
+        described_class.append_association(associations_hash['associations'], 'Ticket', 'Company', nil)
+        expect(associations_hash).to eq({ 'associations' => [] })
+      end
+    end
   end
 end
