@@ -21,7 +21,7 @@ module Hubspot
 
     class << self
       def create!(params = {}, associations: [])
-        associations_hash = { 'associations' => associations }
+        associations_hash = { associations: }
         post_data = associations_hash.merge({ properties: params })
         response = Hubspot::Connection.post_json(TICKETS_PATH, params: {}, body: post_data)
         new(response)

@@ -21,9 +21,9 @@ module Hubspot
 
     class << self
       def create!(params = {}, associations: [])
-        associations_hash = { 'associations' => associations }
+        associations_hash = { associations: }
         properties = { hs_task_status: 'NOT_STARTED', hs_task_type: 'TODO' }.merge(params)
-        post_data = associations_hash.merge({ properties: properties })
+        post_data = associations_hash.merge(properties:)
 
         response = Hubspot::Connection.post_json(TASKS_PATH, params: {}, body: post_data)
         new(response)

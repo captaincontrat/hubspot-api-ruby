@@ -78,9 +78,9 @@ class Hubspot::Association
     # Utility function to build the association list required by some API endpoints
     def build_association_param(origin, associated, associated_id)
       {
-        "to": { "id": associated_id },
-        "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
-                    "associationTypeId": Hubspot::Association::ASSOCIATION_DEFINITIONS[origin][associated] }]
+        to: { id: associated_id },
+        types: [{ associationCategory: 'HUBSPOT_DEFINED',
+                  associationTypeId: Hubspot::Association::ASSOCIATION_DEFINITIONS[origin][associated] }]
       }
     end
 
