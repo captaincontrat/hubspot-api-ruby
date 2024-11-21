@@ -20,12 +20,8 @@ module Hubspot
     end
 
     class << self
-      def create!(params = {}, ticket_id: nil, contact_id: nil, company_id: nil, deal_id: nil)
-        associations_hash = { 'associations' => [] }
-        Hubspot::Association.append_association(associations_hash['associations'], 'Task', 'Ticket', ticket_id)
-        Hubspot::Association.append_association(associations_hash['associations'], 'Task', 'Contact', contact_id)
-        Hubspot::Association.append_association(associations_hash['associations'], 'Task', 'Company', company_id)
-        Hubspot::Association.append_association(associations_hash['associations'], 'Task', 'Deal', deal_id)
+      def create!(params = {}, associations: [])
+        associations_hash = { 'associations' => associations }
         properties = { hs_task_status: 'NOT_STARTED', hs_task_type: 'TODO' }.merge(params)
         post_data = associations_hash.merge({ properties: properties })
 

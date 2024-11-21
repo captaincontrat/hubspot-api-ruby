@@ -1,6 +1,6 @@
-## 0.17.2
+## 0.18.0
 
-* Add more params for task association in Task#create
+* BREAKING CHANGE : Ticket#create! and Task#create now takes association param (array), build it using Association.build_association_param
 
 ## 0.17.1
 

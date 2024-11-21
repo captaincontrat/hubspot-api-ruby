@@ -163,27 +163,16 @@ RSpec.describe Hubspot::Association do
     end
   end
 
-  describe '.append_association' do
-    it 'adds proper association hash to target list' do
-      associations_hash = { 'associations' => [] }
-      described_class.append_association(associations_hash['associations'], 'Ticket', 'Company', 1337)
-      expect(associations_hash).to eq(
+  describe '.build_association_param' do
+    it 'returns proper association hash' do
+      result = described_class.build_association_param('Ticket', 'Company', 1337)
+      expect(result).to eq(
         {
-          'associations' => [
-            "to": { "id": 1337 },
-            "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
-                        "associationTypeId": 339 }]
-          ]
+          "to": { "id": 1337 },
+          "types": [{ "associationCategory": 'HUBSPOT_DEFINED',
+                      "associationTypeId": 339 }]
         }
       )
-    end
-
-    context 'when no associated_id' do
-      it 'does not change the list' do
-        associations_hash = { 'associations' => [] }
-        described_class.append_association(associations_hash['associations'], 'Ticket', 'Company', nil)
-        expect(associations_hash).to eq({ 'associations' => [] })
-      end
     end
   end
 end
