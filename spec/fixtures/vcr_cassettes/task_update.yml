@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.hubapi.com/crm/v3/objects/tasks/64483143324
+    body:
+      encoding: UTF-8
+      string: '{"properties":{"hs_task_status":"COMPLETED"}}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Dec 2024 11:06:00 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1091'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 8efcc356ff020214-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - cc683884-44eb-420c-9709-7ba07fd69c53
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249950'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '99'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=I7rnO5qbdvsw0jMEswzfVrjIg3WAYqgf0JA8YJVZRpB74D1RCcsv3UMAM9wvh05JVToKpelwO6yZ10QpOmm%2FK75Vi2ij4h23%2BAMx627KIF6nl8urZQ7ZZcZz1%2FdZcnjAxho6%2FkhkYq6BteW1"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"64483143324","properties":{"hs_all_owner_ids":"31871900","hs_createdate":"2024-11-13T15:17:14.590Z","hs_lastmodifieddate":"2024-12-10T11:06:00.427Z","hs_object_id":"64483143324","hs_object_source":"INTEGRATION","hs_object_source_id":"1024738","hs_object_source_label":"INTEGRATION","hs_pipeline":"3d314325-1b2a-4225-9388-375f49c57ec3","hs_pipeline_stage":"af0e6a5c-2ea3-4c72-b69f-7c6cb3fdb591","hs_task_completion_count":"1","hs_task_completion_date":"2024-12-10T11:06:00.427Z","hs_task_is_completed":"1","hs_task_is_completed_call":"0","hs_task_is_completed_email":"0","hs_task_is_completed_linked_in":"0","hs_task_is_completed_sequence":"0","hs_task_is_overdue":"false","hs_task_is_past_due_date":"true","hs_task_missed_due_date":"true","hs_task_missed_due_date_count":"1","hs_task_status":"COMPLETED","hs_task_type":"TODO","hs_timestamp":"2024-11-12T00:00:00Z","hs_user_ids_of_all_owners":"5555888","hubspot_owner_assigneddate":"2024-11-13T15:17:14.590Z","hubspot_owner_id":"31871900"},"createdAt":"2024-11-13T15:17:14.590Z","updatedAt":"2024-12-10T11:06:00.427Z","archived":false}'
+  recorded_at: Tue, 10 Dec 2024 11:06:00 GMT
+recorded_with: VCR 6.3.1

@@ -64,4 +64,22 @@ RSpec.describe Hubspot::Task do
       end
     end
   end
+
+  describe 'update!' do
+    let(:task_id) { 64_483_143_324 }
+    let(:properties) do
+      {
+        hs_task_status: 'COMPLETED'
+      }
+    end
+
+    subject(:update_task) { described_class.update!(task_id, properties) }
+
+    it 'updates existing task, returns the updated entity' do
+      VCR.use_cassette 'task_update' do
+        task = update_task
+        task.properties[:hs_task_status] = 'COMPLETED'
+      end
+    end
+  end
 end

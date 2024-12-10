@@ -38,6 +38,12 @@ module Hubspot
       def search(properties = DEFAULT_TASK_FIELDS, body: {})
         Hubspot::Connection.post_json(SEARCH_PATH, params: {}, body: { properties: }.merge(body))
       end
+
+      def update!(task_id, properties = {})
+        request = { properties: properties }
+        response = Hubspot::Connection.patch_json(TASK_PATH, params: { task_id: }, body: request)
+        new(response)
+      end
     end
   end
 end
