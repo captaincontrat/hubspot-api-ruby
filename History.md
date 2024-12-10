@@ -1,3 +1,8 @@
+## 0.19.0
+
+* Add Task#search endpoint
+* Add Task#update! endpoint
+
 ## 0.18.0
 
 * BREAKING CHANGE : Ticket#create! and Task#create now takes association param (array), build it using Association.build_association_param
