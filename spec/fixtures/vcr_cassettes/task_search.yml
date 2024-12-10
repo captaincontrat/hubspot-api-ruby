@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/objects/tasks/search
+    body:
+      encoding: UTF-8
+      string: '{"properties":["hs_task_subject","hs_task_status"],"filterGroups":[{"filters":[{"propertyName":"associations.ticket","operator":"EQ","value":"16676542642"}]}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Dec 2024 10:58:44 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '668'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 8efcb8b1495ebb66-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - d376baf0-c1bf-485e-a9e0-2e3465050ed0
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249951'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=BrX7U8DWQkvjKCExKZK23mBYb7LFsekY3TVQQlWQIiDxiLnYpWEloGa26RxB4Rx67WIwmGfgZSpU5QNdm2evj4kFbISEB%2F8%2BVvK2%2B3z8ZBbDSE%2FnIvUwXB7mS5S1TVqpbXdGHcJgdnY8j1oa"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":2,"results":[{"id":"65090432307","properties":{"hs_createdate":"2024-11-21T13:00:55.209Z","hs_lastmodifieddate":"2024-12-10T10:07:17.005Z","hs_object_id":"65090432307","hs_task_status":"COMPLETED","hs_task_subject":"Nouveau
+        message client"},"createdAt":"2024-11-21T13:00:55.209Z","updatedAt":"2024-12-10T10:07:17.005Z","archived":false},{"id":"65476695429","properties":{"hs_createdate":"2024-11-27T11:07:45.738Z","hs_lastmodifieddate":"2024-11-28T11:07:46.573Z","hs_object_id":"65476695429","hs_task_status":"NOT_STARTED","hs_task_subject":"Nouvelle
+        commande"},"createdAt":"2024-11-27T11:07:45.738Z","updatedAt":"2024-11-28T11:07:46.573Z","archived":false}]}'
+  recorded_at: Tue, 10 Dec 2024 10:58:44 GMT
+recorded_with: VCR 6.3.1

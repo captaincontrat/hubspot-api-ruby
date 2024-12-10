@@ -10,7 +10,7 @@ RSpec.describe Hubspot::Task do
         Hubspot::Association.build_association_param('Task', 'Ticket', 16_174_569_112),
         Hubspot::Association.build_association_param('Task', 'Contact', 75_761_595_194),
         Hubspot::Association.build_association_param('Task', 'Company', 25_571_271_600),
-        Hubspot::Association.build_association_param('Task', 'Deal', 28_806_796_888),
+        Hubspot::Association.build_association_param('Task', 'Deal', 28_806_796_888)
       ]
       described_class.create!(params, associations:)
     end
@@ -44,6 +44,23 @@ RSpec.describe Hubspot::Task do
         VCR.use_cassette 'task_find' do
           expect { existing_task }.to raise_error Hubspot::NotFoundError
         end
+      end
+    end
+  end
+
+  describe 'search' do
+    subject(:search) do
+      body = { filterGroups: [
+        { filters: [{ propertyName: 'associations.ticket', operator: 'EQ',
+                      value: '16676542642' }] }
+      ] }
+      described_class.search(%w[hs_task_subject hs_task_status], body:)
+    end
+
+    it 'returns list of tasks matching search body' do
+      VCR.use_cassette 'task_search' do
+        expect(search['total']).to eq(2)
+        expect(search['results'].map { |r| r['id'] }).to contain_exactly('65090432307', '65476695429')
       end
     end
   end

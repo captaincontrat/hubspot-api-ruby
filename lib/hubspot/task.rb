@@ -8,9 +8,10 @@ module Hubspot
   #
   class Task
     TASKS_PATH = '/crm/v3/objects/tasks'
-    TASK_PATH  = '/crm/v3/objects/tasks/:task_id'
-    DEFAULT_TASK_FIELDS = 'hs_timestamp,hs_task_body,hubspot_owner_id,hs_task_subject,hs_task_status,hs_task_priority,'\
-      'hs_task_type,hs_task_reminders'
+    SEARCH_PATH = '/crm/v3/objects/tasks/search'
+    TASK_PATH = '/crm/v3/objects/tasks/:task_id'
+    DEFAULT_TASK_FIELDS = %w[hs_timestamp hs_task_body hubspot_owner_id hs_task_subject hs_task_status hs_task_priority
+                             hs_task_type hs_task_reminders].freeze
 
     attr_reader :properties, :id
 
@@ -32,6 +33,10 @@ module Hubspot
       def find(task_id, properties = DEFAULT_TASK_FIELDS)
         response = Hubspot::Connection.get_json(TASK_PATH, task_id: task_id, properties:)
         new(response)
+      end
+
+      def search(properties = DEFAULT_TASK_FIELDS, body: {})
+        Hubspot::Connection.post_json(SEARCH_PATH, params: {}, body: { properties: }.merge(body))
       end
     end
   end
