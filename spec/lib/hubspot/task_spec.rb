@@ -67,11 +67,7 @@ RSpec.describe Hubspot::Task do
 
   describe 'update!' do
     let(:task_id) { 64_483_143_324 }
-    let(:properties) do
-      {
-        hs_task_status: 'COMPLETED'
-      }
-    end
+    let(:properties) { { hs_task_status: 'COMPLETED' } }
 
     subject(:update_task) { described_class.update!(task_id, properties) }
 

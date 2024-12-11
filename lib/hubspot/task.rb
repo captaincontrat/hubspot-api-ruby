@@ -40,8 +40,7 @@ module Hubspot
       end
 
       def update!(task_id, properties = {})
-        request = { properties: properties }
-        response = Hubspot::Connection.patch_json(TASK_PATH, params: { task_id: }, body: request)
+        response = Hubspot::Connection.patch_json(TASK_PATH, params: { task_id: }, body: { properties: })
         new(response)
       end
     end
