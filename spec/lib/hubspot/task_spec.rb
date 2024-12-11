@@ -78,7 +78,7 @@ RSpec.describe Hubspot::Task do
     it 'updates existing task, returns the updated entity' do
       VCR.use_cassette 'task_update' do
         task = update_task
-        task.properties[:hs_task_status] = 'COMPLETED'
+        expect(task.properties[:hs_task_status]).to eq('COMPLETED')
       end
     end
   end
