@@ -8,7 +8,9 @@ module Hubspot
   class Owner
     GET_OWNER_PATH    = '/crm/v3/owners/:owner_id' # GET
     GET_OWNERS_PATH   = '/crm/v3/owners' # GET
-
+    CREATE_OWNER_PATH = "/crm/v3/owners" # POST
+    UPDATE_OWNER_PATH = '/crm/v3/owners/:owner_id' # PUT
+    DELETE_OWNER_PATH = '/crm/v3/owners/:owner_id' # DELETE
 
     attr_reader :properties, :owner_id, :email
 
