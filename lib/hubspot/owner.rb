@@ -25,13 +25,12 @@ module Hubspot
     end
 
     class << self
-      def all(include_archived: false, limit: 100, after: nil, id_property: nil)
+      def all(include_archived: false, limit: 100, after: nil)
         path = GET_OWNERS_PATH
         params = {
           archived: include_archived,
           limit: limit,
-          after: after,
-          idProperty: id_property
+          after: after
         }.compact
 
         response = Hubspot::Connection.get_json(path, params)
@@ -52,20 +51,27 @@ module Hubspot
         new(response)
       end
 
-      def find_by_email(email, include_archived: false, id_property: nil)
+      def find_by_email(email, include_archived: false, limit: 100, after: nil)
         path = GET_OWNERS_PATH
         params = {
           email: email,
           archived: include_archived,
-          idProperty: id_property
+          limit: limit,
+          after: after
         }.compact
         response = Hubspot::Connection.get_json(path, params)
-        response['results'].empty? ? nil : new(response['results'].first)
+        {
+          results: response['results'].map { |r| new(r) },
+          pagination: {
+            next: response['paging']&.dig('next', 'after'),
+            total: response['total']
+          }
+        }
       end
 
-      def find_by_emails(emails, include_archived: false, id_property: nil)
+      def find_by_emails(emails, include_archived: false)
         emails.map { |email| 
-          find_by_email(email, include_archived: include_archived, id_property: id_property) 
+          find_by_email(email, include_archived: include_archived) 
         }.reject(&:blank?)
       end
     end
