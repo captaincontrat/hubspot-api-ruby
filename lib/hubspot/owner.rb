@@ -60,19 +60,11 @@ module Hubspot
           after: after
         }.compact
         response = Hubspot::Connection.get_json(path, params)
-        {
-          results: response['results'].map { |r| new(r) },
-          pagination: {
-            next: response['paging']&.dig('next', 'after'),
-            total: response['total']
-          }
-        }
+        response['results'].blank? ? nil : new(response['results'].first)
       end
 
-      def find_by_emails(emails, include_archived: false)
-        emails.map { |email| 
-          find_by_email(email, include_archived: include_archived) 
-        }.reject(&:blank?)
+      def find_by_emails(emails = [], include_archived: false)
+        emails.map { |email| find_by_email(email, include_archived: include_archived) }.reject(&:nil?)
       end
     end
   end
