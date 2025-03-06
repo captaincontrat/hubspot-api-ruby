@@ -1,3 +1,7 @@
+## 0.20.0
+
+* BREAKING CHANGE for Owner: use v3 API endpoint as v2 will be stopped in a few days. It changes the return format of list endpoints as it introduces pagination.
+
 ## 0.19.0
 
 * Add Task#search endpoint
