@@ -1,6 +1,7 @@
 ## 0.20.0
 
-* BREAKING CHANGE for Owner: use v3 API endpoint as v2 will be stopped in a few days. It changes the return format of list endpoints as it introduces pagination.
+* BREAKING CHANGE for Owner: use v3 API endpoint as v2 will be stopped in a few days.
+  * It changes the return format of Hubspot::Owner.all as it introduces pagination.
   * fixes #28 - PR #29, thanks @kpgdev!
 
 ## 0.19.0
