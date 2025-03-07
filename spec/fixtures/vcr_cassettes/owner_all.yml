@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/owners/v2/owners?includeInactive=false
+    uri: https://api.hubapi.com/crm/v3/owners?archived=false&limit=100
     body:
       encoding: US-ASCII
       string: ''
@@ -21,54 +21,53 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 08 Aug 2022 14:52:26 GMT
+      - Wed, 05 Mar 2025 11:38:17 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '515'
+      - '1866'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 73791365ffe3399f-CDG
+      - 91b9538109b152be-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
+      - origin, Accept-Encoding
       Access-Control-Allow-Credentials:
       - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Content-Type-Options:
+      - nosniff
       X-Hubspot-Correlation-Id:
-      - 747e7630-d002-48f5-ad46-35af910910ff
+      - 9331c70a-9379-4edc-9bc4-b84190dc9720
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '248140'
+      - '249983'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '80'
+      - '99'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '8'
-      X-Trace:
-      - 2BA0478645562479771D4E7BB83246C626972536A5000000000000000000
+      - '9'
+      Set-Cookie:
+      - __cf_bm=0dt9BhjcpXf4jM_i9yd8L14OB75bI50nu6afyyHQfag-1741174697-1.0.1.1-MeKKz.oM2eG8DIreiq9AvsdZ_xVmK9_J0pon4E9hh6Z4DmsjJIKW0oMV.zfaaGxH7xiWjHCBJDCEIQ2NrVhPAZG37YLSzZhD7QlbcQHa528;
+        path=/; expires=Wed, 05-Mar-25 12:08:17 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fEVxaJTo5af4tWJAFgx%2Ff4h%2FfZaevI5mfJdZhWDhYM4ewI4WNDSRbSb%2BQy30RYluhyDGamwrwhVx6hqcd5irigHV0BsNEEDNMV4OgrRGArL8EfgMfPuRwshjTStBOSkZrQ92jeH5t3akx6r3"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=G%2FaqcW6F9TBTxRfTJoKlN2QjxlZWP0PRTybYpHzzf5gZELhznuR8GJhY7y0jl76ywF5Y9oy34uVAA3lYgdes4azoQVg9KE4piyWuA7Umvd8yehMxMJ%2BJNQxad9tldmTeRY7t2UOMgR5vrx3k"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        W3sicG9ydGFsSWQiOjxQT1JUQUxfSUQ+LCJvd25lcklkIjoxNTY2NDQzODYsInR5cGUiOiJQRVJTT04iLCJmaXJzdE5hbWUiOiJBdWd1c3RpbiIsImxhc3ROYW1lIjoiZGUgTWFpbnRlbmFudCIsImVtYWlsIjoiYXVndXN0aW5AY2FwdGFpbmNvbnRyYXQuY29tIiwiY3JlYXRlZEF0IjoxNjQ2OTAxMzA3NTAwLCJ1cGRhdGVkQXQiOjE2NTIwODIwODA0NTIsInJlbW90ZUxpc3QiOlt7ImlkIjoxMTUzNTM3MjcsInBvcnRhbElkIjo8UE9SVEFMX0lEPiwib3duZXJJZCI6MTU2NjQ0Mzg2LCJyZW1vdGVJZCI6IjExNTk4Njk0IiwicmVtb3RlVHlwZSI6IkhVQlNQT1QiLCJhY3RpdmUiOnRydWV9XSwiaGFzQ29udGFjdHNBY2Nlc3MiOmZhbHNlLCJhY3RpdmVTYWxlc2ZvcmNlSWQiOm51bGwsInVzZXJJZEluY2x1ZGluZ0luYWN0aXZlIjoxMTU5ODY5NCwiYWN0aXZlVXNlcklkIjoxMTU5ODY5NCwiaXNBY3RpdmUiOnRydWV9LHsicG9ydGFsSWQiOjxQT1JUQUxfSUQ+LCJvd25lcklkIjoxNTgxMzc0OTAsInR5cGUiOiJQRVJTT04iLCJmaXJzdE5hbWUiOiJCb3JpcyIsImxhc3ROYW1lIjoiQWxmw7ZsZGkiLCJlbWFpbCI6ImJvcmlzQGNhcHRhaW5jb250cmF0LmNvbSIsImNyZWF0ZWRBdCI6MTY0NzI3NzMwNDAzMCwidXBkYXRlZEF0IjoxNjU5MDk1NzU2Mzc0LCJyZW1vdGVMaXN0IjpbeyJpZCI6MTE1OTk3MzY1LCJwb3J0YWxJZCI6PFBPUlRBTF9JRD4sIm93bmVySWQiOjE1ODEzNzQ5MCwicmVtb3RlSWQiOiIyNzg2MTkwMSIsInJlbW90ZVR5cGUiOiJIVUJTUE9UIiwiYWN0aXZlIjp0cnVlfV0sImhhc0NvbnRhY3RzQWNjZXNzIjpmYWxzZSwiYWN0aXZlU2FsZXNmb3JjZUlkIjpudWxsLCJ1c2VySWRJbmNsdWRpbmdJbmFjdGl2ZSI6Mjc4NjE5MDEsImFjdGl2ZVVzZXJJZCI6Mjc4NjE5MDEsImlzQWN0aXZlIjp0cnVlfSx7InBvcnRhbElkIjo8UE9SVEFMX0lEPiwib3duZXJJZCI6MTU2NjQ0Mzg3LCJ0eXBlIjoiUEVSU09OIiwiZmlyc3ROYW1lIjoiTWFub24iLCJsYXN0TmFtZSI6IlByZXZvdCIsImVtYWlsIjoibWFub25AY2FwdGFpbmNvbnRyYXQuY29tIiwiY3JlYXRlZEF0IjoxNjQ2OTAxMzA3NTUwLCJ1cGRhdGVkQXQiOjE2NTE0OTM1NTE2MTksInJlbW90ZUxpc3QiOlt7ImlkIjoxMTUzNTM3MjgsInBvcnRhbElkIjo8UE9SVEFMX0lEPiwib3duZXJJZCI6MTU2NjQ0Mzg3LCJyZW1vdGVJZCI6IjM5MDU5NTUiLCJyZW1vdGVUeXBlIjoiSFVCU1BPVCIsImFjdGl2ZSI6dHJ1ZX1dLCJoYXNDb250YWN0c0FjY2VzcyI6ZmFsc2UsImFjdGl2ZVNhbGVzZm9yY2VJZCI6bnVsbCwidXNlcklkSW5jbHVkaW5nSW5hY3RpdmUiOjM5MDU5NTUsImFjdGl2ZVVzZXJJZCI6MzkwNTk1NSwiaXNBY3RpdmUiOnRydWV9LHsicG9ydGFsSWQiOjxQT1JUQUxfSUQ+LCJvd25lcklkIjo4ODM1NDE2MCwidHlwZSI6IlBFUlNPTiIsImZpcnN0TmFtZSI6Illhbm5pY2siLCJsYXN0TmFtZSI6IkZvbmphbGxheiIsImVtYWlsIjoieWFubmlja0BjYXB0YWluY29udHJhdC5jb20iLCJjcmVhdGVkQXQiOjE2MjU0ODkyODQ2NjksInVwZGF0ZWRBdCI6MTYzMjQwNTUyMzI4OCwicmVtb3RlTGlzdCI6W3siaWQiOjU1OTY1MTA1LCJwb3J0YWxJZCI6PFBPUlRBTF9JRD4sIm93bmVySWQiOjg4MzU0MTYwLCJyZW1vdGVJZCI6IjMzMjYwMzgiLCJyZW1vdGVUeXBlIjoiSFVCU1BPVCIsImFjdGl2ZSI6dHJ1ZX1dLCJoYXNDb250YWN0c0FjY2VzcyI6ZmFsc2UsImFjdGl2ZVNhbGVzZm9yY2VJZCI6bnVsbCwidXNlcklkSW5jbHVkaW5nSW5hY3RpdmUiOjMzMjYwMzgsImFjdGl2ZVVzZXJJZCI6MzMyNjAzOCwiaXNBY3RpdmUiOnRydWV9XQ==
-  recorded_at: Mon, 08 Aug 2022 14:52:26 GMT
-recorded_with: VCR 6.0.0
+      string: '{"results":[{"id":"31871817","email":"p[redacted]e@captaincontrat.com","type":"PERSON","firstName":"Philippe","lastName":"W[redacted]","userId":2506672,"userIdIncludingInactive":2506672,"createdAt":"2018-04-09T13:16:56.625Z","updatedAt":"2018-04-09T13:16:56.625Z","archived":false},{"id":"31871900","email":"p[redacted]s@captaincontrat.com","type":"PERSON","firstName":"Paul-Yves","lastName":"L[redacted]","userId":5555888,"userIdIncludingInactive":5555888,"createdAt":"2018-04-09T13:39:06.662Z","updatedAt":"2022-04-27T12:44:02.847Z","archived":false},{"id":"31872455","email":"y[redacted]k@captaincontrat.com","type":"PERSON","firstName":"Yannick","lastName":"F[redacted]","userId":3326038,"userIdIncludingInactive":3326038,"createdAt":"2018-04-09T13:18:57.349Z","updatedAt":"2021-09-23T13:58:43.251Z","archived":false},{"id":"414566270","email":"g[redacted]c@captaincontrat.com","type":"PERSON","firstName":"Guillaume","lastName":"C[redacted]","userId":51647443,"userIdIncludingInactive":51647443,"createdAt":"2023-05-22T13:08:58.190Z","updatedAt":"2023-06-20T13:05:15.163Z","archived":false},{"id":"426301584","email":"n[redacted]d@captaincontrat.com","type":"PERSON","firstName":"Nicolas","lastName":"D[redacted]","userId":51867598,"userIdIncludingInactive":51867598,"createdAt":"2023-06-02T10:47:32.680Z","updatedAt":"2025-03-04T08:35:29.226Z","archived":false},{"id":"542504584","email":"p[redacted]d@captaincontrat.com","type":"PERSON","firstName":"Pierre","lastName":"N[redacted]","userId":60546148,"userIdIncludingInactive":60546148,"createdAt":"2023-09-18T08:46:35.653Z","updatedAt":"2025-02-26T13:09:06.739Z","archived":false},{"id":"691403032","email":"a[redacted]e@captaincontrat.com","type":"PERSON","firstName":"Ayoub","lastName":"E[redacted]","userId":63169306,"userIdIncludingInactive":63169306,"createdAt":"2024-01-17T11:24:32.528Z","updatedAt":"2024-03-01T13:46:28.109Z","archived":false}]}'
+  recorded_at: Wed, 05 Mar 2025 11:38:17 GMT
+recorded_with: VCR 6.3.1

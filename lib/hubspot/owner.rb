@@ -2,24 +2,21 @@ module Hubspot
   #
   # HubSpot Owners API
   #
-  # {http://developers.hubspot.com/docs/methods/owners/get_owners}
+  # {https://developers.hubspot.com/docs/reference/api/crm/owners/v3}
   #
-  # TODO: Create an Owner
-  # TODO: Update an Owner
-  # TODO: Delete an Owner
+  #
   class Owner
-    GET_OWNER_PATH    = '/owners/v2/owners/:owner_id' # GET
-    GET_OWNERS_PATH   = '/owners/v2/owners' # GET
-    CREATE_OWNER_PATH = '/owners/v2/owners' # POST
-    UPDATE_OWNER_PATH = '/owners/v2/owners/:owner_id' # PUT
-    DELETE_OWNER_PATH = '/owners/v2/owners/:owner_id' # DELETE
-
+    GET_OWNER_PATH    = '/crm/v3/owners/:owner_id' # GET
+    GET_OWNERS_PATH   = '/crm/v3/owners' # GET
+    CREATE_OWNER_PATH = "/crm/v3/owners" # POST
+    UPDATE_OWNER_PATH = '/crm/v3/owners/:owner_id' # PUT
+    DELETE_OWNER_PATH = '/crm/v3/owners/:owner_id' # DELETE
 
     attr_reader :properties, :owner_id, :email
 
     def initialize(property_hash)
       @properties = property_hash
-      @owner_id   = @properties['ownerId']
+      @owner_id   = @properties['id']
       @email      = @properties['email']
     end
 
@@ -28,29 +25,46 @@ module Hubspot
     end
 
     class << self
-      def all(include_inactive=false)
-        path     = GET_OWNERS_PATH
-        params   = { includeInactive: include_inactive }
+      def all(include_archived: false, limit: 100, after: nil)
+        path = GET_OWNERS_PATH
+        params = {
+          archived: include_archived,
+          limit: limit,
+          after: after
+        }.compact
+
         response = Hubspot::Connection.get_json(path, params)
-        response.map { |r| new(r) }
+        {
+          results: response['results'].map { |r| new(r) },
+          pagination: {
+            next: response['paging']&.dig('next', 'after'),
+            total: response['total']
+          }
+        }
       end
 
-      def find(id, include_inactive=false)
-        path     = GET_OWNER_PATH
-        response = Hubspot::Connection.get_json(path, owner_id: id,
-          include_inactive: include_inactive)
+      def find(id, id_property: nil)
+        path = GET_OWNER_PATH
+        params = { owner_id: id }
+        params[:idProperty] = id_property if id_property
+        response = Hubspot::Connection.get_json(path, params)
         new(response)
       end
 
-      def find_by_email(email, include_inactive=false)
-        path     = GET_OWNERS_PATH
-        params   = { email: email, includeInactive: include_inactive }
+      def find_by_email(email, include_archived: false, limit: 100, after: nil)
+        path = GET_OWNERS_PATH
+        params = {
+          email: email,
+          archived: include_archived,
+          limit: limit,
+          after: after
+        }.compact
         response = Hubspot::Connection.get_json(path, params)
-        response.blank? ? nil : new(response.first)
+        response['results'].blank? ? nil : new(response['results'].first)
       end
 
-      def find_by_emails(emails, include_inactive=false)
-        emails.map { |email| find_by_email(email, include_inactive) }.reject(&:blank?)
+      def find_by_emails(emails = [], include_archived: false)
+        emails.map { |email| find_by_email(email, include_archived: include_archived) }.reject(&:nil?)
       end
     end
   end

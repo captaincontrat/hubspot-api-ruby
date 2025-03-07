@@ -2,7 +2,7 @@ describe Hubspot::Owner do
   let(:example_owners) do
     VCR.use_cassette('owner_example') do
       headers = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }
-      HTTParty.get('https://api.hubapi.com/owners/v2/owners', headers: headers).parsed_response
+      HTTParty.get('https://api.hubapi.com/crm/v3/owners', headers: headers).parsed_response['results']
     end
   end
 
@@ -13,7 +13,22 @@ describe Hubspot::Owner do
       owners = Hubspot::Owner.all
 
       expect(owners.blank?).to be false
-      compare_owners(owners, example_owners)
+      expect(owners[:results].blank?).to be false
+      compare_owners(owners[:results], example_owners)
+    end
+  end
+
+  describe '.find' do
+    cassette 'owner_find_by_id'
+
+    let(:sample) { example_owners.first }
+    let(:id) { sample['id'] }
+
+    it 'should find a user via their id' do
+      owner = Hubspot::Owner.find(id)
+      sample.map do |key, val|
+        expect(owner[key]).to eq(val)
+      end
     end
   end
 
