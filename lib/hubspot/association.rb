@@ -26,11 +26,10 @@ class Hubspot::Association
     },
     "Ticket" => {
       "Contact" => 16,
-      "Conversation" => 278,
+      "Conversation" => 32,
       "Company" => 339,
       "Deal" => 28,
-      "Task" => 229,
-      "Thread" => 32
+      "Task" => 229
     }
   }.freeze
 
