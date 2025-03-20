@@ -1,3 +1,7 @@
+## 0.21.0
+
+Add a few ids to Hubspot::Association::ASSOCIATION_DEFINITIONS
+
 ## 0.20.0
 
 * BREAKING CHANGE for Owner: use v3 API endpoint as v2 will be stopped in a few days.
