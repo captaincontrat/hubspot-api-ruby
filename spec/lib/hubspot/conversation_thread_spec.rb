@@ -8,14 +8,14 @@ RSpec.describe Hubspot::ConversationThread do
       VCR.use_cassette 'conversation_thread_find' do
         expect(existing_thread.id).not_to be_nil
         expect(existing_thread.properties[:status]).to eq('OPEN')
-        expect(existing_thread.properties[:threadAssociations]).to eq({associatedTicketId: "21514722825"})
+        expect(existing_thread.properties[:threadAssociations]).to eq(associatedTicketId: '21514722825')
       end
     end
 
     context 'when task does not exist' do
       let(:thread_id) { 996_174_569_112 }
 
-      it 'returns nil' do
+      it 'raise an error' do
         VCR.use_cassette 'conversation_thread_find' do
           expect { existing_thread }.to raise_error Hubspot::NotFoundError
         end

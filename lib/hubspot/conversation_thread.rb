@@ -17,7 +17,6 @@ module Hubspot
     end
 
     class << self
-
       def find(thread_id, with_associations: false)
         association = with_associations ? ['TICKET'] : []
         response = Hubspot::Connection.get_json(THREAD_PATH, thread_id:, association:)
