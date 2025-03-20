@@ -22,7 +22,9 @@ class Hubspot::Association
       "Contact" => 16,
       "Deal" => 28,
       "Company" => 339,
-      "Task" => 229
+      "Task" => 229,
+      "Thread" => 32,
+      "Conversation" => 278
     },
     "Task" => {
       "Contact" => 204,
