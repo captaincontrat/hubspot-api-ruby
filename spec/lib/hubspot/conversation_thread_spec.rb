@@ -15,7 +15,7 @@ RSpec.describe Hubspot::ConversationThread do
     context 'when task does not exist' do
       let(:thread_id) { 996_174_569_112 }
 
-      it 'raise an error' do
+      it 'raises an error' do
         VCR.use_cassette 'conversation_thread_find' do
           expect { existing_thread }.to raise_error Hubspot::NotFoundError
         end
