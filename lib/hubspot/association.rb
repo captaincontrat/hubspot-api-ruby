@@ -6,29 +6,30 @@ class Hubspot::Association
   }.freeze
 
   ASSOCIATION_DEFINITIONS = {
-    "Company" => {
-      "Contact" => 2,
-      "Deal" => 6,
-      "Company" => 13
-    },
-    "Deal" => {
-      "Company" => 5,
-      "Contact" => 3
-    },
     "Contact" => {
       "Deal" => 4
     },
-    "Ticket" => {
-      "Contact" => 16,
-      "Deal" => 28,
-      "Company" => 339,
-      "Task" => 229
+    "Company" => {
+      "Contact" => 2,
+      "Company" => 13,
+      "Deal" => 6
+    },
+    "Deal" => {
+      "Contact" => 3,
+      "Company" => 5
     },
     "Task" => {
       "Contact" => 204,
-      "Deal" => 216,
       "Company" => 192,
+      "Deal" => 216,
       "Ticket" => 230
+    },
+    "Ticket" => {
+      "Contact" => 16,
+      "Conversation" => 32,
+      "Company" => 339,
+      "Deal" => 28,
+      "Task" => 229
     }
   }.freeze
 

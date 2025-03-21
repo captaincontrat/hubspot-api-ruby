@@ -32,6 +32,7 @@ require 'hubspot/meeting'
 require 'hubspot/ticket'
 require 'hubspot/ticket_properties'
 require 'hubspot/task'
+require 'hubspot/conversation_thread'
 
 module Hubspot
   def self.configure(config={})
