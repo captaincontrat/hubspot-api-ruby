@@ -1,6 +1,6 @@
 class Hubspot::Contact < Hubspot::Resource
-  self.id_field = "vid"
-  self.update_method = "post"
+  self.id_field = 'vid'
+  self.update_method = 'post'
 
   ALL_PATH                = '/crm/v3/objects/contacts'
   CREATE_PATH             = '/contacts/v1/contact'
@@ -19,10 +19,10 @@ class Hubspot::Contact < Hubspot::Resource
       Hubspot::PagedCollection.new(opts) do |options, after, limit|
         response = Hubspot::Connection.get_json(
           ALL_PATH,
-          options.merge("limit" => limit, "offset" => after, 'offset_param' => 'after')
+          options.merge('limit' => limit, 'offset' => after, 'offset_param' => 'after')
         )
 
-        contacts = response["results"].map { |result| from_result(result) }
+        contacts = response['results'].map { |result| from_result(result) }
         after = response.dig('paging', 'next', 'after')
         [contacts, after, after.present?]
       end
@@ -42,17 +42,17 @@ class Hubspot::Contact < Hubspot::Resource
       response = Hubspot::Connection.get_json(FIND_BY_USER_TOKEN_PATH, token: token)
       from_result(response)
     end
-    alias_method :find_by_utk, :find_by_user_token
+    alias find_by_utk find_by_user_token
 
     def create(email, properties = {})
-      super(properties.merge("email" => email))
+      super(properties.merge('email' => email))
     end
 
     def create_or_update(email, properties = {})
       request = {
-        properties: Hubspot::Utils.hash_to_properties(properties.stringify_keys, key_name: "property")
+        properties: Hubspot::Utils.hash_to_properties(properties.stringify_keys, key_name: 'property')
       }
-      response = Hubspot::Connection.post_json(CREATE_OR_UPDATE_PATH, params: {email: email}, body: request)
+      response = Hubspot::Connection.post_json(CREATE_OR_UPDATE_PATH, params: { email: email }, body: request)
       from_result(response)
     end
 
@@ -61,10 +61,10 @@ class Hubspot::Contact < Hubspot::Resource
         response = Hubspot::Connection.get_json(
           SEARCH_PATH,
           options.merge(q: query, offset: offset, count: limit)
-          )
+        )
 
-        contacts = response["contacts"].map { |result| from_result(result) }
-        [contacts, response["offset"], response["has-more"]]
+        contacts = response['contacts'].map { |result| from_result(result) }
+        [contacts, response['offset'], response['has-more']]
       end
     end
 
@@ -72,8 +72,8 @@ class Hubspot::Contact < Hubspot::Resource
       Hubspot::Connection.post_json(
         MERGE_PATH,
         params: { id: primary.to_i, no_parse: true },
-        body: { "vidToMerge" => secondary.to_i }
-        )
+        body: { 'vidToMerge' => secondary.to_i }
+      )
 
       true
     end
@@ -83,12 +83,12 @@ class Hubspot::Contact < Hubspot::Resource
         # Use the specified options or update with the changes
         changes = opts.empty? ? contact.changes : opts
 
-        unless changes.empty?
-          {
-            "vid" => contact.id,
-            "properties" => changes.map { |k, v| { "property" => k, "value" => v } }
-          }
-        end
+        next if changes.empty?
+
+        {
+          'vid' => contact.id,
+          'properties' => changes.map { |k, v| { 'property' => k, 'value' => v } }
+        }
       end
 
       # Remove any objects without changes and return if there is nothing to update
