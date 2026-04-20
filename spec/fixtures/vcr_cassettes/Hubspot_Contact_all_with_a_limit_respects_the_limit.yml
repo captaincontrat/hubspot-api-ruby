@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/crm/v3/objects/contacts?limit=1&offset=&offset_param=after
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Apr 2026 13:19:05 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '513'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 9ef470478f4a46b2-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, accept-encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Server-Timing:
+      - hcid;desc="019dab0b-6a7c-7027-be99-1b61f6cd4513", cfr;desc="9ef47048435846b2-CDG"
+      X-Hubspot-Correlation-Id:
+      - '019dab0b-6a7c-7027-be99-1b61f6cd4513'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249974'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '92'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Set-Cookie:
+      - __cf_bm=VbqrE1FVCwuw7a9iBn4T0uANCzLPvoupNA2xVB06ups-1776691145-1.0.1.1-RnFuSyewl6970kEEm4dqYFwewA7Mv203TMP0ef8job5fnN6b99_CrcuU_iyf6f.AhmlULLJ3FbHfgsEms20sRVFwZAyxaaTcDU0CXy3aO2Q;
+        path=/; expires=Mon, 20-Apr-26 13:49:05 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XxrjyC4smAFLMpWsiZBjQBKsJiWi0VOU8BeT8bZsZQpjwWUrSnavPPQHGBSaL856wDdGmJt63s52yHKPSyTE0WaP15cWuO%2FpFdDnIuRzjMY4zx4tIh8hli9PBeG1UvpB"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"id":"51","properties":{"createdate":"2018-04-09T13:17:00.224Z","email":"bh@hubspot.com","firstname":"Brian","hs_object_id":"51","lastmodifieddate":"2022-07-08T03:16:44.972Z","lastname":"Halligan
+        (Sample Contact)"},"createdAt":"2018-04-09T13:17:00.224Z","updatedAt":"2022-07-08T03:16:44.972Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/51"}],"paging":{"next":{"after":"52","link":"https://api.hubapi.com/crm/objects/v3/contacts?offset_param=after&limit=1&after=52"}}}'
+  recorded_at: Mon, 20 Apr 2026 13:19:05 GMT
+recorded_with: VCR 6.4.0

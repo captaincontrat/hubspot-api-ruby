@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.hubapi.com/crm/v3/objects/contacts?limit=25&offset=&offset_param=after
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Apr 2026 13:19:01 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 9ef470312974a1a9-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, accept-encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Server-Timing:
+      - hcid;desc="019dab0b-5b6d-7ef5-8506-6afaec3bbc2b", cfr;desc="9ef47031f143a1a9-IAD"
+      X-Hubspot-Correlation-Id:
+      - '019dab0b-5b6d-7ef5-8506-6afaec3bbc2b'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249979'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '97'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Set-Cookie:
+      - __cf_bm=RhkPOkOMoUqF67IYjP2eutedqxITQQwTJPuQSP0B5SQ-1776691141-1.0.1.1-DkVY9iwJIGwbTjRUJY93ILCesNM4AMsXJVkMxCbs20XW9vpcXyXockGZKbC3ja_dto5wSbto7ryvIUESTZzX.EaTMdLWPkEl2MgjmqG5.Sw;
+        path=/; expires=Mon, 20-Apr-26 13:49:01 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=TeLcJj12KVSumTpPbBfv1p%2FHAVvYM6zreFzyAsmDyqb9VF9n7KAjfRmmuXnOJQoV5dIt9W2aN0i3dbMoAnPFsP1vzG4DFfXwhcOrOKChxQktnvYeQenpx9iynp8q7YE3"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"id":"51","properties":{"createdate":"2018-04-09T13:17:00.224Z","email":"bh@hubspot.com","firstname":"Brian","hs_object_id":"51","lastmodifieddate":"2022-07-08T03:16:44.972Z","lastname":"Halligan
+        (Sample Contact)"},"createdAt":"2018-04-09T13:17:00.224Z","updatedAt":"2022-07-08T03:16:44.972Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/51"},{"id":"101","properties":{"createdate":"2018-05-16T14:15:36.472Z","email":"plop@test.fr","firstname":"pweetff","hs_object_id":"101","lastmodifieddate":"2022-06-17T18:45:23.824Z","lastname":"dsfsdfhgfhretret5tretret"},"createdAt":"2018-05-16T14:15:36.472Z","updatedAt":"2022-06-17T18:45:23.824Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/101"},{"id":"151","properties":{"createdate":"2018-05-17T09:20:36.551Z","email":"ewr@test.fr","firstname":"","hs_object_id":"151","lastmodifieddate":"2022-05-03T07:03:14.214Z","lastname":""},"createdAt":"2018-05-17T09:20:36.551Z","updatedAt":"2022-05-03T07:03:14.214Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/151"},{"id":"201","properties":{"createdate":"2018-05-17T09:28:24.666Z","email":"truc@truc.fr","firstname":"","hs_object_id":"201","lastmodifieddate":"2022-06-22T16:33:11.862Z","lastname":""},"createdAt":"2018-05-17T09:28:24.666Z","updatedAt":"2022-06-22T16:33:11.862Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/201"},{"id":"251","properties":{"createdate":"2018-05-17T12:17:55.128Z","email":"devisman@test.fr","firstname":"","hs_object_id":"251","lastmodifieddate":"2022-05-03T23:36:39.132Z","lastname":""},"createdAt":"2018-05-17T12:17:55.128Z","updatedAt":"2022-05-03T23:36:39.132Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/251"},{"id":"301","properties":{"createdate":"2018-05-17T12:30:28.023Z","email":"gras@test.fr","firstname":"","hs_object_id":"301","lastmodifieddate":"2022-06-13T06:24:58.493Z","lastname":""},"createdAt":"2018-05-17T12:30:28.023Z","updatedAt":"2022-06-13T06:24:58.493Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/301"},{"id":"351","properties":{"createdate":"2018-05-17T16:46:53.255Z","email":"pouet@test.fr","firstname":"","hs_object_id":"351","lastmodifieddate":"2022-08-05T14:49:15.525Z","lastname":""},"createdAt":"2018-05-17T16:46:53.255Z","updatedAt":"2022-08-05T14:49:15.525Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/351"},{"id":"401","properties":{"createdate":"2018-05-18T13:20:22.376Z","email":"poulet@test.fr","firstname":"","hs_object_id":"401","lastmodifieddate":"2022-07-22T04:56:07.665Z","lastname":""},"createdAt":"2018-05-18T13:20:22.376Z","updatedAt":"2022-07-22T04:56:07.665Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/401"},{"id":"451","properties":{"createdate":"2018-05-22T09:27:07.452Z","email":"devisman@gmail.com","firstname":"","hs_object_id":"451","lastmodifieddate":"2022-06-07T21:45:54.075Z","lastname":""},"createdAt":"2018-05-22T09:27:07.452Z","updatedAt":"2022-06-07T21:45:54.075Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/451"},{"id":"501","properties":{"createdate":"2018-05-22T14:16:46.295Z","email":"ron@hogwarts.com","firstname":"ron","hs_object_id":"501","lastmodifieddate":"2022-07-10T21:46:00.815Z","lastname":"Lucas"},"createdAt":"2018-05-22T14:16:46.295Z","updatedAt":"2022-07-10T21:46:00.815Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/501"},{"id":"551","properties":{"createdate":"2018-05-23T08:34:51.597Z","email":"machin@test.fr","firstname":"wer","hs_object_id":"551","lastmodifieddate":"2022-06-12T23:46:22.777Z","lastname":"tretret"},"createdAt":"2018-05-23T08:34:51.597Z","updatedAt":"2022-06-12T23:46:22.777Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/551"},{"id":"601","properties":{"createdate":"2018-05-23T14:43:51.423Z","email":"elric@melnibone.fr","firstname":"","hs_object_id":"601","lastmodifieddate":"2022-05-30T15:43:25.242Z","lastname":""},"createdAt":"2018-05-23T14:43:51.423Z","updatedAt":"2022-05-30T15:43:25.242Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/601"},{"id":"651","properties":{"createdate":"2018-05-24T13:20:23.115Z","email":"martin+zmkfnferjflebrf@captaincontrat.com","firstname":"","hs_object_id":"651","lastmodifieddate":"2022-05-11T14:24:46.058Z","lastname":""},"createdAt":"2018-05-24T13:20:23.115Z","updatedAt":"2022-05-11T14:24:46.058Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/651"},{"id":"751","properties":{"createdate":"2018-05-25T15:17:52.743Z","email":"gary.toper@gmail.com","firstname":"Gary","hs_object_id":"751","lastmodifieddate":"2022-06-11T04:47:12.424Z","lastname":"Toper"},"createdAt":"2018-05-25T15:17:52.743Z","updatedAt":"2022-06-11T04:47:12.424Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/751"},{"id":"801","properties":{"createdate":"2018-05-30T09:10:07.938Z","email":"totoro@gmail.com","firstname":"Toto","hs_object_id":"801","lastmodifieddate":"2022-07-03T19:12:53.064Z","lastname":"Gros"},"createdAt":"2018-05-30T09:10:07.938Z","updatedAt":"2022-07-03T19:12:53.064Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/801"},{"id":"901","properties":{"createdate":"2018-05-30T15:27:39.381Z","email":"fastbond@gmail.com","firstname":"","hs_object_id":"901","lastmodifieddate":"2022-07-21T20:58:35.126Z","lastname":""},"createdAt":"2018-05-30T15:27:39.381Z","updatedAt":"2022-07-21T20:58:35.126Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/901"},{"id":"951","properties":{"createdate":"2018-05-31T16:05:05.549Z","email":"amelie2@test.fr","firstname":"","hs_object_id":"951","lastmodifieddate":"2022-05-21T13:06:32.557Z","lastname":""},"createdAt":"2018-05-31T16:05:05.549Z","updatedAt":"2022-05-21T13:06:32.557Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/951"},{"id":"1001","properties":{"createdate":"2018-05-31T16:13:02.986Z","email":"peterpan@test.fr","firstname":"","hs_object_id":"1001","lastmodifieddate":"2022-07-26T18:05:00.829Z","lastname":""},"createdAt":"2018-05-31T16:13:02.986Z","updatedAt":"2022-07-26T18:05:00.829Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1001"},{"id":"1051","properties":{"createdate":"2018-06-06T09:03:15.278Z","email":"petitchat@meow.fr","firstname":"","hs_object_id":"1051","lastmodifieddate":"2022-04-07T22:57:58.213Z","lastname":""},"createdAt":"2018-06-06T09:03:15.278Z","updatedAt":"2022-04-07T22:57:58.213Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1051"},{"id":"1151","properties":{"createdate":"2018-06-07T14:11:56.089Z","email":"vaetresupprimedans@hubspot.com","firstname":"","hs_object_id":"1151","lastmodifieddate":"2022-08-03T19:14:48.822Z","lastname":""},"createdAt":"2018-06-07T14:11:56.089Z","updatedAt":"2022-08-03T19:14:48.822Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1151"},{"id":"1201","properties":{"createdate":"2018-06-11T08:42:26.529Z","email":"pyhton@gmail.com","firstname":"","hs_object_id":"1201","lastmodifieddate":"2022-07-03T04:35:07.942Z","lastname":""},"createdAt":"2018-06-11T08:42:26.529Z","updatedAt":"2022-07-03T04:35:07.942Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1201"},{"id":"1301","properties":{"createdate":"2018-05-24T15:41:02.870Z","email":"slowy@gmail.com","firstname":"","hs_object_id":"1301","lastmodifieddate":"2022-06-08T10:45:25.997Z","lastname":""},"createdAt":"2018-05-24T15:41:02.870Z","updatedAt":"2022-06-08T10:45:25.997Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1301"},{"id":"1351","properties":{"createdate":"2018-06-11T10:41:23.090Z","email":"tqwuyetqu@test.fr","firstname":"","hs_object_id":"1351","lastmodifieddate":"2022-07-05T22:35:41.907Z","lastname":""},"createdAt":"2018-06-11T10:41:23.090Z","updatedAt":"2022-07-05T22:35:41.907Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1351"},{"id":"1401","properties":{"createdate":"2018-06-11T10:44:37.828Z","email":"amelie6@test.fr","firstname":"Albert","hs_object_id":"1401","lastmodifieddate":"2022-07-29T22:40:24.728Z","lastname":""},"createdAt":"2018-06-11T10:44:37.828Z","updatedAt":"2022-07-29T22:40:24.728Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1401"},{"id":"1451","properties":{"createdate":"2018-06-12T15:13:15.546Z","email":"tutur@test.fr","firstname":"","hs_object_id":"1451","lastmodifieddate":"2022-07-25T15:18:42.391Z","lastname":""},"createdAt":"2018-06-12T15:13:15.546Z","updatedAt":"2022-07-25T15:18:42.391Z","archived":false,"url":"https://app.hubspot.com/contacts/<PORTAL_ID>/record/0-1/1451"}],"paging":{"next":{"after":"1452","link":"https://api.hubapi.com/crm/objects/v3/contacts?offset_param=after&limit=25&after=1452"}}}'
+  recorded_at: Mon, 20 Apr 2026 13:19:01 GMT
+recorded_with: VCR 6.4.0

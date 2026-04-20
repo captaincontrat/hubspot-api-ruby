@@ -2,7 +2,7 @@ class Hubspot::Contact < Hubspot::Resource
   self.id_field = "vid"
   self.update_method = "post"
 
-  ALL_PATH                = '/contacts/v1/lists/all/contacts/all'
+  ALL_PATH                = '/crm/v3/objects/contacts'
   CREATE_PATH             = '/contacts/v1/contact'
   CREATE_OR_UPDATE_PATH   = '/contacts/v1/contact/createOrUpdate/email/:email'
   DELETE_PATH             = '/contacts/v1/contact/vid/:id'
@@ -16,14 +16,15 @@ class Hubspot::Contact < Hubspot::Resource
 
   class << self
     def all(opts = {})
-      Hubspot::PagedCollection.new(opts) do |options, offset, limit|
+      Hubspot::PagedCollection.new(opts) do |options, after, limit|
         response = Hubspot::Connection.get_json(
           ALL_PATH,
-          options.merge("count" => limit, "vidOffset" => offset)
-          )
+          options.merge("limit" => limit, "offset" => after, 'offset_param' => 'after')
+        )
 
-        contacts = response["contacts"].map { |result| from_result(result) }
-        [contacts, response["vid-offset"], response["has-more"]]
+        contacts = response["results"].map { |result| from_result(result) }
+        after = response.dig('paging', 'next', 'after')
+        [contacts, after, after.present?]
       end
     end
 
@@ -31,7 +32,7 @@ class Hubspot::Contact < Hubspot::Resource
       response = Hubspot::Connection.get_json(FIND_PATH, id: vid)
       from_result(response)
     end
-    
+
     def find_by_email(email)
       response = Hubspot::Connection.get_json(FIND_BY_EMAIL_PATH, email: email)
       from_result(response)
@@ -76,7 +77,7 @@ class Hubspot::Contact < Hubspot::Resource
 
       true
     end
-    
+
     def batch_update(contacts, opts = {})
       request = contacts.map do |contact|
         # Use the specified options or update with the changes

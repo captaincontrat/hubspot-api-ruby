@@ -11,6 +11,62 @@ RSpec.describe Hubspot::Contact do
     let(:overlapping_properties) { { firstname: "asdf", lastname: "qwer" } }
   end
 
+  describe '.all' do
+    context 'without options' do
+      cassette
+
+      subject { described_class.all }
+
+      it 'returns a collection' do
+        expect(subject).to be_a(Hubspot::PagedCollection)
+        expect(subject.first).to be_a(Hubspot::Contact)
+      end
+
+      it 'has an offset' do
+        expect(subject.next_offset).not_to be_blank
+      end
+
+      it 'identifies if there are more resources' do
+        expect(subject.more?).to be true
+      end
+    end
+
+    context 'with an offset' do
+      cassette
+
+      let!(:contact) { create :contact }
+      subject { described_class.all offset: contact.id }
+
+      it 'returns a collection' do
+        expect(subject).to be_a(Hubspot::PagedCollection)
+      end
+
+      it 'has an offset' do
+        expect(subject.next_offset).not_to be_blank
+      end
+
+      it 'identifies if there are more resources' do
+        expect(subject.more?).not_to be_nil
+      end
+    end
+
+    context 'with a limit' do
+      cassette
+
+      let(:limit) { 1 }
+      subject { described_class.all limit: limit }
+
+      it 'returns a collection' do
+        expect(subject).to be_a(Hubspot::PagedCollection)
+        expect(subject.first).to be_a(Hubspot::Contact)
+      end
+
+      it 'respects the limit' do
+        expect(subject.size).to eq(limit)
+      end
+    end
+  end
+
   describe '.find' do
     context 'with a valid ID' do
       cassette
