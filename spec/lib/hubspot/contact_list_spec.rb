@@ -121,13 +121,13 @@ describe Hubspot::ContactList do
         let(:id) { list.id.to_i }
 
         it { is_expected.to be_an_instance_of Hubspot::ContactList }
-        its(:name) { is_expected.to == list.name }
+        its(:name) { is_expected.to eq list.name }
 
         context 'string id' do
           let(:id) { list.id.to_s }
 
           it { is_expected.to be_an_instance_of Hubspot::ContactList }
-          its(:name) { is_expected.to == list.name }
+          its(:name) { is_expected.to eq list.name }
         end
       end
 
@@ -256,7 +256,7 @@ describe Hubspot::ContactList do
     after { static_list.destroy! }
 
     it { is_expected.to be_an_instance_of Hubspot::ContactList }
-    its(:name) { is_expected.to == 'updated list name' }
+    its(:name) { is_expected.to eq 'updated list name' }
   end
 
   describe '#destroy!' do
