@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/static?count=1
+    uri: https://api.hubapi.com/contacts/v1/lists?count=2
     body:
       encoding: US-ASCII
       string: ''
@@ -21,54 +21,57 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 08 Aug 2022 14:50:26 GMT
+      - Tue, 21 Apr 2026 14:29:12 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '322'
+      - '1034'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7379107dbc963b13-CDG
+      - 9efd1461582f2a6a-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
+      - origin, accept-encoding
       Access-Control-Allow-Credentials:
       - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server-Timing:
+      - hcid;desc="019db071-f995-7e3c-b272-cb0579e8b997", cfr;desc="9efd146222122a6a-IAD"
+      X-Content-Type-Options:
+      - nosniff
       X-Hubspot-Correlation-Id:
-      - eac0b67b-b1f1-46c9-8ac8-a4598accd7b0
+      - '019db071-f995-7e3c-b272-cb0579e8b997'
       X-Hubspot-Ratelimit-Daily:
       - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '248397'
+      - '249062'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
       - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '78'
+      - '96'
       X-Hubspot-Ratelimit-Secondly:
       - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '7'
-      X-Trace:
-      - 2BDA3639833461966F1521050C1ECC4A321B8B5552000000000000000000
+      - '9'
+      Set-Cookie:
+      - __cf_bm=FwUQgeYC4UYW7tMJMOv9lxsnTWOtq8QDwgRJZGVWFO4-1776781752-1.0.1.1-6CkUwhkMj5_I3Qjz5nfaxf5iUjyG2OKuoyOlLZvCi9.NcWN.GU94B9sGraDqjdRNJzkeWq0gqqjY_oFtnzkftl_voSZlttooyTtOn6n7lds;
+        path=/; expires=Tue, 21-Apr-26 14:59:12 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=794Z4GbWFUTsJHFYQAXK%2Fd%2BjILOtdDubujIXbC%2BjtUBSJHSjsshKGEvxU5S%2FekSjfUriLjVDujWIQ9%2FMxNlkIe6H3O%2BCC%2B9OplprS%2Ful5%2BqYUeznbZl3ZdqvYF5ufx%2FaXnYKi5WWdEKfXabo"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=nlANUBwUa3Dyxhpu7C5ac55rHoTYugZB%2FpjGxOikI1XEG%2FDxAzyuKLtD2K7Hkm%2BHSn66yTjcn2KJvN3p4Sp4bczCGCvJ5wC1tcN4h%2Fw2%2BcdnCx74lNyJvckTo0iISlHd"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"offset":1,"lists":[{"portalId":<PORTAL_ID>,"listId":204,"internalListId":204,"createdAt":1659544422564,"updatedAt":1659544422564,"name":"contacts
-        list 6ca7b71e7085db5ec4f18d6e823ba5cb","listType":"STATIC","authorId":3326038,"filters":[],"metaData":{"size":19,"lastSizeChangeAt":1659969872417,"processing":"DONE","lastProcessingStateChangeAt":1659544422807,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}],"has-more":true}'
-  recorded_at: Mon, 08 Aug 2022 14:50:27 GMT
-recorded_with: VCR 6.0.0
+      string: '{"offset":4,"total":null,"lists":[{"portalId":<PORTAL_ID>,"listId":1,"createdAt":1659451892920,"updatedAt":1659451893026,"name":"contacts
+        list 779f7e0e0f58b3a93c02deb9d3687bdc","listType":"STATIC","authorId":3326038,"filters":[],"metaData":{"size":0,"lastSizeChangeAt":1776772681301,"processing":"DONE","lastProcessingStateChangeAt":1659451893411,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"ilsFilterBranch":"","dynamic":false,"internal":false,"readOnly":false,"limitExempt":false},{"portalId":<PORTAL_ID>,"listId":2,"createdAt":1659451928287,"updatedAt":1659451928464,"name":"testing
+        list 671124e4fb8270a236f1eb71396306dd","listType":"STATIC","authorId":3326038,"filters":[],"metaData":{"size":0,"lastSizeChangeAt":1659451928649,"processing":"DONE","lastProcessingStateChangeAt":1659451928710,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"ilsFilterBranch":"","dynamic":false,"internal":false,"readOnly":false,"limitExempt":false}],"has-more":true}'
+  recorded_at: Tue, 21 Apr 2026 14:29:12 GMT
+recorded_with: VCR 6.4.0

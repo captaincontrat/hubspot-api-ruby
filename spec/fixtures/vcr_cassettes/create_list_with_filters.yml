@@ -73,4 +73,79 @@ http_interactions:
       string: '{"portalId":<PORTAL_ID>,"listId":458,"internalListId":458,"createdAt":1659970212757,"updatedAt":1659970212757,"name":"list
         with filters 87fe488934b8dc1b37666f6e07f8f0b4","listType":"STATIC","authorId":3326038,"filters":[[{"filterFamily":"PropertyValue","operator":"EQ","withinTimeMode":"PAST","type":"string","property":"twitterhandle","value":"@hubspot"}]],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"INITIALIZING","lastProcessingStateChangeAt":1659970212757,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}'
   recorded_at: Mon, 08 Aug 2022 14:50:13 GMT
-recorded_with: VCR 6.0.0
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/lists
+    body:
+      encoding: UTF-8
+      string: '{"name":"list with filters 692c586d19f39aa2db0f06da59d30141","filterBranch":{"filterBranches":[{"filterBranches":[],"filterBranchType":"AND","filters":[{"filterType":"PROPERTY","property":"twitterhandle","operation":{"operationType":"STRING","operator":"IS_EQUAL_TO","value":"@hubspot"}}]}],"filterBranchType":"OR","filters":[]},"objectTypeId":"0-1","processingType":"DYNAMIC"}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Apr 2026 14:29:34 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '857'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 9efd14e47b330190-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, accept-encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Server-Timing:
+      - hcid;desc="019db072-4b8d-7d4c-b809-4592fda6ac43", cfr;desc="9efd14e5550b0190-IAD"
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - '019db072-4b8d-7d4c-b809-4592fda6ac43'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248497'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '95'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Set-Cookie:
+      - __cf_bm=zwQDPwFq9G8mmak14x9Vj.GzSWtIYnXZI7h6OH9ms9M-1776781774-1.0.1.1-hooB35DGKYgc3.t9NLcJa7tGg2cHmdIgHbUj6hJh1mMQ2KguqtL6Z1jRsYXj5M0TulqOC5US_5iJv52QE60LbsN83KtJcAJsftIJnmiC6C8;
+        path=/; expires=Tue, 21-Apr-26 14:59:34 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2FuIJQwdUmqyseFoUw0MjTnTwjqUHzMsNVPlg5m26C%2BZRTvDQ4N%2B5V%2BDAQ3ZW4V306uQElWJyVlcvWjfKrMNao%2FOgtrZsSQizRiceWWlGPUZvoii49VP5GvDK6NnFk7mj"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"list":{"listId":"563","listVersion":1,"createdAt":"2026-04-21T14:29:33.807Z","updatedAt":"2026-04-21T14:29:33.807Z","filtersUpdatedAt":"2026-04-21T14:29:33.807Z","processingStatus":"PROCESSING","createdById":"5555888","updatedById":"5555888","processingType":"DYNAMIC","objectTypeId":"0-1","name":"list
+        with filters 692c586d19f39aa2db0f06da59d30141","filterBranch":{"filterBranches":[{"filterBranches":[],"filters":[{"property":"twitterhandle","operation":{"operator":"IS_EQUAL_TO","includeObjectsWithNoValueSet":false,"value":"@hubspot","operationType":"STRING"},"filterType":"PROPERTY"}],"filterBranchType":"AND","filterBranchOperator":"AND"}],"filters":[],"filterBranchType":"OR","filterBranchOperator":"OR"},"listPermissions":{"teamsWithEditAccess":[],"usersWithEditAccess":[]},"membershipSettings":{"membershipTeamId":null,"includeUnassigned":null}}}'
+  recorded_at: Tue, 21 Apr 2026 14:29:34 GMT
+recorded_with: VCR 6.4.0
