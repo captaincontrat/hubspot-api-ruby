@@ -37,7 +37,7 @@ describe Hubspot::ContactList do
     let(:list) { @list }
 
     before(:all) do
-      VCR.use_cassette 'create_and_add_all_contacts' do
+      VCR.use_cassette 'contact_lists/create_and_add_all_contacts' do
         @list = Hubspot::ContactList.create!(name: "contacts list #{SecureRandom.hex}")
         contacts = (1..30).map { Hubspot::Contact.create("#{SecureRandom.hex}@hubspot.com") }
         @list.add(contacts.map(&:id))

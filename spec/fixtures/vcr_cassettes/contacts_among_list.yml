@@ -72,4 +72,76 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"results":[{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216907872614"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908367503"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908367509"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908415320"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908762506"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908817222"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908841020"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908845666"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908854665"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216908931627"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216909130116"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216909328410"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216909336845"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216910021807"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216912897631"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216913038232"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216913673142"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914335571"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914544215"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914575137"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914616486"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914654638"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914669383"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914723476"},{"membershipTimestamp":"2026-04-21T14:29:31.333Z","recordId":"216914744178"}],"paging":{"next":{"after":"AAAAMoEgcAg%3D","link":"https://api.hubapi.com/crm/lists/v3/560/memberships?offset=&offset_param=after&limit=25&after=AAAAMoEgcAg%3D"}},"total":30}'
   recorded_at: Tue, 21 Apr 2026 14:43:48 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/crm/v3/lists/591/memberships?limit=25&offset=&offset_param=after
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Apr 2026 15:13:04 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '2111'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 9efd54a1a928047f-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, accept-encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Server-Timing:
+      - hcid;desc="019db09a-21bf-77d2-9942-4d43c7ada1f5", cfr;desc="9efd54a27201047f-IAD"
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - '019db09a-21bf-77d2-9942-4d43c7ada1f5'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248423'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '98'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Set-Cookie:
+      - __cf_bm=cBu9C_hrLSUbYdMBbQkLS2iRt.Jf.tQ5BleeCwfNzWc-1776784384-1.0.1.1-m3mkgADLcPyfzu9opxy_2Z9JFOAvcFPR_xBOl2lfjYr2VC4n_x8tSMfc6.W2JrzYW9hzVnb.FY1C1cSyra6VQO6FJXP3pg2Wv_71qSOZGRU;
+        path=/; expires=Tue, 21-Apr-26 15:43:04 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=hJVYdgy8mVAq2QfUkvZS%2F2ulIrFms3ob5AAZChf9T8iPlB4rkRDV2EKCtg3q0HtwUOMJIqc8V6S6zITjJntS5WSreJFmwMQiPQyNWdqSCEYkMJENh1SKMBBrqoh3VU0b"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216910628871"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216911424320"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216911477346"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216911512095"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216911579915"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216911603742"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216911784814"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216914337333"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216914488382"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216914554654"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216915348062"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216915725579"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216915733151"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216916184857"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216916658586"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216916838313"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216916976159"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216916976276"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216917473846"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216917916934"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216917916949"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216918219580"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216918571359"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216918577747"},{"membershipTimestamp":"2026-04-21T15:13:03.993Z","recordId":"216918682709"}],"paging":{"next":{"after":"AAAAMoGL6zw%3D","link":"https://api.hubapi.com/crm/lists/v3/591/memberships?offset=&offset_param=after&limit=25&after=AAAAMoGL6zw%3D"}},"total":0}'
+  recorded_at: Tue, 21 Apr 2026 15:13:04 GMT
 recorded_with: VCR 6.4.0
