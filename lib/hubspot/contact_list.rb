@@ -17,7 +17,7 @@ module Hubspot
 
     class << self
       # {https://developers.hubspot.com/docs/api-reference/legacy/crm/lists/guide#create-a-list}
-      def create!(opts={})
+      def create!(opts = {})
         object_type_id = opts.delete(:object_type_id) { CONTACT_OBJECT_TYPE_ID }
         processing_type = opts.delete(:processing_type) { MANUAL_PROCESSING_TYPE }
         body = opts.merge(objectTypeId: object_type_id, processingType: processing_type)
@@ -27,7 +27,7 @@ module Hubspot
       end
 
       # {https://developers.hubspot.com/docs/api-reference/legacy/crm/lists/guide#retrieve-by-searching-list-details}
-      def all(opts={})
+      def all(opts = {})
         body = opts.delete(:body) || { query: '' }
 
         Hubspot::PagedCollection.new(opts) do |options, after, limit|
@@ -46,31 +46,27 @@ module Hubspot
       # {https://developers.hubspot.com/docs/api-reference/legacy/crm/lists/get-lists#parameter-list-ids}
       def find(ids)
         batch_mode, path, params = case ids
-        when Integer then [false, LIST_PATH, { list_id: ids }]
-        when String then [false, LIST_PATH, { list_id: ids.to_i }]
-        when Array then [true, LISTS_PATH, { listIds: ids.map(&:to_i) }]
-        else raise Hubspot::InvalidParams, 'expecting Integer or Array of Integers parameter'
-        end
+                                   when Integer then [false, LIST_PATH, { list_id: ids }]
+                                   when String then [false, LIST_PATH, { list_id: ids.to_i }]
+                                   when Array then [true, LISTS_PATH, { listIds: ids.map(&:to_i) }]
+                                   else raise Hubspot::InvalidParams, 'expecting Integer or Array of Integers parameter'
+                                   end
 
         response = Hubspot::Connection.get_json(path, params)
         batch_mode ? response['lists'].map { |l| new(l) } : new(response)
       end
     end
 
-    attr_reader :id
-    attr_reader :legacy_list_id
-    attr_reader :name
-    attr_reader :processing_type
-    attr_reader :properties
+    attr_reader :id, :legacy_list_id, :name, :processing_type, :properties
 
     def initialize(hash)
-      self.send(:assign_properties, hash.key?('list') ? hash['list'] : hash)
+      send(:assign_properties, hash.key?('list') ? hash['list'] : hash)
     end
 
     # {https://developers.hubspot.com/docs/api-reference/legacy/crm/lists/update-list-name}
     def update_name!(new_name)
       response = Hubspot::Connection.put_json(UPDATE_NAME_PATH, params: { list_id: id, listName: new_name }, body: {})
-      self.send(:assign_properties, response['updatedList'])
+      send(:assign_properties, response['updatedList'])
       self
     end
 

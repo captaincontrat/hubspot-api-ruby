@@ -16,17 +16,19 @@ describe Hubspot::ContactList do
     subject { Hubspot::ContactList.new(example_contact_list_hash) }
 
     let(:example_contact_list_hash) do
-      VCR.use_cassette("contact_list_example") do
+      VCR.use_cassette('contact_list_example') do
         headers = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }
-        response = HTTParty.get("https://api.hubapi.com/contacts/v1/lists?count=2", headers: headers).parsed_response
+        response = HTTParty.get('https://api.hubapi.com/contacts/v1/lists?count=2', headers: headers).parsed_response
         response['lists'].last
       end
     end
 
-    it { should be_an_instance_of Hubspot::ContactList }
-    its(:name) { should_not be_empty }
-    its(:processing_type) { should be_nil }
-    its(:properties) { should be_a(Hash) }
+    specify(:aggregate_failures) do
+      expect(subject).to be_an_instance_of Hubspot::ContactList
+      expect(subject.name).not_to be_empty
+      expect(subject.processing_type).to be_nil
+      expect(subject.properties).to be_a(Hash)
+    end
   end
 
   describe '#contact_ids' do
@@ -58,8 +60,11 @@ describe Hubspot::ContactList do
       cassette 'create_list'
 
       let(:name) { "testing list #{SecureRandom.hex}" }
-      it { should be_an_instance_of Hubspot::ContactList }
-      its(:processing_type) { should eq described_class::MANUAL_PROCESSING_TYPE }
+
+      specify(:aggregate_failures) do
+        expect(subject).to be_an_instance_of Hubspot::ContactList
+        expect(subject.processing_type).to eq described_class::MANUAL_PROCESSING_TYPE
+      end
 
       context 'adding filters parameters' do
         cassette 'create_list_with_filters'
@@ -67,16 +72,16 @@ describe Hubspot::ContactList do
         it 'returns a ContactList object with filters set' do
           name = "list with filters #{SecureRandom.hex}"
           filter_branch = { filterBranches: [
-            { filterBranches: [], filterBranchType: "AND", filters: [
-              { filterType: "PROPERTY", property: "twitterhandle",
-                operation: { operationType: 'STRING', operator: 'IS_EQUAL_TO', value: '@hubspot'} }
-            ]}
-          ], filterBranchType: "OR", filters: [] }
+            { filterBranches: [], filterBranchType: 'AND', filters: [
+              { filterType: 'PROPERTY', property: 'twitterhandle',
+                operation: { operationType: 'STRING', operator: 'IS_EQUAL_TO', value: '@hubspot' } }
+            ] }
+          ], filterBranchType: 'OR', filters: [] }
 
           list_with_filters = Hubspot::ContactList.create!(processing_type: 'DYNAMIC', name: name,
                                                            filterBranch: filter_branch)
           expect(list_with_filters).to be_a(Hubspot::ContactList)
-          expect(list_with_filters.properties['filterBranch']).to_not be_empty
+          expect(list_with_filters.properties['filterBranch']).not_to be_empty
           expect(list_with_filters.processing_type).to eq 'DYNAMIC'
         end
       end
@@ -107,20 +112,22 @@ describe Hubspot::ContactList do
 
   describe '.find' do
     context 'given an id' do
-      cassette "contact_list_find"
+      cassette 'contact_list_find'
       subject { Hubspot::ContactList.find(id) }
 
       let(:list) { Hubspot::ContactList.create!(name: SecureRandom.hex) }
 
       context 'when the contact list is found' do
         let(:id) { list.id.to_i }
-        it { should be_an_instance_of Hubspot::ContactList }
-        its(:name) { should == list.name }
 
-        context "string id" do
+        it { is_expected.to be_an_instance_of Hubspot::ContactList }
+        its(:name) { is_expected.to == list.name }
+
+        context 'string id' do
           let(:id) { list.id.to_s }
-          it { should be_an_instance_of Hubspot::ContactList }
-          its(:name) { should == list.name }
+
+          it { is_expected.to be_an_instance_of Hubspot::ContactList }
+          its(:name) { is_expected.to == list.name }
         end
       end
 
@@ -138,14 +145,14 @@ describe Hubspot::ContactList do
     end
 
     context 'given a list of ids' do
-      cassette "contact_list_batch_find"
+      cassette 'contact_list_batch_find'
 
       let(:list1) { Hubspot::ContactList.create!(name: SecureRandom.hex) }
       let(:list2) { Hubspot::ContactList.create!(name: SecureRandom.hex) }
       let(:list3) { Hubspot::ContactList.create!(name: SecureRandom.hex) }
 
       it 'find lists of contacts' do
-        lists = Hubspot::ContactList.find([list1.id,list2.id,list3.id])
+        lists = Hubspot::ContactList.find([list1.id, list2.id, list3.id])
         list = lists.first
         expect(list).to be_a(Hubspot::ContactList)
         expect(lists.map(&:id)).to contain_exactly(list1.id, list2.id, list3.id)
@@ -153,10 +160,10 @@ describe Hubspot::ContactList do
     end
   end
 
-  describe "#add" do
-    context "for a static list" do
-      it "adds the contact to the contact list" do
-        VCR.use_cassette("contact_lists/add_contact") do
+  describe '#add' do
+    context 'for a static list' do
+      it 'adds the contact to the contact list' do
+        VCR.use_cassette('contact_lists/add_contact') do
           contact = Hubspot::Contact.create("#{SecureRandom.hex}@example.com")
           contact_list_params = { name: "my-contacts-list-#{SecureRandom.hex}" }
           contact_list = Hubspot::ContactList.create!(contact_list_params)
@@ -170,9 +177,9 @@ describe Hubspot::ContactList do
         end
       end
 
-      context "when the contact already exists in the contact list" do
-        it "returns false" do
-          VCR.use_cassette("contact_lists/add_existing_contact") do
+      context 'when the contact already exists in the contact list' do
+        it 'returns false' do
+          VCR.use_cassette('contact_lists/add_existing_contact') do
             contact = Hubspot::Contact.create("#{SecureRandom.hex}@example.com")
 
             contact_list_params = { name: "my-contacts-list-#{SecureRandom.hex}" }
@@ -190,15 +197,15 @@ describe Hubspot::ContactList do
       end
     end
 
-    context "for a dynamic list" do
-      it "raises an error as dynamic lists add contacts via on filters" do
-        VCR.use_cassette("contact_list/add_contact_to_dynamic_list") do
+    context 'for a dynamic list' do
+      it 'raises an error as dynamic lists add contacts via on filters' do
+        VCR.use_cassette('contact_list/add_contact_to_dynamic_list') do
           contact = Hubspot::Contact.create("#{SecureRandom.hex}@example.com")
           filter_branch = {
-            filterBranches: [{ filterBranches: [], filterBranchType: "AND", filters: [
-              { filterType: "PROPERTY", property: "twitterhandle",
-                operation: { operationType: 'STRING', operator: 'IS_EQUAL_TO', value: '@hubspot'}}
-              ]}], filterBranchType: "OR", filters: []
+            filterBranches: [{ filterBranches: [], filterBranchType: 'AND', filters: [
+              { filterType: 'PROPERTY', property: 'twitterhandle',
+                operation: { operationType: 'STRING', operator: 'IS_EQUAL_TO', value: '@hubspot' } }
+            ] }], filterBranchType: 'OR', filters: []
           }
           contact_list_params = {
             name: "my-contacts-list-#{SecureRandom.hex}",
@@ -207,9 +214,7 @@ describe Hubspot::ContactList do
           }
           contact_list = Hubspot::ContactList.create!(contact_list_params)
 
-          expect {
-            contact_list.add(contact)
-          }.to raise_error(Hubspot::RequestError)
+          expect { contact_list.add(contact) }.to raise_error(Hubspot::RequestError)
         end
       end
     end
@@ -217,7 +222,7 @@ describe Hubspot::ContactList do
 
   describe '#remove' do
     it 'returns true if removes all contacts' do
-      VCR.use_cassette("contact_lists/remove_contact") do
+      VCR.use_cassette('contact_lists/remove_contact') do
         contact_ids = (1..2).map { Hubspot::Contact.create("#{SecureRandom.hex}@example.com").id }
         contact_list_params = { name: "my-contacts-list-#{SecureRandom.hex}" }
         contact_list = Hubspot::ContactList.create!(contact_list_params)
@@ -232,7 +237,7 @@ describe Hubspot::ContactList do
     end
 
     it 'returns false if the contact cannot be removed' do
-      VCR.use_cassette("contact_lists/remove_unknown_contact") do
+      VCR.use_cassette('contact_lists/remove_unknown_contact') do
         contact_list_params = { name: "my-contacts-list-#{SecureRandom.hex}" }
         contact_list = Hubspot::ContactList.create!(contact_list_params)
         result = contact_list.remove([42])
@@ -244,23 +249,24 @@ describe Hubspot::ContactList do
   end
 
   describe '#update_name!' do
-    cassette "contact_list_update"
+    cassette 'contact_list_update'
 
-    subject { static_list.update_name!("updated list name") }
-
-    it { should be_an_instance_of Hubspot::ContactList }
-    its(:name){ should == "updated list name" }
+    subject { static_list.update_name!('updated list name') }
 
     after { static_list.destroy! }
+
+    it { is_expected.to be_an_instance_of Hubspot::ContactList }
+    its(:name) { is_expected.to == 'updated list name' }
   end
 
   describe '#destroy!' do
-    cassette "contact_list_destroy"
+    cassette 'contact_list_destroy'
 
-    subject{ static_list.destroy! }
-    it { should be true }
+    subject { static_list.destroy! }
 
-    it "should be destroyed" do
+    it { is_expected.to be true }
+
+    it 'is destroyed' do
       subject
       expect(static_list).to be_destroyed
     end
