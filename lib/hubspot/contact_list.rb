@@ -6,7 +6,6 @@ module Hubspot
     LISTS_PATH             = '/crm/v3/lists'
     LIST_PATH              = '/crm/v3/lists/:list_id'
     SEARCH_PATH            = LISTS_PATH + '/search'
-    LIST_BATCH_PATH        = LISTS_PATH + '/batch'
     CONTACTS_PATH          = LIST_PATH + '/memberships'
     RECENT_CONTACTS_PATH   = LIST_PATH + '/memberships/join-order'
     ADD_CONTACTS_PATH      = LIST_PATH + '/memberships/add'
