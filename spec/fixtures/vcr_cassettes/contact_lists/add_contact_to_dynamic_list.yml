@@ -1,0 +1,227 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"email","value":"6522e55a05ee64150785c73575df9c33@example.com"}]}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Apr 2026 14:45:09 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '7553'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 9efd2bb968d29ef6-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, accept-encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Server-Timing:
+      - hcid;desc="019db080-9091-7456-a30e-9d81a7243c50", cfr;desc="9efd2bba21269ef6-CDG"
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - '019db080-9091-7456-a30e-9d81a7243c50'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249016'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '99'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Set-Cookie:
+      - __cf_bm=rTdKLl.6ZcvnZXZnY5JsJNVAQZiZAFbCUT28EhhzSOE-1776782709-1.0.1.1-2PVLy618rlZGlANNO0yGwHR_mQd1ktmbWUG2SeAhwBhJ2N8E7bEj4X6IPkVFsTsov5VBd5TR44ML0SfkjCD0sy_P98mrKTuFgAejNvgHycA;
+        path=/; expires=Tue, 21-Apr-26 15:15:09 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=PVM6RXCgfKHw%2FMmahPC0iD0ygv5ROliXxMX21WgFoVIAMActQBa8nP8oKG%2FPJiCURprTC5Ohh81uiBNdOiw4jLe6EIuysHg17sHpcQMRTfVz9qyphgfWr4H%2B5OxmYfYY"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vid":216910622208,"canonical-vid":216910622208,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"hs_is_unworked":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_v2_time_in_current_stage":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"lastmodifieddate":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_full_name_or_email":{"value":"6522e55a05ee64150785c73575df9c33@example.com","versions":[{"value":"6522e55a05ee64150785c73575df9c33@example.com","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_pipeline":{"value":"contacts-lifecycle-pipeline","versions":[{"value":"contacts-lifecycle-pipeline","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"createdate":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_prospecting_agent_total_enrolled_count":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_membership_has_accessed_private_content":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_registered_member":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_associated_target_accounts":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_all_contact_vids":{"value":"216910622208","versions":[{"value":"216910622208","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_source_label":{"value":"INTEGRATION","versions":[{"value":"INTEGRATION","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_sequences_actively_enrolled_count":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_source_id":{"value":"1024738","versions":[{"value":"1024738","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_is_contact":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_id":{"value":"216910622208","versions":[{"value":"216910622208","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_prospecting_agent_actively_enrolled_count":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_email_domain":{"value":"example.com","versions":[{"value":"example.com","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_source":{"value":"INTEGRATION","versions":[{"value":"INTEGRATION","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_currently_enrolled_in_prospecting_agent":{"value":"false","versions":[{"value":"false","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_lifecyclestage_lead_date":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"lifecyclestage":{"value":"lead","versions":[{"value":"lead","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"email":{"value":"6522e55a05ee64150785c73575df9c33@example.com","versions":[{"value":"6522e55a05ee64150785c73575df9c33@example.com","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"num_notes":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_v2_date_entered_current_stage":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":216910622208,"is-deleted":false,"is-contact":true,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":1776782709050,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"6522e55a05ee64150785c73575df9c33@example.com","timestamp":1776782708900,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"ad98bc96-86ab-47ab-aa18-a3c882961aa6","timestamp":1776782709044,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Tue, 21 Apr 2026 14:45:09 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/lists
+    body:
+      encoding: UTF-8
+      string: '{"name":"my-contacts-list-2b6fa5db3427eb3aa95cc6b498840df0","filterBranch":{"filterBranches":[{"filterBranches":[],"filterBranchType":"AND","filters":[{"filterType":"PROPERTY","property":"twitterhandle","operation":{"operationType":"STRING","operator":"IS_EQUAL_TO","value":"@hubspot"}}]}],"filterBranchType":"OR","filters":[]},"objectTypeId":"0-1","processingType":"DYNAMIC"}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Apr 2026 14:45:09 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '856'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 9efd2bbceb753c71-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, accept-encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Server-Timing:
+      - hcid;desc="019db080-92d5-768f-9e3d-e3dd1e164272", cfr;desc="9efd2bbdc05ef178-IAD"
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - '019db080-92d5-768f-9e3d-e3dd1e164272'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248427'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '99'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Set-Cookie:
+      - __cf_bm=LnWhisFe2fPTxCYz.a9SK_lfo50u9Th5tnRP5TsfGys-1776782709-1.0.1.1-KVR7JjnYhk1F7dYzjNUCtjVO4TtBi39htAdZkdal0c9Q435EOv9ROcm021VvDZ5MwSYRwDzHAvjnvNklmMklSnIiV1_YRIHgA.KbV48UE5U;
+        path=/; expires=Tue, 21-Apr-26 15:15:09 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=6yYbbvaQEWb8Bz4wX3vadxrrrkYqhe36RDc0vIKd3t41BNugk9R7JW6yRkZhD3UgwFZJc8x0JbLkdhCFT66OzH0aZfKV6oXUNQSG0r%2BhkDATQCammzys%2FubFbi90%2FYbP"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: ASCII-8BIT
+      string: '{"list":{"listId":"590","listVersion":1,"createdAt":"2026-04-21T14:45:09.555Z","updatedAt":"2026-04-21T14:45:09.555Z","filtersUpdatedAt":"2026-04-21T14:45:09.555Z","processingStatus":"PROCESSING","createdById":"5555888","updatedById":"5555888","processingType":"DYNAMIC","objectTypeId":"0-1","name":"my-contacts-list-2b6fa5db3427eb3aa95cc6b498840df0","filterBranch":{"filterBranches":[{"filterBranches":[],"filters":[{"property":"twitterhandle","operation":{"operator":"IS_EQUAL_TO","includeObjectsWithNoValueSet":false,"value":"@hubspot","operationType":"STRING"},"filterType":"PROPERTY"}],"filterBranchOperator":"AND","filterBranchType":"AND"}],"filters":[],"filterBranchOperator":"OR","filterBranchType":"OR"},"listPermissions":{"teamsWithEditAccess":[],"usersWithEditAccess":[]},"membershipSettings":{"membershipTeamId":null,"includeUnassigned":null}}}'
+  recorded_at: Tue, 21 Apr 2026 14:45:09 GMT
+- request:
+    method: put
+    uri: https://api.hubapi.com/crm/v3/lists/590/memberships/add
+    body:
+      encoding: UTF-8
+      string: '[{"changes":{},"properties":{"hs_is_unworked":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_v2_time_in_current_stage":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"lastmodifieddate":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_full_name_or_email":{"value":"6522e55a05ee64150785c73575df9c33@example.com","versions":[{"value":"6522e55a05ee64150785c73575df9c33@example.com","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_pipeline":{"value":"contacts-lifecycle-pipeline","versions":[{"value":"contacts-lifecycle-pipeline","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"createdate":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_prospecting_agent_total_enrolled_count":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_membership_has_accessed_private_content":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_registered_member":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_associated_target_accounts":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_all_contact_vids":{"value":"216910622208","versions":[{"value":"216910622208","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_source_label":{"value":"INTEGRATION","versions":[{"value":"INTEGRATION","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_sequences_actively_enrolled_count":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_source_id":{"value":"1024738","versions":[{"value":"1024738","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_is_contact":{"value":"true","versions":[{"value":"true","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_id":{"value":"216910622208","versions":[{"value":"216910622208","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_prospecting_agent_actively_enrolled_count":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_email_domain":{"value":"example.com","versions":[{"value":"example.com","source-type":"CALCULATED","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_object_source":{"value":"INTEGRATION","versions":[{"value":"INTEGRATION","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_currently_enrolled_in_prospecting_agent":{"value":"false","versions":[{"value":"false","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_lifecyclestage_lead_date":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"lifecyclestage":{"value":"lead","versions":[{"value":"lead","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"email":{"value":"6522e55a05ee64150785c73575df9c33@example.com","versions":[{"value":"6522e55a05ee64150785c73575df9c33@example.com","source-type":"INTEGRATION","source-id":"1024738","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"num_notes":{"value":"0","versions":[{"value":"0","source-type":"CALCULATED","source-id":"InitialRollupProperties","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]},"hs_v2_date_entered_current_stage":{"value":"1776782708900","versions":[{"value":"1776782708900","source-type":"CALCULATED","source-id":"CalculatedPropertyComputer","source-label":null,"updated-by-user-id":null,"timestamp":1776782708900,"selected":false,"data-sensitivity":null,"is-encrypted":null}]}},"id":216910622208,"persisted":true,"deleted":false,"metadata":{"vid":216910622208,"canonical-vid":216910622208,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":216910622208,"is-deleted":false,"is-contact":true,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":1776782709050,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"6522e55a05ee64150785c73575df9c33@example.com","timestamp":1776782708900,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"ad98bc96-86ab-47ab-aa18-a3c882961aa6","timestamp":1776782709044,"source":"UNSPECIFIED"}]}],"merge-audits":[]}}]'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 21 Apr 2026 14:45:10 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '228'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 9efd2bc0890500ca-CDG
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - origin, Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Server-Timing:
+      - hcid;desc="019db080-9520-7281-9dd4-ac65a0089626", cfr;desc="9efd2bc1759100ca-IAD"
+      X-Content-Type-Options:
+      - nosniff
+      X-Hubspot-Correlation-Id:
+      - '019db080-9520-7281-9dd4-ac65a0089626'
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248426'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '98'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      Set-Cookie:
+      - __cf_bm=YY9.qezSWUyrbBe1MEsMlfxhK8enOs2XooHAs44aUI0-1776782710-1.0.1.1-W5qNaI2siUCBzls1AhyswRFL4ASVl6EfA2VCB6RdsoXwSzO76wOI7OHC6DRQ3F0YKirncnR3u9.pmXvJvbwGjlybdRIk_.ROc8n_e_BTXXY;
+        path=/; expires=Tue, 21-Apr-26 15:15:10 GMT; domain=.hubapi.com; HttpOnly;
+        Secure; SameSite=None
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=f9Zpd0ZGGIerIWed%2FOJQA5PH%2FuUrP%2BSopiUcxj4Hscmm5rqJ4MhsEazCB%2BqJ0VrUzUsxBBMz%2FDqJpenFUIW0aykiWlXjKeGpCfu%2BF1XHXDJBo73A0iSvpWtX9bJyJZHg"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"Invalid input JSON on line 1, column 2:
+        Cannot deserialize value of type `java.lang.String` from Object value (token
+        `JsonToken.START_OBJECT`)","correlationId":"019db080-9520-7281-9dd4-ac65a0089626"}'
+  recorded_at: Tue, 21 Apr 2026 14:45:10 GMT
+recorded_with: VCR 6.4.0

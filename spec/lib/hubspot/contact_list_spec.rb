@@ -199,7 +199,7 @@ describe Hubspot::ContactList do
 
     context 'for a dynamic list' do
       it 'raises an error as dynamic lists add contacts via on filters' do
-        VCR.use_cassette('contact_list/add_contact_to_dynamic_list') do
+        VCR.use_cassette('contact_lists/add_contact_to_dynamic_list') do
           contact = Hubspot::Contact.create("#{SecureRandom.hex}@example.com")
           filter_branch = {
             filterBranches: [{ filterBranches: [], filterBranchType: 'AND', filters: [
