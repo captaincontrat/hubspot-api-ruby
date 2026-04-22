@@ -212,9 +212,9 @@ describe Hubspot::Connection do
       end
 
       context "passing Array as parameters for batch mode, key is prefixed with batch_" do
-        let(:path) { Hubspot::ContactList::LIST_BATCH_PATH }
+        let(:path) { Hubspot::ContactList::LISTS_PATH }
         let(:params) { { batch_list_id: [1,2,3] } }
-        it { should == "https://api.hubapi.com/contacts/v1/lists/batch?listId=1&listId=2&listId=3" }
+        it { should == "https://api.hubapi.com/crm/v3/lists?listId=1&listId=2&listId=3" }
       end
     end
   end

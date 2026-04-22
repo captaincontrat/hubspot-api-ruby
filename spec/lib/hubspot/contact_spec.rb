@@ -1,23 +1,81 @@
 RSpec.describe Hubspot::Contact do
-
-  it_behaves_like "a saveable resource", :contact do
+  it_behaves_like 'a saveable resource', :contact do
     def set_property(contact)
-      contact.firstname = "foobar"
+      contact.firstname = 'foobar'
     end
   end
 
-  it_behaves_like "an updateable resource", :contact do
-    let(:changed_properties) { { firstname: "foobar" } }
-    let(:overlapping_properties) { { firstname: "asdf", lastname: "qwer" } }
+  it_behaves_like 'an updateable resource', :contact do
+    let(:changed_properties) { { firstname: 'foobar' } }
+    let(:overlapping_properties) { { firstname: 'asdf', lastname: 'qwer' } }
+  end
+
+  describe '.all' do
+    context 'without options' do
+      cassette
+
+      subject { described_class.all }
+
+      it 'returns a collection' do
+        expect(subject).to be_a(Hubspot::PagedCollection)
+        expect(subject.first).to be_a(Hubspot::Contact)
+      end
+
+      it 'has an offset' do
+        expect(subject.next_offset).not_to be_blank
+      end
+
+      it 'identifies if there are more resources' do
+        expect(subject.more?).to be true
+      end
+    end
+
+    context 'with an offset' do
+      cassette
+
+      subject { described_class.all offset: contact.id }
+
+      let!(:contact) { create :contact }
+
+      it 'returns a collection' do
+        expect(subject).to be_a(Hubspot::PagedCollection)
+      end
+
+      it 'has an offset' do
+        expect(subject.next_offset).not_to be_blank
+      end
+
+      it 'identifies if there are more resources' do
+        expect(subject.more?).not_to be_nil
+      end
+    end
+
+    context 'with a limit' do
+      cassette
+
+      subject { described_class.all limit: limit }
+
+      let(:limit) { 1 }
+
+      it 'returns a collection' do
+        expect(subject).to be_a(Hubspot::PagedCollection)
+        expect(subject.first).to be_a(Hubspot::Contact)
+      end
+
+      it 'respects the limit' do
+        expect(subject.size).to eq(limit)
+      end
+    end
   end
 
   describe '.find' do
     context 'with a valid ID' do
       cassette
 
+      subject { described_class.find contact.id }
+
       let(:company) { create :company }
       let(:contact) { create :contact, associatedcompanyid: company.id }
-      subject { described_class.find contact.id }
 
       it 'finds the contact' do
         expect(subject).to be_a(described_class)
@@ -31,9 +89,9 @@ RSpec.describe Hubspot::Contact do
       subject { described_class.find 0 }
 
       it 'raises an error' do
-        expect {
+        expect do
           subject
-        }.to raise_error(Hubspot::NotFoundError, /contact does not exist/)
+        end.to raise_error(Hubspot::NotFoundError, /contact does not exist/)
       end
     end
   end
@@ -42,8 +100,9 @@ RSpec.describe Hubspot::Contact do
     context 'without properties' do
       cassette
 
-      let(:email) { Faker::Internet.email(name: "#{(0..3).map { (65 + rand(26)).chr }.join}#{Time.new.to_i.to_s[-5..-1]}") }
       subject { described_class.create email }
+
+      let(:email) { Faker::Internet.email(name: "#{(0..3).map { rand(65..90).chr }.join}#{Time.new.to_i.to_s[-5..-1]}") }
 
       it 'creates a new contact' do
         expect(subject).to be_a(described_class)
@@ -54,11 +113,11 @@ RSpec.describe Hubspot::Contact do
     context 'with properties' do
       cassette
 
-      let(:email) { Faker::Internet.email(name: "#{(0..3).map { (65 + rand(26)).chr }.join}#{Time.new.to_i.to_s[-5..-1]}") }
-      let(:firstname) { "Allison" }
-      let(:properties) { { firstname: firstname } }
-
       subject { described_class.create email, properties }
+
+      let(:email) { Faker::Internet.email(name: "#{(0..3).map { rand(65..90).chr }.join}#{Time.new.to_i.to_s[-5..-1]}") }
+      let(:firstname) { 'Allison' }
+      let(:properties) { { firstname: firstname } }
 
       it 'creates a new contact' do
         expect(subject).to be_a(described_class)
@@ -77,29 +136,29 @@ RSpec.describe Hubspot::Contact do
     context 'with an existing email address' do
       cassette
 
+      subject { described_class.create email }
+
       let(:contact) { create :contact }
       let(:email) { contact.email }
 
-      subject { described_class.create email }
-
       it 'raises an error' do
-        expect {
+        expect do
           subject
-        }.to raise_error(Hubspot::RequestError)
+        end.to raise_error(Hubspot::RequestError)
       end
     end
 
     context 'with an invalid email address' do
       cassette
 
-      let(:email) { 'an_invalid_email' }
-
       subject { described_class.create email }
 
+      let(:email) { 'an_invalid_email' }
+
       it 'raises an error' do
-        expect {
+        expect do
           subject
-        }.to raise_error(Hubspot::RequestError)
+        end.to raise_error(Hubspot::RequestError)
       end
     end
   end
@@ -107,9 +166,9 @@ RSpec.describe Hubspot::Contact do
   describe '.find_by_email' do
     cassette
 
-    let(:contact) { create :contact }
-
     subject { described_class.find_by_email contact.email }
+
+    let(:contact) { create :contact }
 
     it 'finds the contact' do
       expect(subject).to be_a(described_class)
@@ -124,8 +183,9 @@ RSpec.describe Hubspot::Contact do
   describe '.find_by_user_token' do
     cassette
 
-    let(:contact) { create :contact }
     subject { described_class.find_by_user_token contact.utk }
+
+    let(:contact) { create :contact }
 
     it 'finds the contact' do
       skip 'need a contact with a user token'
@@ -167,10 +227,10 @@ RSpec.describe Hubspot::Contact do
     context 'with valid contact ids' do
       cassette
 
+      subject { described_class.merge contact1.id, contact2.id }
+
       let!(:contact1) { create :contact }
       let!(:contact2) { create :contact }
-
-      subject { described_class.merge contact1.id, contact2.id }
 
       it 'succeeds' do
         expect(subject).to be_truthy
@@ -183,9 +243,9 @@ RSpec.describe Hubspot::Contact do
       subject { described_class.merge 1, 2 }
 
       it 'raises an error' do
-        expect {
+        expect do
           subject
-        }.to raise_error(Hubspot::RequestError)
+        end.to raise_error(Hubspot::RequestError)
       end
     end
   end
@@ -194,10 +254,10 @@ RSpec.describe Hubspot::Contact do
     context 'with a valid contact' do
       cassette
 
+      subject { contact1.merge(contact2) }
+
       let!(:contact1) { create :contact }
       let!(:contact2) { create :contact }
-
-      subject { contact1.merge(contact2) }
 
       it 'succeeds' do
         expect(subject).to be_truthy
@@ -207,14 +267,14 @@ RSpec.describe Hubspot::Contact do
     context 'with an invalid contact' do
       cassette
 
-      let!(:contact1) { create :contact }
-
       subject { contact1.merge(contact1.id) }
 
+      let!(:contact1) { create :contact }
+
       it 'raises an error' do
-        expect {
+        expect do
           subject
-        }.to raise_error(Hubspot::RequestError)
+        end.to raise_error(Hubspot::RequestError)
       end
     end
   end

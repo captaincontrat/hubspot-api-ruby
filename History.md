@@ -1,3 +1,26 @@
+## 0.22.0
+
+* BREAKING CHANGES to `ContactList`
+  * adapt as [hubspot is sunsetting contact list API v1](https://developers.hubspot.com/changelog/extension-contact-lists-api-v1-sunset-moved-to-april-30-2026)
+  * this required a bunch of changes to the interface. Please check https://github.com/captaincontrat/hubspot-api-ruby/pull/31 for details
+  * notable changes:
+    * `.all` is now paginated
+    * filters parameters changed a lot. It's way more powerful but also more verbose. [Find the official docs here](https://developers.hubspot.com/docs/api-reference/legacy/crm/lists/list-filters)
+    * `ContactList#portal_id` is removed
+    * `processing_type` replaces the boolean `dynamic`
+    * `update_name!` replaces `update!`, there is no unique update endpoint anymore
+      * please open a pull request if you need to update filters via API ([documentation is here](https://developers.hubspot.com/docs/api-reference/legacy/crm/lists/guide#update-a-list-filter-branch))
+    * `#contact_ids` replaces `contacts`
+    * `#add` and `#remove` now receive a list of contact ids instead of `Contact` instances
+* `Contact.all` used the contacts list API, migrate to contacts API instead
+* `Contact`s won't include lists membership anymore
+* Official support of ruby 4
+  * we've been running on ruby 4 in production for a few months but it's always nice to have CI run it here too.
+
+I checked the other announced sunsets, this gem does not seem to be impacted, but watch out if it concerns you app. More info here: https://developers.hubspot.com/changelog
+
+Thanks to [@ur5us](https://github.com/ur5us) for the heads-up!
+
 ## 0.21.0
 
 * Add a few ids to Hubspot::Association::ASSOCIATION_DEFINITIONS
