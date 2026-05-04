@@ -1,10 +1,16 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
+
+# Setup ENV variables
+require "dotenv"
+Dotenv.load(".env.development.local", ".env.development", ".env.local", ".env")
+
 require "hubspot-api-ruby"
 
 # Include Byebug for debugging
 require "byebug"
+
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -13,8 +19,11 @@ require "byebug"
 # require "pry"
 # Pry.start
 
-# Configure with the demo key by default
-Hubspot.configure(hapikey: 'demo')
+Hubspot.configure(
+  access_token: ENV.fetch("HUBSPOT_ACCESS_TOKEN"),
+  portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"),
+  logger: Logger.new(STDOUT)
+)
 
 require "irb"
 IRB.start(__FILE__)
