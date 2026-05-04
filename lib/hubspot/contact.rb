@@ -17,10 +17,9 @@ class Hubspot::Contact < Hubspot::Resource
   class << self
     def all(opts = {})
       Hubspot::PagedCollection.new(opts) do |options, after, limit|
-        response = Hubspot::Connection.get_json(
-          ALL_PATH,
-          options.merge('limit' => limit, 'offset' => after, 'offset_param' => 'after')
-        )
+        request_options = options.merge(limit:)
+        request_options[:after] = after if after.present?
+        response = Hubspot::Connection.get_json(ALL_PATH, request_options)
 
         contacts = response['results'].map { |result| from_result(result) }
         after = response.dig('paging', 'next', 'after')
