@@ -1,3 +1,11 @@
+## 0.22.1
+
+A handful of fixes, thanks to [@ur5us](https://github.com/ur5us)!
+
+* Fix console and make it useful https://github.com/captaincontrat/hubspot-api-ruby/pull/32
+* Fix pagination for contacts https://github.com/captaincontrat/hubspot-api-ruby/pull/33
+* Fix ID parsing for contacts API https://github.com/captaincontrat/hubspot-api-ruby/pull/34
+
 ## 0.22.0
 
 * BREAKING CHANGES to `ContactList`
