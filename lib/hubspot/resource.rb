@@ -9,7 +9,7 @@ module Hubspot
     self.update_method = "put"
 
     class << self
-      def from_result(result)
+      def from_result(result, id_field: self.id_field)
         resource = new(result[id_field])
         resource.send(:initialize_from, result.with_indifferent_access)
         resource
@@ -55,9 +55,12 @@ module Hubspot
       @changes = HashWithIndifferentAccess.new
       @properties = HashWithIndifferentAccess.new
 
-      if id_or_properties.is_a?(Integer) || id_or_properties.nil?
+      case id_or_properties
+      when Integer, NilClass
         @id = id_or_properties
-      elsif id_or_properties.is_a?(Hash)
+      when String
+        @id = Integer id_or_properties
+      when Hash
         @id = id_or_properties.delete(id_field) || id_or_properties.delete(:id)
 
         add_accessors(id_or_properties.keys)
