@@ -234,7 +234,7 @@ module Hubspot
 
           # Define a setter
           define_method("#{k}=") do |v|
-            @changes[k.to_sym] = v
+            @changes[k] = v
           end
         end
       end
