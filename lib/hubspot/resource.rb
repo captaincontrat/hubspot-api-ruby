@@ -230,7 +230,7 @@ module Hubspot
       singleton_class.instance_eval do
         keys.each do |k|
           # Define a getter
-          define_method(k) { @changes[k.to_sym] || @properties.dig(k, 'value') }
+          define_method(k) { self[k] }
 
           # Define a setter
           define_method("#{k}=") do |v|
@@ -247,9 +247,9 @@ module Hubspot
         add_accessors([attr])
 
         # Call the new setter
-        return send(method_name, arguments[0])
+        send(method_name, arguments[0])
       elsif @properties.key?(method_name)
-        return @properties[method_name]['value']
+        self[method_name]
       else
         super
       end
