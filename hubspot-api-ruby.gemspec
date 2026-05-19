@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
     "changelog_uri" => "https://github.com/captaincontrat/hubspot-api-ruby/blob/master/History.md"
   }
 
-  s.required_ruby_version = ">= 3.2"
+  s.required_ruby_version = ">= 3.3"
 
   # Add runtime dependencies here
   s.add_runtime_dependency "activesupport", ">= 4.2.2"
