@@ -1,3 +1,7 @@
+## 0.22.2
+
+Fix contact property accessors https://github.com/captaincontrat/hubspot-api-ruby/pull/36, thanks to [@ur5us](https://github.com/ur5us)!
+
 ## 0.22.1
 
 A handful of fixes, thanks to [@ur5us](https://github.com/ur5us)!
