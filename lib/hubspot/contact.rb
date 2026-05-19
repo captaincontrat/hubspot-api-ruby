@@ -106,6 +106,14 @@ class Hubspot::Contact < Hubspot::Resource
     end
   end
 
+  def [](name)
+    return @changes[name] if changes.key? name
+
+    name_property = @properties[name]
+
+    name_property.is_a?(Hash) ? name_property['value'] : name_property
+  end
+
   def name
     [firstname, lastname].compact.join(' ')
   end
