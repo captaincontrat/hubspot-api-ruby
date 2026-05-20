@@ -90,10 +90,10 @@ module Hubspot
           params["portal_id"] = Hubspot::Config.portal_id if path =~ /:portal_id/
         end
 
-        params.each do |k,v|
-          if path.match(":#{k}")
-            path.gsub!(":#{k}", CGI.escape(v.to_s))
-            params.delete(k)
+        params.each do |key, value|
+          if path.match(":#{key}")
+            path = path.gsub(":#{key}", CGI.escape(value.to_s))
+            params.delete(key)
           end
         end
         raise(Hubspot::MissingInterpolation.new("Interpolation not resolved")) if path =~ /:/
