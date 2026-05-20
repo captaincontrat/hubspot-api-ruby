@@ -41,10 +41,10 @@ module Hubspot
           verb,
           url,
           body: options[:body].to_json,
-          headers: { "Content-Type" => "application/json" },
+          headers: { 'Content-Type' => 'application/json' },
           format: :json,
           read_timeout: read_timeout(options),
-          open_timeout: open_timeout(options),
+          open_timeout: open_timeout(options)
         )
 
         log_request_and_response(url, response, options[:body])
@@ -65,10 +65,11 @@ module Hubspot
         return response if response.success?
 
         raise(Hubspot::NotFoundError.new(response)) if response.not_found?
+
         raise(Hubspot::RequestError.new(response))
       end
 
-      def log_request_and_response(uri, response, body=nil)
+      def log_request_and_response(uri, response, body = nil)
         Hubspot::Config.logger.info(<<~MSG)
           Hubspot: #{uri}.
           Body: #{body}.
@@ -76,7 +77,7 @@ module Hubspot
         MSG
       end
 
-      def generate_url(path, params={}, options={})
+      def generate_url(path, params = {}, options = {})
         if Hubspot::Config.access_token.present?
           options[:hapikey] = false
         else
@@ -85,11 +86,11 @@ module Hubspot
         path = path.clone
         params = params.clone
         base_url = options[:base_url] || Hubspot::Config.base_url
-        params["hapikey"] = Hubspot::Config.hapikey unless options[:hapikey] == false
+        params['hapikey'] = Hubspot::Config.hapikey unless options[:hapikey] == false
 
-        if path =~ /:portal_id/
+        if /:portal_id/.match?(path)
           Hubspot::Config.ensure! :portal_id
-          params["portal_id"] = Hubspot::Config.portal_id if path =~ /:portal_id/
+          params['portal_id'] = Hubspot::Config.portal_id if /:portal_id/.match?(path)
         end
 
         params.each do |key, value|
@@ -98,13 +99,13 @@ module Hubspot
             params.delete(key)
           end
         end
-        raise(Hubspot::MissingInterpolation.new("Interpolation not resolved")) if path =~ /:/
+        raise(Hubspot::MissingInterpolation.new('Interpolation not resolved')) if /:/.match?(path)
 
-        query = params.map do |k,v|
-          v.is_a?(Array) ? v.map { |value| param_string(k,value) } : param_string(k,v)
-        end.join("&")
+        query = params.map do |k, v|
+          v.is_a?(Array) ? v.map { |value| param_string(k, value) } : param_string(k, v)
+        end.join('&')
 
-        path += path.include?('?') ? '&' : "?" if query.present?
+        path += path.include?('?') ? '&' : '?' if query.present?
         base_url + path + query
       end
 
@@ -113,13 +114,14 @@ module Hubspot
         value.is_a?(Time) ? (value.to_i * 1000) : CGI.escape(value.to_s)
       end
 
-      def param_string(key,value)
+      def param_string(key, value)
         case key
         when /range/
-          raise "Value must be a range" unless value.is_a?(Range)
+          raise 'Value must be a range' unless value.is_a?(Range)
+
           "#{key}=#{converted_value(value.begin)}&#{key}=#{converted_value(value.end)}"
         when /^batch_(.*)$/
-          key = $1.gsub(/(_.)/) { |w| w.last.upcase }
+          key = ::Regexp.last_match(1).gsub(/(_.)/) { |w| w.last.upcase }
           "#{key}=#{converted_value(value)}"
         else
           "#{key}=#{converted_value(value)}"
@@ -148,7 +150,7 @@ module Hubspot
     def self.trigger(path, opts)
       url = generate_url(path, opts[:params], { hapikey: true })
       headers = (opts[:headers] || {}).merge('content-type': 'application/json')
-      post(url, body: opts[:body].to_json, headers: headers)
+      post(url, body: opts[:body].to_json, headers:)
     end
   end
 end
