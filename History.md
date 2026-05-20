@@ -1,3 +1,7 @@
+## 0.23.0
+
+BREAKING CHANGE : requires ruby 3.3+, as [ruby 3.2 is EOL](https://www.ruby-lang.org/en/downloads/branches/), we're not testing against olders versions
+
 ## 0.22.2
 
 Fix contact property accessors https://github.com/captaincontrat/hubspot-api-ruby/pull/36, thanks to [@ur5us](https://github.com/ur5us)!
