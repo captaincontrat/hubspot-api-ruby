@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hubspot do
   describe ".configure" do
     it "delegates .configure to Hubspot::Config.configure" do

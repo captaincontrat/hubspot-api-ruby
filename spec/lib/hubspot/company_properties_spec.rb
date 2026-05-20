@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hubspot::CompanyProperties do
   describe '.add_default_parameters' do
     let(:opts) { {} }

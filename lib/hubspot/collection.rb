@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hubspot::Collection
   def initialize(opts = {}, &block)
     @options = opts

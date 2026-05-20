@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hubspot
   describe Properties do
     let(:params) { { 'name'                          => 'amount_of_new_money_lined_up',

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hubspot::Contact < Hubspot::Resource
   self.id_field = 'vid'
   self.update_method = 'post'

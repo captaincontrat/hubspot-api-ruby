@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe Hubspot::TicketProperties do
   describe '.create' do
     context 'with all valid parameters' do

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Hubspot::Company < Hubspot::Resource
   self.id_field = "companyId"
   self.property_name_field = "name"

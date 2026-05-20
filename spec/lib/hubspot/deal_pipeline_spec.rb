@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hubspot::DealPipeline do
 
   describe ".find" do

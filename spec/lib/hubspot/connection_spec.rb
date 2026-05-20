@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe Hubspot::Connection do
   describe ".get_json" do
     it "returns the parsed response from the GET request" do

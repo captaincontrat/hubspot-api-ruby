@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe Hubspot::ContactList do
   # uncomment if you need to create test data in your panel.
   # note that sandboxes have a limit of 10 dynamic lists

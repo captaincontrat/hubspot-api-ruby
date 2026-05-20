@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe Hubspot::DealProperties do
   describe '.add_default_parameters' do
     let(:opts) { {} }

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.shared_examples_for "a saveable resource" do |factory_name|
   describe '#save' do
     context 'with a new resource' do

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module CassetteHelper
   def self.extended(base)
     base.around do |spec|

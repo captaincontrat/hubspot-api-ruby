@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hubspot::Ticket do
   describe 'create!' do
     subject(:new_ticket) do

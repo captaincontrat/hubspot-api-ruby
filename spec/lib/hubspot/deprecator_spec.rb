@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hubspot::Deprecator do
   describe ".build" do
     it "returns an instance of ActiveSupport::Deprecation" do

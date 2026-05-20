@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 RSpec.describe Hubspot::Resource do
   describe '#new' do

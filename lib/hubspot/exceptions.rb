@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hubspot
   class RequestError < StandardError
     attr_accessor :response
