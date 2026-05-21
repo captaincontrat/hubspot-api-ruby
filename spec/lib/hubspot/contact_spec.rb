@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Hubspot::Contact do
   it_behaves_like 'a saveable resource', :contact do
     def set_property(contact)

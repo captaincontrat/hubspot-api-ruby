@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples_for "an updateable resource" do |factory_name|
   describe '.update' do
     context 'with an existing resource' do

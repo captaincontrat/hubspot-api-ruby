@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe Hubspot::Engagement do
   let(:contact) { Hubspot::Contact.create("#{SecureRandom.hex}@hubspot.com") }
   let(:engagement) { Hubspot::EngagementNote.create!(contact.id, "foo") }

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe Hubspot::File do
   let(:example_file_hash) do
     VCR.use_cassette('file_example') do

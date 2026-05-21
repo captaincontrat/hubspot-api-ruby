@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Hubspot
   class Subscription
     SUBSCRIPTIONS_PATH = '/email/public/v1/subscriptions'

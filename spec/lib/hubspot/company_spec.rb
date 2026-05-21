@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Hubspot::Company do
 
   it_behaves_like "a saveable resource", :company do

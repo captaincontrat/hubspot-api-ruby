@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :contact, class: 'Hubspot::Contact' do
     to_create { |instance| instance.save }

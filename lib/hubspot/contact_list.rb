@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Hubspot
   #
   # HubSpot Contact lists API

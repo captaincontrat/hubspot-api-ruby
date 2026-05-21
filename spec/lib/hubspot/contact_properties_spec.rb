@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe Hubspot::ContactProperties do
   describe '.add_default_parameters' do
     let(:opts) { {} }

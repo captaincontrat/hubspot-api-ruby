@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Hubspot::PagedCollection < Hubspot::Collection
   attr_accessor :offset, :limit
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe Hubspot::Form do
   let(:example_form_hash) do
     VCR.use_cassette('form_example') do

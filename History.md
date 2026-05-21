@@ -1,3 +1,7 @@
+## unreleased
+
+Fix frozen string literal warning, add magical comment to freeze string literals everywhere
+
 ## 0.23.0
 
 BREAKING CHANGE : requires ruby 3.3+, as [ruby 3.2 is EOL](https://www.ruby-lang.org/en/downloads/branches/), we're not testing against olders versions

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Hubspot::Meeting do
 
   let(:hubspot_owner_id) do

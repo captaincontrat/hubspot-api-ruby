@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe Hubspot::Event do
   let(:portal_id) { ENV.fetch("HUBSPOT_PORTAL_ID") }
   let(:sent_portal_id) { portal_id }

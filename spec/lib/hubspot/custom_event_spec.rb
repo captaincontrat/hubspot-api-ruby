@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Hubspot::CustomEvent do
   before do
     Hubspot.configure(access_token: ENV.fetch("HUBSPOT_ACCESS_TOKEN"), portal_id: ENV.fetch("HUBSPOT_PORTAL_ID"),

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Hubspot::ConversationThread do
   describe 'find' do
     let(:thread_id) { 3_176_297_853 }
