@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe Hubspot::Owner do
   let(:example_owners) do
     VCR.use_cassette('owner_example') do

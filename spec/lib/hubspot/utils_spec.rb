@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe Hubspot::Utils do
   API_HEADERS = { Authorization: "Bearer #{ENV.fetch('HUBSPOT_ACCESS_TOKEN')}" }.freeze
 

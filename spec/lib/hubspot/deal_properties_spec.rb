@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe Hubspot::DealProperties do
   describe '.add_default_parameters' do
     let(:opts) { {} }
@@ -38,7 +39,7 @@ describe Hubspot::DealProperties do
         end
       end
     end
-    
+
     describe '.find' do
       context 'existing property' do
         cassette 'deal_properties/existing_property'

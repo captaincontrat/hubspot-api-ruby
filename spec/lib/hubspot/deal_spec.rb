@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe Hubspot::Deal do
   let(:portal_id) { ENV.fetch("HUBSPOT_PORTAL_ID").to_i }
   let(:company) { Hubspot::Company.create(name: SecureRandom.hex) }

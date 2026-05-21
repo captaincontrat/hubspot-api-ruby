@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe Hubspot::Config do
   describe ".configure" do
     it "sets the access token config" do
