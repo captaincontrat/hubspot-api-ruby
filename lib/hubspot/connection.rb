@@ -90,7 +90,7 @@ module Hubspot
 
         if /:portal_id/.match?(path)
           Hubspot::Config.ensure! :portal_id
-          params['portal_id'] = Hubspot::Config.portal_id if /:portal_id/.match?(path)
+          params['portal_id'] = Hubspot::Config.portal_id
         end
 
         params.each do |key, value|
