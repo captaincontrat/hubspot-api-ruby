@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Hubspot
   class TicketProperties < Properties
     CREATE_PROPERTY_PATH = '/crm/v3/properties/ticket'

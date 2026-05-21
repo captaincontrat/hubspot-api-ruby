@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require "vcr"
 
 def vcr_record_mode

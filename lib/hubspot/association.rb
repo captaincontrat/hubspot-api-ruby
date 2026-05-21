@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Hubspot::Association
   OBJECT_TARGET_TO_CLASS = {
     "Contact" => Hubspot::Contact,

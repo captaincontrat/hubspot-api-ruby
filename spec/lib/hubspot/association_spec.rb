@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Hubspot::Association do
   let(:portal_id) { 62515 }
   let(:company) { create :company }

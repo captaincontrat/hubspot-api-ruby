@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Hubspot::Task do
   describe 'create!' do
     subject(:new_task) do

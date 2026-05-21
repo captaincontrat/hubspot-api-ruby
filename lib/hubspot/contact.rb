@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Hubspot::Contact < Hubspot::Resource
   self.id_field = 'vid'
   self.update_method = 'post'
@@ -22,8 +23,8 @@ class Hubspot::Contact < Hubspot::Resource
         request_options[:after] = after if after.present?
         response = Hubspot::Connection.get_json(ALL_PATH, request_options)
 
-        contacts = response['results'].map do |result| 
-          from_result result, id_field: Hubspot::Resource.id_field 
+        contacts = response['results'].map do |result|
+          from_result result, id_field: Hubspot::Resource.id_field
         end
         after = response.dig('paging', 'next', 'after')
         [contacts, after, after.present?]

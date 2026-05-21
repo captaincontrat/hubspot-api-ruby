@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Hubspot
   class Resource
     class_attribute :id_field, instance_writer: false
