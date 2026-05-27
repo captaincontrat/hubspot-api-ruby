@@ -1,3 +1,7 @@
+# MOVED TO Hubspot-Ruby-Community/hubspot-api-ruby
+
+Please checkout https://github.com/Hubspot-Ruby-Community/hubspot-api-ruby for updates from now on.
+
 ## unreleased
 
 Fix frozen string literal warning, add magical comment to freeze string literals everywhere

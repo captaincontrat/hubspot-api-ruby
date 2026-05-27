@@ -1,3 +1,7 @@
+# MOVED TO Hubspot-Ruby-Community/hubspot-api-ruby
+
+This project moved to https://github.com/Hubspot-Ruby-Community/hubspot-api-ruby, to improve collaboration and avoid it being linked to a single organization.
+
 # HubSpot REST API wrappers for ruby
 
 Wraps the HubSpot REST API for convenient access from ruby applications.
